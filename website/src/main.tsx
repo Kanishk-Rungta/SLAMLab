@@ -3,4 +3,4 @@ import App from './App';
 import 'katex/dist/katex.min.css';
 import './style.css';
 
-createRoot(document.getElementById('root')!).render(<App/>);
+createRoot(document.getElementById('root')!).render(<App />);

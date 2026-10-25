@@ -13,6 +13,7 @@ Use Node.js 24 LTS and the committed npm lockfile:
 npm ci
 npm run dev
 npm run lint
+npm run format:check
 npm test
 npm run build
 npm run preview
