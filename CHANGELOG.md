@@ -13,3 +13,4 @@
 - Added labeled analytic fixtures and exercised actual bounded simulator trajectories.
 - Added fundamentals, practical tutorials, output interpretation, research references and future website content guidance.
 - Reworked the project README around available capabilities and explicit native validation gaps.
+- Added a common offline validation runner and least-privilege Python 3.10/3.12 GitHub Actions.
