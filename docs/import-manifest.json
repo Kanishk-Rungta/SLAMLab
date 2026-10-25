@@ -6,1666 +6,3440 @@
       "destination": "experiments/ab3/Standard Environment/standard_manifest.json",
       "sha256": "11cf1c8cca96cff5927f46c63ce7d5c2f712bad57ba985c05716757c86b453dd",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "06c793645d40c6757aee89109e7eb0d9a6c9bc4fb8657f677ee3b51b3912e81e"
     },
     {
       "source": "Benchmark/Standard Environment/benchmark/benchlog.py",
       "destination": "experiments/ab3/Standard Environment/benchmark/benchlog.py",
       "sha256": "8593eb260c02286e047e2dd7cd232a98409ebb106cbda14b53286ba544937595",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "0bccc5b7879f54050d72af5a3375e5862224f4e8e88ee68dfedfbf11b24c80e0"
     },
     {
       "source": "Benchmark/Standard Environment/benchmark/bench_supervisor.py",
       "destination": "experiments/ab3/Standard Environment/benchmark/bench_supervisor.py",
       "sha256": "27b4170c357f39f30beca01050c661b2c93ec40b783f8d2a39e1fe8feb4ef1a7",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "a1c8c4005470a669ba11b34ec922f046cd37756e8d82dfc84d4d823794392ac9"
     },
     {
       "source": "Benchmark/Standard Environment/benchmark/compare.py",
       "destination": "experiments/ab3/Standard Environment/benchmark/compare.py",
       "sha256": "df510676b825c83f8f81503f367635d4abc11ad85b98b45ea78acc94c405c59e",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "4fdcb58a8c4b854c561dc9e633dfea88fca9b15c99c2d55907b45e853019e6aa"
     },
     {
       "source": "Benchmark/Standard Environment/benchmark/evaluate.py",
       "destination": "experiments/ab3/Standard Environment/benchmark/evaluate.py",
       "sha256": "b808e3523a4cfe47fd468c617f92617a473153079a21a655d59a60c48df7dcb4",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "281e046b7215f6a2e98ed24b2ef5651a81d67b1da964f6e4f3f552d37dd9a8a8"
     },
     {
       "source": "Benchmark/Standard Environment/benchmark/adapters/import_files.py",
       "destination": "experiments/ab3/Standard Environment/benchmark/adapters/import_files.py",
       "sha256": "bc16bcefae51a9593b8dbb615711a08f9ccc040279782a8669bc7599b9f46809",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "5fbdd2b2752620337e2198f15fdef71d486988c35e58229fdd9a7a5d20d1d001"
     },
     {
       "source": "Benchmark/Standard Environment/benchmark/adapters/ros2_bridge.py",
       "destination": "experiments/ab3/Standard Environment/benchmark/adapters/ros2_bridge.py",
       "sha256": "3febcba8cd32442023995b049544ab5576d26b6f92ca736278d0e7769d341379",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "384d95f662a75838671e3c592ce5dbff66c6ac240cf9093b211536859f35fcbc"
     },
     {
       "source": "Benchmark/Standard Environment/benchmark/evaluation/common.py",
       "destination": "experiments/ab3/Standard Environment/benchmark/evaluation/common.py",
       "sha256": "3035fa9b8455465ffbce0b5da87b5cd8684405b3aa3e14aa6a4cdc301fc0ddc7",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "87cd257a48c6a92eda048b17af5d45cae577042ef5eacfdd7eb92c75fc0b9998"
     },
     {
       "source": "Benchmark/Standard Environment/benchmark/evaluation/communication.py",
       "destination": "experiments/ab3/Standard Environment/benchmark/evaluation/communication.py",
       "sha256": "27980bcfdc9b997748ab54d11320676cb531cd8f109661e14d3502f399e27002",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "807d193ab349dba1017a88ae1dd17216c046532d69fe566bc164b460b977d809"
     },
     {
       "source": "Benchmark/Standard Environment/benchmark/evaluation/loops.py",
       "destination": "experiments/ab3/Standard Environment/benchmark/evaluation/loops.py",
       "sha256": "6d62b6cf66c65825cd1c04ecab0e055c045b7ba40526b50399acfe44e9a94826",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "07bd49330b241aef2b2a6025c5e9931e6f11c2f8b4b9a0e9ba573db985d16a62"
     },
     {
       "source": "Benchmark/Standard Environment/benchmark/evaluation/mapping.py",
       "destination": "experiments/ab3/Standard Environment/benchmark/evaluation/mapping.py",
       "sha256": "7c5d0d70328a39719af5350b93d16e09826018c757a74b5bb3eb85a903282206",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "95fb32db4b151cc4e368519f993bf104de4b6f338dde62f33571ac2d6e3eddd0"
     },
     {
       "source": "Benchmark/Standard Environment/benchmark/evaluation/resources.py",
       "destination": "experiments/ab3/Standard Environment/benchmark/evaluation/resources.py",
       "sha256": "e26d280e2e935cc946288cc25b2fbf6a4043d63e3ce5fb8d8de18e5c0b231460",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "8694940e8143f0debb56b1da78087d368e898c9fd1836c3f9ca283aabde09317"
     },
     {
       "source": "Benchmark/Standard Environment/benchmark/evaluation/tracking.py",
       "destination": "experiments/ab3/Standard Environment/benchmark/evaluation/tracking.py",
       "sha256": "a7056b2b98079b3d0ee4a94a33fc8c46da4f9fabadc1ead2582345ef8a3fea65",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "dce3a542d2d0df02fd0b1ec73d166538bdec1a6219c0864712eb53598dc370bb"
     },
     {
       "source": "Benchmark/Standard Environment/benchmark/evaluation/trajectory.py",
       "destination": "experiments/ab3/Standard Environment/benchmark/evaluation/trajectory.py",
       "sha256": "7d2400446b96b92eee501e36c1aa2bb57b98f35df7be4edf04ccb74f5696720d",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "6d40d16c7b6944eb08e7fb0c97da9963a6f6f9506fa1fdbd201dbb03150562c4"
     },
     {
       "source": "Benchmark/Standard Environment/benchmark/evaluation/__init__.py",
       "destination": "experiments/ab3/Standard Environment/benchmark/evaluation/__init__.py",
       "sha256": "5a65e225ef5b18d2a963beb17bb08392ea0df2539eecf5a1f7d1063cc4ffd7a6",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "7dc73deb21e5a98ebad1d03b3f77bdaa958bd85536b3bf3ce44b24cdb785cd59"
     },
     {
       "source": "Benchmark/Standard Environment/benchmark/scenarios/baseline.json",
       "destination": "experiments/ab3/Standard Environment/benchmark/scenarios/baseline.json",
       "sha256": "0005bbc13aca8c5bd0fcc4d0f7e42d991b37a98eab69319a1ecbc45e83fe68be",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "ed9794cba324e1950692306f6c7ec836a4eea2880115df840219320605bd6875"
     },
     {
       "source": "Benchmark/Standard Environment/benchmark/scenarios/comm_failure.json",
       "destination": "experiments/ab3/Standard Environment/benchmark/scenarios/comm_failure.json",
       "sha256": "19e29cd4f0f362810dcd7760d0a731165325502631acd17f1b9e4e5abac6ead1",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "b6f32d674e71b5918adc2edb1b95cc572da5716c3a314e1f3996a1fc684146c0"
     },
     {
       "source": "Benchmark/Standard Environment/benchmark/scenarios/dynamic_obstacles.json",
       "destination": "experiments/ab3/Standard Environment/benchmark/scenarios/dynamic_obstacles.json",
       "sha256": "0c013a9a97dae181f7591aa851ea0424f265ce8052a2f667ea8538a440341f11",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "afeab859c6d9d72e7d1c5cd16b6607661935cc002846b0c310ba495f4f488a0c"
     },
     {
       "source": "Benchmark/Standard Environment/benchmark/scenarios/sensor_noise_x2.json",
       "destination": "experiments/ab3/Standard Environment/benchmark/scenarios/sensor_noise_x2.json",
       "sha256": "a1064cc8deb3cb060631f8fee7357c665b92d4e04c7699da47c59c3d58582822",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "fc5b3acd04818ee0b716d4417e825670ba98023e4efe6d1b1101a335da7a6c5a"
     },
     {
       "source": "Benchmark/Standard Environment/benchmark/scenarios/sensor_noise_x4.json",
       "destination": "experiments/ab3/Standard Environment/benchmark/scenarios/sensor_noise_x4.json",
       "sha256": "99c7b765e685e7817fcab51add034461c2818622f014d1c7062110ef35fb5491",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "64f5b28760f4b51fdb344d80e907d9053dea85f745b14c3dec4619fc7e8fa2cf"
     },
     {
       "source": "Benchmark/Standard Environment/benchmark/tests/test_evaluator.py",
       "destination": "experiments/ab3/Standard Environment/benchmark/tests/test_evaluator.py",
       "sha256": "a456809bbac723f392a2eb00f69103253ce1fa226e935cbdaf87d5b6428020ce",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "136cb1e25765a2f0c6add7c4f59e4996d7006b989e9fc91165bf4c051cc5cbcd"
     },
     {
       "source": "Benchmark/Standard Environment/benchmark/tools/install_supervisor.py",
       "destination": "experiments/ab3/Standard Environment/benchmark/tools/install_supervisor.py",
       "sha256": "00f018573c3287559eef7b069eee579be158e7d4fc4f6e9cdb8780d76d785826",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "27060687252d0c5f9543db3059a97e1f33a38c613a6acce21d7341670f7b60eb"
     },
     {
       "source": "Benchmark/Standard Environment/benchmark/tools/make_ab3_gt_map.py",
       "destination": "experiments/ab3/Standard Environment/benchmark/tools/make_ab3_gt_map.py",
       "sha256": "588ff5d8e130d4a436900da57627771345c4a20217d8b6990e3836e26992c9e5",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "07c69b1a11f134378909fc580cf9202b42fd84753ced3edc030f39d5f393f22a"
     },
     {
       "source": "Benchmark/Standard Environment/ground_truth/ab3_gt_map.npz",
       "destination": "experiments/ab3/Standard Environment/ground_truth/ab3_gt_map.npz",
       "sha256": "92d56c60fa433350e67c5cbf6ce653d067c33fe4113bef655c3a36762ec04186",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "92d56c60fa433350e67c5cbf6ce653d067c33fe4113bef655c3a36762ec04186"
     },
     {
       "source": "Benchmark/Standard Environment/ground_truth/ab3_layout.npz",
       "destination": "experiments/ab3/Standard Environment/ground_truth/ab3_layout.npz",
       "sha256": "1e61fe1041355987a9cadb772fad81068c6b0f7c4faa37c3bbb7450a5a786598",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "1e61fe1041355987a9cadb772fad81068c6b0f7c4faa37c3bbb7450a5a786598"
     },
     {
       "source": "Benchmark/Standard Environment/robot/robot_spec.json",
       "destination": "experiments/ab3/Standard Environment/robot/robot_spec.json",
       "sha256": "24b5a4688b7d9435b80585d32402a44d0545c19e3a19a496a41785e962adc535",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "a4ed18f834892a25f7e66c64589f30838538a2f41e1bc4fe883b9ed563ce23be"
     },
     {
       "source": "Benchmark/Standard Environment/robot/start_poses.json",
       "destination": "experiments/ab3/Standard Environment/robot/start_poses.json",
       "sha256": "ba077e48e30f22c52963d2a112da61ce058ff9d02d7f3d90aa3d80f822a5f637",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "668ed1ac69503c5e3872c21991e9954d2a8b836503a8d3617334d5c29459ff15"
     },
     {
       "source": "Benchmark/Standard Environment/robot/stereo_left.yaml",
       "destination": "experiments/ab3/Standard Environment/robot/stereo_left.yaml",
       "sha256": "3e26fe49b249602e4380455ea04617da6fd464655de5451615f5fddbdc1256e2",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "c910e8b8872fcc739c91fbf3ec6d8212addd37076b8145d1bc86d8584580110e"
     },
     {
       "source": "Benchmark/Standard Environment/robot/stereo_right.yaml",
       "destination": "experiments/ab3/Standard Environment/robot/stereo_right.yaml",
       "sha256": "a2b7025fb6ae8be7e2347e54bf64bd2de94a30631871f2ae576cc89ff56e198d",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "888c03bd78761d782ea47a85e903961bf45fa356419d1329f144b0b3d97b53c5"
     },
     {
       "source": "Benchmark/Standard Environment/sensors/bstem_sensors.py",
       "destination": "experiments/ab3/Standard Environment/sensors/bstem_sensors.py",
       "sha256": "c58f6e0c1955f987f8166da4ae9c3a4d21f3ed43be31fca0d3342ff263a2937c",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "c2c915eafd0ddfab503b8a82f31447819b7192f59b404402c701bdd9439d7e83"
     },
     {
       "source": "Benchmark/Standard Environment/tools/bench_python.sh",
       "destination": "experiments/ab3/Standard Environment/tools/bench_python.sh",
       "sha256": "d407db672fc5adbaeb51f9fb2e762732b2f08edbbeb7d47e39b4e779bd760cd4",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "d407db672fc5adbaeb51f9fb2e762732b2f08edbbeb7d47e39b4e779bd760cd4"
     },
     {
       "source": "Benchmark/Standard Environment/tools/common.ps1",
       "destination": "experiments/ab3/Standard Environment/tools/common.ps1",
       "sha256": "2106085bbc085335a35854fc5142f10303db13e4ef62e85054e709624a46664a",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "60a98cbfd9d0badd9b2f76da2db12fb06e354db6865efc1fa48540f971767070"
     },
     {
       "source": "Benchmark/Standard Environment/tools/install_controller.py",
       "destination": "experiments/ab3/Standard Environment/tools/install_controller.py",
       "sha256": "09c1a0b40dadb8c4f379be1300f9490b7881e58ea2b531be6893a6e3d2baaab6",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "43371d021994d91e34416ce079680c2ac9ce34d143fbf5730e462ed03e62fd7e"
     },
     {
       "source": "Benchmark/Standard Environment/tools/launcher_common.py",
       "destination": "experiments/ab3/Standard Environment/tools/launcher_common.py",
       "sha256": "62a41def68695e74826b222f97f9bc4b460521a82a260c479b89e23fbb777c78",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "eb8d3ad054de1868f98282b9f74f6551fb7c7e972879259761d4b3960f2c2083"
     },
     {
       "source": "Benchmark/Standard Environment/tools/make_algorithm_world.py",
       "destination": "experiments/ab3/Standard Environment/tools/make_algorithm_world.py",
       "sha256": "28a99e44385da0b36dc085904c497512376f4e1642987450cc3744d183dd3458",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "50a41704949abc786b3455756f748493b74857df888fd256b8f3ae6fc8d8919b"
     },
     {
       "source": "Benchmark/Standard Environment/tools/make_standard_world.py",
       "destination": "experiments/ab3/Standard Environment/tools/make_standard_world.py",
       "sha256": "cc647837a5c1ffc1436e1872a61870871dcd5fca4292dbd9f47a0ed90124dabb",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "fbf1b527e9f018db85a5b7b75b97cc1c78b3ec0e0405cacb050395221b927dcb"
     },
     {
       "source": "Benchmark/Standard Environment/tools/run_outputs.py",
       "destination": "experiments/ab3/Standard Environment/tools/run_outputs.py",
       "sha256": "73566c9ae7b26092a38070ea6c93c2b1aecc50527eac7b7dfa376034ce054fc2",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "c15d0c7350e4775225fb9ee331f320d74368020ac3ef96f4ba9875c8ca958ebf"
     },
     {
       "source": "Benchmark/Standard Environment/tools/run_with_bench_python.ps1",
       "destination": "experiments/ab3/Standard Environment/tools/run_with_bench_python.ps1",
       "sha256": "425011bca2764f42b741a77c0aa941ee91d31fc0729e6c6b55f02691f83a76b4",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "067af59b55b21bde1dfc2c975ed90789c81371372859602f0727123dbeceb80f"
     },
     {
       "source": "Benchmark/Standard Environment/tools/standard_manifest.py",
       "destination": "experiments/ab3/Standard Environment/tools/standard_manifest.py",
       "sha256": "69dc5c440155c6b041d98155f205ce7ffe7089437cf6eedec769e07d1b88c76a",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "db128f6ec5f1c48bb8509e38660001d7d126504630cd28b524f9430bfc3c999a"
     },
     {
       "source": "Benchmark/Standard Environment/tools/reference/ab3_first_floor.wbt",
       "destination": "experiments/ab3/Standard Environment/tools/reference/ab3_first_floor.wbt",
       "sha256": "fc975e840fb208ea14f948b2dda40b5053ceaedcae227ac5b7e2d354107dcaef",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "5a69626025d12d9092669c23f0241ce970e49255494acb751cca964ce2830d4f"
     },
     {
       "source": "Benchmark/Standard Environment/webots/protos/AB3BenchBot.proto",
       "destination": "experiments/ab3/Standard Environment/webots/protos/AB3BenchBot.proto",
       "sha256": "9baecd1a0e891c9a2b81bbefb6b78e56d050c78df0a7fb77f38672717c951902",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "6a5a05cebe8a6380614745aa4e7ff3503329cb48277d920f96242df754925b77"
     },
     {
       "source": "Benchmark/Standard Environment/webots/protos/AB3Board.proto",
       "destination": "experiments/ab3/Standard Environment/webots/protos/AB3Board.proto",
       "sha256": "fe036ff44a58faf442554d1dac404bc85a52122746af07d32a64f69052dff1e9",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "cd793f9aa0e0a39b2d0f4f51af9e6d82f099d7d17810ceb132585bcc515c9d8a"
     },
     {
       "source": "Benchmark/Standard Environment/webots/protos/AB3ConferenceTable.proto",
       "destination": "experiments/ab3/Standard Environment/webots/protos/AB3ConferenceTable.proto",
       "sha256": "16a6199ed28217ec26d6027453594265a9257d41ff7ebeed9c9360268915e37c",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "27839e1e5fef2a5e40065d504633cb9ea6f5719a26a02c76510c80c23ed92cbd"
     },
     {
       "source": "Benchmark/Standard Environment/webots/protos/AB3Cubicle.proto",
       "destination": "experiments/ab3/Standard Environment/webots/protos/AB3Cubicle.proto",
       "sha256": "df01661983c07520c730e13f5adf421f444c364cf54ac60cfd4401d4c87c94ac",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "b7cd54adb7cb48745183a7a795a2dd8095bb42bf42fb0e2dc9cab5c17cc18a65"
     },
     {
       "source": "Benchmark/Standard Environment/webots/protos/AB3Desk.proto",
       "destination": "experiments/ab3/Standard Environment/webots/protos/AB3Desk.proto",
       "sha256": "28e9906068f99295d0144088548dbb680b2dfbd2a3bc1856d2bf50861547edc5",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "984a375661762ff01ca43f0e5684701e9bdbe915baf1dfcfc398642bb615a1ab"
     },
     {
       "source": "Benchmark/Standard Environment/webots/protos/AB3Doorway.proto",
       "destination": "experiments/ab3/Standard Environment/webots/protos/AB3Doorway.proto",
       "sha256": "6396d8b8bfe1cdc81031ed311398cb5ed38cd7b24b56786c9bcf5b046ec0bb52",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "6cf452f3d42b4114125e0e95cf4ec99cc89c5e80f2952b9e94561f808c602900"
     },
     {
       "source": "Benchmark/Standard Environment/webots/protos/AB3Floor.proto",
       "destination": "experiments/ab3/Standard Environment/webots/protos/AB3Floor.proto",
       "sha256": "7fd83142aa14b7d4d4f6671ca5278e009d6f50ddb05f5287673c2cc35434139e",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "dfa428b996d661446c53776175d924221f6c04a4313d3f7d4c16dc41b38cce17"
     },
     {
       "source": "Benchmark/Standard Environment/webots/protos/AB3LabBench.proto",
       "destination": "experiments/ab3/Standard Environment/webots/protos/AB3LabBench.proto",
       "sha256": "4c7054ad6b10d24187b96940ab77a8c0c7a9ff0e10383a72177209f1eb5092ef",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "07abfc3e20142293f4b2150f6aa62234715e3064f780d802d67c63fc4a89b32a"
     },
     {
       "source": "Benchmark/Standard Environment/webots/protos/AB3Parapet.proto",
       "destination": "experiments/ab3/Standard Environment/webots/protos/AB3Parapet.proto",
       "sha256": "71fb43e10866902dc1f496403bfa51ef0aa499cff456b0dff841da2c350da8b4",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "51f8be1549a167f16f569dc65c709dd72f5ef7606b1ada39fb982df2cbe90080"
     },
     {
       "source": "Benchmark/Standard Environment/webots/protos/AB3Partition.proto",
       "destination": "experiments/ab3/Standard Environment/webots/protos/AB3Partition.proto",
       "sha256": "016a1c47d1a3717e41896d7cbb59ccac065eb22db0e5cbcd486e9015807f3b7b",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "060b23e78a72b4c257394159f345d79f5903b57051af23055aea1668f0b5a367"
     },
     {
       "source": "Benchmark/Standard Environment/webots/protos/AB3Platform.proto",
       "destination": "experiments/ab3/Standard Environment/webots/protos/AB3Platform.proto",
       "sha256": "30dbdd61f55df78be6e50cc9a6fbd8b38aee5af529fbe1cdcaf84bc4848dbba4",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "e15d30c7859c2943b0e7e1c844c63039da3d46a9b6f27ce2f2245dc930e0b6cc"
     },
     {
       "source": "Benchmark/Standard Environment/webots/protos/AB3Poster.proto",
       "destination": "experiments/ab3/Standard Environment/webots/protos/AB3Poster.proto",
       "sha256": "3e0683e810f004f2bd852429a5cf2209aee8c71cd8fdc86d5ee19630692ab169",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "f2155eba0bdf7d4c3754f7444b870523284e372d5559be7ccf144a161630c92f"
     },
     {
       "source": "Benchmark/Standard Environment/webots/protos/AB3StairBlock.proto",
       "destination": "experiments/ab3/Standard Environment/webots/protos/AB3StairBlock.proto",
       "sha256": "aec4014e7a2afa1a3421ab0508600e4dbcc8ca711ac5404198f3de93c02600c5",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "3db5ba47cf598d3ab9a8552c2bcaeeef37d48e1b579411aad5a064e396f25bca"
     },
     {
       "source": "Benchmark/Standard Environment/webots/protos/AB3Wall.proto",
       "destination": "experiments/ab3/Standard Environment/webots/protos/AB3Wall.proto",
       "sha256": "cf31fe46dd7391fbefba7a24f65d4978eb7564f6a1817c0a322340d9ef59b076",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "49138f8239d9f6026ed1222cdbfd83dbdc2acd0e1667c7390dccd854b9ff31fd"
     },
     {
       "source": "Benchmark/Standard Environment/webots/protos/AB3WindowBand.proto",
       "destination": "experiments/ab3/Standard Environment/webots/protos/AB3WindowBand.proto",
       "sha256": "6e1893d12a8e0582581cb46ee088be964e3c2cd18a98a8ce8697a77533d564c1",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "e0a4df99e9eb2e0c52ec932bedb430bd68e99fe511d87e2852982546fb8ebe4a"
     },
     {
       "source": "Benchmark/Standard Environment/webots/protos/BstemRobot.proto",
       "destination": "experiments/ab3/Standard Environment/webots/protos/BstemRobot.proto",
       "sha256": "6ef5229f89fa4563e0c8490b8e718e6f3ca865f07c44a6972aeee54080262fd5",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "4b2d1f4ff5435d8e0b0ea039e405dabea3a205671020d604e8857722c471c1fe"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/ab3_standard.wbt",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/ab3_standard.wbt",
       "sha256": "279dfe5abd7ae55e6e387874a8eb11958f43831a5c93bdcfc3d573ec5a3a8492",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "95f2b61e1036cd1e0469396f386a93e833800592088a1009243f80bb9958d3d3"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/bench.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/bench.png",
       "sha256": "590164de5997abca487b0e22f3c6ca80b28575345584265cf547e7d84827f3b9",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "590164de5997abca487b0e22f3c6ca80b28575345584265cf547e7d84827f3b9"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/board.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/board.png",
       "sha256": "2653a893c0402a6fff0f6f381565f8b8f1cee0993df04f01c6e88b357a7e4586",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "2653a893c0402a6fff0f6f381565f8b8f1cee0993df04f01c6e88b357a7e4586"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/ceiling.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/ceiling.png",
       "sha256": "0d843b55dba21c395eee4840fec97f3a9994f81eabc34c159644559614629fc2",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "0d843b55dba21c395eee4840fec97f3a9994f81eabc34c159644559614629fc2"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/column.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/column.png",
       "sha256": "47c43ac2f19f8365d7b95806b1c92df4a868cd95a0808f126578924dafaa2a1b",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "47c43ac2f19f8365d7b95806b1c92df4a868cd95a0808f126578924dafaa2a1b"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/courtyard_ground.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/courtyard_ground.png",
       "sha256": "52be63740ad6bbe860ef3c5fc643d07d8a028ff3460e109a94556f0c49525096",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "52be63740ad6bbe860ef3c5fc643d07d8a028ff3460e109a94556f0c49525096"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/cubicle.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/cubicle.png",
       "sha256": "8c60521a6243e959de9b8aea43410487a859fbd4f229ea0811ed0d5438745031",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "8c60521a6243e959de9b8aea43410487a859fbd4f229ea0811ed0d5438745031"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/desk.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/desk.png",
       "sha256": "3f83ea1d79417be4c33d4cef51f92309ee691b6fb34b6b237799a33fb33b270e",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "3f83ea1d79417be4c33d4cef51f92309ee691b6fb34b6b237799a33fb33b270e"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/door.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/door.png",
       "sha256": "c21141f62709f74681d488ec5fac5b1d1cffe98156e9378a3bddea0c56ada74a",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "c21141f62709f74681d488ec5fac5b1d1cffe98156e9378a3bddea0c56ada74a"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/flat.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/flat.png",
       "sha256": "c7d5a6fa18be467669de819eef1fa0c003b35983d7eb8fc04a539d4c98be949a",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "c7d5a6fa18be467669de819eef1fa0c003b35983d7eb8fc04a539d4c98be949a"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/floor_00.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/floor_00.png",
       "sha256": "3c7e8589b9a9a3f46648e7b5c528d5c6f0251f90a1138857e91d1a465c1237c0",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "3c7e8589b9a9a3f46648e7b5c528d5c6f0251f90a1138857e91d1a465c1237c0"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/floor_01.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/floor_01.png",
       "sha256": "30ebe393d3ef6c1b6ca726b57cfb4b3f5d84e1eadf43fe855f68bc93b9a81b33",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "30ebe393d3ef6c1b6ca726b57cfb4b3f5d84e1eadf43fe855f68bc93b9a81b33"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/floor_02.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/floor_02.png",
       "sha256": "ad307524bc375c30840da16217eabaf0c87dc94cbc5ae644fb626f7fa2723d9b",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "ad307524bc375c30840da16217eabaf0c87dc94cbc5ae644fb626f7fa2723d9b"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/floor_03.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/floor_03.png",
       "sha256": "9fc83eb4c03381d3f7934c6d8597d3d0ac3e041a9757d3be9d67db9c8b4ad579",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "9fc83eb4c03381d3f7934c6d8597d3d0ac3e041a9757d3be9d67db9c8b4ad579"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/floor_04.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/floor_04.png",
       "sha256": "d4538659b27f5f6dc0ce4d3b8dd3000694cf595209e7eb896b6b7534266901b4",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "d4538659b27f5f6dc0ce4d3b8dd3000694cf595209e7eb896b6b7534266901b4"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/floor_05.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/floor_05.png",
       "sha256": "c49de0029b3a794a72d3db2238c88473ab32c95e9fbb1767f12e5112193e9853",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "c49de0029b3a794a72d3db2238c88473ab32c95e9fbb1767f12e5112193e9853"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/notice_board.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/notice_board.png",
       "sha256": "0aae209c7debae3c1bc8e8f615241503cbd37b34fe9c89b79f065af55e453cd2",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "0aae209c7debae3c1bc8e8f615241503cbd37b34fe9c89b79f065af55e453cd2"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/parapet.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/parapet.png",
       "sha256": "eab8e6aef6e3eb1959018df2ced635ca07343d1ae2469e1656a38ca86cd8edbf",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "eab8e6aef6e3eb1959018df2ced635ca07343d1ae2469e1656a38ca86cd8edbf"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/partition.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/partition.png",
       "sha256": "5809f59244a2f7c899a2f50f67bb03bf38a0b2955e5b7fc65a6701d532f5b3c8",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "5809f59244a2f7c899a2f50f67bb03bf38a0b2955e5b7fc65a6701d532f5b3c8"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/plaster_00.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/plaster_00.png",
       "sha256": "0620ac19c53aa6661c1111b38fd8d3516661d83bee2416d082f434851899acb6",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "0620ac19c53aa6661c1111b38fd8d3516661d83bee2416d082f434851899acb6"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/plaster_01.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/plaster_01.png",
       "sha256": "4354dc69d842ee7b0763a13bccf789472c4eafc09f91b9e3a545e441e86bb6f0",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "4354dc69d842ee7b0763a13bccf789472c4eafc09f91b9e3a545e441e86bb6f0"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/plaster_02.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/plaster_02.png",
       "sha256": "4b8392013b40840c11498bfa9852e0e9485c1720eb7a34a14dbf62b760915165",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "4b8392013b40840c11498bfa9852e0e9485c1720eb7a34a14dbf62b760915165"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/plaster_03.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/plaster_03.png",
       "sha256": "312f19d2b9e2bb1280a5cdc71a778228a2184a471d9466370dbb251e462a7725",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "312f19d2b9e2bb1280a5cdc71a778228a2184a471d9466370dbb251e462a7725"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/plaster_04.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/plaster_04.png",
       "sha256": "560e77e9711f9f948ac3635140255c84c8b63264a5acb92f010624ec69c72f5c",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "560e77e9711f9f948ac3635140255c84c8b63264a5acb92f010624ec69c72f5c"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/plaster_05.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/plaster_05.png",
       "sha256": "d68a5e976c0b7dc7f19578280752ff9933a6ea1a56e63a9cc22abc92a862b4a7",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "d68a5e976c0b7dc7f19578280752ff9933a6ea1a56e63a9cc22abc92a862b4a7"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/plaster_06.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/plaster_06.png",
       "sha256": "3b3054a80161db8d5f20f6bb6af2496a4665544105563f013e1716ad33f084b7",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "3b3054a80161db8d5f20f6bb6af2496a4665544105563f013e1716ad33f084b7"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/plaster_07.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/plaster_07.png",
       "sha256": "70931ce69df83278a54d22bd30ee831bda8ba331528a620f6b19b761e0e8b483",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "70931ce69df83278a54d22bd30ee831bda8ba331528a620f6b19b761e0e8b483"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/platform.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/platform.png",
       "sha256": "fa1d8012cabfca8c2f51afb69f26a39d1ab88bb0ed4df88ac828798cc346aae3",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "fa1d8012cabfca8c2f51afb69f26a39d1ab88bb0ed4df88ac828798cc346aae3"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/poster_00.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/poster_00.png",
       "sha256": "ead47ed54f9c3063ba2b2b141fbebac126a176be3bbb8ad1443bb630a14e21d0",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "ead47ed54f9c3063ba2b2b141fbebac126a176be3bbb8ad1443bb630a14e21d0"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/poster_01.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/poster_01.png",
       "sha256": "6c16b8d1a1212f0d4180866291af4402f8eae7e3b4eebbd6d87526d36c31ecda",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "6c16b8d1a1212f0d4180866291af4402f8eae7e3b4eebbd6d87526d36c31ecda"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/poster_02.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/poster_02.png",
       "sha256": "4e83c18f9abfa9ce3bc7f70822609c3c39c7b87d82b1902c8823c61c9c4336d5",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "4e83c18f9abfa9ce3bc7f70822609c3c39c7b87d82b1902c8823c61c9c4336d5"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/poster_03.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/poster_03.png",
       "sha256": "2a667c03b45304c7031076730b60571322d04f9a2e04c3d78b86d0d03f28ea4c",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "2a667c03b45304c7031076730b60571322d04f9a2e04c3d78b86d0d03f28ea4c"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/poster_04.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/poster_04.png",
       "sha256": "d8d889c526f7b176a2fd11ae90d28b9e3e1a7946929305c070765341057a3933",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "d8d889c526f7b176a2fd11ae90d28b9e3e1a7946929305c070765341057a3933"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/poster_05.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/poster_05.png",
       "sha256": "ab94b89e33cb92f4d8da0012ecf780fee336b0f9a823ed1f13330395f454c02a",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "ab94b89e33cb92f4d8da0012ecf780fee336b0f9a823ed1f13330395f454c02a"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/poster_06.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/poster_06.png",
       "sha256": "92e4602b334141dee87e9d0dcfaa1e6a1866e32283c9318538120d0843920fa2",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "92e4602b334141dee87e9d0dcfaa1e6a1866e32283c9318538120d0843920fa2"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/poster_07.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/poster_07.png",
       "sha256": "ca4627163a1d9dad29ffaa53b38c0fa6a0a74b5f965eb9cc850f0b25b6da80f1",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "ca4627163a1d9dad29ffaa53b38c0fa6a0a74b5f965eb9cc850f0b25b6da80f1"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/poster_08.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/poster_08.png",
       "sha256": "bc93cddcb79744564784f9977c76a7a9885f72969b2c494f06dec25976f0ca49",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "bc93cddcb79744564784f9977c76a7a9885f72969b2c494f06dec25976f0ca49"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/poster_09.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/poster_09.png",
       "sha256": "b85a58301e46c5add218a6f59d1f10523b05e475f7e22b3bc91f52dc0e065340",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "b85a58301e46c5add218a6f59d1f10523b05e475f7e22b3bc91f52dc0e065340"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/poster_10.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/poster_10.png",
       "sha256": "80f3012a701bcbf52bbc0f4ae680f102d1963c29e43a2968c1c5893448dabbf3",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "80f3012a701bcbf52bbc0f4ae680f102d1963c29e43a2968c1c5893448dabbf3"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/poster_11.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/poster_11.png",
       "sha256": "a74a580b8dabaa6c42e6259f90718bb691430d18c29c0e5267a65adc3b1136a7",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "a74a580b8dabaa6c42e6259f90718bb691430d18c29c0e5267a65adc3b1136a7"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_A-201.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_A-201.png",
       "sha256": "6035cdb190bd4be4b8994e4ca371624858987b61ab477df08f3bfd617a993454",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "6035cdb190bd4be4b8994e4ca371624858987b61ab477df08f3bfd617a993454"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_A-202.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_A-202.png",
       "sha256": "10b96d9a421340124209769f9e89e34ecfd2d7e08bdb687d35b3bb952366f7a3",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "10b96d9a421340124209769f9e89e34ecfd2d7e08bdb687d35b3bb952366f7a3"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_A-203.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_A-203.png",
       "sha256": "eb918c3a632ddbf8ae343f3b8d7286d380fba23d3bd626cdb669687410c8e1bb",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "eb918c3a632ddbf8ae343f3b8d7286d380fba23d3bd626cdb669687410c8e1bb"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_A-204.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_A-204.png",
       "sha256": "d3959b336d77fdf5d5c37baa2a5cfc2eef384c4609e400476b004fb30353a2c4",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "d3959b336d77fdf5d5c37baa2a5cfc2eef384c4609e400476b004fb30353a2c4"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_A-205.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_A-205.png",
       "sha256": "c32ca441e785acde51e0b9b7726cccd40879d85c600061af37a6cf3a635aee81",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "c32ca441e785acde51e0b9b7726cccd40879d85c600061af37a6cf3a635aee81"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_B-201.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_B-201.png",
       "sha256": "64beda4eb03d769eaaeb6fb964ceae698bf08d3db883b74dcb4d9a9f42e9dd4d",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "64beda4eb03d769eaaeb6fb964ceae698bf08d3db883b74dcb4d9a9f42e9dd4d"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_B-202.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_B-202.png",
       "sha256": "9449c7cefc4fa7ef52653d8d6ea2abedba72bd0f4c3b7ad50a8f9b380b82917f",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "9449c7cefc4fa7ef52653d8d6ea2abedba72bd0f4c3b7ad50a8f9b380b82917f"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_B-203.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_B-203.png",
       "sha256": "747dab49921d0598d268458cb4cde0563495dca15b1e71e0e5c5bfd871671b17",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "747dab49921d0598d268458cb4cde0563495dca15b1e71e0e5c5bfd871671b17"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_B-204.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_B-204.png",
       "sha256": "b46afe98574cb35cb7639c350f5c35bc0263fb9d6da8365910eec90208285884",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "b46afe98574cb35cb7639c350f5c35bc0263fb9d6da8365910eec90208285884"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_B204-PASS.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_B204-PASS.png",
       "sha256": "8f43607ceb1acc6d58cc70cdf42504b781ba09e4342d71964cb6212f8da5a72e",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "8f43607ceb1acc6d58cc70cdf42504b781ba09e4342d71964cb6212f8da5a72e"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_C-201.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_C-201.png",
       "sha256": "9a4f9c4d39b29e62b7fc9508d09517e7b9146b07fdf36e48e2311821c4e44e93",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "9a4f9c4d39b29e62b7fc9508d09517e7b9146b07fdf36e48e2311821c4e44e93"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_C-202.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_C-202.png",
       "sha256": "cee21998043b698f8fdd4eb926637bfcacfa4c36a9d4095c10ad08be9e246c70",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "cee21998043b698f8fdd4eb926637bfcacfa4c36a9d4095c10ad08be9e246c70"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_C-203.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_C-203.png",
       "sha256": "ec5cdcdb03966f89b166a4cd0b9722b351b721806b635a5ea61edba36d844ee3",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "ec5cdcdb03966f89b166a4cd0b9722b351b721806b635a5ea61edba36d844ee3"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_C-204.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_C-204.png",
       "sha256": "918f1cfaa7c4e3423f45d4dccb07f111f5a6dc2791f7477e7bc79f807ff00358",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "918f1cfaa7c4e3423f45d4dccb07f111f5a6dc2791f7477e7bc79f807ff00358"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_C-205.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_C-205.png",
       "sha256": "957568a9a903772e1d612d300b5d3d727057b99c124fa48dd2cff9233966d5af",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "957568a9a903772e1d612d300b5d3d727057b99c124fa48dd2cff9233966d5af"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_C-CTS.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_C-CTS.png",
       "sha256": "57056023909716734345ef1fc4d2e02e2a156eb24490848380017f23737b554b",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "57056023909716734345ef1fc4d2e02e2a156eb24490848380017f23737b554b"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_C-HW.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_C-HW.png",
       "sha256": "8c6f7145bb68a7de33e9bba5d1653041b834589455675beda8dbfc51d50313be",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "8c6f7145bb68a7de33e9bba5d1653041b834589455675beda8dbfc51d50313be"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_COR-AT-E.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_COR-AT-E.png",
       "sha256": "ffb11332d0c274b2e5f8e179e8025cd7ed01a3c0fcb673d9b047ffa03e51cf7b",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "ffb11332d0c274b2e5f8e179e8025cd7ed01a3c0fcb673d9b047ffa03e51cf7b"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_COR-AT-W.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_COR-AT-W.png",
       "sha256": "82837292e91df4e847e8c11d74bf45a62e6db786e97a0e8fafcdf67049793cec",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "82837292e91df4e847e8c11d74bf45a62e6db786e97a0e8fafcdf67049793cec"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_COR-N-E.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_COR-N-E.png",
       "sha256": "d8dfccde7b44983666c7884db102ac8a1db3445ba1d6618d4d3e00a4802b2ea3",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "d8dfccde7b44983666c7884db102ac8a1db3445ba1d6618d4d3e00a4802b2ea3"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_COR-N-W.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_COR-N-W.png",
       "sha256": "5dad8dc71937da93bca0ad0b6efefb3e57ceefb6375434af4901df55b579aee0",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "5dad8dc71937da93bca0ad0b6efefb3e57ceefb6375434af4901df55b579aee0"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_COR-S-STUB.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_COR-S-STUB.png",
       "sha256": "9d9a8f06d75797266225072de938b5fe52f2358a4c6a1eed1f479dbd48665458",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "9d9a8f06d75797266225072de938b5fe52f2358a4c6a1eed1f479dbd48665458"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_COR-S.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_COR-S.png",
       "sha256": "1adfd6d9a8f48139fdc54114be5d5f16eb4f81a99674ed6841c997a81bb43644",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "1adfd6d9a8f48139fdc54114be5d5f16eb4f81a99674ed6841c997a81bb43644"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_CY-ATRIUM.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_CY-ATRIUM.png",
       "sha256": "ebad8c7f4f0958c7afff6dd1c2f80db2ccef81295a389d3d1bd3155e9fe8efb9",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "ebad8c7f4f0958c7afff6dd1c2f80db2ccef81295a389d3d1bd3155e9fe8efb9"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_CY-NE1.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_CY-NE1.png",
       "sha256": "670b154be3be71e5287a14aa184ee4a1e121c6bde23b8e814d722dda3fe2afa7",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "670b154be3be71e5287a14aa184ee4a1e121c6bde23b8e814d722dda3fe2afa7"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_CY-NE2.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_CY-NE2.png",
       "sha256": "7c32808c8b52b5303e03bf4dbe59c3fed61648a8e84913c83f1fc523a2672825",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "7c32808c8b52b5303e03bf4dbe59c3fed61648a8e84913c83f1fc523a2672825"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_CY-NW1.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_CY-NW1.png",
       "sha256": "5cfe0ab93a034eca3ebf340835b072015a27d017500cb40666d56019f6228c88",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "5cfe0ab93a034eca3ebf340835b072015a27d017500cb40666d56019f6228c88"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_CY-NW2.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_CY-NW2.png",
       "sha256": "59e8a1787758fa548482d37a41abfa203b89c28ad785e90f7837c254069e3257",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "59e8a1787758fa548482d37a41abfa203b89c28ad785e90f7837c254069e3257"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_CY-SE1.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_CY-SE1.png",
       "sha256": "e4337826642c626decc10c8316930c8fb2781c3fcbf6086f6ceaea4881a5c19d",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "e4337826642c626decc10c8316930c8fb2781c3fcbf6086f6ceaea4881a5c19d"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_CY-SE2.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_CY-SE2.png",
       "sha256": "702ef0f63424cbe293fe8eeca80ab7f2c04211934184f8f0c0a3d7bdc16e5310",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "702ef0f63424cbe293fe8eeca80ab7f2c04211934184f8f0c0a3d7bdc16e5310"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_CY-SW1.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_CY-SW1.png",
       "sha256": "c2f8be1ebea03b9dc19e2fc7323bca03bd461aee7b4b75a9af896759c47fb111",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "c2f8be1ebea03b9dc19e2fc7323bca03bd461aee7b4b75a9af896759c47fb111"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_CY-SW2.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_CY-SW2.png",
       "sha256": "1f8293deccb141f9e18ef04cc7704bd6693fb3da0607c999cce5ced6e2a2fafb",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "1f8293deccb141f9e18ef04cc7704bd6693fb3da0607c999cce5ced6e2a2fafb"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_D-201.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_D-201.png",
       "sha256": "a02c3a5974db9dc4943451feedfe177421d881b320cda85d22517f983abd2ce4",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "a02c3a5974db9dc4943451feedfe177421d881b320cda85d22517f983abd2ce4"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_D-202.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_D-202.png",
       "sha256": "c22ea96d25e83a3949fa24330efabdeac6a656d5dba78cca1ee75d6a19fb429b",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "c22ea96d25e83a3949fa24330efabdeac6a656d5dba78cca1ee75d6a19fb429b"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_D-203.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_D-203.png",
       "sha256": "829bfd97cde0d50c000b624cbf54955979cf16b69e5a20cf2a0be3469aca0695",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "829bfd97cde0d50c000b624cbf54955979cf16b69e5a20cf2a0be3469aca0695"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_D-204.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_D-204.png",
       "sha256": "f054c968c08008ae76f268d46fc5f9570d16c0e981cb18083e549917eb89ed38",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "f054c968c08008ae76f268d46fc5f9570d16c0e981cb18083e549917eb89ed38"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_D-205.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_D-205.png",
       "sha256": "330093b01ba3a502936ad3366070125f7dbb2f439400a98d6191a121ebee08f6",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "330093b01ba3a502936ad3366070125f7dbb2f439400a98d6191a121ebee08f6"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_D-206.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_D-206.png",
       "sha256": "89ac394813c2f2c16a43be32df23224562b4776b11b39df29d1c1fe5c58e7eb0",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "89ac394813c2f2c16a43be32df23224562b4776b11b39df29d1c1fe5c58e7eb0"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_D-207.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_D-207.png",
       "sha256": "fbfeeb9d8b4031d1c177afaf8b0d451b32cc7ed8e5e54d186beea4e856f9770b",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "fbfeeb9d8b4031d1c177afaf8b0d451b32cc7ed8e5e54d186beea4e856f9770b"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_D-208.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_D-208.png",
       "sha256": "b8160e7e47b31fb111dae3c75f30e8d6c72b173320d77d4f8eab86289a1dc1a1",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "b8160e7e47b31fb111dae3c75f30e8d6c72b173320d77d4f8eab86289a1dc1a1"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_D-209.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_D-209.png",
       "sha256": "f60085413fb35cad371e81500f522905291861fb25ac67261c8c2fd3e5a566d4",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "f60085413fb35cad371e81500f522905291861fb25ac67261c8c2fd3e5a566d4"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_D-210.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_D-210.png",
       "sha256": "049b5673b1c9721406ea8b320c6652f87dbeb31de11be2d081f0a69565208e11",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "049b5673b1c9721406ea8b320c6652f87dbeb31de11be2d081f0a69565208e11"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_D-211.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_D-211.png",
       "sha256": "6ac9488181f594f37fa128b06b34e57c97c1f9026eabc71d2311a2248cd14fed",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "6ac9488181f594f37fa128b06b34e57c97c1f9026eabc71d2311a2248cd14fed"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_DUCT-B-N.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_DUCT-B-N.png",
       "sha256": "bdd16a36a5ba3dfd3b87b8db9a9f0a3a401dbe06a36b29925c371b1c6bbbd9d1",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "bdd16a36a5ba3dfd3b87b8db9a9f0a3a401dbe06a36b29925c371b1c6bbbd9d1"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_DUCT-B-S.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_DUCT-B-S.png",
       "sha256": "57528ca37d10593d8fefc2377f7e416fbdc09db998718e366ccf89c8cdf44bdf",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "57528ca37d10593d8fefc2377f7e416fbdc09db998718e366ccf89c8cdf44bdf"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_DUCT-B.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_DUCT-B.png",
       "sha256": "cde1d86032bb103fa3a081ae425ca2561a3a580d86ad1761b3580b20f460d071",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "cde1d86032bb103fa3a081ae425ca2561a3a580d86ad1761b3580b20f460d071"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_DUCT-E-N.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_DUCT-E-N.png",
       "sha256": "03603342c26178ed740557c9821e66012c91bdecd61c45cf7cc93b2768801747",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "03603342c26178ed740557c9821e66012c91bdecd61c45cf7cc93b2768801747"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_DUCT-E-S.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_DUCT-E-S.png",
       "sha256": "c79ec06cafaa1e95971197f7566a09f396ed322113d7c940f36744017ad63e66",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "c79ec06cafaa1e95971197f7566a09f396ed322113d7c940f36744017ad63e66"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_DUCT-E.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_DUCT-E.png",
       "sha256": "0fb1364d48ebba53f1892c6ef4e1f25231cbd1a6c211dff6f1aa56d8dcacdd71",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "0fb1364d48ebba53f1892c6ef4e1f25231cbd1a6c211dff6f1aa56d8dcacdd71"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_DUCT-NE.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_DUCT-NE.png",
       "sha256": "d8456956351625cdaf9f8f1caac6d6cb5415057bd0d1fc2a5a3e8500fc073dbb",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "d8456956351625cdaf9f8f1caac6d6cb5415057bd0d1fc2a5a3e8500fc073dbb"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_DUCT-NEE.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_DUCT-NEE.png",
       "sha256": "5d88430e92094066add3a05b1bb4bee0cefac16cd526dedeeb9ed16710b95fb1",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "5d88430e92094066add3a05b1bb4bee0cefac16cd526dedeeb9ed16710b95fb1"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_DUCT-NW.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_DUCT-NW.png",
       "sha256": "4a70d12962a74c4c6c479eb7ba35ba5816fb095f1ff677f08b673daa2c915977",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "4a70d12962a74c4c6c479eb7ba35ba5816fb095f1ff677f08b673daa2c915977"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_DUCT-NWW.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_DUCT-NWW.png",
       "sha256": "a5323a2b189eb2109fbb03983c6b6e721fae33b0a89ee3b4f18954159fd1f4d3",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "a5323a2b189eb2109fbb03983c6b6e721fae33b0a89ee3b4f18954159fd1f4d3"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_DUCT-SE.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_DUCT-SE.png",
       "sha256": "0835e5ed2765bb8075f47b118cb606459e65259923ca594b9475c53eeae0572d",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "0835e5ed2765bb8075f47b118cb606459e65259923ca594b9475c53eeae0572d"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_DUCT-SEE.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_DUCT-SEE.png",
       "sha256": "6b05a5b0dcde142f433277f7d6ed46c1a21fe4588de015fa53bc408419bead54",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "6b05a5b0dcde142f433277f7d6ed46c1a21fe4588de015fa53bc408419bead54"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_DUCT-SW.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_DUCT-SW.png",
       "sha256": "d99672697e6673c25bb248f22ec856edbb2aa038236f2363659e78a8d1ab79f7",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "d99672697e6673c25bb248f22ec856edbb2aa038236f2363659e78a8d1ab79f7"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_DUCT-SWW.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_DUCT-SWW.png",
       "sha256": "6a001fc3e6fb2ef218c793bb27907b93266b100b77957374efa2a04e3e9054d8",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "6a001fc3e6fb2ef218c793bb27907b93266b100b77957374efa2a04e3e9054d8"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_E-201.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_E-201.png",
       "sha256": "e0af7d056817e8ada168c8e354b8ea4cfb786077e906e47b62dc7c8a1b2bf412",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "e0af7d056817e8ada168c8e354b8ea4cfb786077e906e47b62dc7c8a1b2bf412"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_E-202.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_E-202.png",
       "sha256": "e62908d7c5a177bb3e791c1c05bb288dd03edfdb4056266641bbf191d0e0aa1f",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "e62908d7c5a177bb3e791c1c05bb288dd03edfdb4056266641bbf191d0e0aa1f"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_E-203.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_E-203.png",
       "sha256": "71c42638b8d455f16a586cbb6cb7f31a4b1d64d64f5904a1a87ebc65302681cd",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "71c42638b8d455f16a586cbb6cb7f31a4b1d64d64f5904a1a87ebc65302681cd"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_E-204.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_E-204.png",
       "sha256": "9a1148c41070bbf94158cf75802fd9cea0540abef881e25b5587b03e045926bf",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "9a1148c41070bbf94158cf75802fd9cea0540abef881e25b5587b03e045926bf"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_E201-PASS.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_E201-PASS.png",
       "sha256": "d425431f35e22daf10ada576f607e60d9a704cb7646a41e06d6eea7f97c6d570",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "d425431f35e22daf10ada576f607e60d9a704cb7646a41e06d6eea7f97c6d570"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_EE-CORE.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_EE-CORE.png",
       "sha256": "823783dbf9d83270998e6a2b3531e4785d936d5730ce109aec262ab757915a8b",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "823783dbf9d83270998e6a2b3531e4785d936d5730ce109aec262ab757915a8b"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_EE-MAL.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_EE-MAL.png",
       "sha256": "a0a099848414dbe8237f2898060e7f749f3c0b91a568878f4ca3e2aeee768549",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "a0a099848414dbe8237f2898060e7f749f3c0b91a568878f4ca3e2aeee768549"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_EE-WC-L.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_EE-WC-L.png",
       "sha256": "c2524498edbc9c3f29669073015aa5b651badabcfddae37eb0285a90564514b9",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "c2524498edbc9c3f29669073015aa5b651badabcfddae37eb0285a90564514b9"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_F-201.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_F-201.png",
       "sha256": "d3b3f90361d2b741a5678065f7b27f4c054e57d58d3a2481777b1d3770ede7ac",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "d3b3f90361d2b741a5678065f7b27f4c054e57d58d3a2481777b1d3770ede7ac"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_F-202.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_F-202.png",
       "sha256": "4e53ce5173618b584cf12a5b49241446e802da12159702e1973ae748e1e4d2cf",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "4e53ce5173618b584cf12a5b49241446e802da12159702e1973ae748e1e4d2cf"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_F-203.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_F-203.png",
       "sha256": "4dc1b55e8dc3451771d6247ccdf2bf9339610e3bfec26eddea27c7965897a01c",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "4dc1b55e8dc3451771d6247ccdf2bf9339610e3bfec26eddea27c7965897a01c"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_F-204.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_F-204.png",
       "sha256": "35ae1c704fdd58d38582310cd1d8643d8606e85b0ce5aa39d683f972c5c442bb",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "35ae1c704fdd58d38582310cd1d8643d8606e85b0ce5aa39d683f972c5c442bb"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_F-205.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_F-205.png",
       "sha256": "8bbb37ef7a837f6b394c1d33d58d3e01e48db292a5885cb9a0d92eee89871b1a",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "8bbb37ef7a837f6b394c1d33d58d3e01e48db292a5885cb9a0d92eee89871b1a"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_F-206.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_F-206.png",
       "sha256": "29aa5e2e5b5246583ac7738e1212f673e913d3c2bf647d295400df4459f39169",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "29aa5e2e5b5246583ac7738e1212f673e913d3c2bf647d295400df4459f39169"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_F-207.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_F-207.png",
       "sha256": "e7cd7d664d3bb6aac0bafc3eb2e3d9162b1920fe69a6d07f286d4abc9b799948",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "e7cd7d664d3bb6aac0bafc3eb2e3d9162b1920fe69a6d07f286d4abc9b799948"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_generic.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_generic.png",
       "sha256": "29e96486cf22c6a1636df76a7f926b52438737bec44c2ca1cb4dcde1e89b0b65",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "29e96486cf22c6a1636df76a7f926b52438737bec44c2ca1cb4dcde1e89b0b65"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_LOBBY-E-N.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_LOBBY-E-N.png",
       "sha256": "2e8cef80082b95bd7bde48df32c55dc99f27c42fae661ba6d6f3286d86a7d5ce",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "2e8cef80082b95bd7bde48df32c55dc99f27c42fae661ba6d6f3286d86a7d5ce"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_LOBBY-E-S.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_LOBBY-E-S.png",
       "sha256": "69bf4c9564e83b4bb2f61f1cc834a25ee3188bd9a42d10b6a3de9b28239b466a",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "69bf4c9564e83b4bb2f61f1cc834a25ee3188bd9a42d10b6a3de9b28239b466a"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_LOBBY-W-N.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_LOBBY-W-N.png",
       "sha256": "815efc5e4697f10651eb0191aa2bd8b60781b36f6be41e54acb24b1017ec7d89",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "815efc5e4697f10651eb0191aa2bd8b60781b36f6be41e54acb24b1017ec7d89"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_LOBBY-W-S.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_LOBBY-W-S.png",
       "sha256": "ee1e2a686e9a60e3582adfbffa1161c29b448efc792ad566c144a5409a203ddf",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "ee1e2a686e9a60e3582adfbffa1161c29b448efc792ad566c144a5409a203ddf"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_N-E1.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_N-E1.png",
       "sha256": "a09be84b8e2950ae89ae11eff5ae0fb5a58ed758eb3a0dd215a63797ba42dd5c",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "a09be84b8e2950ae89ae11eff5ae0fb5a58ed758eb3a0dd215a63797ba42dd5c"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_N-E2.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_N-E2.png",
       "sha256": "010fa02bd419777a865ba8c6b1d5ba5649b0e2cb4a284503585271d99f376454",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "010fa02bd419777a865ba8c6b1d5ba5649b0e2cb4a284503585271d99f376454"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_N-E3.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_N-E3.png",
       "sha256": "ec9350517e1b38f5c84faa17263b6bd7f2f7383524a4d2544fa2de7680899b9d",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "ec9350517e1b38f5c84faa17263b6bd7f2f7383524a4d2544fa2de7680899b9d"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_N-W1.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_N-W1.png",
       "sha256": "01a0693a35e17f50b6d54309f6756556455ecb869d5a16696b12df2d674cf841",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "01a0693a35e17f50b6d54309f6756556455ecb869d5a16696b12df2d674cf841"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_N-W2.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_N-W2.png",
       "sha256": "f87ae6ae86e00312a866618bef240117fc22e6665990fa01892ce0b0f9a601d9",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "f87ae6ae86e00312a866618bef240117fc22e6665990fa01892ce0b0f9a601d9"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_N-W3.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_N-W3.png",
       "sha256": "4e43dab47ad1ab3d2c7a0395bc7f219c7bac6956b4893e596ecf79d0faf5b1f1",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "4e43dab47ad1ab3d2c7a0395bc7f219c7bac6956b4893e596ecf79d0faf5b1f1"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_NE-WC-G.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_NE-WC-G.png",
       "sha256": "0ddf8eb8472f74d448e6efc885123e189a9c598a9df62b339fd18dd9786a1c4d",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "0ddf8eb8472f74d448e6efc885123e189a9c598a9df62b339fd18dd9786a1c4d"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_NW-WC-L.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_NW-WC-L.png",
       "sha256": "d8031722e0ace8e548c3d73bf0453b9a40363e3fa1abb7fe7589a2f5c244c12b",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "d8031722e0ace8e548c3d73bf0453b9a40363e3fa1abb7fe7589a2f5c244c12b"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_PASS-E.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_PASS-E.png",
       "sha256": "9b1ff6e4671c0bb4b6f61b804fc7ff7ba645f7dbea5946ade92f0f86127b5bb8",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "9b1ff6e4671c0bb4b6f61b804fc7ff7ba645f7dbea5946ade92f0f86127b5bb8"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_PASS-W.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_PASS-W.png",
       "sha256": "e78f37e2221ccab8823e916597d47d6f6997cd4373ef4db456c89f2fe9b044b0",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "e78f37e2221ccab8823e916597d47d6f6997cd4373ef4db456c89f2fe9b044b0"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_S-E1.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_S-E1.png",
       "sha256": "d5541322f7ce5703370e1768d2f59a7bfcb85b3e9a4447f89f10039ba65bfe22",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "d5541322f7ce5703370e1768d2f59a7bfcb85b3e9a4447f89f10039ba65bfe22"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_S-E2.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_S-E2.png",
       "sha256": "331891d1fb84aa7d104fe47554c6709e2cc57a367935e73e1f5fb363900014f6",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "331891d1fb84aa7d104fe47554c6709e2cc57a367935e73e1f5fb363900014f6"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_S-E3.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_S-E3.png",
       "sha256": "0bbd94b808caeae7b21d976bf4a8ee84dfc232407500d393ead3a21607e600df",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "0bbd94b808caeae7b21d976bf4a8ee84dfc232407500d393ead3a21607e600df"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_S-W1.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_S-W1.png",
       "sha256": "adcab9ecb89d03690b38f0993e0b9a0ea115c541d94a97a293ef9ee115b282e2",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "adcab9ecb89d03690b38f0993e0b9a0ea115c541d94a97a293ef9ee115b282e2"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_S-W2.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_S-W2.png",
       "sha256": "91cab2fd468674bd71467d27529b2178021703f3d35d6065a3ed8ea92f106242",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "91cab2fd468674bd71467d27529b2178021703f3d35d6065a3ed8ea92f106242"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_S-W3.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_S-W3.png",
       "sha256": "2b2cd921100623ecd45c7ee6d5458691950d705eeb4fb55a8757ec92436c31b0",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "2b2cd921100623ecd45c7ee6d5458691950d705eeb4fb55a8757ec92436c31b0"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_S-W4.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_S-W4.png",
       "sha256": "52eb791515e4fa174845d1fb1058435c59e9c26f0b59d39859e2199e4f451f63",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "52eb791515e4fa174845d1fb1058435c59e9c26f0b59d39859e2199e4f451f63"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_SEALED-NW.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_SEALED-NW.png",
       "sha256": "ce69296aea281d6ba983597040f64e8772cfda706ede0cd96f8f8791143e8d1d",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "ce69296aea281d6ba983597040f64e8772cfda706ede0cd96f8f8791143e8d1d"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_SLOT-NE.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_SLOT-NE.png",
       "sha256": "fed82bb85ad53454519f7837922ae32ea2902794982960806fddf40e521b0dee",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "fed82bb85ad53454519f7837922ae32ea2902794982960806fddf40e521b0dee"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_SLOT-NW.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_SLOT-NW.png",
       "sha256": "726ed977b744afec82a94e3ccf6938b361686480f39a562d02ca3034008fa770",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "726ed977b744afec82a94e3ccf6938b361686480f39a562d02ca3034008fa770"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_SLOT-SE.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_SLOT-SE.png",
       "sha256": "725e759c9bc55aaea6935023bb1e52d118299f511fe4fd85536501d06c266e75",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "725e759c9bc55aaea6935023bb1e52d118299f511fe4fd85536501d06c266e75"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_SLOT-SW.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_SLOT-SW.png",
       "sha256": "556e66aa70600abd6f76951afd3ebbb4e127568f8bae25b3ce7d134bde97297c",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "556e66aa70600abd6f76951afd3ebbb4e127568f8bae25b3ce7d134bde97297c"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_ST-C-ACCESS.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_ST-C-ACCESS.png",
       "sha256": "615b834e307c8abee6ef116c43bc4918e1c44f8618be3ff708e23fa2c8f4a483",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "615b834e307c8abee6ef116c43bc4918e1c44f8618be3ff708e23fa2c8f4a483"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_ST-C.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_ST-C.png",
       "sha256": "ddced8cafe8c4335eac7657f1a39a211c526e121091d8e7175755f3cd2bb4b3a",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "ddced8cafe8c4335eac7657f1a39a211c526e121091d8e7175755f3cd2bb4b3a"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_ST-E.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_ST-E.png",
       "sha256": "b11c30bcfef2fbd0beca5b39b9763caec854930900581d021666b9543421570c",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "b11c30bcfef2fbd0beca5b39b9763caec854930900581d021666b9543421570c"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_ST-W.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_ST-W.png",
       "sha256": "2b0d26202767eb2e575a714efe93ceb9e2aa7ccc67dd594c5cdf6485fd53f564",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "2b0d26202767eb2e575a714efe93ceb9e2aa7ccc67dd594c5cdf6485fd53f564"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_UPS.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_UPS.png",
       "sha256": "740a7b7040288f26b868b0de0c84bb73296d459b12cb9413893b7385b1176aaa",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "740a7b7040288f26b868b0de0c84bb73296d459b12cb9413893b7385b1176aaa"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_VOID-CE.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_VOID-CE.png",
       "sha256": "9d29ecc481264c51c684345fd9be9bf88a9132c087951a89c1b39f2bf8853a72",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "9d29ecc481264c51c684345fd9be9bf88a9132c087951a89c1b39f2bf8853a72"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_VOID-CW1.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_VOID-CW1.png",
       "sha256": "079f2230060b0e95243aa1e1c024772f290168f1d2d181ed2d81a25e19f57fc3",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "079f2230060b0e95243aa1e1c024772f290168f1d2d181ed2d81a25e19f57fc3"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_VOID-CW2.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_VOID-CW2.png",
       "sha256": "874d3cef5d8eb73c7a71f0d3ddb05ad63bd3696c276d27e0bc8b7a60668186c1",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "874d3cef5d8eb73c7a71f0d3ddb05ad63bd3696c276d27e0bc8b7a60668186c1"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-B-DISC.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-B-DISC.png",
       "sha256": "741d1188e673be723f1db3d984bdd1f5f92e8b5f88d954bfa74b466e2560856d",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "741d1188e673be723f1db3d984bdd1f5f92e8b5f88d954bfa74b466e2560856d"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-B-HOD.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-B-HOD.png",
       "sha256": "8186bb9aed9c0e29f80a403327becf7ba204ab8bfed992fdb7d68ae09408ee3b",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "8186bb9aed9c0e29f80a403327becf7ba204ab8bfed992fdb7d68ae09408ee3b"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-B-LOUNGE.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-B-LOUNGE.png",
       "sha256": "d7fbd765d297dfb8ad0a100ffde0664adb6e31b8db1193cbbb05acdc217d6cc6",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "d7fbd765d297dfb8ad0a100ffde0664adb6e31b8db1193cbbb05acdc217d6cc6"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-B-OFF.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-B-OFF.png",
       "sha256": "e1fd83b60d8d75d33b14e3655533e424dce60782d15d99a410bab0dd168ad411",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "e1fd83b60d8d75d33b14e3655533e424dce60782d15d99a410bab0dd168ad411"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-B-PANTRY.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-B-PANTRY.png",
       "sha256": "094562a70d66a0589ffb3d982ea444cdc0417ba7eb41e6983210611d384d5e3a",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "094562a70d66a0589ffb3d982ea444cdc0417ba7eb41e6983210611d384d5e3a"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-B-PROF1.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-B-PROF1.png",
       "sha256": "03d84f1758cbc63fb7b497537c2c9e03ac1f0067cf223e0132b7165709980cb6",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "03d84f1758cbc63fb7b497537c2c9e03ac1f0067cf223e0132b7165709980cb6"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-B-PROF2.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-B-PROF2.png",
       "sha256": "4d5b525dbfff8a256a601b6943c71a6a8304b23e4df39f31fc6249c3ca188bf7",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "4d5b525dbfff8a256a601b6943c71a6a8304b23e4df39f31fc6249c3ca188bf7"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-B-PROF3.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-B-PROF3.png",
       "sha256": "caaa9bfd38647ad085d6da13e6aa92f944a9ab3569395ff6934e64dc16166f16",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "caaa9bfd38647ad085d6da13e6aa92f944a9ab3569395ff6934e64dc16166f16"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-B-PROF4.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-B-PROF4.png",
       "sha256": "bed1e80512934e1079404da532944fdfa7a9b4d438879c88b757d29caff029d9",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "bed1e80512934e1079404da532944fdfa7a9b4d438879c88b757d29caff029d9"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-B-WC-G.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-B-WC-G.png",
       "sha256": "b760dacfc4987ece4b79195c7d5c72c1e7ef48de452a15b9f6d0c8ed127a1bf5",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "b760dacfc4987ece4b79195c7d5c72c1e7ef48de452a15b9f6d0c8ed127a1bf5"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-B-WC-L.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-B-WC-L.png",
       "sha256": "77b3540afc2d3103d430a0e8bbcc25e0cfc8b0945c9897869cd16a8ffaa2c5aa",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "77b3540afc2d3103d430a0e8bbcc25e0cfc8b0945c9897869cd16a8ffaa2c5aa"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-B.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-B.png",
       "sha256": "60896c4be04794c96b488d49214f0025a2c683d521a4a0746cef18c95efb9692",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "60896c4be04794c96b488d49214f0025a2c683d521a4a0746cef18c95efb9692"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-E-DISC.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-E-DISC.png",
       "sha256": "67aa0214bbb8a48caa7902f69df0f306c9b76df6b537051ef044a2612fcc67de",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "67aa0214bbb8a48caa7902f69df0f306c9b76df6b537051ef044a2612fcc67de"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-E-HOD.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-E-HOD.png",
       "sha256": "4f69686aa2dcd412e7215e5d90768e685e33d037e2f2be5638d802261a3fdcee",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "4f69686aa2dcd412e7215e5d90768e685e33d037e2f2be5638d802261a3fdcee"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-E-P1.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-E-P1.png",
       "sha256": "b2c525d5a5fa141a0d57283e771f879b773c3e6c53cdc3899922b2cc4a76c5e4",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "b2c525d5a5fa141a0d57283e771f879b773c3e6c53cdc3899922b2cc4a76c5e4"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-E-P2.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-E-P2.png",
       "sha256": "7b66d12286e80e9c286bb019a33ec7cf366a7ffe00be73838a2ee5b0d42e7a69",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "7b66d12286e80e9c286bb019a33ec7cf366a7ffe00be73838a2ee5b0d42e7a69"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-E-P3.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-E-P3.png",
       "sha256": "06708cd3454ac0a54ebb736157763bb315477da9fdbf81c4fcc79f3513a25887",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "06708cd3454ac0a54ebb736157763bb315477da9fdbf81c4fcc79f3513a25887"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-E-P4.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-E-P4.png",
       "sha256": "48b1da57ab8d2e78825fe92c54b64d9e151b38efa6ec21a3fd47699b735683fc",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "48b1da57ab8d2e78825fe92c54b64d9e151b38efa6ec21a3fd47699b735683fc"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-E-P5.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-E-P5.png",
       "sha256": "12bd3bd5e37ea06e9890bfadd47ae2dc223adc1d111010fc0e35c51bb0e19166",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "12bd3bd5e37ea06e9890bfadd47ae2dc223adc1d111010fc0e35c51bb0e19166"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-E-P6.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-E-P6.png",
       "sha256": "f36cc3f4a6cbf5af5b2d0a203f5ffba570ef36512a895a5138ea9e0aa1eb683b",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "f36cc3f4a6cbf5af5b2d0a203f5ffba570ef36512a895a5138ea9e0aa1eb683b"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-E-SEC.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-E-SEC.png",
       "sha256": "152552d9f3108826c23abdbc36c96b8ba76de25a35ebfb8ea2d1c16cbad0897d",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "152552d9f3108826c23abdbc36c96b8ba76de25a35ebfb8ea2d1c16cbad0897d"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-E-WC.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-E-WC.png",
       "sha256": "6ac17d733a3f9396b175e90f4ecbfa57a73b3f1100b42441a385f5140ca35c07",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "6ac17d733a3f9396b175e90f4ecbfa57a73b3f1100b42441a385f5140ca35c07"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-E-WC2.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-E-WC2.png",
       "sha256": "c9921ea298da30090a98b1c085d3961b0a81ef19d862487d0d02bc5c8b9ee351",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "c9921ea298da30090a98b1c085d3961b0a81ef19d862487d0d02bc5c8b9ee351"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-E.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-E.png",
       "sha256": "11ca70d6c0d720b92d42f30b1c132109e0155009c4422d67d2299356986be2d7",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "11ca70d6c0d720b92d42f30b1c132109e0155009c4422d67d2299356986be2d7"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_WE-SIEM-ANNEX.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_WE-SIEM-ANNEX.png",
       "sha256": "1cadbb6fecc893a4d98f152a6f27b1cc46fb3914523a457e23050fbe57813a91",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "1cadbb6fecc893a4d98f152a6f27b1cc46fb3914523a457e23050fbe57813a91"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_WE-SIEM.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_WE-SIEM.png",
       "sha256": "efd0cf77bd9d47414e6f7b6fce4b89875a899b3dca99f54cd9d2ab1c08cacfc8",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "efd0cf77bd9d47414e6f7b6fce4b89875a899b3dca99f54cd9d2ab1c08cacfc8"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_WE-SMART.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_WE-SMART.png",
       "sha256": "31f79b777de5e32a82b3af420ddbcb422d580c70fa069495e16f78702a8ba2e5",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "31f79b777de5e32a82b3af420ddbcb422d580c70fa069495e16f78702a8ba2e5"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_WE-UTIL.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_WE-UTIL.png",
       "sha256": "25434cd9c5a45609d00ecca1ce93d1edf36b5f57e534ff6ae5dfd5083ff108d6",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "25434cd9c5a45609d00ecca1ce93d1edf36b5f57e534ff6ae5dfd5083ff108d6"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_WE-WC.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_WE-WC.png",
       "sha256": "8a4d64097d29170f19e344cb3c78f7fd33b17c87d83c1b1613f6717a29ed91fa",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "8a4d64097d29170f19e344cb3c78f7fd33b17c87d83c1b1613f6717a29ed91fa"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_XL-NE.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_XL-NE.png",
       "sha256": "df116f67f5e970fbb83f0f3e2aa95bf9af2f50d6d1a9d3fe9cba3cb02ad91891",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "df116f67f5e970fbb83f0f3e2aa95bf9af2f50d6d1a9d3fe9cba3cb02ad91891"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_XL-NW.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_XL-NW.png",
       "sha256": "923c95d1c942d8787291341918d17fbb244ca567ffab98a3dec38ee2dcf1cb9d",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "923c95d1c942d8787291341918d17fbb244ca567ffab98a3dec38ee2dcf1cb9d"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_XL-SE.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_XL-SE.png",
       "sha256": "ca91f7b14f63822d0401ac0b24708139aaa85e67f652acacfe0fc33c4bc3271c",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "ca91f7b14f63822d0401ac0b24708139aaa85e67f652acacfe0fc33c4bc3271c"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_XL-SW.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_XL-SW.png",
       "sha256": "4c91a5ab53ec0980eac02e54b72498bc80fae0949b2fedac848882d4cfd07e03",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "4c91a5ab53ec0980eac02e54b72498bc80fae0949b2fedac848882d4cfd07e03"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/stair.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/stair.png",
       "sha256": "be55ac21a834b95111965fcd144c393c35ea1123af304b2f01240a2a75238eb7",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "be55ac21a834b95111965fcd144c393c35ea1123af304b2f01240a2a75238eb7"
     },
     {
       "source": "Benchmark/Standard Environment/webots/worlds/textures/window_opaque.png",
       "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/window_opaque.png",
       "sha256": "015d35c03bdced2e9e6fcb3e02c06ddbbd633d930798935c7aefe4a19464148d",
       "license": "MIT (owner confirmed team rights)",
-      "modifications": []
+      "modifications": [],
+      "repository_sha256": "015d35c03bdced2e9e6fcb3e02c06ddbbd633d930798935c7aefe4a19464148d"
+    },
+    {
+      "source": "Benchmark/Door Slam/BUILD_ORIGINAL.cmd",
+      "destination": "experiments/ab3/Door Slam/BUILD_ORIGINAL.cmd",
+      "sha256": "32b06151b7898ff29474a73428e09313e24183f5ee59e58700368f4374bb6f6e",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "18ee6c2569432fb2146fff305a42510f7ee648bc049ee194d5b6803341aa1707"
+    },
+    {
+      "source": "Benchmark/Door Slam/BUILD_ORIGINAL.command",
+      "destination": "experiments/ab3/Door Slam/BUILD_ORIGINAL.command",
+      "sha256": "6135d787c99b2827fc42b1e634f83694fd5b50e25c4b453179e2e6022312a638",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "6135d787c99b2827fc42b1e634f83694fd5b50e25c4b453179e2e6022312a638"
+    },
+    {
+      "source": "Benchmark/Door Slam/Dockerfile",
+      "destination": "experiments/ab3/Door Slam/Dockerfile",
+      "sha256": "0e5275c64c18148b5ea0bcce83d1959237e251ecd27121b9c10154d3c79a4cfb",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "0e5275c64c18148b5ea0bcce83d1959237e251ecd27121b9c10154d3c79a4cfb"
+    },
+    {
+      "source": "Benchmark/Door Slam/EVALUATE_LAST_RUN.cmd",
+      "destination": "experiments/ab3/Door Slam/EVALUATE_LAST_RUN.cmd",
+      "sha256": "fab7a2367c0efeece6aad1cdc285e67831eeb980d91fb6f97f571066126d3520",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "c74447959224cd3a4d4f58f3a202c7ffc629cb520a52ff77eaecc44bbc82c9c7"
+    },
+    {
+      "source": "Benchmark/Door Slam/EVALUATE_LAST_RUN.command",
+      "destination": "experiments/ab3/Door Slam/EVALUATE_LAST_RUN.command",
+      "sha256": "9e13a8e0e878fc282ef6cc32de56a5508aac85680a2c81bb52fad9accd9eb11c",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "9e13a8e0e878fc282ef6cc32de56a5508aac85680a2c81bb52fad9accd9eb11c"
+    },
+    {
+      "source": "Benchmark/Door Slam/RUN_DOOR_SLAM_ORIGINAL.cmd",
+      "destination": "experiments/ab3/Door Slam/RUN_DOOR_SLAM_ORIGINAL.cmd",
+      "sha256": "efb5ea717c86b4fd31e544210b9c934d3120f90b3ad83e53f804a4a2f6e33735",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "b5accd8067ca0d6ba618589b9b0aaf42357bef3f7e3a75b63f794021d90b92fa"
+    },
+    {
+      "source": "Benchmark/Door Slam/RUN_DOOR_SLAM_ORIGINAL.command",
+      "destination": "experiments/ab3/Door Slam/RUN_DOOR_SLAM_ORIGINAL.command",
+      "sha256": "d8154927f36d8e50d7461970ea0ee5b90cfe8263cd6ca947d3983408f9891650",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "d8154927f36d8e50d7461970ea0ee5b90cfe8263cd6ca947d3983408f9891650"
+    },
+    {
+      "source": "Benchmark/Door Slam/run_door_slam_original.ps1",
+      "destination": "experiments/ab3/Door Slam/run_door_slam_original.ps1",
+      "sha256": "1fc132081667913db687a9a47099bec2b0e074460cf1d6bb05bc6ba65d4bfa9d",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "2eede3c9aed04d54ac55bc92ef3f66c44046da8f97fe376918651d1be9ec5d65"
+    },
+    {
+      "source": "Benchmark/Door Slam/run_door_slam_original.py",
+      "destination": "experiments/ab3/Door Slam/run_door_slam_original.py",
+      "sha256": "1be11615b21facdc1797f181a9219579407e3a099b0d752b1c67f40c913ddc39",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "d18b66e7e582724af2b6412d9a18a6bdb11ce92f66c8139749baaeba522022ee"
+    },
+    {
+      "source": "Benchmark/Door Slam/source_lock.json",
+      "destination": "experiments/ab3/Door Slam/source_lock.json",
+      "sha256": "8e41f79717df019da73860c454f81fb50b0e19ff5d526bff716de84b3e015fe2",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "557701020b66d8aacf975a813da22bb4153e2e9141b6513a87ce5e5b938ef8ce"
+    },
+    {
+      "source": "Benchmark/Door Slam/STOP_DOOR_SLAM_ORIGINAL.cmd",
+      "destination": "experiments/ab3/Door Slam/STOP_DOOR_SLAM_ORIGINAL.cmd",
+      "sha256": "c3215131b52c08381b911b7ecc8fce37b22c04e17672bb9dc09ceab716121ea8",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "a1ef61474abf5cde67b1137788e3c712000aeba9bc15fd4af4b03e68d33a5307"
+    },
+    {
+      "source": "Benchmark/Door Slam/STOP_DOOR_SLAM_ORIGINAL.command",
+      "destination": "experiments/ab3/Door Slam/STOP_DOOR_SLAM_ORIGINAL.command",
+      "sha256": "4d9fa69c51871e66b367ae02dd1c085c82f9ccb6fa7d18e8578e4bce632c889f",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "4d9fa69c51871e66b367ae02dd1c085c82f9ccb6fa7d18e8578e4bce632c889f"
+    },
+    {
+      "source": "Benchmark/Door Slam/bridge/buzz_transport.py",
+      "destination": "experiments/ab3/Door Slam/bridge/buzz_transport.py",
+      "sha256": "d419e93bcb23cbfa44c8e625e5166ef326a81c7dd27ba7ff0fc43d94467e013d",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "883fa44e26b39b788b738e4e5d517118057bfd2782c0bf036a11ca6056e66200"
+    },
+    {
+      "source": "Benchmark/Door Slam/bridge/mapping.py",
+      "destination": "experiments/ab3/Door Slam/bridge/mapping.py",
+      "sha256": "798bc26baac236d59cbced33587c12bd607f5afc770ac4c67feb106f194758c6",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "5760d7d6747bd4e37ef532a028c1fe5d1e4249b833f819fd1fd7157c5c6dc806"
+    },
+    {
+      "source": "Benchmark/Door Slam/bridge/radio_outbox.py",
+      "destination": "experiments/ab3/Door Slam/bridge/radio_outbox.py",
+      "sha256": "b809c8c46224f871becae71482292a4c05345c677cde106e7206be845e8b66c8",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "d84328bcad0b182197f81235ee4db2de776f4109a2941f59fdc193dcc382e773"
+    },
+    {
+      "source": "Benchmark/Door Slam/bridge/radio_packets.py",
+      "destination": "experiments/ab3/Door Slam/bridge/radio_packets.py",
+      "sha256": "86a6810fd1e56443714cea9d5b82a5d6cb0b6a7eb49868f0f5a6df5c207dd114",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "102f17f863049cd5af849f49b899ebb760eb3aa7dc23d573d8848ab2efb567f2"
+    },
+    {
+      "source": "Benchmark/Door Slam/bridge/wire.py",
+      "destination": "experiments/ab3/Door Slam/bridge/wire.py",
+      "sha256": "223be6bdcc5ab57d76e1cbf026d9630ad65465f5e5fcf5bfa347695378578a84",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "13921e24bb7fbe59f9fd6f814a40663a36336e32afb3c321eb9605c2330a46c2"
+    },
+    {
+      "source": "Benchmark/Door Slam/config/benchmark.json",
+      "destination": "experiments/ab3/Door Slam/config/benchmark.json",
+      "sha256": "2bcf23b8106498b81a2d9169f3f1bf51efa1db97f9349fcbccee700f0c5c05f2",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "44ba1fc60e71d1aa87c14d6cdfabc8ea8586f3c40c57e6777658eb20b38f7e1d"
+    },
+    {
+      "source": "Benchmark/Door Slam/config/dependencies.json",
+      "destination": "experiments/ab3/Door Slam/config/dependencies.json",
+      "sha256": "e174df2b69ffbcb559e9273be8f87d4cdfd5eeff4f92c7dbd887356223392111",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "cfde4437b9256fce56009227f2c275b29db39140d362fdfb6be6dafc70f76843"
+    },
+    {
+      "source": "Benchmark/Door Slam/config/integration.json",
+      "destination": "experiments/ab3/Door Slam/config/integration.json",
+      "sha256": "0b0714fcf8ee201026c0a669cfb350088c4fb01ad61f1816414f14c862f023d9",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "39c19092bc882822ed1443eb36c0bddf563b548f6cd622c7beca4beb8393fe37"
+    },
+    {
+      "source": "Benchmark/Door Slam/native/build_dependencies.py",
+      "destination": "experiments/ab3/Door Slam/native/build_dependencies.py",
+      "sha256": "a846f2c668103b0e2aa728690217a569459132b9605b1dabc171d12e0d237e2c",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "a846f2c668103b0e2aa728690217a569459132b9605b1dabc171d12e0d237e2c"
+    },
+    {
+      "source": "Benchmark/Door Slam/native/build_native.sh",
+      "destination": "experiments/ab3/Door Slam/native/build_native.sh",
+      "sha256": "760c05b32184bc2e25e57bc8c6bd0210028347b1756c90dfd74910589b67c1e8",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "760c05b32184bc2e25e57bc8c6bd0210028347b1756c90dfd74910589b67c1e8"
+    },
+    {
+      "source": "Benchmark/Door Slam/native/download_weights.py",
+      "destination": "experiments/ab3/Door Slam/native/download_weights.py",
+      "sha256": "3e924409138d88c8bcc76823b5c12bfd7bddc4fbee5ffbc449b75a73352bcc6d",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "3e924409138d88c8bcc76823b5c12bfd7bddc4fbee5ffbc449b75a73352bcc6d"
+    },
+    {
+      "source": "Benchmark/Door Slam/native/entrypoint.sh",
+      "destination": "experiments/ab3/Door Slam/native/entrypoint.sh",
+      "sha256": "c6e0e59a4e71f556543e7c7842fd058728ad15cb88daa5e7c6478679529d34b4",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "c6e0e59a4e71f556543e7c7842fd058728ad15cb88daa5e7c6478679529d34b4"
+    },
+    {
+      "source": "Benchmark/Door Slam/native/extract_original.py",
+      "destination": "experiments/ab3/Door Slam/native/extract_original.py",
+      "sha256": "19f3de9473b811d29e29eeb7bce7e5fef976d05e4881e0ccea57e137af2039c1",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "19f3de9473b811d29e29eeb7bce7e5fef976d05e4881e0ccea57e137af2039c1"
+    },
+    {
+      "source": "Benchmark/Door Slam/native/gateway.py",
+      "destination": "experiments/ab3/Door Slam/native/gateway.py",
+      "sha256": "43bc51c066b22b35e1fefbe0c376a71e110ba740e7ecdf87d35be50aee38da4a",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "43bc51c066b22b35e1fefbe0c376a71e110ba740e7ecdf87d35be50aee38da4a"
+    },
+    {
+      "source": "Benchmark/Door Slam/native/robot.launch",
+      "destination": "experiments/ab3/Door Slam/native/robot.launch",
+      "sha256": "65b3189de22b33485f2dddda7f9f119d803be5ae5c740e98774cabe28cd8a26b",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "65b3189de22b33485f2dddda7f9f119d803be5ae5c740e98774cabe28cd8a26b"
+    },
+    {
+      "source": "Benchmark/Door Slam/native/start_robot.py",
+      "destination": "experiments/ab3/Door Slam/native/start_robot.py",
+      "sha256": "63078abc915c2ec171c82aa1bb2530c12bcb726e5f9862aad2be67ddb56f2eb7",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "63078abc915c2ec171c82aa1bb2530c12bcb726e5f9862aad2be67ddb56f2eb7"
+    },
+    {
+      "source": "Benchmark/Door Slam/tests/test_build_io.py",
+      "destination": "experiments/ab3/Door Slam/tests/test_build_io.py",
+      "sha256": "9a2629c1fabf1bb84187ad30cb7be4ec16659b64c8a20bf1772607292e180664",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "13d7bb75e58031f9ddbd8b5b4df86b26c1cb083b9013334b9d8c1394fe9b0ccc"
+    },
+    {
+      "source": "Benchmark/Door Slam/tests/test_output_history.py",
+      "destination": "experiments/ab3/Door Slam/tests/test_output_history.py",
+      "sha256": "058ccefbeb7c2c85afeda440b97044aa19027765607a9cd47b420992be601114",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "a8d5b7663ee42066b71ab0fc4b0f87b4409a033915a267efc7e4084c9d3bc9ed"
+    },
+    {
+      "source": "Benchmark/Door Slam/tests/test_preparation.py",
+      "destination": "experiments/ab3/Door Slam/tests/test_preparation.py",
+      "sha256": "fb9a2e7f4beb9f472e73e3ab1cf7433c0829b36200f2bb581e6e857cd15aa9a8",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "823f7d128837d80dd2a47f7505bbd9498eb4205346f2a020fcbbdccff66044a7"
+    },
+    {
+      "source": "Benchmark/Door Slam/tools/calibration.py",
+      "destination": "experiments/ab3/Door Slam/tools/calibration.py",
+      "sha256": "9db61d19425072cd01e82be2c6dba9f18ad82058154eb99d384643b0dafb7e2f",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "cb7972e2aee37725151157d45c3877f6fa9bf882e89b1dfc9465c11653f3d9d7"
+    },
+    {
+      "source": "Benchmark/Door Slam/tools/docker_runtime.py",
+      "destination": "experiments/ab3/Door Slam/tools/docker_runtime.py",
+      "sha256": "6c1e6b44ab1d03c9eef6bcae5918ed66271a1df21417ee0f8f7a738793a6fa12",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "12ab0798b5ef0ad60f4ebf863a4d9d81fde5072bec596ecd5792583cfc46ccf6"
+    },
+    {
+      "source": "Benchmark/Door Slam/tools/live_view.py",
+      "destination": "experiments/ab3/Door Slam/tools/live_view.py",
+      "sha256": "486cc1fc8fcacaf86d4788a53eb335ccfdf769d6a24a6c8d9991ccb6f476fd07",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "ecbd75ac02b921306cdaa90b2e587ac57ad7f1ba9752f838006bf483cfcd51e2"
+    },
+    {
+      "source": "Benchmark/Door Slam/tools/patch_runtime.py",
+      "destination": "experiments/ab3/Door Slam/tools/patch_runtime.py",
+      "sha256": "93eff53d6571891253273c7a61e640a672c07e09b2a78030ce418d783ab3abc3",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "c0d3d98cd12975180fa9cb7014cff7c2d1453450da841f506e650b2fd08bc1b7"
+    },
+    {
+      "source": "Benchmark/Door Slam/tools/upstream_source.py",
+      "destination": "experiments/ab3/Door Slam/tools/upstream_source.py",
+      "sha256": "c1eaf9a8199bbfcb6ca1c6c3397c48931a768b552b5e82ab7ad326e91fc9fbc2",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "b8cae1cdda9eb2b43499ba24a912df3af86aa15f44b5e21797a9fe68219f38d5"
+    },
+    {
+      "source": "Benchmark/Door Slam/webots_controller/door_slam_original.py",
+      "destination": "experiments/ab3/Door Slam/webots_controller/door_slam_original.py",
+      "sha256": "9dafd0ca278099e348e394f11939fe78ce9e6d6200221ffa2982b4ee07f9a471",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "b288f5eb77922017c2f70df2d51810b88dd86ec3b0c9fb3abb08c2d1ba20cca1"
+    },
+    {
+      "source": "Benchmark/D2 Slam/BUILD_D2SLAM.cmd",
+      "destination": "experiments/ab3/D2 Slam/BUILD_D2SLAM.cmd",
+      "sha256": "4814b7361cf2901b4b1051331000c3cc1221e1d935d107ea5d722f2512125f9b",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "a378002d1a15c0046b209b36ece07d8b47cc64871d769971152a24c2c7b12be4"
+    },
+    {
+      "source": "Benchmark/D2 Slam/BUILD_D2SLAM.command",
+      "destination": "experiments/ab3/D2 Slam/BUILD_D2SLAM.command",
+      "sha256": "02b675fae298c7977463835a77449f57b10d4ee7c1beb5d10935802c5b52a565",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "02b675fae298c7977463835a77449f57b10d4ee7c1beb5d10935802c5b52a565"
+    },
+    {
+      "source": "Benchmark/D2 Slam/Dockerfile",
+      "destination": "experiments/ab3/D2 Slam/Dockerfile",
+      "sha256": "0de6fff13f4eb2fb934e626ec0da31a25d9bd8cf23dc4098b1a62cde5f747980",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "0de6fff13f4eb2fb934e626ec0da31a25d9bd8cf23dc4098b1a62cde5f747980"
+    },
+    {
+      "source": "Benchmark/D2 Slam/EVALUATE_LAST_RUN.cmd",
+      "destination": "experiments/ab3/D2 Slam/EVALUATE_LAST_RUN.cmd",
+      "sha256": "60edb917b8da4acac4ff10cf3a3a9557c29a8053e3ff1bb7902fb8700378999c",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "448b332814de4f2eadea6d8210db22dd07eaab1c96a8910558b4a257631b3fff"
+    },
+    {
+      "source": "Benchmark/D2 Slam/EVALUATE_LAST_RUN.command",
+      "destination": "experiments/ab3/D2 Slam/EVALUATE_LAST_RUN.command",
+      "sha256": "4c594cb7cc6d3a37c97b3d8bf5717bc8cfca92584c4d26fd12a3a80138ecb12f",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "4c594cb7cc6d3a37c97b3d8bf5717bc8cfca92584c4d26fd12a3a80138ecb12f"
+    },
+    {
+      "source": "Benchmark/D2 Slam/RUN_D2SLAM.cmd",
+      "destination": "experiments/ab3/D2 Slam/RUN_D2SLAM.cmd",
+      "sha256": "0b3254c3aa90581a81ecd52fdc5533fcb7e342363abc732f5fd1d4b8f25feb21",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "5e24cdfc355d410d37d5576281e1d57349d72300416f752f8eed5507e7716700"
+    },
+    {
+      "source": "Benchmark/D2 Slam/RUN_D2SLAM.command",
+      "destination": "experiments/ab3/D2 Slam/RUN_D2SLAM.command",
+      "sha256": "709d5f58e7d8509fe45d5fbfb4f08e5b590a5f1db33e58025f017566afab42d7",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "709d5f58e7d8509fe45d5fbfb4f08e5b590a5f1db33e58025f017566afab42d7"
+    },
+    {
+      "source": "Benchmark/D2 Slam/run_d2slam.ps1",
+      "destination": "experiments/ab3/D2 Slam/run_d2slam.ps1",
+      "sha256": "0ae886bd83bb991520b474c37fccef2ce47816301666919d0919d198ca291d8c",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "53519071788f0b019a79433b04795dd0f5975f9158fc05a76677fedaf7edea07"
+    },
+    {
+      "source": "Benchmark/D2 Slam/run_d2slam.py",
+      "destination": "experiments/ab3/D2 Slam/run_d2slam.py",
+      "sha256": "54e236969eb37bfc4af901be416f9962e9ce7752331cb84e37d6df6598fdb5cf",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "384fdc18330058654be59afbf5119a0075e9c5e3d48e9b8c112735da0acb485c"
+    },
+    {
+      "source": "Benchmark/D2 Slam/source_lock.json",
+      "destination": "experiments/ab3/D2 Slam/source_lock.json",
+      "sha256": "61342a7478887929861a9e52c09094df8c1a29cb0da7d2891116490d1b88c486",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "be2d25a6828b93bea807caa2dd001c94408852e8ae9444b6cb2248dd2a175ca5"
+    },
+    {
+      "source": "Benchmark/D2 Slam/STOP_D2SLAM.cmd",
+      "destination": "experiments/ab3/D2 Slam/STOP_D2SLAM.cmd",
+      "sha256": "f970f055dc7f0ab2c374af6aa2e33d0bf8a8dc69dcbc3663416b1f862de10de3",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "ccc5120c3b7469cb24c382e49ac11c14fafe80a8d301bedefce48594fa8ed9c6"
+    },
+    {
+      "source": "Benchmark/D2 Slam/STOP_D2SLAM.command",
+      "destination": "experiments/ab3/D2 Slam/STOP_D2SLAM.command",
+      "sha256": "8f0dbb691de8e16a37fdc66429a664d3fced62895c52ef811986645f6eee135d",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "8f0dbb691de8e16a37fdc66429a664d3fced62895c52ef811986645f6eee135d"
+    },
+    {
+      "source": "Benchmark/D2 Slam/bridge/d2_outputs.py",
+      "destination": "experiments/ab3/D2 Slam/bridge/d2_outputs.py",
+      "sha256": "c7c7169cba2a6768a6b9578f10b0878b830acdb492ad97bcc0efdf4a7608d63b",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "a0859c26e52c7323a578359d5ebe4761eef914768fcbaf321a804124c551fcba"
+    },
+    {
+      "source": "Benchmark/D2 Slam/bridge/lcm_frames.py",
+      "destination": "experiments/ab3/D2 Slam/bridge/lcm_frames.py",
+      "sha256": "d21a3addb54392f61e50490ead27c4dd9b1ddbadc6138fa24d70c790be7f98b5",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "725b436ef2b24c56d8c80f2cbd4f1a2c3cdd4059d3ba75d4dd7dd0850b31da87"
+    },
+    {
+      "source": "Benchmark/D2 Slam/bridge/mapping.py",
+      "destination": "experiments/ab3/D2 Slam/bridge/mapping.py",
+      "sha256": "228b756e8b9a194f1bf1bb18e59015e06ca76b0ce55ac0e7cf3295b9ca656886",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "79fbaaee6f927eddb61334cd015a2453255f40ceb890c3236a9d399b20c39f47"
+    },
+    {
+      "source": "Benchmark/D2 Slam/bridge/radio_outbox.py",
+      "destination": "experiments/ab3/D2 Slam/bridge/radio_outbox.py",
+      "sha256": "38b78df80e5c23905dd71e5df2648390cd60c7f18b358bfe704ba638451b3a9c",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "87305e551a39a19e90e2119cfd57334d0d41006002811d1a7dc63cad9c5fd162"
+    },
+    {
+      "source": "Benchmark/D2 Slam/bridge/radio_packets.py",
+      "destination": "experiments/ab3/D2 Slam/bridge/radio_packets.py",
+      "sha256": "67a0454e846c1448086216c724e8fdafbbacf53b19e6d7316ed97f0e556667d5",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "a2a36408994f2c94541f4526fa892c6c81bedaef7754dbe78aef53be1194ea98"
+    },
+    {
+      "source": "Benchmark/D2 Slam/bridge/wire.py",
+      "destination": "experiments/ab3/D2 Slam/bridge/wire.py",
+      "sha256": "223be6bdcc5ab57d76e1cbf026d9630ad65465f5e5fcf5bfa347695378578a84",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "13921e24bb7fbe59f9fd6f814a40663a36336e32afb3c321eb9605c2330a46c2"
+    },
+    {
+      "source": "Benchmark/D2 Slam/config/benchmark.json",
+      "destination": "experiments/ab3/D2 Slam/config/benchmark.json",
+      "sha256": "1eec7b5ee6506df431f699437ec538a2592f665a62e72304c2eb2bcf29811fb6",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "3e1e526a0494038889cb3c9a04449b6b10db9e879cd8f3a3d4d724230eda44da"
+    },
+    {
+      "source": "Benchmark/D2 Slam/config/d2slam_template.yaml",
+      "destination": "experiments/ab3/D2 Slam/config/d2slam_template.yaml",
+      "sha256": "9db5bf07353d1c779b5ceb8b41ea21f972b2cbcbc0d660d5e29ac930684dc942",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "832eb724f0ce3eb106b35d8519e695894bcd1bc300d6408f2e6c10afb3587072"
+    },
+    {
+      "source": "Benchmark/D2 Slam/config/integration.json",
+      "destination": "experiments/ab3/D2 Slam/config/integration.json",
+      "sha256": "2aa9b1889316d7607b56cb69c99fce6dbabe906bcfb143e30a90d64f444d5e3c",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "9f81e82d6f41b5d34ac4bf1c8122253a6c8f2b72802b25513579a60983b5838e"
+    },
+    {
+      "source": "Benchmark/D2 Slam/native/build_d2slam.sh",
+      "destination": "experiments/ab3/D2 Slam/native/build_d2slam.sh",
+      "sha256": "d2b79497b7c634226b3caefad7b86f8eb7d7649a509cfe4a2dfae27ace5cdc95",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "d2b79497b7c634226b3caefad7b86f8eb7d7649a509cfe4a2dfae27ace5cdc95"
+    },
+    {
+      "source": "Benchmark/D2 Slam/native/entrypoint.sh",
+      "destination": "experiments/ab3/D2 Slam/native/entrypoint.sh",
+      "sha256": "af7b9844f1becaf943db55f4859c374b875aa0a8e94cf3605cf8720f63311f05",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "af7b9844f1becaf943db55f4859c374b875aa0a8e94cf3605cf8720f63311f05"
+    },
+    {
+      "source": "Benchmark/D2 Slam/native/extract_original.py",
+      "destination": "experiments/ab3/D2 Slam/native/extract_original.py",
+      "sha256": "98c9741e764dc17d583f3a1ca211c45035294f5bee70f236bcd8f48d5170cff5",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "98c9741e764dc17d583f3a1ca211c45035294f5bee70f236bcd8f48d5170cff5"
+    },
+    {
+      "source": "Benchmark/D2 Slam/native/fetch_pinned.py",
+      "destination": "experiments/ab3/D2 Slam/native/fetch_pinned.py",
+      "sha256": "78ae5fe89118225193fd391d3acb3d58abfa5286f250f14ce6c05c208ba1c88d",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "78ae5fe89118225193fd391d3acb3d58abfa5286f250f14ce6c05c208ba1c88d"
+    },
+    {
+      "source": "Benchmark/D2 Slam/native/gateway.py",
+      "destination": "experiments/ab3/D2 Slam/native/gateway.py",
+      "sha256": "90af8d969ad2aa0605f8cb47165c26edd60c24de503af25ebbcb1fdc62349fbd",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "90af8d969ad2aa0605f8cb47165c26edd60c24de503af25ebbcb1fdc62349fbd"
+    },
+    {
+      "source": "Benchmark/D2 Slam/native/robot.launch",
+      "destination": "experiments/ab3/D2 Slam/native/robot.launch",
+      "sha256": "b483d44a8e76c037a17a0f34d7a8ad1d241aafaf1fcea9f4283b811ed460c2f7",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "b483d44a8e76c037a17a0f34d7a8ad1d241aafaf1fcea9f4283b811ed460c2f7"
+    },
+    {
+      "source": "Benchmark/D2 Slam/native/start_robot.py",
+      "destination": "experiments/ab3/D2 Slam/native/start_robot.py",
+      "sha256": "d81ab6f5fd06deb8127ed1eac0a0c59720190e468c1964114d9a89660ea11e2b",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "d81ab6f5fd06deb8127ed1eac0a0c59720190e468c1964114d9a89660ea11e2b"
+    },
+    {
+      "source": "Benchmark/D2 Slam/tests/test_controller_smoke.py",
+      "destination": "experiments/ab3/D2 Slam/tests/test_controller_smoke.py",
+      "sha256": "b6a6ede2e4398bd58f4757fee4d8a7561807f0da90bc7782a10657e68bd701a7",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "de18d5cf813c1e45da13b7b970068fd56c3fb25b1cbb2cbffcae0ba8336a92ac"
+    },
+    {
+      "source": "Benchmark/D2 Slam/tests/test_gateway_fake_ros.py",
+      "destination": "experiments/ab3/D2 Slam/tests/test_gateway_fake_ros.py",
+      "sha256": "884c48a24f3cd0a9e07490e0a6e5b310fa0a3f5c3a53070995cfb75f73c63014",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "114d541a500ca50538f723cf6db4e9114ab567f39d7b12efaf7e5cb4ac39c83b"
+    },
+    {
+      "source": "Benchmark/D2 Slam/tests/test_output_history.py",
+      "destination": "experiments/ab3/D2 Slam/tests/test_output_history.py",
+      "sha256": "ed14de2b2502bc635a903bd692115cc34d39cee35bac3e408117c895d1bb4464",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "8b909a496b8636de089740e06c74a03204e5514864474d512f303c16f1322106"
+    },
+    {
+      "source": "Benchmark/D2 Slam/tests/test_preparation.py",
+      "destination": "experiments/ab3/D2 Slam/tests/test_preparation.py",
+      "sha256": "cba1f27f57dae6916e1403fce1ebeafc6795f46978d2d57247a2f6c67fa54844",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "eef9ebdf974413a0bda25976c507a2570768be39bf73e4db2abeeebe038b3090"
+    },
+    {
+      "source": "Benchmark/D2 Slam/tools/calibration.py",
+      "destination": "experiments/ab3/D2 Slam/tools/calibration.py",
+      "sha256": "d0b3c3cb9db0ccc586cb59ef40aeab8f8b53cbfbf8c1783a1591fa5826836f7b",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "970e86e9cd7058ab7c1a251b9d678e64b81b69c5b522de273ad268e287e7e8cc"
+    },
+    {
+      "source": "Benchmark/D2 Slam/tools/docker_runtime.py",
+      "destination": "experiments/ab3/D2 Slam/tools/docker_runtime.py",
+      "sha256": "71ecdfb2e91271be3c3d3c1e77aa86e7c82f8dc42114d6dc8c52201c601e5ab0",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "5c91e0bb19f11702b68045d06b6d9da53d6422ade583efaa6e9a1c13ce5f6615"
+    },
+    {
+      "source": "Benchmark/D2 Slam/tools/live_view.py",
+      "destination": "experiments/ab3/D2 Slam/tools/live_view.py",
+      "sha256": "8ec978f2b032131bd39d9a0374496450fedf0368b0fa89e196d245b563b85ebd",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "2c9dbc4551019d79c6b20153376a873aae67666aba4dd2a9e2f1d0334a321986"
+    },
+    {
+      "source": "Benchmark/D2 Slam/tools/patch_runtime.py",
+      "destination": "experiments/ab3/D2 Slam/tools/patch_runtime.py",
+      "sha256": "bf0d78e7f7060765c443334fd8c6965d9a9123b578f1728bbd97ac182e6065c0",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "88763650a666a8fcf61e3ac529fff7835f9d5d1c705c17f8d3acca37f1b459ef"
+    },
+    {
+      "source": "Benchmark/D2 Slam/tools/upstream_source.py",
+      "destination": "experiments/ab3/D2 Slam/tools/upstream_source.py",
+      "sha256": "255999adc779af6f150111743655e07720776ba094b82bfa7cc62a0aff115a6e",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "62504583a822f7eea40f32f9262e65b90c35ae1e9e37b475156d0f4518b5877f"
+    },
+    {
+      "source": "Benchmark/D2 Slam/webots_controller/d2slam.py",
+      "destination": "experiments/ab3/D2 Slam/webots_controller/d2slam.py",
+      "sha256": "7d91b09d155db9c12f3af733e1bbfb53d6b19a5d8894dc398cf0f4eb350e142f",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "a5b1c0a09535e3c997997011368e3188324977bb7dd5d0ace86f67c93296272b"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/BUILD_KIMERA_MULTI.cmd",
+      "destination": "experiments/ab3/Kimera Multi/BUILD_KIMERA_MULTI.cmd",
+      "sha256": "7f3cb36265151e59a05ab32eb45e5886ce9d2a7cb34799d298c72f1ac62733a8",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "544e0f436cfc4acb8a75b733d7ce866b8d9e826337748461b2e0879e880071cf"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/BUILD_KIMERA_MULTI.command",
+      "destination": "experiments/ab3/Kimera Multi/BUILD_KIMERA_MULTI.command",
+      "sha256": "f960a0907cea55b1f599afebb442b6471480c300ad552bc66b2d4e63136be413",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "f960a0907cea55b1f599afebb442b6471480c300ad552bc66b2d4e63136be413"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/BUILD_KIMERA_MULTI.sh",
+      "destination": "experiments/ab3/Kimera Multi/BUILD_KIMERA_MULTI.sh",
+      "sha256": "8495fc1b5c8161cd1fd40ceeeaf79d49ce60b46427f62dacc8a4f04b30a91aec",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "8495fc1b5c8161cd1fd40ceeeaf79d49ce60b46427f62dacc8a4f04b30a91aec"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/Dockerfile",
+      "destination": "experiments/ab3/Kimera Multi/Dockerfile",
+      "sha256": "e68be6efa856e9683800fd0cd1906725bb433cc96f6fa61274ff0f6f1f7089a7",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "e68be6efa856e9683800fd0cd1906725bb433cc96f6fa61274ff0f6f1f7089a7"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/EVALUATE_LAST_RUN_KIMERA_MULTI.cmd",
+      "destination": "experiments/ab3/Kimera Multi/EVALUATE_LAST_RUN_KIMERA_MULTI.cmd",
+      "sha256": "e533d78d08d423b1e34b73262d4fa53840785a5f54fa3dc061816af67e28dbfe",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "80ce05b6fa0c6ba96b73051f5bfec31343ff8ef267daeac55b85fb11e17033fb"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/EVALUATE_LAST_RUN_KIMERA_MULTI.command",
+      "destination": "experiments/ab3/Kimera Multi/EVALUATE_LAST_RUN_KIMERA_MULTI.command",
+      "sha256": "c63f8a42e9e921d112b061a70e20ab2595c1d430faf9b86ed47b74e8c6e42f9e",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "c63f8a42e9e921d112b061a70e20ab2595c1d430faf9b86ed47b74e8c6e42f9e"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/EVALUATE_LAST_RUN_KIMERA_MULTI.sh",
+      "destination": "experiments/ab3/Kimera Multi/EVALUATE_LAST_RUN_KIMERA_MULTI.sh",
+      "sha256": "fcd288ba8ca910502f154f664dc006a59c0c9e2494a6ab5947cc73f5d9ff78b5",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "fcd288ba8ca910502f154f664dc006a59c0c9e2494a6ab5947cc73f5d9ff78b5"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/PREPARE_KIMERA_MULTI.cmd",
+      "destination": "experiments/ab3/Kimera Multi/PREPARE_KIMERA_MULTI.cmd",
+      "sha256": "59255d3e1b169a4d4493e1ac6a883d8c8bd1d7cff0bdb5b3509018540b6dde5e",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "56e007ebd542c3a32a9b89e60f62f353ff9b3dda824057d09037985326fce698"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/PREPARE_KIMERA_MULTI.command",
+      "destination": "experiments/ab3/Kimera Multi/PREPARE_KIMERA_MULTI.command",
+      "sha256": "a06af5971d2c4d7318fa628ff97fc5eaf96451b9dc1ba664df3d8172e3a672a7",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "a06af5971d2c4d7318fa628ff97fc5eaf96451b9dc1ba664df3d8172e3a672a7"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/PREPARE_KIMERA_MULTI.sh",
+      "destination": "experiments/ab3/Kimera Multi/PREPARE_KIMERA_MULTI.sh",
+      "sha256": "1c3a42abad6acb311f70115e6cdf63938f62a8f3c5bfc3b42227d4eda77fc274",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "1c3a42abad6acb311f70115e6cdf63938f62a8f3c5bfc3b42227d4eda77fc274"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/RUN_KIMERA_MULTI.cmd",
+      "destination": "experiments/ab3/Kimera Multi/RUN_KIMERA_MULTI.cmd",
+      "sha256": "bc94e9d70fa62f7f40816147640db8ec256c0cb502a5c946f117c9e77d83e2db",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "7968c7ca13748b58115d1d6888645df59efe9a3623bd97b69e9e0ead56837850"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/RUN_KIMERA_MULTI.command",
+      "destination": "experiments/ab3/Kimera Multi/RUN_KIMERA_MULTI.command",
+      "sha256": "e6d9b71286b3893ead3d5b016f371024fec19b793dc0d88b1bf3001942f4265c",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "e6d9b71286b3893ead3d5b016f371024fec19b793dc0d88b1bf3001942f4265c"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/run_kimera_multi.py",
+      "destination": "experiments/ab3/Kimera Multi/run_kimera_multi.py",
+      "sha256": "c43dbd2edda97090901f9c42b7be9eb430f7ae7322f3e325f242c006fce63e13",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "c43dbd2edda97090901f9c42b7be9eb430f7ae7322f3e325f242c006fce63e13"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/RUN_KIMERA_MULTI.sh",
+      "destination": "experiments/ab3/Kimera Multi/RUN_KIMERA_MULTI.sh",
+      "sha256": "695f1c13b1a87cbd7d38d9e56c6819f4781e4d215e7d99d03f8288d5bc9d2098",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "695f1c13b1a87cbd7d38d9e56c6819f4781e4d215e7d99d03f8288d5bc9d2098"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/source_lock.json",
+      "destination": "experiments/ab3/Kimera Multi/source_lock.json",
+      "sha256": "ba1675a22a2f8a558c748f4a3df1740ee7820a6c1370df5699e4f4dffd165e89",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "ba1675a22a2f8a558c748f4a3df1740ee7820a6c1370df5699e4f4dffd165e89"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/STOP_KIMERA_MULTI.cmd",
+      "destination": "experiments/ab3/Kimera Multi/STOP_KIMERA_MULTI.cmd",
+      "sha256": "0cdbaab9294d574c2f38c1542cf0ff9d1c1a05461b3ed3f0ce171d0737fa707d",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "6ce6e997cf2e484724c4d4468c3a894cc1d28bb880ce3d5c7fd03aec794394b7"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/STOP_KIMERA_MULTI.command",
+      "destination": "experiments/ab3/Kimera Multi/STOP_KIMERA_MULTI.command",
+      "sha256": "9e9e0e618a403e27279247175ac126a04ec5b7daf58be78ea7691f55af634c51",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "9e9e0e618a403e27279247175ac126a04ec5b7daf58be78ea7691f55af634c51"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/STOP_KIMERA_MULTI.sh",
+      "destination": "experiments/ab3/Kimera Multi/STOP_KIMERA_MULTI.sh",
+      "sha256": "f8fb502fac7e327e689fcbc3bc65ac76c5027b416537ed52d20e2b508dc5a8e6",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "f8fb502fac7e327e689fcbc3bc65ac76c5027b416537ed52d20e2b508dc5a8e6"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/algorithm/workspace/catkin_boost_python_buildtool.lock.json",
+      "destination": "experiments/ab3/Kimera Multi/algorithm/workspace/catkin_boost_python_buildtool.lock.json",
+      "sha256": "5c8cb14bd79106131f6e2040cb92c4903708833c386e863075be803a7378618c",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "7aae9dd3686f9ca44c9ceb4f0464795092f79ed2a39d34de54d6cd33fbb371d2"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/algorithm/workspace/catkin_simple.lock.json",
+      "destination": "experiments/ab3/Kimera Multi/algorithm/workspace/catkin_simple.lock.json",
+      "sha256": "f0c5b8599a40dbc05fc07c575aeb2c660eea1f1c10931fd536b6b47667f42caa",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "e5c88f26a1bb0ef452376145454abf9d986a58004473d74ed11659915c5286c2"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/algorithm/workspace/cmake_external_project_catkin.lock.json",
+      "destination": "experiments/ab3/Kimera Multi/algorithm/workspace/cmake_external_project_catkin.lock.json",
+      "sha256": "7ea553c699bd71b803107a663bfaa874c3363b43e712edb04e3e900f373bb0e5",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "61540f2e2d9ca3d159b9883b82a5927e656e7b2d1e3e7357ad25d0299ed8e9bc"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/algorithm/workspace/dbow2_catkin.lock.json",
+      "destination": "experiments/ab3/Kimera Multi/algorithm/workspace/dbow2_catkin.lock.json",
+      "sha256": "3c51f303347c3c3ec94ed31bc617001abfc44d9baa31e4d2465941284541b934",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "bf4928fcbe72065b6dbfb3f613efc0c6fc7e496fc13824bc006dc892c0b3e888"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/algorithm/workspace/dpgo.lock.json",
+      "destination": "experiments/ab3/Kimera Multi/algorithm/workspace/dpgo.lock.json",
+      "sha256": "e6b74846e690d7fbcda4c89704d66c3ba4bde7a7f15e6d4af3a1a15ebc7e3ec1",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "48f9c2d523c5555cb0dc9e6c96de430cb4aa49f2c0402726cf8b50d2c6420b1f"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/algorithm/workspace/dpgo_ros.lock.json",
+      "destination": "experiments/ab3/Kimera Multi/algorithm/workspace/dpgo_ros.lock.json",
+      "sha256": "55c6dc15b5e817a1e559c2fdcf2e57b583e32cecfa5cc284529b7944e73de04a",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "704591740bd2f8fcd4db8a6297d9c4bf6c31820a6ce54cde80689a66c11a07ac"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/algorithm/workspace/eigen_catkin.lock.json",
+      "destination": "experiments/ab3/Kimera Multi/algorithm/workspace/eigen_catkin.lock.json",
+      "sha256": "b35394878501d36326f5f5f8c8c72b834a0e86ba0acb2d7acc070d23118ffeb0",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "2932d7f3a94b9bb75132a395fbd94532d433b667d9bccb3eb52a40de53bf663d"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/algorithm/workspace/eigen_checks.lock.json",
+      "destination": "experiments/ab3/Kimera Multi/algorithm/workspace/eigen_checks.lock.json",
+      "sha256": "39506c47f94698b698d9da9ecf84537cb1672b86f9860f008fcca3208f1933ea",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "68ac4e772c80143a5f2abc2734b2b5aa7b95ddbc0e65c9dd2f9bf412e6a445d0"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/algorithm/workspace/gflags_catkin.lock.json",
+      "destination": "experiments/ab3/Kimera Multi/algorithm/workspace/gflags_catkin.lock.json",
+      "sha256": "f888a763adf6a683841fa2c7cb28d85ff6a3f655a0df2b1c6e8e2192df7b29db",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "0afb5b347457cbaa90552ead22f1aa3d575be252d6057ed8935c6e93707993eb"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/algorithm/workspace/glog_catkin.lock.json",
+      "destination": "experiments/ab3/Kimera Multi/algorithm/workspace/glog_catkin.lock.json",
+      "sha256": "ce67679db3a77217e5998004e66b2a11bc4b90aadcc7cd93b1d94ad10d4c73a9",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "6c4806ebef975a05259eeb16c37afd0f3d594f2ea6d72a4481327c6228c4610f"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/algorithm/workspace/gtsam.lock.json",
+      "destination": "experiments/ab3/Kimera Multi/algorithm/workspace/gtsam.lock.json",
+      "sha256": "b46f0d527a154b499616c8b0bc31e06a2d80b84db230f7bec61019de20beb7af",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "508b05fc55ac72e822a23b2a3983f9681359161f8f04cd255d6fb6e8265ea050"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/algorithm/workspace/image_undistort.lock.json",
+      "destination": "experiments/ab3/Kimera Multi/algorithm/workspace/image_undistort.lock.json",
+      "sha256": "e3d79a539fcdb2e3daa08bb1a26164213b90f836432b04cccb36e4ee6d60d0d2",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "ed714889d873b70b60a1c0d533534a024b6f4882c01b6a24ca23307468b1dcd6"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/algorithm/workspace/kimera_distributed.lock.json",
+      "destination": "experiments/ab3/Kimera Multi/algorithm/workspace/kimera_distributed.lock.json",
+      "sha256": "0ddccebb6cb08bf5dc99219cc32c345f83673683225ee853b93bdca1782d2a4d",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "40994c1c17aebd863d76acb1278e87eb8a8cf0098eeca51c7a0c87b47afe6bfa"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/algorithm/workspace/kimera_multi_lcd.lock.json",
+      "destination": "experiments/ab3/Kimera Multi/algorithm/workspace/kimera_multi_lcd.lock.json",
+      "sha256": "6de5bba17ad0cf52dbea3aa6e63e3805b3316d3052fad76712ebb36b56fb63b5",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "c7739bc81ac34ba93eed900776784fe86b4b5a5d1565100c7b546ee05a3153f0"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/algorithm/workspace/kimera_pgmo.lock.json",
+      "destination": "experiments/ab3/Kimera Multi/algorithm/workspace/kimera_pgmo.lock.json",
+      "sha256": "18eff41555aba34fd36ca6078e7e67c5b01c9ebcf9adf0170aeb2b3556b6db9e",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "651676c3b4868ba7583b017006a52f1b05a56da01359c279a6d46a49076f393b"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/algorithm/workspace/kimera_ros.lock.json",
+      "destination": "experiments/ab3/Kimera Multi/algorithm/workspace/kimera_ros.lock.json",
+      "sha256": "9c4be0d300887c8a98eeb75e4fbbe6bedc7077243a3d63997655dd3535f66ec1",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "fb1f652d554de4d39e1d8fc5b42ac155a217058ef9c7265340db0bde3de2cc1f"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/algorithm/workspace/kimera_rpgo.lock.json",
+      "destination": "experiments/ab3/Kimera Multi/algorithm/workspace/kimera_rpgo.lock.json",
+      "sha256": "8acc81426d6123d8a9c2b6133b7d7a6de43b911fda0b3ebf5dc3265e23925feb",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "e7c522d65ad850e62848c520800a1f064c00b4de7ba363f42690da57583c4e32"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/algorithm/workspace/kimera_rviz_markers.lock.json",
+      "destination": "experiments/ab3/Kimera Multi/algorithm/workspace/kimera_rviz_markers.lock.json",
+      "sha256": "a20f093e507e8de5906dfabf5a89031d5b972b5ebe5ffe62ed1395478dcc1dfe",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "c9f37a59b0bdb5c18703b890ea3dba1c37ac30c751730e5db6fdf1416a394663"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/algorithm/workspace/kimera_semantics.lock.json",
+      "destination": "experiments/ab3/Kimera Multi/algorithm/workspace/kimera_semantics.lock.json",
+      "sha256": "019c8acc7ffef35b193c12a08cdc331c9b1107df54ef119f561c331ad3d93313",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "4f65a961001afb8b806b1d78bc88134527d75d4b8bb10501716d4e6066b8d704"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/algorithm/workspace/kimera_vio.lock.json",
+      "destination": "experiments/ab3/Kimera Multi/algorithm/workspace/kimera_vio.lock.json",
+      "sha256": "dc46ed63f1fd45ea802832999a3d7a9808764d18cb85bdbfa1a535f3a5bc1518",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "c8bbd54570c3e9c41125a574073efd35b0dc59532a75f8d10aa41c7a704cc645"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/algorithm/workspace/mesh_rviz_plugins.lock.json",
+      "destination": "experiments/ab3/Kimera Multi/algorithm/workspace/mesh_rviz_plugins.lock.json",
+      "sha256": "9f636ca0aa43c784dd28578a58d8cb3f7e5e4be0c685180193aedcbfa4c03365",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "0b458c01157dd55efb1e252c4921608ea856735678765e4dd41f8aec2fe3c408"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/algorithm/workspace/mesh_tools.lock.json",
+      "destination": "experiments/ab3/Kimera Multi/algorithm/workspace/mesh_tools.lock.json",
+      "sha256": "9d87c86b8593c3d52b55a8932319896941747ed38ef0d639b338a97d18aea545",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "1881ce1af1d8c5cf39852cc744e58c8b38d5b165b172445230735923cceac578"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/algorithm/workspace/minkindr.lock.json",
+      "destination": "experiments/ab3/Kimera Multi/algorithm/workspace/minkindr.lock.json",
+      "sha256": "078631bccd5d3d9fbdc55b8784e7448ff4c61ae5f183ec8a6a4052abacd3d966",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "6dae592f7278112a6e6ba739926dc8d60959e791b3368ece8bde8552199628c9"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/algorithm/workspace/minkindr_ros.lock.json",
+      "destination": "experiments/ab3/Kimera Multi/algorithm/workspace/minkindr_ros.lock.json",
+      "sha256": "c799de6a545fc14f4c7758fd2fc38f295f17997dd52f67a8cab7d25fd72df2bb",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "8cfc641d79612ceee2e4731f7becec8cdaad366fb4101f4cbf3ea24096d6ebec"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/algorithm/workspace/numpy_eigen.lock.json",
+      "destination": "experiments/ab3/Kimera Multi/algorithm/workspace/numpy_eigen.lock.json",
+      "sha256": "871abf60241bfda307ed90dcdf006fa27ccce98106506daf92a9c2d35d1b96a0",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "8777cd235663dfcdf342fc4f60932ae3105dfa10fc50f11a270061d446a8a3e3"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/algorithm/workspace/opencv3_catkin.lock.json",
+      "destination": "experiments/ab3/Kimera Multi/algorithm/workspace/opencv3_catkin.lock.json",
+      "sha256": "49cb1dcaa435727e18e396794a0652102a84b1ccdc2a51c3047db825cd9b26da",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "40c8d77bd3cd0be4a93036c53f5fa1662e8832074f453d0656eef0b0b5ec4d33"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/algorithm/workspace/pose_graph_tools.lock.json",
+      "destination": "experiments/ab3/Kimera Multi/algorithm/workspace/pose_graph_tools.lock.json",
+      "sha256": "c8d569487d6bee8fdddb077d30efa2da2cfbb9afb1ce1fb04f47b9ff6c0a2cb0",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "c1514144bfa7ba1bade4a0831ec9e01612da03ba33eb6ee65d9719959be97a0c"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/algorithm/workspace/protobuf_catkin.lock.json",
+      "destination": "experiments/ab3/Kimera Multi/algorithm/workspace/protobuf_catkin.lock.json",
+      "sha256": "bf50c6b77182f3e0e40563fcec36a5729af282c7615146609e182f2d02ccefb5",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "323e81c5fbfb27ae9a64a518846a6adf204cf5dddbbd6cfeacd6e679af5c834e"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/algorithm/workspace/pybind11_catkin.lock.json",
+      "destination": "experiments/ab3/Kimera Multi/algorithm/workspace/pybind11_catkin.lock.json",
+      "sha256": "f701d2a4eb1d8ab24acc2bde55a2e1ad9436e572b2b453bfcc936ef769068a69",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "98005628f55f8659e93e18f074c95991cff3d5299d5080469010c0e830d15468"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/algorithm/workspace/voxblox.lock.json",
+      "destination": "experiments/ab3/Kimera Multi/algorithm/workspace/voxblox.lock.json",
+      "sha256": "159f1e645196b821d4efe4c831b9f71f36d4c757fc801e51a9bc9bfa1cc42cf1",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "305caf50244b3e32224cc436dd7c528f12d1cf050f27c6102d2357ce50048977"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/config/benchmark.json",
+      "destination": "experiments/ab3/Kimera Multi/config/benchmark.json",
+      "sha256": "2818b27d3c77ecf188586633be4eae9008a07dabf93f1e0666f214149ee77573",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "2818b27d3c77ecf188586633be4eae9008a07dabf93f1e0666f214149ee77573"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/native/ab3_kimera_adapter/CMakeLists.txt",
+      "destination": "experiments/ab3/Kimera Multi/native/ab3_kimera_adapter/CMakeLists.txt",
+      "sha256": "730e421af496de2db8421f5c5533541140261fdb3eb64052f5608022aa85de72",
+      "license": "BSD (retained package.xml declaration; team-written integration)",
+      "modifications": [],
+      "repository_sha256": "730e421af496de2db8421f5c5533541140261fdb3eb64052f5608022aa85de72"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/native/ab3_kimera_adapter/package.xml",
+      "destination": "experiments/ab3/Kimera Multi/native/ab3_kimera_adapter/package.xml",
+      "sha256": "0876aaaf4c09ae33f02a6c53cd943b2c165d5f99f8a789e175b5a12d87074da2",
+      "license": "BSD (retained package.xml declaration; team-written integration)",
+      "modifications": [],
+      "repository_sha256": "0876aaaf4c09ae33f02a6c53cd943b2c165d5f99f8a789e175b5a12d87074da2"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/native/ab3_kimera_adapter/launch/ab3_kimera_vio.launch",
+      "destination": "experiments/ab3/Kimera Multi/native/ab3_kimera_adapter/launch/ab3_kimera_vio.launch",
+      "sha256": "68f7b4e3f68c7729fb8cfe576c1a2759298d5bbdf75e3cc0e1ef792b5c0f6313",
+      "license": "BSD (retained package.xml declaration; team-written integration)",
+      "modifications": [],
+      "repository_sha256": "68f7b4e3f68c7729fb8cfe576c1a2759298d5bbdf75e3cc0e1ef792b5c0f6313"
+    },
+    {
+      "source": "Benchmark/Kimera Multi/native/ab3_kimera_adapter/scripts/ab3_kimera_output.py",
+      "destination": "experiments/ab3/Kimera Multi/native/ab3_kimera_adapter/scripts/ab3_kimera_output.py",
+      "sha256": "b61396dcbb656f9846ceb000eaa7531a183371227e53c83b2e859363551e7c3c",
+      "license": "BSD (retained package.xml declaration; team-written integration)",
+      "modifications": [],
+      "repository_sha256": "b61396dcbb656f9846ceb000eaa7531a183371227e53c83b2e859363551e7c3c"
+    },
+    {
+      "source": "Benchmark/Swarm Slam/BUILD_SWARM_SLAM.cmd",
+      "destination": "experiments/ab3/Swarm Slam/BUILD_SWARM_SLAM.cmd",
+      "sha256": "e89694e37550915065580f996560959a9ba84bbee52b2481251c8646bdc11c86",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "502e5081ba7f499d745511bade656c43f4de99f5c2ed62f13dd4f3e1c81bea8a"
+    },
+    {
+      "source": "Benchmark/Swarm Slam/BUILD_SWARM_SLAM.command",
+      "destination": "experiments/ab3/Swarm Slam/BUILD_SWARM_SLAM.command",
+      "sha256": "4bcc80009fa3ef1afbd43e52dbcf74d3ad48d0c3f248290f65400f08b9828e0c",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "4bcc80009fa3ef1afbd43e52dbcf74d3ad48d0c3f248290f65400f08b9828e0c"
+    },
+    {
+      "source": "Benchmark/Swarm Slam/BUILD_SWARM_SLAM.sh",
+      "destination": "experiments/ab3/Swarm Slam/BUILD_SWARM_SLAM.sh",
+      "sha256": "c1e6722d411a04df1d428e51f58d84d63436de02f065550ce950ef4d80c8e439",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "c1e6722d411a04df1d428e51f58d84d63436de02f065550ce950ef4d80c8e439"
+    },
+    {
+      "source": "Benchmark/Swarm Slam/Dockerfile",
+      "destination": "experiments/ab3/Swarm Slam/Dockerfile",
+      "sha256": "8c84c5de88bf6f4f4067836611f1b0477b679e2de8232042c19c9849216f207a",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "8c84c5de88bf6f4f4067836611f1b0477b679e2de8232042c19c9849216f207a"
+    },
+    {
+      "source": "Benchmark/Swarm Slam/EVALUATE_LAST_RUN_SWARM_SLAM.cmd",
+      "destination": "experiments/ab3/Swarm Slam/EVALUATE_LAST_RUN_SWARM_SLAM.cmd",
+      "sha256": "9d33987443bcd4f262c73100c20600448fdbb83b47cd509d9e61d142226cdc3a",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "e6aa6a1c19fd7807b0e7818c985ab9702a5bc0df88e495b0ba062cda9797b8e2"
+    },
+    {
+      "source": "Benchmark/Swarm Slam/EVALUATE_LAST_RUN_SWARM_SLAM.command",
+      "destination": "experiments/ab3/Swarm Slam/EVALUATE_LAST_RUN_SWARM_SLAM.command",
+      "sha256": "11510f888a8d5a0897fb9205aea0abbf11ee4cff225183abe51b394ab11221c8",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "11510f888a8d5a0897fb9205aea0abbf11ee4cff225183abe51b394ab11221c8"
+    },
+    {
+      "source": "Benchmark/Swarm Slam/EVALUATE_LAST_RUN_SWARM_SLAM.sh",
+      "destination": "experiments/ab3/Swarm Slam/EVALUATE_LAST_RUN_SWARM_SLAM.sh",
+      "sha256": "e4109d1a14fbf66feb0076ed3b2d987212f2d63e207e24d8727de5fbb0ee87f9",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "e4109d1a14fbf66feb0076ed3b2d987212f2d63e207e24d8727de5fbb0ee87f9"
+    },
+    {
+      "source": "Benchmark/Swarm Slam/PREPARE_SWARM_SLAM.cmd",
+      "destination": "experiments/ab3/Swarm Slam/PREPARE_SWARM_SLAM.cmd",
+      "sha256": "34345e96e5140749fd865e96bd02437835927c5f1369c6e8b708f5ef8b028e58",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "01945a530304186d7498b7d31ae5250135370c522a4b27840053a8195551d52f"
+    },
+    {
+      "source": "Benchmark/Swarm Slam/PREPARE_SWARM_SLAM.command",
+      "destination": "experiments/ab3/Swarm Slam/PREPARE_SWARM_SLAM.command",
+      "sha256": "a1682655501691d6ae22c715d4cbb29ce34f6d7d17da6aa7c495afd45bfcf817",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "a1682655501691d6ae22c715d4cbb29ce34f6d7d17da6aa7c495afd45bfcf817"
+    },
+    {
+      "source": "Benchmark/Swarm Slam/PREPARE_SWARM_SLAM.sh",
+      "destination": "experiments/ab3/Swarm Slam/PREPARE_SWARM_SLAM.sh",
+      "sha256": "f6da6cda0feff6e90d0533f3ca082b9a2ef600627cae069ff9a2a1a66336647c",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "f6da6cda0feff6e90d0533f3ca082b9a2ef600627cae069ff9a2a1a66336647c"
+    },
+    {
+      "source": "Benchmark/Swarm Slam/RUN_SWARM_SLAM.cmd",
+      "destination": "experiments/ab3/Swarm Slam/RUN_SWARM_SLAM.cmd",
+      "sha256": "3ed706d590c3322107af31203cab04b2a61c4a7110f860508f36da52dc865883",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "7049fd30550c7e09ed33345f8c35e441770cc515d041e26c7f352cda7f886bda"
+    },
+    {
+      "source": "Benchmark/Swarm Slam/RUN_SWARM_SLAM.command",
+      "destination": "experiments/ab3/Swarm Slam/RUN_SWARM_SLAM.command",
+      "sha256": "4ded5312120b47af56dcf3b2675a85c64cb6d3abf1d8699ef70bdfe1e13d0f3d",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "4ded5312120b47af56dcf3b2675a85c64cb6d3abf1d8699ef70bdfe1e13d0f3d"
+    },
+    {
+      "source": "Benchmark/Swarm Slam/run_swarm_slam.py",
+      "destination": "experiments/ab3/Swarm Slam/run_swarm_slam.py",
+      "sha256": "c43dbd2edda97090901f9c42b7be9eb430f7ae7322f3e325f242c006fce63e13",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "c43dbd2edda97090901f9c42b7be9eb430f7ae7322f3e325f242c006fce63e13"
+    },
+    {
+      "source": "Benchmark/Swarm Slam/RUN_SWARM_SLAM.sh",
+      "destination": "experiments/ab3/Swarm Slam/RUN_SWARM_SLAM.sh",
+      "sha256": "a36d30d1a49d4afc0b7e96ba237e1d7abe61493fcd2fe5dde4562399685b0f41",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "a36d30d1a49d4afc0b7e96ba237e1d7abe61493fcd2fe5dde4562399685b0f41"
+    },
+    {
+      "source": "Benchmark/Swarm Slam/source_lock.json",
+      "destination": "experiments/ab3/Swarm Slam/source_lock.json",
+      "sha256": "20e5df565305edf0c90315464bb7faeb6a253fef90ef9442ba08475b92a2a2e6",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "20e5df565305edf0c90315464bb7faeb6a253fef90ef9442ba08475b92a2a2e6"
+    },
+    {
+      "source": "Benchmark/Swarm Slam/STOP_SWARM_SLAM.cmd",
+      "destination": "experiments/ab3/Swarm Slam/STOP_SWARM_SLAM.cmd",
+      "sha256": "5e71dc6c254dafc5415de007e108204a4e3f5821213c52ebb3f01ac4c9c220f8",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "f6b711dba36708130a64b5c731d855e9b6cfb0a9103bcbd06d23e470290f447c"
+    },
+    {
+      "source": "Benchmark/Swarm Slam/STOP_SWARM_SLAM.command",
+      "destination": "experiments/ab3/Swarm Slam/STOP_SWARM_SLAM.command",
+      "sha256": "a151fd215369471ef4f24c9531a5557493c7ff6a4f29c3c0f94a089181146871",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "a151fd215369471ef4f24c9531a5557493c7ff6a4f29c3c0f94a089181146871"
+    },
+    {
+      "source": "Benchmark/Swarm Slam/STOP_SWARM_SLAM.sh",
+      "destination": "experiments/ab3/Swarm Slam/STOP_SWARM_SLAM.sh",
+      "sha256": "bfb85bf2f1853c0bae9e45f187bff1515c41b4c2d857910cb5b8b2c736e73299",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "bfb85bf2f1853c0bae9e45f187bff1515c41b4c2d857910cb5b8b2c736e73299"
+    },
+    {
+      "source": "Benchmark/Swarm Slam/algorithm/workspace/cslam.lock.json",
+      "destination": "experiments/ab3/Swarm Slam/algorithm/workspace/cslam.lock.json",
+      "sha256": "8720f687d21adf7a89a587f8afc5f555c1c0334816bbdbfc9400a6924f160973",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "5cf53a43cada151048e82559d0cbdb650f435f71b08275de90afb4649f06870a"
+    },
+    {
+      "source": "Benchmark/Swarm Slam/algorithm/workspace/cslam_experiments.lock.json",
+      "destination": "experiments/ab3/Swarm Slam/algorithm/workspace/cslam_experiments.lock.json",
+      "sha256": "483bad996fa84b100ca147a250ba7f0570ab829f24824796f7e69273590f1f7b",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "fd4f95874fe554359b7af232baed2cb53a41dec11247d4b694c2afbc9bdd6d99"
+    },
+    {
+      "source": "Benchmark/Swarm Slam/algorithm/workspace/cslam_interfaces.lock.json",
+      "destination": "experiments/ab3/Swarm Slam/algorithm/workspace/cslam_interfaces.lock.json",
+      "sha256": "b2651810701e04e7dc825b6311e81eae2e9954a004b2b26c7054a507318f9698",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "3f5e60cc7a815ee32e912a8ab7f76d5793ab303c0631c189445dcbc3fb856221"
+    },
+    {
+      "source": "Benchmark/Swarm Slam/algorithm/workspace/gtsam.lock.json",
+      "destination": "experiments/ab3/Swarm Slam/algorithm/workspace/gtsam.lock.json",
+      "sha256": "caf13d888729611714a03d4018e69c4b7d3daab450a194a835d575684a2c0dcb",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "766b14fd20cf70bdba981cc203c69e072a898658faefae9961caba4a2ebfa509"
+    },
+    {
+      "source": "Benchmark/Swarm Slam/config/benchmark.json",
+      "destination": "experiments/ab3/Swarm Slam/config/benchmark.json",
+      "sha256": "97e069dcef585126328a36361f35d2b320cf2ecc61df0000805746c27cb4de81",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "97e069dcef585126328a36361f35d2b320cf2ecc61df0000805746c27cb4de81"
+    },
+    {
+      "source": "Benchmark/Swarm Slam/native/patch_build.py",
+      "destination": "experiments/ab3/Swarm Slam/native/patch_build.py",
+      "sha256": "d33ef563c1b77184281a3ffc311f74f2e9a91ba2cb2443da9a4bcfa36bb54a71",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "d33ef563c1b77184281a3ffc311f74f2e9a91ba2cb2443da9a4bcfa36bb54a71"
+    },
+    {
+      "source": "Benchmark/Swarm Slam/third_party/models/model_lock.json",
+      "destination": "experiments/ab3/Swarm Slam/third_party/models/model_lock.json",
+      "sha256": "ee117fe9890a55f3fc13fad950ef593a3279b73eb3c9b958cdab5275bd294af7",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "ee117fe9890a55f3fc13fad950ef593a3279b73eb3c9b958cdab5275bd294af7"
+    },
+    {
+      "source": "Benchmark/Live Integrations/entrypoint_ros1.sh",
+      "destination": "experiments/ab3/Live Integrations/entrypoint_ros1.sh",
+      "sha256": "bad704cdc1c172667fbd2bf56b93bbee96060dc5a027d7f5158f6e8dc45b5cd0",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "bad704cdc1c172667fbd2bf56b93bbee96060dc5a027d7f5158f6e8dc45b5cd0"
+    },
+    {
+      "source": "Benchmark/Live Integrations/entrypoint_ros2.sh",
+      "destination": "experiments/ab3/Live Integrations/entrypoint_ros2.sh",
+      "sha256": "3b2de0ae0eb3f808e099222be65bb6bca2814980e80ae63d6d7af1e6fc8d4e99",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "3b2de0ae0eb3f808e099222be65bb6bca2814980e80ae63d6d7af1e6fc8d4e99"
+    },
+    {
+      "source": "Benchmark/Live Integrations/finalize_native.py",
+      "destination": "experiments/ab3/Live Integrations/finalize_native.py",
+      "sha256": "d0d058d949f7dbcf37dac020f8ece2662f8aafe50cde03f4a9cd895c52f7cb0f",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "d0d058d949f7dbcf37dac020f8ece2662f8aafe50cde03f4a9cd895c52f7cb0f"
+    },
+    {
+      "source": "Benchmark/Live Integrations/initialization_scan.py",
+      "destination": "experiments/ab3/Live Integrations/initialization_scan.py",
+      "sha256": "b371de27f1bca178bdaf9fcd245cf332aa204fbe3131276c74461f9ab30128b8",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "b371de27f1bca178bdaf9fcd245cf332aa204fbe3131276c74461f9ab30128b8"
+    },
+    {
+      "source": "Benchmark/Live Integrations/live_controller.py",
+      "destination": "experiments/ab3/Live Integrations/live_controller.py",
+      "sha256": "8403e7b0087537e7c899b18548d0f307413131e76558d06b9c46a0184738cea4",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "8403e7b0087537e7c899b18548d0f307413131e76558d06b9c46a0184738cea4"
+    },
+    {
+      "source": "Benchmark/Live Integrations/live_radio.py",
+      "destination": "experiments/ab3/Live Integrations/live_radio.py",
+      "sha256": "b32deaa25a1e464078803b1ba222d0bbd2a54682001d23c10c053796d7e6883a",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "b32deaa25a1e464078803b1ba222d0bbd2a54682001d23c10c053796d7e6883a"
+    },
+    {
+      "source": "Benchmark/Live Integrations/live_runner.py",
+      "destination": "experiments/ab3/Live Integrations/live_runner.py",
+      "sha256": "33a1dbce0d75bcde5429fb07a1dd57b68dc2ddcb9a8806007710811198961d29",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "33a1dbce0d75bcde5429fb07a1dd57b68dc2ddcb9a8806007710811198961d29"
+    },
+    {
+      "source": "Benchmark/Live Integrations/live_runtime.py",
+      "destination": "experiments/ab3/Live Integrations/live_runtime.py",
+      "sha256": "4a25a22bd2193c7ae414c18f64cf726c1f8e95bf828a935fd53ae00ef5393616",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "4a25a22bd2193c7ae414c18f64cf726c1f8e95bf828a935fd53ae00ef5393616"
+    },
+    {
+      "source": "Benchmark/Live Integrations/live_wire.py",
+      "destination": "experiments/ab3/Live Integrations/live_wire.py",
+      "sha256": "aa7baf91dc62aa065a343fd874c1f54de4cbcf2f21ef09f444f247c577b82cd7",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "aa7baf91dc62aa065a343fd874c1f54de4cbcf2f21ef09f444f247c577b82cd7"
+    },
+    {
+      "source": "Benchmark/Live Integrations/monocular_scale.py",
+      "destination": "experiments/ab3/Live Integrations/monocular_scale.py",
+      "sha256": "50cf40b60dc73978c1b6a90e972200cbed92de1e6736d3f34b5908212dd899a0",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "50cf40b60dc73978c1b6a90e972200cbed92de1e6736d3f34b5908212dd899a0"
+    },
+    {
+      "source": "Benchmark/Live Integrations/native_output_state.py",
+      "destination": "experiments/ab3/Live Integrations/native_output_state.py",
+      "sha256": "8a132a5bc9000112a75d58d003fdcfe4e0c614db72a0d5394f48542680468c2a",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "8a132a5bc9000112a75d58d003fdcfe4e0c614db72a0d5394f48542680468c2a"
+    },
+    {
+      "source": "Benchmark/Live Integrations/native_ros1.py",
+      "destination": "experiments/ab3/Live Integrations/native_ros1.py",
+      "sha256": "e70d44d622e0adfb71da53b8e5e7aa804a1d5dfdfdacb18580e5e8a033f1663a",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "e70d44d622e0adfb71da53b8e5e7aa804a1d5dfdfdacb18580e5e8a033f1663a"
+    },
+    {
+      "source": "Benchmark/Live Integrations/native_ros2.py",
+      "destination": "experiments/ab3/Live Integrations/native_ros2.py",
+      "sha256": "2b8c4c3afdc2d0969b09878d697db78f61dec2ac1dae4ff1653e64d3b0f4cfa2",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "2b8c4c3afdc2d0969b09878d697db78f61dec2ac1dae4ff1653e64d3b0f4cfa2"
+    },
+    {
+      "source": "Benchmark/Live Integrations/native_supervisor.py",
+      "destination": "experiments/ab3/Live Integrations/native_supervisor.py",
+      "sha256": "b21bfa753b5112cae12ddf7b5fd22857122f071ec497cffd6a87ad0bf5120326",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "b21bfa753b5112cae12ddf7b5fd22857122f071ec497cffd6a87ad0bf5120326"
+    },
+    {
+      "source": "Benchmark/Live Integrations/pose_frames.py",
+      "destination": "experiments/ab3/Live Integrations/pose_frames.py",
+      "sha256": "65e83803841da82b5096f95c02209a113b09506c703e89fc0fc6b899f1fc286e",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "65e83803841da82b5096f95c02209a113b09506c703e89fc0fc6b899f1fc286e"
+    },
+    {
+      "source": "Benchmark/Live Integrations/prepare.py",
+      "destination": "experiments/ab3/Live Integrations/prepare.py",
+      "sha256": "7f75bbe53de4ddf7d11fe2accc71475148f77baccd537dee0e51726dbb5bd92c",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "7f75bbe53de4ddf7d11fe2accc71475148f77baccd537dee0e51726dbb5bd92c"
+    },
+    {
+      "source": "Benchmark/Live Integrations/reactive_drive.py",
+      "destination": "experiments/ab3/Live Integrations/reactive_drive.py",
+      "sha256": "52d7b83b441b385bbdbd76e4179b3c201b939966640f4b30e06cde5ec14c44d4",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "52d7b83b441b385bbdbd76e4179b3c201b939966640f4b30e06cde5ec14c44d4"
+    },
+    {
+      "source": "Benchmark/Live Integrations/restore_sources.py",
+      "destination": "experiments/ab3/Live Integrations/restore_sources.py",
+      "sha256": "a4e4817b10c86c15dce235f25cc819408990399ceccbfd27c90d7445c9a06e5e",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "a4e4817b10c86c15dce235f25cc819408990399ceccbfd27c90d7445c9a06e5e"
+    },
+    {
+      "source": "Benchmark/Live Integrations/ros_routes.py",
+      "destination": "experiments/ab3/Live Integrations/ros_routes.py",
+      "sha256": "21ea6b5ff1cb2c186375f3a6f061f57eec45bf3c2baa0c4a231c0c24532cadd7",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "21ea6b5ff1cb2c186375f3a6f061f57eec45bf3c2baa0c4a231c0c24532cadd7"
+    },
+    {
+      "source": "Benchmark/Live Integrations/server_correction.py",
+      "destination": "experiments/ab3/Live Integrations/server_correction.py",
+      "sha256": "4e4d651ecb238aae3fd8a21fb589cb45435f4c7081858b84f70282b170de4046",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "4e4d651ecb238aae3fd8a21fb589cb45435f4c7081858b84f70282b170de4046"
+    },
+    {
+      "source": "Benchmark/Live Integrations/source_tools.py",
+      "destination": "experiments/ab3/Live Integrations/source_tools.py",
+      "sha256": "bcb7f691fadb2c2682e06ee09d3029d6036ad1785f896d248f058016b5891d7c",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "bcb7f691fadb2c2682e06ee09d3029d6036ad1785f896d248f058016b5891d7c"
+    },
+    {
+      "source": "Benchmark/Live Integrations/stereo_output.py",
+      "destination": "experiments/ab3/Live Integrations/stereo_output.py",
+      "sha256": "6c12ec49aadda2a889b6d71eb0175c90d41eb82dbede6d4e2208e6f2d956e7df",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "6c12ec49aadda2a889b6d71eb0175c90d41eb82dbede6d4e2208e6f2d956e7df"
+    },
+    {
+      "source": "Benchmark/Live Integrations/tcp_tunnel.py",
+      "destination": "experiments/ab3/Live Integrations/tcp_tunnel.py",
+      "sha256": "19a3ecea9edae44c2fadf8d5900d8a151fd97d41d8bbcb7b3e3e0ddba2ad24b4",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "19a3ecea9edae44c2fadf8d5900d8a151fd97d41d8bbcb7b3e3e0ddba2ad24b4"
+    },
+    {
+      "source": "Benchmark/Live Integrations/test_controller_boundary.py",
+      "destination": "experiments/ab3/Live Integrations/test_controller_boundary.py",
+      "sha256": "1d9b78d3596285883f24dd4bd17d631a984cb38a6847f152747f0071cc58e60b",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "1d9b78d3596285883f24dd4bd17d631a984cb38a6847f152747f0071cc58e60b"
+    },
+    {
+      "source": "Benchmark/Live Integrations/test_initialization_scan.py",
+      "destination": "experiments/ab3/Live Integrations/test_initialization_scan.py",
+      "sha256": "03324c3ae3e2b6210267be030aa2454df66f3f7f16e81e2536ce58ab84cad593",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "03324c3ae3e2b6210267be030aa2454df66f3f7f16e81e2536ce58ab84cad593"
+    },
+    {
+      "source": "Benchmark/Live Integrations/test_live_transport.py",
+      "destination": "experiments/ab3/Live Integrations/test_live_transport.py",
+      "sha256": "9139c468c0ce74a513834b6d8ff98b3e8989908a595b6ba6bcd57ae86de28747",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "9139c468c0ce74a513834b6d8ff98b3e8989908a595b6ba6bcd57ae86de28747"
+    },
+    {
+      "source": "Benchmark/Live Integrations/test_native_outputs.py",
+      "destination": "experiments/ab3/Live Integrations/test_native_outputs.py",
+      "sha256": "be50954eff13fadd3bf1e3c3fa8303434b814240f515be13fb1844422c472901",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "be50954eff13fadd3bf1e3c3fa8303434b814240f515be13fb1844422c472901"
+    },
+    {
+      "source": "Benchmark/Live Integrations/test_native_ros2_peers.py",
+      "destination": "experiments/ab3/Live Integrations/test_native_ros2_peers.py",
+      "sha256": "87a8eb04760b3b90bafd4156d11c24b0324c8e47c3e32359eee3ce75db700fec",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "87a8eb04760b3b90bafd4156d11c24b0324c8e47c3e32359eee3ce75db700fec"
+    },
+    {
+      "source": "Benchmark/Live Integrations/test_native_ros2_sensors.py",
+      "destination": "experiments/ab3/Live Integrations/test_native_ros2_sensors.py",
+      "sha256": "61eb51f03a2e484c44113b9f3d699db74016d0302239f0379b2b71ee545706af",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "61eb51f03a2e484c44113b9f3d699db74016d0302239f0379b2b71ee545706af"
+    },
+    {
+      "source": "Benchmark/Live Integrations/test_native_ros2_services.py",
+      "destination": "experiments/ab3/Live Integrations/test_native_ros2_services.py",
+      "sha256": "809c71f8dd64f31bea99368c2ec0e43c43461d1e5dc3b0d6bbd0910a7d49187a",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "809c71f8dd64f31bea99368c2ec0e43c43461d1e5dc3b0d6bbd0910a7d49187a"
+    },
+    {
+      "source": "Benchmark/Live Integrations/test_new_adapters.py",
+      "destination": "experiments/ab3/Live Integrations/test_new_adapters.py",
+      "sha256": "113978128017e8fa0de26dd0abbb4aa02b97d962360d7c6f1ee40deec11a2f5f",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "113978128017e8fa0de26dd0abbb4aa02b97d962360d7c6f1ee40deec11a2f5f"
+    },
+    {
+      "source": "Benchmark/Live Integrations/test_preparation.py",
+      "destination": "experiments/ab3/Live Integrations/test_preparation.py",
+      "sha256": "0b00127235a34dd6ad1101d779f2511848079b195b470430ea0ba13b372d338a",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "0b00127235a34dd6ad1101d779f2511848079b195b470430ea0ba13b372d338a"
+    },
+    {
+      "source": "Benchmark/Live Integrations/test_reactive_drive.py",
+      "destination": "experiments/ab3/Live Integrations/test_reactive_drive.py",
+      "sha256": "2a8551161423ccbc308dd7f995fc06daa849f53f9aeaaa281bdb710274139d5d",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "2a8551161423ccbc308dd7f995fc06daa849f53f9aeaaa281bdb710274139d5d"
+    },
+    {
+      "source": "Benchmark/Live Integrations/test_stereo_output.py",
+      "destination": "experiments/ab3/Live Integrations/test_stereo_output.py",
+      "sha256": "c8ec88a28825df52d859221f91b4bf2bf692edf930f44fd799a8d08770460437",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "c8ec88a28825df52d859221f91b4bf2bf692edf930f44fd799a8d08770460437"
+    },
+    {
+      "source": "Benchmark/Live Integrations/test_tcp_tunnel.py",
+      "destination": "experiments/ab3/Live Integrations/test_tcp_tunnel.py",
+      "sha256": "d3d3fed471014da9148479b4b5c25ae74ca3a375d2ecefa8881f8fe6f1f1d5bc",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "d3d3fed471014da9148479b4b5c25ae74ca3a375d2ecefa8881f8fe6f1f1d5bc"
+    },
+    {
+      "source": "Benchmark/Door Slam/live_view_template.html",
+      "destination": "experiments/ab3/Door Slam/live_view_template.html",
+      "sha256": "fafa5a2fe4cdad6d92df2e597410a484cfa85f56f37ea6a15a3b15307a1c3145",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "06fcc123da9fbf5dd73d5d96af6c887a323d5e9c2058d4f1ff027d6e98cd07c1"
+    },
+    {
+      "source": "Benchmark/D2 Slam/live_view_template.html",
+      "destination": "experiments/ab3/D2 Slam/live_view_template.html",
+      "sha256": "1156dfeea365c8fdc0fca4f0d5b1981af8cfbebc8d89ee891ba549dcfa52d566",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "2fed1f4c610551ecd2f395e601f4acf68a4e455d20d2aa5eab7e83de25315fd4"
+    },
+    {
+      "source": "Benchmark/Door Slam/.dockerignore",
+      "destination": "experiments/ab3/Door Slam/.dockerignore",
+      "sha256": "ba3c73d58c67e12d2cfa6be9f6d92a74365096a55572680512e8c2d22bad1fcc",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "08182b667bd185bfede0a87e402a32f5cdb777a5e77e1b7f990f2cced54eb2a6"
+    },
+    {
+      "source": "Benchmark/D2 Slam/.dockerignore",
+      "destination": "experiments/ab3/D2 Slam/.dockerignore",
+      "sha256": "9bdef519aaad0623abbab34c2dc54a345797f1557ff816d64a4b82d1e01bf3c0",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": [],
+      "repository_sha256": "b4d7e26bd51756f53be7e793170e4897670decfa5da4b95d5bb9b3e61703055c"
     }
   ]
 }

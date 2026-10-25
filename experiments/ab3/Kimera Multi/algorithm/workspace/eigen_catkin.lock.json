@@ -1,0 +1,17 @@
+{
+  "repository": "https://github.com/ethz-asl/eigen_catkin",
+  "commit": "3323b388540fa95ec9da6f9cd887f70ead055edb",
+  "archive_sha256": "c223b0baea87711d32cb2a235157350c3e2ca107f3b8131bc8162b9d6295f490",
+  "files": {
+    ".gitignore": "da299f54051fc3b8253f8b418f1e122e085b908172884ba6a5b9481731ba9fcc",
+    "CMakeLists.txt": "b525426b7834ed01d1f8867eb6a8c852baf00153d68b349516ff86e7387825f1",
+    "DisableTests.patch": "3bf17f104e18209edb41ea74df6caded179942dea35178a05f26b059188655e8",
+    "FixWarning.patch": "a4dd9ba0b0dbe21c0b896486fce8d328d66ecd4aadb36de21933f269dbc0dbdd",
+    "LICENSE": "3e88da38c5d3ad339594f6f4e1ed280cbe1996b8b5f9f38f6fea3c625ee44a6a",
+    "README.md": "4136f143517d123f2e02860f9e988db5dc859bce60fe80e69ca645d7f5e5a363",
+    "StdVector.patch": "062262a1a7f2afd1f40c0a839328f7e339f71931f969b027955c21a53e404caf",
+    "cmake/eigen-extras.cmake.in": "b25c53b6fc7072072af17c900500b06407b7b87325cc53817eba977f7ef48bcf",
+    "package.xml": "03c68b19e598a7ff7b257e67a3301b2745a320da976d98d235713195fae4bb63",
+    "use-system-installation-of-eigen.cmake": "5662fee224499ade8d562945687e28b9af7e1d5d98946a1b473ba36484c608af"
+  }
+}

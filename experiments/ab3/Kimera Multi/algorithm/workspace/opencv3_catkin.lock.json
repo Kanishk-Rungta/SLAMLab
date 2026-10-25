@@ -1,0 +1,14 @@
+{
+  "repository": "https://github.com/ethz-asl/opencv3_catkin",
+  "commit": "934f93b0595ef9b340017b46acd720f51ac12056",
+  "archive_sha256": "12e00a894d1a84a8f2be856a4f390f51594d7007f34512fff1a240a54dd0c899",
+  "files": {
+    ".gitignore": "3a14644992d434b32d2da769043b846a25178f07aea64a40525496640b9955f0",
+    "CMakeLists.txt": "5cbe9ee18e152b60399283e6d0aa9b890f6ba726091a5bb3bf778da8d5ec36e2",
+    "README.md": "c3fe3d0eb29a5287347e4a45109812a7b353b97ab61454ddf08019bcaaea2879",
+    "fix_lapack.patch": "e7e186da166924c910f90dee219cf40d3697a6b70a63eaaa84819c6510f53976",
+    "fix_python_discovery.patch": "f3bb8ce1eb4cf17225bacafb0081d8d8912d3a190eba12fa00b1c6f51184a09b",
+    "package.xml": "053bf6d7d728afb0f54d23978c6dc2986522fbef7927c8ff75d294a761478fec",
+    "rename_unordered_map_definition.patch": "d402b390ac6b2183a8e26e2ad0514548fecccfc50787d86de0747db49dc99be0"
+  }
+}

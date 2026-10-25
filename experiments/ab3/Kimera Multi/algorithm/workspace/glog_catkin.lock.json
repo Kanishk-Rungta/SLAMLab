@@ -1,0 +1,14 @@
+{
+  "repository": "https://github.com/ethz-asl/glog_catkin",
+  "commit": "40a9edadd15c59f8b57dc947d0135b0a007ea10b",
+  "archive_sha256": "f3dc1f83c6f5a8bc9e2dc476a527cecb20a8fed7df553440c34e1ca61852634c",
+  "files": {
+    ".gitignore": "0865b355234186f9becbfe1aa7ac5c328d863f5d61093d765b3443ab60f02177",
+    "CMakeLists.txt": "c67e6a3a4ed5e389080cc5d87e67be0985b909ee65fa7859a8d81fc84c98468e",
+    "README.md": "fa8ec2fdcbdf6e436f03ae15c62c3b4832428b5d222c3a0b0b12b83f6e4bb425",
+    "cmake/Modules/FindGlog.cmake": "d03f636a151dbb986d3163f3bb76c892f35ed9c0d6f8f356a18ef3095d38566c",
+    "cmake/glog-catkin-extras.cmake.in": "a5aa0c32f7fcb36b5bc35e4ece18e54e61e491555523fe2892a10d63907e9ebc",
+    "fix-unused-typedef-warning.patch": "1577bd26a224d999783a10a6b585d315be2b0564a07d83a58e05b65dcbd092c8",
+    "package.xml": "1cd88d514cffb6789ed0fc36f3c5cc2c84300a6df8bde7b129a32f86479518f2"
+  }
+}

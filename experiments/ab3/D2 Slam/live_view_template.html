@@ -1,0 +1,9 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Original D2SLAM — AB3</title>
+<style>body{font:16px Segoe UI,Arial,sans-serif;margin:24px;background:#fafafa;color:#222}figure{margin:0 0 24px}img{max-width:100%;border:1px solid #ccc}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:20px}</style></head>
+<body><h2>Original D2SLAM — {ROBOTS} robots — {SCENARIO}</h2>
+<p>Official D2VINS stereo-inertial odometry, SuperPoint/NetVLAD loop detection and distributed D2PGO, run on the CPU. No lidar. These are local stereo occupancy outputs rebuilt with D2SLAM's corrected keyframe poses. Docks are ignored, so the maps use the algorithm's estimated frame. The evaluator aligns that shared frame to ground truth after the run.</p>
+<p>Maps appear after D2VINS initializes. No merged occupancy map is claimed. The final report is saved as benchmark_report.md.</p>
+<figure><img data-src="overview.png" alt="Swarm map overview"></figure><div class="grid">{CELLS}</div>
+<script>function refresh(){document.querySelectorAll('img').forEach(i=>i.src=i.dataset.src+'?'+Date.now());}refresh();setInterval(refresh,60000);</script>
+</body></html>

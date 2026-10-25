@@ -1,0 +1,30 @@
+{
+  "repository": "https://github.com/MIT-SPARK/Kimera-Multi-LCD",
+  "commit": "e9f73da9213b72c370dc079a86db354e7c0654bb",
+  "archive_sha256": "5cc56df6dc2b422164b676c254fd8a4e5a943b41a0244161d005e1fb2dc288d5",
+  "files": {
+    ".clang-format": "9bda1723b793ef5dd3ab26714e01c65aa0f79c5722832636ccc1571daf83df16",
+    ".gitignore": "412fa34c4c7c4ce80b7dbee7ff2905df07e7aa213d43462bec46a1820b837c40",
+    "CMakeLists.txt": "cda54a3d5f785747859e8948c80d8eec1294a0686a372fcd013a23f99d5a687a",
+    "LICENSE": "e1f26297b6c7f5513ab02db0c81ed167b043e28b23ababd1f59ed6dc0b1f1629",
+    "README.md": "25294200ac2354309db25f717fa4edffe20892557b14b6565aa95b2268e935c6",
+    "cmake/json.CMakeLists.txt.in": "3f6ce0f3490b70fb55110decde35b3aa00df044f5d692d985c5a790d5920db32",
+    "cmake/vocab_download.cmake": "4c7a21e7fa249b23f5f02933f8d06fc6cc42b899ab7f7ee152ee9fe34328caf5",
+    "include/kimera_multi_lcd/io.h": "16e98fed1a3484911af930990c38f13e69e1007d5a8c353c735181f98b7a6053",
+    "include/kimera_multi_lcd/lcd_third_party.h": "5c8eb36bed0f526ca1eab02525fdda0203c3f18b2aede01455fb53d6a289afe5",
+    "include/kimera_multi_lcd/loop_closure_detector.h": "9dfc89ebcde3e83b2333479c043dcacda17d4b8d13846d8210ba22b21eacd9bc",
+    "include/kimera_multi_lcd/serializer.h": "db1c1a93d3a6c7c42b85fd07a22d21d12aaf8ee9d4d757bc64e246ca6faaf573",
+    "include/kimera_multi_lcd/types.h": "97ecf6ae9112a27d6ba387d8153fa9c5d3682e98efc5171c1c771b8917dce79c",
+    "include/kimera_multi_lcd/utils.h": "7e393578ffa7bcb3f510449a721fa5b6982bc631ae0c9fbe323c80ebd0895afb",
+    "package.xml": "1804d5bf6c983ee468650c1b5b297910cde4266ed563bc8270487eba02a4e659",
+    "src/io.cpp": "693a9ea2f4570957b32ee79b7268f3076bafa3cfbd49b8e965a79392d0f6083c",
+    "src/lcd_third_party.cpp": "f66a5aa9f80eac90c891334178e94be0bad9580f5d60791cf6bd88851ca219f2",
+    "src/loop_closure_detector.cpp": "27874b193dca88db60b34351fff052635038945165902642c3c0e288edde0d42",
+    "src/serializer.cpp": "a03e10e116c01270a277b4b4823a6890e7ca5d7b97be47008d4d2f64dfe80dab",
+    "src/types.cpp": "23a274cf4851b94db44a7c2fec9edbbd265b0174ce4cae723bb1912199372429",
+    "src/utils.cpp": "dd04aaa36eac84172ef54b1e24024d278b5b2673bd2f16bc25b71f7cd136dd95",
+    "test/test_config.h.in": "5c7ba5f7e9e11cca53bbfd0fdacc05fbbd3c4206a9256736f0841477dc66ff90",
+    "test/test_lcd.cpp": "ad2a5205bd3d65c1516cbe786c8144f180272c6cf6f351858ca43c2d82190506",
+    "test/test_utils.cpp": "4e163680307666df9dbb1937e126cd0bafc6042b3455b04799e64271433bbbeb"
+  }
+}

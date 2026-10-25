@@ -1,0 +1,17 @@
+{
+  "repository": "https://github.com/ethz-asl/catkin_boost_python_buildtool",
+  "commit": "c8ea6e25bc5d98772d57b2ffd7619973952a6839",
+  "archive_sha256": "6f6c6c8273e00adc657061402c5ee5fe020dae637e05f84ce891bb6a1d95d666",
+  "files": {
+    ".gitignore": "1785df0830311a586fdc43165c050f0698bebbec8ba2264d50be987c159872db",
+    "catkin_boost_python_buildtool/CMakeLists.txt": "cd70fc7a0cefe53c876d841df4931c2774ef08cc9ffec0a18a8b58068bb9a50b",
+    "catkin_boost_python_buildtool/cmake/add_python_export_library.cmake": "a7dec3cd9a607783ed474768c11edc6a2e6fdc65f2132dff7102a87a99daeb97",
+    "catkin_boost_python_buildtool/package.xml": "caa52d5b07d091c835bb2b036b361223591c9090a5e3eca5af8ca971f72cb49c",
+    "catkin_boost_python_buildtool_test/CMakeLists.txt": "acdecb1cc0445abdb94348e62c7412027df8dad5360b480d5f7e7d1102971e85",
+    "catkin_boost_python_buildtool_test/package.xml": "d2b8da4f7aabed5c2b3074bdb51c9efa2fcf8bc63d8e3d392f23790ccb5bbb04",
+    "catkin_boost_python_buildtool_test/python/catkin_boost_python_test/__init__.py": "8ceee7b78733d99fcfd9bdb45f925e097a62d464c4348ddaa8961eaf6a9ecfbd",
+    "catkin_boost_python_buildtool_test/setup.py": "04f96d11ef66d0a4dc2483e269bb67417cf6da2a8d91446566f40258b3b9eb30",
+    "catkin_boost_python_buildtool_test/src/module.cpp": "2a52cc049d9c499eb9402353f4d018b16051d6efc6a38ccd26eb3bcb4c3d60ba",
+    "catkin_boost_python_buildtool_test/test/test.py": "e8a244d00e7367fff8eee17b49e31a0d19e5230817aefba8c47fe5a0ce583665"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "swarm_slam",
+  "algorithm": "Swarm-SLAM",
+  "repository": "https://github.com/MISTLab/Swarm-SLAM",
+  "ros": "ROS 2 Humble/Jazzy",
+  "input_mode": "stereo with RTAB-Map visual odometry",
+  "result_label": "Swarm-SLAM-AB3-Stereo-RTABMap",
+  "architecture": "decentralized",
+  "max_robots_upstream": 10,
+  "required_workspace": [
+    "cslam",
+    "cslam_interfaces",
+    "cslam_experiments",
+    "gtsam"
+  ],
+  "model_asset": "ResNet18_64_cosplace.pth",
+  "first_port": 48300,
+  "live_adapter_implemented": true,
+  "native_build_validated": false,
+  "webots_validated": false,
+  "integration_work_remaining": [
+    "Compile the Docker image and verify the ROS/RTAB-Map/GTSAM APIs on the target Linux-container runtime.",
+    "Validate real native startup, camera synchronization, tracking and corrected pose graph output in AB3.",
+    "Validate peer channel coverage and native optimizer behavior under standard radio loss and outages.",
+    "Validate native loop measurements and timestamp resolution with real two-robot data."
+  ]
+}

@@ -1,0 +1,22 @@
+# Installation
+
+Use Python 3.10?3.12. From the repository root, create an isolated environment:
+
+```sh
+python -m venv .venv
+# Windows PowerShell
+.venv/Scripts/Activate.ps1
+# Linux/macOS: source .venv/bin/activate
+python -m pip install -r requirements.txt
+```
+
+The requirements pin direct host packages. This is not a full transitive lock;
+record `python -m pip freeze` with an experiment. These packages do not install
+ROS, Docker or Webots. Install Webots R2025a separately and set `WEBOTS_HOME` if
+needed. Native algorithm builds require Docker with Linux containers and their
+separate historical ROS stacks. The [algorithm guides](../../algorithms/README.md)
+explain source restoration and remaining validation gates.
+
+Start offline with `python -B tools/run_webots_demo.py --prepare-only`, then run
+`python -B tools/run_webots_demo.py --robots 1 --seconds 10` on a simulator host.
+No native SLAM dependency is required for wheel odometry.

@@ -1,0 +1,70 @@
+<launch>
+  <!-- One robot of the official D2SLAM stack: D2VINS (with D2Frontend), D2PGO
+       and D2Comm, as in upstream d2vins/launch/realsense.launch with
+       enable_loop/enable_pgo true. Parameter values are upstream's; only the
+       paths, the robot id and the container-local LCM URL are deployment
+       settings. No RViz, TaichiSLAM or dense depth generation. -->
+  <arg name="self_id"/>
+  <arg name="config"/>
+  <arg name="models"/>
+  <arg name="output"/>
+  <arg name="lcm_uri"/>
+  <param name="/use_sim_time" value="true"/>
+  <node pkg="d2vins" type="d2vins_node" name="d2vins" output="screen" required="true">
+    <rosparam>
+      jpg_quality: 75
+      query_thres: 0.2
+      init_query_thres: 0.2
+      min_movement_keyframe: 0.1
+      enable_pub_remote_img: false
+      enable_sub_remote_img: false
+      accept_min_3d_pts: 30
+      recv_msg_duration: 0.5
+      superpoint_thres: 0.1
+      triangle_thres: 0.012
+      min_direction_loop: 1
+      detector_match_thres: 0.7
+      send_all_features: false
+      lower_cam_as_main: false
+      min_match_per_dir: 20
+      output_raw_superpoint_desc: false
+      depth_far_thres: 100
+      loop_cov_pos: 0.1
+      odometry_consistency_threshold: 3.0
+      pos_covariance_per_meter: 0.01
+      yaw_covariance_per_meter: 0.003
+      enable_network: true
+    </rosparam>
+    <param name="lcm_uri" value="$(arg lcm_uri)" type="string" />
+    <param name="pca_comp_path" value="$(arg models)/components_.csv" type="string" />
+    <param name="pca_mean_path" value="$(arg models)/mean_.csv" type="string" />
+    <param name="pca_netvlad" value="$(arg models)/netvlad_pca.csv" type="string" />
+    <param name="output_path" value="$(arg output)" type="string" />
+    <param name="superpoint_model_path" value="$(arg models)/superpoint_v1_dyn_size.onnx" type="string" />
+    <param name="netvlad_model_path" value="$(arg models)/mobilenetvlad_dyn_size.onnx" type="string" />
+    <param name="superglue_model_path" value="$(arg models)/superglue.onnx" type="string" />
+    <param name="show" value="false" type="bool" />
+    <param name="send_img" value="false" type="bool" />
+    <param name="send_whole_img_desc" value="false" type="bool" />
+    <param name="self_id" value="$(arg self_id)" type="int" />
+    <param name="match_index_dist" value="100" type="int" />
+    <param name="match_index_dist_remote" value="20" type="int" />
+    <param name="nonkeyframe_waitsec" value="5.0" type="double" />
+    <param name="inter_drone_init_frames" value="3" type="int" />
+    <param name="vins_config_path" value="$(arg config)" type="string" />
+    <param name="is_4dof" value="false" type="bool" />
+    <param name="enable_loop" value="true" type="bool" />
+  </node>
+  <node pkg="d2pgo" type="d2pgo_node" name="d2pgo" output="screen" required="true">
+    <remap from="~frame_local" to="/d2vins/frame_local" />
+    <remap from="~frame_remote" to="/d2vins/frame_remote" />
+    <remap from="~loop" to="/d2vins/loop" />
+    <param name="vins_config_path" value="$(arg config)" type="string" />
+    <param name="self_id" value="$(arg self_id)" type="int" />
+    <param name="is_4dof" value="false" type="bool" />
+  </node>
+  <node pkg="d2comm" type="d2comm_node" name="d2comm" output="screen" required="true">
+    <param name="self_id" value="$(arg self_id)" type="int" />
+    <param name="lcm_uri" value="$(arg lcm_uri)" type="string" />
+  </node>
+</launch>

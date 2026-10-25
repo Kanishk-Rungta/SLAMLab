@@ -1,0 +1,12 @@
+{
+  "algorithm": "DOOR-SLAM-Original-Stereo",
+  "native_stack": "ROS 1 Melodic, official stereo frontend, NetVLAD, Buzz, distributed PCM/GTSAM",
+  "sensors": "BstemSensors stereo cameras only for visual estimation; standard gyro/wheels available for motion/odometry baseline",
+  "lidar": false,
+  "rangefinder": false,
+  "ground_truth_to_estimator": false,
+  "inter_robot_transport": "BstemSensors.send/receive, including front-end ROS RPC and backend Buzz bytes",
+  "native_runtime_validated": false,
+  "native_adapter_complete": true,
+  "comparison_ready": false
+}
