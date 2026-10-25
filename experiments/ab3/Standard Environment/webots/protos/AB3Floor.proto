@@ -1,0 +1,19 @@
+#VRML_SIM R2025a utf8
+# AB3 benchmark: floor or ceiling slab. size is [x, y, thickness]; translation is the slab centre.
+PROTO AB3Floor [
+  field SFVec3f    translation   0 0 -0.05
+  field SFVec3f    size          10 10 0.1
+  field SFString   name          "floor"
+  field MFString   textureUrl    [ "../worlds/textures/floor_00.png" ]
+  field SFVec2f    textureScale  1 1
+  field SFVec2f    textureOffset 0 0
+  field SFFloat    roughness     0.7
+]
+{
+  Solid {
+    translation IS translation
+    name IS name
+    children [ Shape { appearance PBRAppearance { roughness IS roughness metalness 0 baseColorMap ImageTexture { url IS textureUrl } textureTransform TextureTransform { scale IS textureScale translation IS textureOffset } } geometry Box { size IS size } } ]
+    boundingObject Box { size IS size }
+  }
+}

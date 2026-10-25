@@ -1,0 +1,159 @@
+#VRML_SIM R2025a utf8
+# AB3 benchmark robot: differential-drive base with a stereo pair, an RGB-D camera, a 360 deg
+# 2D lidar, an IMU and wheel encoders.  Every sensor parameter is a field, filled by
+# tools/build_world.py from config/sensors.yaml.  All sensors are children of the base Solid,
+# so their poses relative to base_link are exactly the translations below (published as static
+# TF by the controllers and written to the run manifest).
+PROTO AB3BenchBot [
+  field SFVec3f    translation      0 0 0.05
+  field SFRotation rotation         0 0 1 0
+  field SFString   name             "benchbot"
+  field SFString   controller       "trajectory_driver"
+  field MFString   controllerArgs   []
+  field SFBool     supervisor       TRUE
+  field SFString   customData       ""
+  field SFFloat    wheelRadius      0.05
+  field SFFloat    wheelSeparation  0.32
+  field SFVec3f    bodySize         0.36 0.30 0.12
+  field SFFloat    stereoBaseline   0.12
+  field SFInt32    stereoWidth      640
+  field SFInt32    stereoHeight     480
+  field SFFloat    stereoFov        1.2217
+  field SFFloat    stereoNoise      0.0
+  field SFFloat    stereoHeightAboveFloor 0.35
+  field SFFloat    stereoForward    0.15
+  field SFInt32    depthWidth       320
+  field SFInt32    depthHeight      240
+  field SFFloat    depthFov         1.0472
+  field SFFloat    depthMin         0.2
+  field SFFloat    depthMax         8.0
+  field SFFloat    depthNoise       0.0
+  field SFInt32    lidarResolution  720
+  field SFFloat    lidarFov         6.2832
+  field SFFloat    lidarMin         0.1
+  field SFFloat    lidarMax         20.0
+  field SFFloat    lidarNoise       0.0
+  field SFFloat    lidarHeight      0.20
+  field SFFloat    lidarFrequency   10.0
+  field SFFloat    accelNoise       0.0
+  field SFFloat    gyroNoise        0.0
+]
+{
+  %<
+    const r = fields.wheelRadius.value, sep = fields.wheelSeparation.value;
+    const bx = fields.bodySize.value.x, by = fields.bodySize.value.y, bz = fields.bodySize.value.z;
+    const bodyZ = 0.02 + bz / 2;          // body bottom sits 2 cm above the wheel axle height (origin = axle)
+    const camZ = fields.stereoHeightAboveFloor.value - r;   // fields are given above the floor; origin is at axle height r
+    const lidZ = fields.lidarHeight.value - r;
+    const cx = fields.stereoForward.value;
+    const half = fields.stereoBaseline.value / 2;
+    const an = fields.accelNoise.value, gn = fields.gyroNoise.value;
+  >%
+  Robot {
+    translation IS translation
+    rotation IS rotation
+    name IS name
+    controller IS controller
+    controllerArgs IS controllerArgs
+    supervisor IS supervisor
+    customData IS customData
+    children [
+      DEF BODY Pose {
+        translation 0 0 %<= bodyZ.toFixed(4) >%
+        children [
+          Shape {
+            appearance PBRAppearance { baseColor 0.85 0.35 0.1 roughness 0.6 metalness 0.2 }
+            geometry Box { size %<= bx.toFixed(3) >% %<= by.toFixed(3) >% %<= bz.toFixed(3) >% }
+          }
+        ]
+      }
+      DEF MAST Pose {
+        translation %<= (cx - 0.03).toFixed(3) >% 0 %<= ((bodyZ + bz / 2 + camZ) / 2).toFixed(4) >%
+        children [ Shape { appearance PBRAppearance { baseColor 0.2 0.2 0.22 roughness 0.5 metalness 0.5 } geometry Box { size 0.04 0.04 %<= Math.max(camZ - bodyZ - bz / 2, 0.02).toFixed(4) >% } } ]
+      }
+      %< for (const [nm, sgn] of [["left", 1], ["right", -1]]) { >%
+      HingeJoint {
+        jointParameters HingeJointParameters { axis 0 1 0 anchor 0 %<= (sgn * sep / 2).toFixed(4) >% 0 }
+        device [
+          RotationalMotor { name "%<= nm >%_wheel_motor" maxVelocity 30 maxTorque 5 }
+          PositionSensor { name "%<= nm >%_wheel_sensor" }
+        ]
+        endPoint Solid {
+          translation 0 %<= (sgn * sep / 2).toFixed(4) >% 0
+          rotation 1 0 0 1.5708
+          name "%<= nm >%_wheel"
+          children [ Shape { appearance PBRAppearance { baseColor 0.1 0.1 0.1 roughness 0.9 metalness 0 } geometry Cylinder { radius %<= r.toFixed(4) >% height 0.03 } } ]
+          boundingObject Cylinder { radius %<= r.toFixed(4) >% height 0.03 }
+          physics Physics { density -1 mass 0.3 }
+        }
+      }
+      %< } >%
+      %< for (const [nm, px] of [["front", bx / 2 - 0.03], ["rear", -bx / 2 + 0.03]]) { >%
+      Solid {
+        translation %<= px.toFixed(4) >% 0 %<= (-r + 0.02).toFixed(4) >%
+        name "%<= nm >%_caster"
+        children [ Shape { appearance PBRAppearance { baseColor 0.3 0.3 0.3 roughness 0.3 metalness 0.5 } geometry Sphere { radius 0.02 subdivision 2 } } ]
+        boundingObject Sphere { radius 0.02 }
+        physics Physics { density -1 mass 0.05 }
+      }
+      %< } >%
+      Camera {
+        translation %<= cx.toFixed(4) >% %<= half.toFixed(4) >% %<= camZ.toFixed(4) >%
+        name "camera_left"
+        fieldOfView IS stereoFov
+        width IS stereoWidth
+        height IS stereoHeight
+        noise IS stereoNoise
+        antiAliasing FALSE
+        children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 } geometry Box { size 0.03 0.03 0.03 } } ]
+      }
+      Camera {
+        translation %<= cx.toFixed(4) >% %<= (-half).toFixed(4) >% %<= camZ.toFixed(4) >%
+        name "camera_right"
+        fieldOfView IS stereoFov
+        width IS stereoWidth
+        height IS stereoHeight
+        noise IS stereoNoise
+        antiAliasing FALSE
+        children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 } geometry Box { size 0.03 0.03 0.03 } } ]
+      }
+      Camera {
+        translation %<= cx.toFixed(4) >% 0 %<= (camZ + 0.05).toFixed(4) >%
+        name "camera_rgb"
+        fieldOfView IS depthFov
+        width IS depthWidth
+        height IS depthHeight
+        noise IS stereoNoise
+        antiAliasing FALSE
+      }
+      RangeFinder {
+        translation %<= cx.toFixed(4) >% 0 %<= (camZ + 0.05).toFixed(4) >%
+        name "camera_depth"
+        fieldOfView IS depthFov
+        width IS depthWidth
+        height IS depthHeight
+        minRange IS depthMin
+        maxRange IS depthMax
+        noise IS depthNoise
+      }
+      Lidar {
+        translation 0 0 %<= lidZ.toFixed(4) >%
+        name "lidar"
+        horizontalResolution IS lidarResolution
+        fieldOfView IS lidarFov
+        numberOfLayers 1
+        minRange IS lidarMin
+        maxRange IS lidarMax
+        noise IS lidarNoise
+        defaultFrequency IS lidarFrequency
+        type "fixed"
+        children [ Shape { appearance PBRAppearance { baseColor 0.1 0.1 0.3 roughness 0.4 metalness 0.5 } geometry Cylinder { radius 0.035 height 0.04 } } ]
+      }
+      Accelerometer { translation 0 0 %<= (bodyZ).toFixed(4) >% name "accelerometer" lookupTable [ -100 -100 %<= an.toFixed(5) >% 100 100 %<= an.toFixed(5) >% ] }
+      Gyro { translation 0 0 %<= (bodyZ).toFixed(4) >% name "gyro" lookupTable [ -50 -50 %<= gn.toFixed(5) >% 50 50 %<= gn.toFixed(5) >% ] }
+      InertialUnit { translation 0 0 %<= (bodyZ).toFixed(4) >% name "imu_orientation" }
+    ]
+    boundingObject Pose { translation 0 0 %<= bodyZ.toFixed(4) >% children [ Box { size %<= bx.toFixed(3) >% %<= by.toFixed(3) >% %<= bz.toFixed(3) >% } ] }
+    physics Physics { density -1 mass 4.0 centerOfMass [ 0 0 %<= (bodyZ - 0.02).toFixed(4) >% ] }
+  }
+}

@@ -1,0 +1,11 @@
+{
+ "name": "dynamic_obstacles",
+ "noise_scale": 1.0,
+ "dynamic_obstacles": {
+  "count": 8,
+  "speed": 0.6,
+  "radius": 0.25,
+  "seed": 1
+ },
+ "_comment": "Eight person-sized cylinders walking through free floor at 0.6 m/s (needs gt_map in the supervisor config)."
+}

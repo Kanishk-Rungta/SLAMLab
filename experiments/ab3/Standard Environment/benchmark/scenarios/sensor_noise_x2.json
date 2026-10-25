@@ -1,0 +1,5 @@
+{
+ "name": "sensor_noise_x2",
+ "noise_scale": 2.0,
+ "_comment": "Sensor noise doubled. The algorithm's sensor adapter multiplies its noise by benchlog.scenario()['noise_scale']."
+}

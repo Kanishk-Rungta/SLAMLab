@@ -1,0 +1,34 @@
+#VRML_SIM R2025a utf8
+# AB3 benchmark: conference table with chairs around it. size is [x, y, height].
+PROTO AB3ConferenceTable [
+  field SFVec3f    translation 0 0 0
+  field SFRotation rotation    0 0 1 0
+  field SFVec3f    size        4 1.4 0.75
+  field SFInt32    chairs      12
+  field SFString   name        "conference_table"
+  field MFString   textureUrl  [ "../worlds/textures/desk.png" ]
+]
+{
+  %<
+    const sx = fields.size.value.x, sy = fields.size.value.y, h = fields.size.value.z, n = fields.chairs.value;
+    const perSide = Math.max(Math.floor(n / 2), 1); const pitch = sx / perSide;
+  >%
+  Solid {
+    translation IS translation
+    rotation IS rotation
+    name IS name
+    children [
+      Pose { translation 0 0 %<= (h - 0.02).toFixed(3) >% children [ Shape { appearance PBRAppearance { roughness 0.5 metalness 0 baseColorMap ImageTexture { url IS textureUrl } } geometry Box { size %<= sx.toFixed(3) >% %<= sy.toFixed(3) >% 0.04 } } ] }
+      Pose { translation 0 0 %<= ((h - 0.04) / 2).toFixed(3) >% children [ Shape { appearance PBRAppearance { baseColor 0.3 0.25 0.2 roughness 0.7 metalness 0 } geometry Box { size %<= (sx * 0.6).toFixed(3) >% %<= (sy * 0.5).toFixed(3) >% %<= (h - 0.04).toFixed(3) >% } } ] }
+      %< for (let i = 0; i < perSide; i++) { const px = -sx / 2 + pitch * (i + 0.5); for (const sgn of [1, -1]) { const py = sgn * (sy / 2 + 0.35); >%
+      Pose { translation %<= px.toFixed(3) >% %<= py.toFixed(3) >% 0.45 children [ Shape { appearance PBRAppearance { baseColor 0.55 0.1 0.1 roughness 0.8 metalness 0 } geometry Box { size 0.45 0.45 0.9 } } ] }
+      %< } } >%
+    ]
+    boundingObject Group { children [
+      Pose { translation 0 0 %<= (h / 2).toFixed(3) >% children [ Box { size %<= sx.toFixed(3) >% %<= sy.toFixed(3) >% %<= h.toFixed(3) >% } ] }
+      %< for (let i = 0; i < perSide; i++) { const px = -sx / 2 + pitch * (i + 0.5); for (const sgn of [1, -1]) { const py = sgn * (sy / 2 + 0.35); >%
+      Pose { translation %<= px.toFixed(3) >% %<= py.toFixed(3) >% 0.45 children [ Box { size 0.45 0.45 0.9 } ] }
+      %< } } >%
+    ] }
+  }
+}

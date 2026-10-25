@@ -1,0 +1,29 @@
+#VRML_SIM R2025a utf8
+# AB3 benchmark: student desk/bench (top + 4 legs). size is [x, y, height].
+PROTO AB3Desk [
+  field SFVec3f    translation 0 0 0
+  field SFRotation rotation    0 0 1 0
+  field SFVec3f    size        1.2 0.5 0.75
+  field SFString   name        "desk"
+  field MFString   textureUrl  [ "../worlds/textures/desk.png" ]
+]
+{
+  %< const sx = fields.size.value.x, sy = fields.size.value.y, h = fields.size.value.z; const lx = sx / 2 - 0.04, ly = sy / 2 - 0.04; >%
+  Solid {
+    translation IS translation
+    rotation IS rotation
+    name IS name
+    children [
+      Pose { translation 0 0 %<= (h - 0.02).toFixed(3) >% children [ Shape { appearance PBRAppearance { roughness 0.6 metalness 0 baseColorMap ImageTexture { url IS textureUrl } } geometry Box { size %<= sx.toFixed(3) >% %<= sy.toFixed(3) >% 0.04 } } ] }
+      %< for (const [px, py] of [[lx, ly], [-lx, ly], [lx, -ly], [-lx, -ly]]) { >%
+      Pose { translation %<= px.toFixed(3) >% %<= py.toFixed(3) >% %<= ((h - 0.04) / 2).toFixed(3) >% children [ Shape { appearance PBRAppearance { baseColor 0.25 0.25 0.28 roughness 0.5 metalness 0.6 } geometry Box { size 0.04 0.04 %<= (h - 0.04).toFixed(3) >% } } ] }
+      %< } >%
+    ]
+    boundingObject Group { children [
+      Pose { translation 0 0 %<= (h - 0.02).toFixed(3) >% children [ Box { size %<= sx.toFixed(3) >% %<= sy.toFixed(3) >% 0.04 } ] }
+      %< for (const [px, py] of [[lx, ly], [-lx, ly], [lx, -ly], [-lx, -ly]]) { >%
+      Pose { translation %<= px.toFixed(3) >% %<= py.toFixed(3) >% %<= ((h - 0.04) / 2).toFixed(3) >% children [ Box { size 0.04 0.04 %<= (h - 0.04).toFixed(3) >% } ] }
+      %< } >%
+    ] }
+  }
+}

@@ -1,0 +1,17 @@
+#VRML_SIM R2025a utf8
+# AB3 benchmark: thin textured plate on a wall (poster / notice board). Visual texture only.
+PROTO AB3Poster [
+  field SFVec3f    translation 0 0 1.5
+  field SFString   axis        "x"
+  field SFVec2f    size        0.6 0.85
+  field SFString   name        "poster"
+  field MFString   textureUrl  [ "../worlds/textures/poster_00.png" ]
+]
+{
+  %< const ax = fields.axis.value === "y"; const w = fields.size.value.x, h = fields.size.value.y; >%
+  Solid {
+    translation IS translation
+    name IS name
+    children [ Shape { appearance PBRAppearance { roughness 0.6 metalness 0 baseColorMap ImageTexture { url IS textureUrl } } geometry Box { size %<= (ax ? 0.012 : w).toFixed(3) >% %<= (ax ? w : 0.012).toFixed(3) >% %<= h.toFixed(3) >% } } ]
+  }
+}

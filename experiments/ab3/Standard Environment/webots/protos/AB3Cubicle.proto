@@ -1,0 +1,31 @@
+#VRML_SIM R2025a utf8
+# AB3 benchmark: office workstation: desk plus partition screens on the back and one side.
+PROTO AB3Cubicle [
+  field SFVec3f    translation  0 0 0
+  field SFRotation rotation     0 0 1 0
+  field SFVec2f    deskSize     1.5 0.7
+  field SFFloat    deskHeight   0.75
+  field SFFloat    screenHeight 1.2
+  field SFString   name         "cubicle"
+  field MFString   screenTexture [ "../worlds/textures/cubicle.png" ]
+  field MFString   deskTexture   [ "../worlds/textures/desk.png" ]
+]
+{
+  %< const w = fields.deskSize.value.x, d = fields.deskSize.value.y, h = fields.deskHeight.value, sh = fields.screenHeight.value; >%
+  Solid {
+    translation IS translation
+    rotation IS rotation
+    name IS name
+    children [
+      Pose { translation 0 0 %<= (h - 0.02).toFixed(3) >% children [ Shape { appearance PBRAppearance { roughness 0.6 metalness 0 baseColorMap ImageTexture { url IS deskTexture } } geometry Box { size %<= w.toFixed(3) >% %<= d.toFixed(3) >% 0.04 } } ] }
+      Pose { translation 0 %<= (d / 2 + 0.02).toFixed(3) >% %<= (sh / 2).toFixed(3) >% children [ Shape { appearance PBRAppearance { roughness 0.9 metalness 0 baseColorMap ImageTexture { url IS screenTexture } } geometry Box { size %<= w.toFixed(3) >% 0.04 %<= sh.toFixed(3) >% } } ] }
+      Pose { translation %<= (w / 2 + 0.02).toFixed(3) >% 0 %<= (sh / 2).toFixed(3) >% children [ Shape { appearance PBRAppearance { roughness 0.9 metalness 0 baseColorMap ImageTexture { url IS screenTexture } } geometry Box { size 0.04 %<= d.toFixed(3) >% %<= sh.toFixed(3) >% } } ] }
+      Pose { translation 0 %<= (-d / 2 + 0.25).toFixed(3) >% 0.35 children [ Shape { appearance PBRAppearance { baseColor 0.3 0.3 0.32 roughness 0.7 metalness 0.2 } geometry Box { size 0.45 0.45 0.05 } } ] }
+    ]
+    boundingObject Group { children [
+      Pose { translation 0 0 %<= (h / 2).toFixed(3) >% children [ Box { size %<= w.toFixed(3) >% %<= d.toFixed(3) >% %<= h.toFixed(3) >% } ] }
+      Pose { translation 0 %<= (d / 2 + 0.02).toFixed(3) >% %<= (sh / 2).toFixed(3) >% children [ Box { size %<= w.toFixed(3) >% 0.04 %<= sh.toFixed(3) >% } ] }
+      Pose { translation %<= (w / 2 + 0.02).toFixed(3) >% 0 %<= (sh / 2).toFixed(3) >% children [ Box { size 0.04 %<= d.toFixed(3) >% %<= sh.toFixed(3) >% } ] }
+    ] }
+  }
+}

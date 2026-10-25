@@ -1,0 +1,33 @@
+#VRML_SIM R2025a utf8
+# AB3 benchmark: row of computer desks with monitors, running along the local X axis.
+PROTO AB3LabBench [
+  field SFVec3f    translation 0 0 0
+  field SFRotation rotation    0 0 1 0
+  field SFFloat    length      6
+  field SFFloat    depth       0.8
+  field SFFloat    height      0.75
+  field SFInt32    monitors    6
+  field SFString   name        "lab_bench"
+  field MFString   textureUrl  [ "../worlds/textures/bench.png" ]
+]
+{
+  %< const L = fields.length.value, d = fields.depth.value, h = fields.height.value, n = Math.max(fields.monitors.value, 1); const pitch = L / n; >%
+  Solid {
+    translation IS translation
+    rotation IS rotation
+    name IS name
+    children [
+      Pose { translation 0 0 %<= (h - 0.02).toFixed(3) >% children [ Shape { appearance PBRAppearance { roughness 0.6 metalness 0 baseColorMap ImageTexture { url IS textureUrl } textureTransform TextureTransform { scale %<= (L / 1.5).toFixed(2) >% 1 } } geometry Box { size %<= L.toFixed(3) >% %<= d.toFixed(3) >% 0.04 } } ] }
+      Pose { translation 0 0 %<= ((h - 0.04) / 2).toFixed(3) >% children [ Shape { appearance PBRAppearance { baseColor 0.85 0.85 0.85 roughness 0.7 metalness 0 } geometry Box { size %<= L.toFixed(3) >% %<= (d * 0.5).toFixed(3) >% %<= (h - 0.04).toFixed(3) >% } } ] }
+      %< for (let i = 0; i < n; i++) { const px = -L / 2 + pitch * (i + 0.5); >%
+      Pose { translation %<= px.toFixed(3) >% %<= (d * 0.2).toFixed(3) >% %<= (h + 0.22).toFixed(3) >% children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.06 roughness 0.3 metalness 0.3 } geometry Box { size 0.5 0.05 0.34 } } ] }
+      %< } >%
+    ]
+    # Collision shape matches the visible worktop, half-depth base and monitor (was one full-depth block
+    # from the floor, an invisible wall under the worktop overhang for low robots).
+    boundingObject Group { children [
+      Pose { translation 0 0 %<= (h - 0.02).toFixed(3) >% children [ Box { size %<= L.toFixed(3) >% %<= d.toFixed(3) >% 0.04 } ] }
+      Pose { translation 0 0 %<= ((h - 0.04) / 2).toFixed(3) >% children [ Box { size %<= L.toFixed(3) >% %<= (d * 0.5).toFixed(3) >% %<= (h - 0.04).toFixed(3) >% } ] }
+    ] }
+  }
+}

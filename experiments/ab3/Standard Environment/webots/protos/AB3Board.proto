@@ -1,0 +1,18 @@
+#VRML_SIM R2025a utf8
+# AB3 benchmark: writing board mounted on a wall. size is [width, height]; axis is the wall direction.
+PROTO AB3Board [
+  field SFVec3f    translation 0 0 1.5
+  field SFString   axis        "y"
+  field SFVec2f    size        4 1.2
+  field SFString   name        "board"
+  field MFString   textureUrl  [ "../worlds/textures/board.png" ]
+]
+{
+  %< const ax = fields.axis.value === "y"; const w = fields.size.value.x, h = fields.size.value.y; >%
+  Solid {
+    translation IS translation
+    name IS name
+    children [ Shape { appearance PBRAppearance { roughness 0.7 metalness 0 baseColorMap ImageTexture { url IS textureUrl } } geometry Box { size %<= (ax ? 0.03 : w).toFixed(3) >% %<= (ax ? w : 0.03).toFixed(3) >% %<= h.toFixed(3) >% } } ]
+    boundingObject Box { size %<= (ax ? 0.03 : w).toFixed(3) >% %<= (ax ? w : 0.03).toFixed(3) >% %<= h.toFixed(3) >% }
+  }
+}

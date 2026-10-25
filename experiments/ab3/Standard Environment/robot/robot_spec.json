@@ -1,0 +1,95 @@
+{
+ "_comment": "Standard benchmark platform. Every algorithm runs on exactly this robot, sensors, timing and error model. Do not edit per algorithm; changing it invalidates comparisons with earlier runs.",
+ "name": "bStem stereo robot (standard benchmark platform)",
+ "body": {
+  "shape": "disc",
+  "radius_m": 0.15,
+  "height_m": 0.06,
+  "mass_kg": 2.3,
+  "base_origin_height_above_floor_m": 0.043
+ },
+ "drive": {
+  "type": "differential",
+  "wheel_radius_m": 0.033,
+  "track_width_m": 0.16,
+  "max_wheel_speed_rad_s": 6.0,
+  "max_linear_speed_m_s": 0.198,
+  "motors": [
+   "left_motor",
+   "right_motor"
+  ],
+  "encoders": [
+   "left_encoder",
+   "right_encoder"
+  ]
+ },
+ "timing": {
+  "physics_step_ms": 32,
+  "control_step_ms": 32,
+  "camera_period_ms": 96
+ },
+ "stereo": {
+  "device_names": [
+   "camera_left",
+   "camera_right"
+  ],
+  "width": 320,
+  "height": 360,
+  "hfov_rad": 1.0472,
+  "fx": 277.1273,
+  "fy": 277.1273,
+  "cx": 160.0,
+  "cy": 180.0,
+  "distortion": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "baseline_m": 0.025,
+  "left_position_m": [
+   0.13,
+   0.0125,
+   0.02
+  ],
+  "right_position_m": [
+   0.13,
+   -0.0125,
+   0.02
+  ],
+  "height_above_floor_m": 0.063,
+  "_comment": "Positions are in the robot body frame (x forward, y left, z up; origin at the wheel axle centre, 0.043 m above the floor). Cameras look along +x. The bStem MT9M114 stereo mode is 640x720 per camera; the benchmark renders the 2x-downsampled 320x360 image (same field of view)."
+ },
+ "imu": {
+  "gyro": "mapping_gyro",
+  "accelerometer": "mapping_accelerometer",
+  "_comment": "bStem L3GD20 3-axis gyro and LSM303DLHC accelerometer, at the body origin. BstemSensors.read() gives the yaw rate; BstemSensors.imu() gives all three body rates (same error model per axis) and the raw accelerometer.",
+  "gyro_axes": "xyz"
+ },
+ "radio": {
+  "emitter": "emitter",
+  "receiver": "receiver",
+  "range_m": 40.0,
+  "channel": 42,
+  "loss_rate": 0.03,
+  "delay_s": [
+   0.0,
+   0.15
+  ],
+  "bandwidth_limit_Bps": 50000,
+  "_comment": "Stands in for bStem WiFi broadcast. Applied by sensors/bstem_sensors.py to every algorithm: packets beyond the per-robot bandwidth limit are dropped."
+ },
+ "sensor_errors": {
+  "seed": 98,
+  "encoder_std_m": 2e-05,
+  "wheel_radius_error": 0.005,
+  "slip_per_m": 0.01,
+  "gyro_std_rad_s": 0.003,
+  "gyro_bias_rad_s": 0.001,
+  "gyro_bias_walk_rad_s_per_sqrt_s": 1e-05,
+  "gyro_scale_error": 0.01,
+  "image_noise_std": 0.5,
+  "camera_dropout": 0.02,
+  "_comment": "Hardware-like errors injected by the standard sensor interface; unknown to the algorithms. Each robot's random stream is seed + 100 * robot number, so runs are repeatable. Benchmark noise scenarios multiply the noise terms."
+ }
+}

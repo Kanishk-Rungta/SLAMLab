@@ -1,0 +1,72 @@
+#VRML_SIM R2025a utf8
+# AB3 benchmark: door opening in a wall. Always emits the lintel above the opening; emits a
+# closed leaf when open is FALSE; emits a room-number sign plate beside the opening.
+# axis "x": the wall runs along X (opening width along X, wall thickness along Y).
+# axis "y": the wall runs along Y.
+# translation is the centre of the opening at floor level.
+PROTO AB3Doorway [
+  field SFVec3f    translation   0 0 0
+  field SFString   axis          "x"
+  field SFFloat    width         1.16
+  field SFFloat    height        2.1
+  field SFFloat    wallHeight    3.3
+  field SFFloat    thickness     0.238
+  field SFBool     open          TRUE
+  field SFString   name          "door"
+  field MFString   wallTexture   [ "../worlds/textures/plaster_00.png" ]
+  field MFString   leafTexture   [ "../worlds/textures/door.png" ]
+  field MFString   signTexture   [ "../worlds/textures/sign_generic.png" ]
+  field SFFloat    signSide      1
+]
+{
+  %<
+    const ax = fields.axis.value === "y";
+    const w = fields.width.value, h = fields.height.value, H = fields.wallHeight.value, t = fields.thickness.value;
+    const lintelH = H - h;
+    const sx = ax ? t : w, sy = ax ? w : t;
+    const signOff = (w / 2 + 0.25) * fields.signSide.value;
+    const signX = ax ? (t / 2 + 0.012) * fields.signSide.value : signOff;
+    const signY = ax ? signOff : (t / 2 + 0.012) * fields.signSide.value;
+    const signSx = ax ? 0.02 : 0.30, signSy = ax ? 0.30 : 0.02;
+  >%
+  Solid {
+    translation IS translation
+    name IS name
+    children [
+      Solid {
+        translation 0 0 %<= (h + lintelH / 2).toFixed(4) >%
+        name "lintel"
+        children [
+          Shape {
+            appearance PBRAppearance { roughness 0.9 metalness 0 baseColorMap ImageTexture { url IS wallTexture } }
+            geometry Box { size %<= sx.toFixed(4) >% %<= sy.toFixed(4) >% %<= lintelH.toFixed(4) >% }
+          }
+        ]
+        boundingObject Box { size %<= sx.toFixed(4) >% %<= sy.toFixed(4) >% %<= lintelH.toFixed(4) >% }
+      }
+      %< if (!fields.open.value) { >%
+      Solid {
+        translation 0 0 %<= (h / 2).toFixed(4) >%
+        name "leaf"
+        children [
+          Shape {
+            appearance PBRAppearance { roughness 0.6 metalness 0 baseColorMap ImageTexture { url IS leafTexture } }
+            geometry Box { size %<= (ax ? 0.045 : w).toFixed(4) >% %<= (ax ? w : 0.045).toFixed(4) >% %<= h.toFixed(4) >% }
+          }
+        ]
+        boundingObject Box { size %<= (ax ? 0.045 : w).toFixed(4) >% %<= (ax ? w : 0.045).toFixed(4) >% %<= h.toFixed(4) >% }
+      }
+      %< } >%
+      Solid {
+        translation %<= signX.toFixed(4) >% %<= signY.toFixed(4) >% 1.6
+        name "sign"
+        children [
+          Shape {
+            appearance PBRAppearance { roughness 0.4 metalness 0.1 baseColorMap ImageTexture { url IS signTexture } }
+            geometry Box { size %<= signSx.toFixed(3) >% %<= signSy.toFixed(3) >% 0.12 }
+          }
+        ]
+      }
+    ]
+  }
+}

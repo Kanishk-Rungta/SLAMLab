@@ -1,0 +1,76 @@
+#VRML_SIM R2025a utf8
+# AB3 benchmark: wall segment carrying a continuous window band between sill and head.
+# glazed FALSE -> the band is an opaque textured panel (default for the benchmark).
+# glazed TRUE  -> the band is a transparent panel (separate experiment, see README).
+# Solid margins of 'margin' metres are kept at both ends so the band never meets a column flush.
+PROTO AB3WindowBand [
+  field SFVec3f    translation   0 0 0
+  field SFString   axis          "x"
+  field SFFloat    length        4
+  field SFFloat    thickness     0.238
+  field SFFloat    wallHeight    3.3
+  field SFFloat    sill          0.9
+  field SFFloat    head          2.4
+  field SFFloat    margin        0.45
+  field SFBool     glazed        FALSE
+  field SFString   name          "window_band"
+  field MFString   wallTexture   [ "../worlds/textures/plaster_00.png" ]
+  field MFString   windowTexture [ "../worlds/textures/window_opaque.png" ]
+  field SFVec2f    textureScale  1 1
+  field SFVec2f    textureOffset 0 0
+]
+{
+  %<
+    const ax = fields.axis.value === "y";
+    const L = fields.length.value, t = fields.thickness.value, H = fields.wallHeight.value;
+    const s = fields.sill.value, hd = fields.head.value, m = fields.margin.value;
+    const inner = Math.max(L - 2 * m, 0.3);
+    function box(len, thick) { return (ax ? thick : len).toFixed(4) + " " + (ax ? len : thick).toFixed(4); }
+    const mOff = (L - m) / 2;
+  >%
+  Solid {
+    translation IS translation
+    name IS name
+    children [
+      Solid {
+        translation 0 0 %<= (s / 2).toFixed(4) >%
+        name "lower"
+        children [ Shape { appearance PBRAppearance { roughness 0.9 metalness 0 baseColorMap ImageTexture { url IS wallTexture } textureTransform TextureTransform { scale IS textureScale translation IS textureOffset } } geometry Box { size %<= box(L, t) >% %<= s.toFixed(4) >% } } ]
+        boundingObject Box { size %<= box(L, t) >% %<= s.toFixed(4) >% }
+      }
+      Solid {
+        translation 0 0 %<= ((hd + H) / 2).toFixed(4) >%
+        name "upper"
+        children [ Shape { appearance PBRAppearance { roughness 0.9 metalness 0 baseColorMap ImageTexture { url IS wallTexture } textureTransform TextureTransform { scale IS textureScale translation IS textureOffset } } geometry Box { size %<= box(L, t) >% %<= (H - hd).toFixed(4) >% } } ]
+        boundingObject Box { size %<= box(L, t) >% %<= (H - hd).toFixed(4) >% }
+      }
+      Solid {
+        translation %<= (ax ? 0 : -mOff).toFixed(4) >% %<= (ax ? -mOff : 0).toFixed(4) >% %<= ((s + hd) / 2).toFixed(4) >%
+        name "margin_a"
+        children [ Shape { appearance PBRAppearance { roughness 0.9 metalness 0 baseColorMap ImageTexture { url IS wallTexture } } geometry Box { size %<= box(m, t) >% %<= (hd - s).toFixed(4) >% } } ]
+        boundingObject Box { size %<= box(m, t) >% %<= (hd - s).toFixed(4) >% }
+      }
+      Solid {
+        translation %<= (ax ? 0 : mOff).toFixed(4) >% %<= (ax ? mOff : 0).toFixed(4) >% %<= ((s + hd) / 2).toFixed(4) >%
+        name "margin_b"
+        children [ Shape { appearance PBRAppearance { roughness 0.9 metalness 0 baseColorMap ImageTexture { url IS wallTexture } } geometry Box { size %<= box(m, t) >% %<= (hd - s).toFixed(4) >% } } ]
+        boundingObject Box { size %<= box(m, t) >% %<= (hd - s).toFixed(4) >% }
+      }
+      Solid {
+        translation 0 0 %<= ((s + hd) / 2).toFixed(4) >%
+        name "panel"
+        children [
+          Shape {
+            %< if (fields.glazed.value) { >%
+            appearance PBRAppearance { baseColor 0.75 0.85 0.9 transparency 0.72 roughness 0.05 metalness 0.2 }
+            %< } else { >%
+            appearance PBRAppearance { roughness 0.5 metalness 0 baseColorMap ImageTexture { url IS windowTexture } textureTransform TextureTransform { scale %<= (inner / 1.5).toFixed(3) >% 1 } }
+            %< } >%
+            geometry Box { size %<= box(inner, t * 0.6) >% %<= (hd - s).toFixed(4) >% }
+          }
+        ]
+        boundingObject Box { size %<= box(inner, t * 0.6) >% %<= (hd - s).toFixed(4) >% }
+      }
+    ]
+  }
+}

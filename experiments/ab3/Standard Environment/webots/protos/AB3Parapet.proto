@@ -1,0 +1,29 @@
+#VRML_SIM R2025a utf8
+# AB3 benchmark: guard wall along a courtyard / atrium edge. height is the assumed
+# parapet_height from the JSON (1.05 m). A ground robot must not be able to pass it.
+PROTO AB3Parapet [
+  field SFVec3f    translation   0 0 0.525
+  field SFVec3f    size          1 0.238 1.05
+  field SFString   name          "parapet"
+  field MFString   textureUrl    [ "../worlds/textures/parapet.png" ]
+  field SFVec2f    textureScale  1 1
+  field SFVec2f    textureOffset 0 0
+]
+{
+  Solid {
+    translation IS translation
+    name IS name
+    children [
+      Shape {
+        appearance PBRAppearance {
+          roughness 0.95
+          metalness 0
+          baseColorMap ImageTexture { url IS textureUrl }
+          textureTransform TextureTransform { scale IS textureScale translation IS textureOffset }
+        }
+        geometry Box { size IS size }
+      }
+    ]
+    boundingObject Box { size IS size }
+  }
+}

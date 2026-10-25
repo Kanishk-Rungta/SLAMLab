@@ -1,0 +1,112 @@
+#VRML_SIM R2025a utf8
+# bStem mapping robot: the custom SLAM's reference platform (worlds/mapping_environment.wbt) with
+# only the sensors a bStem build has: the bStem stereo pair (Aptina MT9M114, 640x720 per camera in
+# stereo mode, 25 mm baseline), the on-board gyro (L3GD20) and accelerometer (LSM303DLHC), and the
+# drive base's wheel encoders, and a radio standing in for the bStem WiFi link between robots.
+# No IR, sonar or lidar.
+PROTO BstemRobot [
+  field SFVec3f    translation  0 0 0.043
+  field SFRotation rotation     0 0 1 0
+  field SFString   name         "bstem"
+  field SFString   controller   "<none>"
+  field MFString   controllerArgs []
+  field SFBool     supervisor   TRUE   # ground-truth logging for evaluation only
+  field SFString   customData   ""
+  field SFFloat    radioRange   40     # m; indoor WiFi range between bStem boards
+  field SFInt32    radioChannel 42
+  field SFInt32    cameraWidth  640    # bStem stereo mode: 640x720 per camera
+  field SFInt32    cameraHeight 720
+]
+{
+  Robot {
+    translation IS translation
+    rotation IS rotation
+    name IS name
+    controller IS controller
+    controllerArgs IS controllerArgs
+    supervisor IS supervisor
+    customData IS customData
+    children [
+      Shape {
+        appearance PBRAppearance { baseColor 0.15 0.56 0.74 roughness 0.3 metalness 0.5 }
+        geometry Cylinder { radius 0.15 height 0.06 }
+      }
+      Pose {
+        translation 0.12 0 0.025
+        children [ Shape { appearance PBRAppearance { baseColor 1 0 0 emissiveColor 1 0 0 } geometry Box { size 0.04 0.06 0.015 } } ]
+      }
+      HingeJoint {
+        jointParameters HingeJointParameters { axis 0 1 0 anchor 0 0.08 -0.01 }
+        device [
+          RotationalMotor { name "left_motor" maxVelocity 10.0 maxTorque 1.2 }
+          PositionSensor { name "left_encoder" }
+        ]
+        endPoint Solid {
+          name "left_wheel"
+          translation 0 0.08 -0.01
+          children [ Pose { rotation 1 0 0 1.5708 children [ DEF WHEEL_SHAPE Shape { appearance PBRAppearance { baseColor 0.15 0.15 0.15 roughness 0.8 } geometry Cylinder { radius 0.033 height 0.015 } } ] } ]
+          boundingObject Pose { rotation 1 0 0 1.5708 children [ Cylinder { radius 0.033 height 0.015 } ] }
+          physics Physics { density -1 mass 0.1 }
+        }
+      }
+      HingeJoint {
+        jointParameters HingeJointParameters { axis 0 1 0 anchor 0 -0.08 -0.01 }
+        device [
+          RotationalMotor { name "right_motor" maxVelocity 10.0 maxTorque 1.2 }
+          PositionSensor { name "right_encoder" }
+        ]
+        endPoint Solid {
+          name "right_wheel"
+          translation 0 -0.08 -0.01
+          children [ Pose { rotation 1 0 0 1.5708 children [ USE WHEEL_SHAPE ] } ]
+          boundingObject Pose { rotation 1 0 0 1.5708 children [ Cylinder { radius 0.033 height 0.015 } ] }
+          physics Physics { density -1 mass 0.1 }
+        }
+      }
+      BallJoint {
+        jointParameters BallJointParameters { anchor -0.12 0 -0.028 }
+        endPoint Solid {
+          name "caster"
+          translation -0.12 0 -0.028
+          children [ DEF CASTER_SHAPE Shape { appearance PBRAppearance { baseColor 0.2 0.2 0.2 roughness 0.5 } geometry Sphere { radius 0.015 } } ]
+          boundingObject Sphere { radius 0.015 }
+          physics Physics { density -1 mass 0.05 }
+        }
+      }
+      BallJoint {
+        jointParameters BallJointParameters { anchor 0.12 0 -0.028 }
+        endPoint Solid {
+          name "front_caster"
+          translation 0.12 0 -0.028
+          children [ USE CASTER_SHAPE ]
+          boundingObject Sphere { radius 0.015 }
+          physics Physics { density -1 mass 0.05 }
+        }
+      }
+      Gyro { name "mapping_gyro" }
+      # Simulation only: lets the adapter emulate a continuously filtered gyro (see bstem_sim_adapter).
+      InertialUnit { name "sim_attitude" }
+      Accelerometer { name "mapping_accelerometer" }
+      Camera {
+        name "camera_left"
+        translation 0.13 0.0125 0.02
+        fieldOfView 1.0472
+        width IS cameraWidth
+        height IS cameraHeight
+        children [ DEF CAM_SHAPE Shape { appearance PBRAppearance { baseColor 0.1 0.1 0.1 } geometry Box { size 0.02 0.012 0.015 } } ]
+      }
+      Camera {
+        name "camera_right"
+        translation 0.13 -0.0125 0.02
+        fieldOfView 1.0472
+        width IS cameraWidth
+        height IS cameraHeight
+        children [ USE CAM_SHAPE ]
+      }
+      Emitter { name "emitter" type "radio" range IS radioRange channel IS radioChannel bufferSize 65536 }
+      Receiver { name "receiver" type "radio" channel IS radioChannel bufferSize 262144 }
+    ]
+    boundingObject Cylinder { radius 0.15 height 0.06 }
+    physics Physics { density -1 mass 2.0 centerOfMass [ 0 0 -0.02 ] }
+  }
+}
