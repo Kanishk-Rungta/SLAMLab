@@ -1,0 +1,56 @@
+{
+ "_comment": "Fixed start (dock) poses [x, y, yaw] of robots bstem1..bstem10 in the AB3 world frame (metres, radians). On corridor centrelines from the AB3 route files, checked clear of obstacles. Robots 1 and 10 start 2.6 m apart (shared-area test). Algorithms may use these as known docks (shared frame) or not; say which in the results.",
+ "frame": "AB3 world (z up)",
+ "poses": {
+  "bstem1": [
+   53.395,
+   -41.978,
+   0.0
+  ],
+  "bstem2": [
+   70.22,
+   -35.0,
+   1.5708
+  ],
+  "bstem3": [
+   88.0,
+   -10.857,
+   0.0
+  ],
+  "bstem4": [
+   107.72,
+   -25.0,
+   -1.5708
+  ],
+  "bstem5": [
+   30.0,
+   -41.978,
+   3.1416
+  ],
+  "bstem6": [
+   11.184,
+   -25.0,
+   1.5708
+  ],
+  "bstem7": [
+   30.0,
+   -10.857,
+   0.0
+  ],
+  "bstem8": [
+   48.675,
+   -25.0,
+   1.5708
+  ],
+  "bstem9": [
+   95.0,
+   -41.978,
+   3.1416
+  ],
+  "bstem10": [
+   56.0,
+   -41.978,
+   0.0
+  ]
+ }
+}

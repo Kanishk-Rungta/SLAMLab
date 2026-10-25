@@ -1,0 +1,16 @@
+#VRML_SIM R2025a utf8
+# AB3 benchmark: raised teaching platform (drawn as an elongated octagon on the plan; modelled as a box).
+PROTO AB3Platform [
+  field SFVec3f    translation 0 0 0.075
+  field SFVec3f    size        1.6 7 0.15
+  field SFString   name        "platform"
+  field MFString   textureUrl  [ "../worlds/textures/platform.png" ]
+]
+{
+  Solid {
+    translation IS translation
+    name IS name
+    children [ Shape { appearance PBRAppearance { roughness 0.8 metalness 0 baseColorMap ImageTexture { url IS textureUrl } } geometry Box { size IS size } } ]
+    boundingObject Box { size IS size }
+  }
+}

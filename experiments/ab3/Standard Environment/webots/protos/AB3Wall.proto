@@ -1,0 +1,35 @@
+#VRML_SIM R2025a utf8
+# AB3 benchmark: static textured wall segment. Size is [x, y, z] in metres, axis-aligned
+# (the generator never rotates walls; a wall along Y simply has size.y > size.x).
+# Every dimension comes from tools/build_world.py, which reads ab3_first_floor.json.
+PROTO AB3Wall [
+  field SFVec3f    translation   0 0 1.65
+  field SFRotation rotation      0 0 1 0
+  field SFVec3f    size          1 0.238 3.3
+  field SFString   name          "wall"
+  field MFString   textureUrl    [ "../worlds/textures/plaster_00.png" ]
+  field SFVec2f    textureScale  1 1
+  field SFVec2f    textureOffset 0 0
+  field SFColor    baseColor     1 1 1
+  field SFFloat    roughness     0.9
+]
+{
+  Solid {
+    translation IS translation
+    rotation IS rotation
+    name IS name
+    children [
+      Shape {
+        appearance PBRAppearance {
+          baseColor IS baseColor
+          roughness IS roughness
+          metalness 0
+          baseColorMap ImageTexture { url IS textureUrl }
+          textureTransform TextureTransform { scale IS textureScale translation IS textureOffset }
+        }
+        geometry Box { size IS size }
+      }
+    ]
+    boundingObject Box { size IS size }
+  }
+}

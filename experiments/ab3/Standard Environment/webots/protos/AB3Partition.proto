@@ -1,0 +1,29 @@
+#VRML_SIM R2025a utf8
+# AB3 benchmark: thin internal partition (30/60/90 mm on the drawing). Same node as AB3Wall
+# with partition defaults, kept separate so the audit can count partitions and walls apart.
+PROTO AB3Partition [
+  field SFVec3f    translation   0 0 1.65
+  field SFVec3f    size          1 0.06 3.3
+  field SFString   name          "partition"
+  field MFString   textureUrl    [ "../worlds/textures/partition.png" ]
+  field SFVec2f    textureScale  1 1
+  field SFVec2f    textureOffset 0 0
+]
+{
+  Solid {
+    translation IS translation
+    name IS name
+    children [
+      Shape {
+        appearance PBRAppearance {
+          roughness 0.8
+          metalness 0
+          baseColorMap ImageTexture { url IS textureUrl }
+          textureTransform TextureTransform { scale IS textureScale translation IS textureOffset }
+        }
+        geometry Box { size IS size }
+      }
+    ]
+    boundingObject Box { size IS size }
+  }
+}

@@ -1,0 +1,16 @@
+%YAML:1.0
+camera_id: right_cam
+# Sensor extrinsics wrt. the body frame (robot base, x forward, y left, z up). Optical frame: z forward, x right, y down.
+T_BS:
+  cols: 4
+  rows: 4
+  data: [0.0, 0.0, 1.0, 0.1300,
+         -1.0, 0.0, 0.0, -0.0125,
+         0.0, -1.0, 0.0, 0.0200,
+         0.0, 0.0, 0.0, 1.0]
+rate_hz: 10.417
+resolution: [320, 360]   # width, height
+camera_model: pinhole
+intrinsics: [277.1273, 277.1273, 160.0, 180.0]   # fu, fv, cu, cv
+distortion_model: radtan
+distortion_coefficients: [0.0, 0.0, 0.0, 0.0]

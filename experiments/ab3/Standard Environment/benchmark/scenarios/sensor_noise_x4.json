@@ -1,0 +1,4 @@
+{
+ "name": "sensor_noise_x4",
+ "noise_scale": 4.0
+}

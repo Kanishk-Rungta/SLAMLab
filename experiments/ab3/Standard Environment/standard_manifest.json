@@ -1,0 +1,12 @@
+{
+ "webots/worlds/ab3_standard.wbt": "eaa0ceb62cd813059392faae415c099a3e7f78042cdcc05d6b2651862e0cbf6f",
+ "webots/protos": "f67098fe8b51d756590649015268fa22d59b9552edc2d08b6ac6af5ad09612e1",
+ "robot": "d6f53683e7f27c924bb4f77c5b3de982da4423f5eddbab9c29f22c2465f9c82d",
+ "sensors/bstem_sensors.py": "f697ee9b22b2ff1c8c0aa9db6b564352d2a8fc05814de0dea0cc9a08ca4d0a2a",
+ "ground_truth": "c6154fcf67f9fc0e78badeec102ac4bc62337fcc9cf80e6d853bcbfc75649daa",
+ "benchmark/benchlog.py": "4ee2dc9228b79399901d423f424f2db08ca47db73653935b25ea9baa833b1078",
+ "benchmark/bench_supervisor.py": "0e5014bb0f23c5e75825a0911f636d83ad3b3ae5423eeb47b6e8f7bf677c1171",
+ "benchmark/evaluate.py": "0dbad719e1bcfe07ca92451e39a30e6ca4d124374becf9aacc87be8c50762f2c",
+ "benchmark/evaluation": "f271790c552fbc35305cd8d1a2a9cc9647835e698ad158767ba370e6c793aa5a",
+ "benchmark/scenarios": "c4e6cb53ee9cd78e46c2ee1e77ca6b5b1c466750cc115e0333f92887b20f8b65"
+}

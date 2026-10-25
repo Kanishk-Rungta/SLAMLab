@@ -1,0 +1,18 @@
+#VRML_SIM R2025a utf8
+# AB3 benchmark: stair core modelled as a solid blocked volume (spec 7.4): a ground robot cannot
+# enter it and a lidar sees a wall at the landing edge. Individual treads are NOT modelled.
+PROTO AB3StairBlock [
+  field SFVec3f    translation 0 0 1.65
+  field SFVec3f    size        8 9 3.3
+  field SFString   name        "stair_block"
+  field MFString   textureUrl  [ "../worlds/textures/stair.png" ]
+  field SFVec2f    textureScale 2 1
+]
+{
+  Solid {
+    translation IS translation
+    name IS name
+    children [ Shape { appearance PBRAppearance { roughness 0.9 metalness 0 baseColorMap ImageTexture { url IS textureUrl } textureTransform TextureTransform { scale IS textureScale } } geometry Box { size IS size } } ]
+    boundingObject Box { size IS size }
+  }
+}

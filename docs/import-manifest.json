@@ -1,0 +1,1671 @@
+{
+  "source_head": "7425aec9f58fccb609b5cb788785851a4dc3a682",
+  "files": [
+    {
+      "source": "Benchmark/Standard Environment/standard_manifest.json",
+      "destination": "experiments/ab3/Standard Environment/standard_manifest.json",
+      "sha256": "11cf1c8cca96cff5927f46c63ce7d5c2f712bad57ba985c05716757c86b453dd",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/benchmark/benchlog.py",
+      "destination": "experiments/ab3/Standard Environment/benchmark/benchlog.py",
+      "sha256": "8593eb260c02286e047e2dd7cd232a98409ebb106cbda14b53286ba544937595",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/benchmark/bench_supervisor.py",
+      "destination": "experiments/ab3/Standard Environment/benchmark/bench_supervisor.py",
+      "sha256": "27b4170c357f39f30beca01050c661b2c93ec40b783f8d2a39e1fe8feb4ef1a7",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/benchmark/compare.py",
+      "destination": "experiments/ab3/Standard Environment/benchmark/compare.py",
+      "sha256": "df510676b825c83f8f81503f367635d4abc11ad85b98b45ea78acc94c405c59e",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/benchmark/evaluate.py",
+      "destination": "experiments/ab3/Standard Environment/benchmark/evaluate.py",
+      "sha256": "b808e3523a4cfe47fd468c617f92617a473153079a21a655d59a60c48df7dcb4",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/benchmark/adapters/import_files.py",
+      "destination": "experiments/ab3/Standard Environment/benchmark/adapters/import_files.py",
+      "sha256": "bc16bcefae51a9593b8dbb615711a08f9ccc040279782a8669bc7599b9f46809",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/benchmark/adapters/ros2_bridge.py",
+      "destination": "experiments/ab3/Standard Environment/benchmark/adapters/ros2_bridge.py",
+      "sha256": "3febcba8cd32442023995b049544ab5576d26b6f92ca736278d0e7769d341379",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/benchmark/evaluation/common.py",
+      "destination": "experiments/ab3/Standard Environment/benchmark/evaluation/common.py",
+      "sha256": "3035fa9b8455465ffbce0b5da87b5cd8684405b3aa3e14aa6a4cdc301fc0ddc7",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/benchmark/evaluation/communication.py",
+      "destination": "experiments/ab3/Standard Environment/benchmark/evaluation/communication.py",
+      "sha256": "27980bcfdc9b997748ab54d11320676cb531cd8f109661e14d3502f399e27002",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/benchmark/evaluation/loops.py",
+      "destination": "experiments/ab3/Standard Environment/benchmark/evaluation/loops.py",
+      "sha256": "6d62b6cf66c65825cd1c04ecab0e055c045b7ba40526b50399acfe44e9a94826",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/benchmark/evaluation/mapping.py",
+      "destination": "experiments/ab3/Standard Environment/benchmark/evaluation/mapping.py",
+      "sha256": "7c5d0d70328a39719af5350b93d16e09826018c757a74b5bb3eb85a903282206",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/benchmark/evaluation/resources.py",
+      "destination": "experiments/ab3/Standard Environment/benchmark/evaluation/resources.py",
+      "sha256": "e26d280e2e935cc946288cc25b2fbf6a4043d63e3ce5fb8d8de18e5c0b231460",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/benchmark/evaluation/tracking.py",
+      "destination": "experiments/ab3/Standard Environment/benchmark/evaluation/tracking.py",
+      "sha256": "a7056b2b98079b3d0ee4a94a33fc8c46da4f9fabadc1ead2582345ef8a3fea65",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/benchmark/evaluation/trajectory.py",
+      "destination": "experiments/ab3/Standard Environment/benchmark/evaluation/trajectory.py",
+      "sha256": "7d2400446b96b92eee501e36c1aa2bb57b98f35df7be4edf04ccb74f5696720d",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/benchmark/evaluation/__init__.py",
+      "destination": "experiments/ab3/Standard Environment/benchmark/evaluation/__init__.py",
+      "sha256": "5a65e225ef5b18d2a963beb17bb08392ea0df2539eecf5a1f7d1063cc4ffd7a6",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/benchmark/scenarios/baseline.json",
+      "destination": "experiments/ab3/Standard Environment/benchmark/scenarios/baseline.json",
+      "sha256": "0005bbc13aca8c5bd0fcc4d0f7e42d991b37a98eab69319a1ecbc45e83fe68be",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/benchmark/scenarios/comm_failure.json",
+      "destination": "experiments/ab3/Standard Environment/benchmark/scenarios/comm_failure.json",
+      "sha256": "19e29cd4f0f362810dcd7760d0a731165325502631acd17f1b9e4e5abac6ead1",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/benchmark/scenarios/dynamic_obstacles.json",
+      "destination": "experiments/ab3/Standard Environment/benchmark/scenarios/dynamic_obstacles.json",
+      "sha256": "0c013a9a97dae181f7591aa851ea0424f265ce8052a2f667ea8538a440341f11",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/benchmark/scenarios/sensor_noise_x2.json",
+      "destination": "experiments/ab3/Standard Environment/benchmark/scenarios/sensor_noise_x2.json",
+      "sha256": "a1064cc8deb3cb060631f8fee7357c665b92d4e04c7699da47c59c3d58582822",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/benchmark/scenarios/sensor_noise_x4.json",
+      "destination": "experiments/ab3/Standard Environment/benchmark/scenarios/sensor_noise_x4.json",
+      "sha256": "99c7b765e685e7817fcab51add034461c2818622f014d1c7062110ef35fb5491",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/benchmark/tests/test_evaluator.py",
+      "destination": "experiments/ab3/Standard Environment/benchmark/tests/test_evaluator.py",
+      "sha256": "a456809bbac723f392a2eb00f69103253ce1fa226e935cbdaf87d5b6428020ce",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/benchmark/tools/install_supervisor.py",
+      "destination": "experiments/ab3/Standard Environment/benchmark/tools/install_supervisor.py",
+      "sha256": "00f018573c3287559eef7b069eee579be158e7d4fc4f6e9cdb8780d76d785826",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/benchmark/tools/make_ab3_gt_map.py",
+      "destination": "experiments/ab3/Standard Environment/benchmark/tools/make_ab3_gt_map.py",
+      "sha256": "588ff5d8e130d4a436900da57627771345c4a20217d8b6990e3836e26992c9e5",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/ground_truth/ab3_gt_map.npz",
+      "destination": "experiments/ab3/Standard Environment/ground_truth/ab3_gt_map.npz",
+      "sha256": "92d56c60fa433350e67c5cbf6ce653d067c33fe4113bef655c3a36762ec04186",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/ground_truth/ab3_layout.npz",
+      "destination": "experiments/ab3/Standard Environment/ground_truth/ab3_layout.npz",
+      "sha256": "1e61fe1041355987a9cadb772fad81068c6b0f7c4faa37c3bbb7450a5a786598",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/robot/robot_spec.json",
+      "destination": "experiments/ab3/Standard Environment/robot/robot_spec.json",
+      "sha256": "24b5a4688b7d9435b80585d32402a44d0545c19e3a19a496a41785e962adc535",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/robot/start_poses.json",
+      "destination": "experiments/ab3/Standard Environment/robot/start_poses.json",
+      "sha256": "ba077e48e30f22c52963d2a112da61ce058ff9d02d7f3d90aa3d80f822a5f637",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/robot/stereo_left.yaml",
+      "destination": "experiments/ab3/Standard Environment/robot/stereo_left.yaml",
+      "sha256": "3e26fe49b249602e4380455ea04617da6fd464655de5451615f5fddbdc1256e2",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/robot/stereo_right.yaml",
+      "destination": "experiments/ab3/Standard Environment/robot/stereo_right.yaml",
+      "sha256": "a2b7025fb6ae8be7e2347e54bf64bd2de94a30631871f2ae576cc89ff56e198d",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/sensors/bstem_sensors.py",
+      "destination": "experiments/ab3/Standard Environment/sensors/bstem_sensors.py",
+      "sha256": "c58f6e0c1955f987f8166da4ae9c3a4d21f3ed43be31fca0d3342ff263a2937c",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/tools/bench_python.sh",
+      "destination": "experiments/ab3/Standard Environment/tools/bench_python.sh",
+      "sha256": "d407db672fc5adbaeb51f9fb2e762732b2f08edbbeb7d47e39b4e779bd760cd4",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/tools/common.ps1",
+      "destination": "experiments/ab3/Standard Environment/tools/common.ps1",
+      "sha256": "2106085bbc085335a35854fc5142f10303db13e4ef62e85054e709624a46664a",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/tools/install_controller.py",
+      "destination": "experiments/ab3/Standard Environment/tools/install_controller.py",
+      "sha256": "09c1a0b40dadb8c4f379be1300f9490b7881e58ea2b531be6893a6e3d2baaab6",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/tools/launcher_common.py",
+      "destination": "experiments/ab3/Standard Environment/tools/launcher_common.py",
+      "sha256": "62a41def68695e74826b222f97f9bc4b460521a82a260c479b89e23fbb777c78",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/tools/make_algorithm_world.py",
+      "destination": "experiments/ab3/Standard Environment/tools/make_algorithm_world.py",
+      "sha256": "28a99e44385da0b36dc085904c497512376f4e1642987450cc3744d183dd3458",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/tools/make_standard_world.py",
+      "destination": "experiments/ab3/Standard Environment/tools/make_standard_world.py",
+      "sha256": "cc647837a5c1ffc1436e1872a61870871dcd5fca4292dbd9f47a0ed90124dabb",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/tools/run_outputs.py",
+      "destination": "experiments/ab3/Standard Environment/tools/run_outputs.py",
+      "sha256": "73566c9ae7b26092a38070ea6c93c2b1aecc50527eac7b7dfa376034ce054fc2",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/tools/run_with_bench_python.ps1",
+      "destination": "experiments/ab3/Standard Environment/tools/run_with_bench_python.ps1",
+      "sha256": "425011bca2764f42b741a77c0aa941ee91d31fc0729e6c6b55f02691f83a76b4",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/tools/standard_manifest.py",
+      "destination": "experiments/ab3/Standard Environment/tools/standard_manifest.py",
+      "sha256": "69dc5c440155c6b041d98155f205ce7ffe7089437cf6eedec769e07d1b88c76a",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/tools/reference/ab3_first_floor.wbt",
+      "destination": "experiments/ab3/Standard Environment/tools/reference/ab3_first_floor.wbt",
+      "sha256": "fc975e840fb208ea14f948b2dda40b5053ceaedcae227ac5b7e2d354107dcaef",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/protos/AB3BenchBot.proto",
+      "destination": "experiments/ab3/Standard Environment/webots/protos/AB3BenchBot.proto",
+      "sha256": "9baecd1a0e891c9a2b81bbefb6b78e56d050c78df0a7fb77f38672717c951902",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/protos/AB3Board.proto",
+      "destination": "experiments/ab3/Standard Environment/webots/protos/AB3Board.proto",
+      "sha256": "fe036ff44a58faf442554d1dac404bc85a52122746af07d32a64f69052dff1e9",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/protos/AB3ConferenceTable.proto",
+      "destination": "experiments/ab3/Standard Environment/webots/protos/AB3ConferenceTable.proto",
+      "sha256": "16a6199ed28217ec26d6027453594265a9257d41ff7ebeed9c9360268915e37c",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/protos/AB3Cubicle.proto",
+      "destination": "experiments/ab3/Standard Environment/webots/protos/AB3Cubicle.proto",
+      "sha256": "df01661983c07520c730e13f5adf421f444c364cf54ac60cfd4401d4c87c94ac",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/protos/AB3Desk.proto",
+      "destination": "experiments/ab3/Standard Environment/webots/protos/AB3Desk.proto",
+      "sha256": "28e9906068f99295d0144088548dbb680b2dfbd2a3bc1856d2bf50861547edc5",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/protos/AB3Doorway.proto",
+      "destination": "experiments/ab3/Standard Environment/webots/protos/AB3Doorway.proto",
+      "sha256": "6396d8b8bfe1cdc81031ed311398cb5ed38cd7b24b56786c9bcf5b046ec0bb52",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/protos/AB3Floor.proto",
+      "destination": "experiments/ab3/Standard Environment/webots/protos/AB3Floor.proto",
+      "sha256": "7fd83142aa14b7d4d4f6671ca5278e009d6f50ddb05f5287673c2cc35434139e",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/protos/AB3LabBench.proto",
+      "destination": "experiments/ab3/Standard Environment/webots/protos/AB3LabBench.proto",
+      "sha256": "4c7054ad6b10d24187b96940ab77a8c0c7a9ff0e10383a72177209f1eb5092ef",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/protos/AB3Parapet.proto",
+      "destination": "experiments/ab3/Standard Environment/webots/protos/AB3Parapet.proto",
+      "sha256": "71fb43e10866902dc1f496403bfa51ef0aa499cff456b0dff841da2c350da8b4",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/protos/AB3Partition.proto",
+      "destination": "experiments/ab3/Standard Environment/webots/protos/AB3Partition.proto",
+      "sha256": "016a1c47d1a3717e41896d7cbb59ccac065eb22db0e5cbcd486e9015807f3b7b",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/protos/AB3Platform.proto",
+      "destination": "experiments/ab3/Standard Environment/webots/protos/AB3Platform.proto",
+      "sha256": "30dbdd61f55df78be6e50cc9a6fbd8b38aee5af529fbe1cdcaf84bc4848dbba4",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/protos/AB3Poster.proto",
+      "destination": "experiments/ab3/Standard Environment/webots/protos/AB3Poster.proto",
+      "sha256": "3e0683e810f004f2bd852429a5cf2209aee8c71cd8fdc86d5ee19630692ab169",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/protos/AB3StairBlock.proto",
+      "destination": "experiments/ab3/Standard Environment/webots/protos/AB3StairBlock.proto",
+      "sha256": "aec4014e7a2afa1a3421ab0508600e4dbcc8ca711ac5404198f3de93c02600c5",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/protos/AB3Wall.proto",
+      "destination": "experiments/ab3/Standard Environment/webots/protos/AB3Wall.proto",
+      "sha256": "cf31fe46dd7391fbefba7a24f65d4978eb7564f6a1817c0a322340d9ef59b076",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/protos/AB3WindowBand.proto",
+      "destination": "experiments/ab3/Standard Environment/webots/protos/AB3WindowBand.proto",
+      "sha256": "6e1893d12a8e0582581cb46ee088be964e3c2cd18a98a8ce8697a77533d564c1",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/protos/BstemRobot.proto",
+      "destination": "experiments/ab3/Standard Environment/webots/protos/BstemRobot.proto",
+      "sha256": "6ef5229f89fa4563e0c8490b8e718e6f3ca865f07c44a6972aeee54080262fd5",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/ab3_standard.wbt",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/ab3_standard.wbt",
+      "sha256": "279dfe5abd7ae55e6e387874a8eb11958f43831a5c93bdcfc3d573ec5a3a8492",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/bench.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/bench.png",
+      "sha256": "590164de5997abca487b0e22f3c6ca80b28575345584265cf547e7d84827f3b9",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/board.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/board.png",
+      "sha256": "2653a893c0402a6fff0f6f381565f8b8f1cee0993df04f01c6e88b357a7e4586",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/ceiling.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/ceiling.png",
+      "sha256": "0d843b55dba21c395eee4840fec97f3a9994f81eabc34c159644559614629fc2",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/column.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/column.png",
+      "sha256": "47c43ac2f19f8365d7b95806b1c92df4a868cd95a0808f126578924dafaa2a1b",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/courtyard_ground.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/courtyard_ground.png",
+      "sha256": "52be63740ad6bbe860ef3c5fc643d07d8a028ff3460e109a94556f0c49525096",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/cubicle.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/cubicle.png",
+      "sha256": "8c60521a6243e959de9b8aea43410487a859fbd4f229ea0811ed0d5438745031",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/desk.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/desk.png",
+      "sha256": "3f83ea1d79417be4c33d4cef51f92309ee691b6fb34b6b237799a33fb33b270e",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/door.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/door.png",
+      "sha256": "c21141f62709f74681d488ec5fac5b1d1cffe98156e9378a3bddea0c56ada74a",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/flat.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/flat.png",
+      "sha256": "c7d5a6fa18be467669de819eef1fa0c003b35983d7eb8fc04a539d4c98be949a",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/floor_00.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/floor_00.png",
+      "sha256": "3c7e8589b9a9a3f46648e7b5c528d5c6f0251f90a1138857e91d1a465c1237c0",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/floor_01.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/floor_01.png",
+      "sha256": "30ebe393d3ef6c1b6ca726b57cfb4b3f5d84e1eadf43fe855f68bc93b9a81b33",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/floor_02.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/floor_02.png",
+      "sha256": "ad307524bc375c30840da16217eabaf0c87dc94cbc5ae644fb626f7fa2723d9b",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/floor_03.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/floor_03.png",
+      "sha256": "9fc83eb4c03381d3f7934c6d8597d3d0ac3e041a9757d3be9d67db9c8b4ad579",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/floor_04.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/floor_04.png",
+      "sha256": "d4538659b27f5f6dc0ce4d3b8dd3000694cf595209e7eb896b6b7534266901b4",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/floor_05.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/floor_05.png",
+      "sha256": "c49de0029b3a794a72d3db2238c88473ab32c95e9fbb1767f12e5112193e9853",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/notice_board.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/notice_board.png",
+      "sha256": "0aae209c7debae3c1bc8e8f615241503cbd37b34fe9c89b79f065af55e453cd2",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/parapet.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/parapet.png",
+      "sha256": "eab8e6aef6e3eb1959018df2ced635ca07343d1ae2469e1656a38ca86cd8edbf",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/partition.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/partition.png",
+      "sha256": "5809f59244a2f7c899a2f50f67bb03bf38a0b2955e5b7fc65a6701d532f5b3c8",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/plaster_00.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/plaster_00.png",
+      "sha256": "0620ac19c53aa6661c1111b38fd8d3516661d83bee2416d082f434851899acb6",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/plaster_01.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/plaster_01.png",
+      "sha256": "4354dc69d842ee7b0763a13bccf789472c4eafc09f91b9e3a545e441e86bb6f0",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/plaster_02.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/plaster_02.png",
+      "sha256": "4b8392013b40840c11498bfa9852e0e9485c1720eb7a34a14dbf62b760915165",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/plaster_03.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/plaster_03.png",
+      "sha256": "312f19d2b9e2bb1280a5cdc71a778228a2184a471d9466370dbb251e462a7725",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/plaster_04.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/plaster_04.png",
+      "sha256": "560e77e9711f9f948ac3635140255c84c8b63264a5acb92f010624ec69c72f5c",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/plaster_05.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/plaster_05.png",
+      "sha256": "d68a5e976c0b7dc7f19578280752ff9933a6ea1a56e63a9cc22abc92a862b4a7",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/plaster_06.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/plaster_06.png",
+      "sha256": "3b3054a80161db8d5f20f6bb6af2496a4665544105563f013e1716ad33f084b7",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/plaster_07.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/plaster_07.png",
+      "sha256": "70931ce69df83278a54d22bd30ee831bda8ba331528a620f6b19b761e0e8b483",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/platform.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/platform.png",
+      "sha256": "fa1d8012cabfca8c2f51afb69f26a39d1ab88bb0ed4df88ac828798cc346aae3",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/poster_00.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/poster_00.png",
+      "sha256": "ead47ed54f9c3063ba2b2b141fbebac126a176be3bbb8ad1443bb630a14e21d0",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/poster_01.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/poster_01.png",
+      "sha256": "6c16b8d1a1212f0d4180866291af4402f8eae7e3b4eebbd6d87526d36c31ecda",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/poster_02.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/poster_02.png",
+      "sha256": "4e83c18f9abfa9ce3bc7f70822609c3c39c7b87d82b1902c8823c61c9c4336d5",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/poster_03.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/poster_03.png",
+      "sha256": "2a667c03b45304c7031076730b60571322d04f9a2e04c3d78b86d0d03f28ea4c",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/poster_04.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/poster_04.png",
+      "sha256": "d8d889c526f7b176a2fd11ae90d28b9e3e1a7946929305c070765341057a3933",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/poster_05.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/poster_05.png",
+      "sha256": "ab94b89e33cb92f4d8da0012ecf780fee336b0f9a823ed1f13330395f454c02a",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/poster_06.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/poster_06.png",
+      "sha256": "92e4602b334141dee87e9d0dcfaa1e6a1866e32283c9318538120d0843920fa2",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/poster_07.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/poster_07.png",
+      "sha256": "ca4627163a1d9dad29ffaa53b38c0fa6a0a74b5f965eb9cc850f0b25b6da80f1",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/poster_08.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/poster_08.png",
+      "sha256": "bc93cddcb79744564784f9977c76a7a9885f72969b2c494f06dec25976f0ca49",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/poster_09.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/poster_09.png",
+      "sha256": "b85a58301e46c5add218a6f59d1f10523b05e475f7e22b3bc91f52dc0e065340",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/poster_10.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/poster_10.png",
+      "sha256": "80f3012a701bcbf52bbc0f4ae680f102d1963c29e43a2968c1c5893448dabbf3",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/poster_11.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/poster_11.png",
+      "sha256": "a74a580b8dabaa6c42e6259f90718bb691430d18c29c0e5267a65adc3b1136a7",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_A-201.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_A-201.png",
+      "sha256": "6035cdb190bd4be4b8994e4ca371624858987b61ab477df08f3bfd617a993454",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_A-202.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_A-202.png",
+      "sha256": "10b96d9a421340124209769f9e89e34ecfd2d7e08bdb687d35b3bb952366f7a3",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_A-203.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_A-203.png",
+      "sha256": "eb918c3a632ddbf8ae343f3b8d7286d380fba23d3bd626cdb669687410c8e1bb",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_A-204.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_A-204.png",
+      "sha256": "d3959b336d77fdf5d5c37baa2a5cfc2eef384c4609e400476b004fb30353a2c4",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_A-205.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_A-205.png",
+      "sha256": "c32ca441e785acde51e0b9b7726cccd40879d85c600061af37a6cf3a635aee81",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_B-201.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_B-201.png",
+      "sha256": "64beda4eb03d769eaaeb6fb964ceae698bf08d3db883b74dcb4d9a9f42e9dd4d",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_B-202.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_B-202.png",
+      "sha256": "9449c7cefc4fa7ef52653d8d6ea2abedba72bd0f4c3b7ad50a8f9b380b82917f",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_B-203.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_B-203.png",
+      "sha256": "747dab49921d0598d268458cb4cde0563495dca15b1e71e0e5c5bfd871671b17",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_B-204.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_B-204.png",
+      "sha256": "b46afe98574cb35cb7639c350f5c35bc0263fb9d6da8365910eec90208285884",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_B204-PASS.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_B204-PASS.png",
+      "sha256": "8f43607ceb1acc6d58cc70cdf42504b781ba09e4342d71964cb6212f8da5a72e",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_C-201.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_C-201.png",
+      "sha256": "9a4f9c4d39b29e62b7fc9508d09517e7b9146b07fdf36e48e2311821c4e44e93",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_C-202.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_C-202.png",
+      "sha256": "cee21998043b698f8fdd4eb926637bfcacfa4c36a9d4095c10ad08be9e246c70",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_C-203.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_C-203.png",
+      "sha256": "ec5cdcdb03966f89b166a4cd0b9722b351b721806b635a5ea61edba36d844ee3",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_C-204.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_C-204.png",
+      "sha256": "918f1cfaa7c4e3423f45d4dccb07f111f5a6dc2791f7477e7bc79f807ff00358",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_C-205.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_C-205.png",
+      "sha256": "957568a9a903772e1d612d300b5d3d727057b99c124fa48dd2cff9233966d5af",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_C-CTS.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_C-CTS.png",
+      "sha256": "57056023909716734345ef1fc4d2e02e2a156eb24490848380017f23737b554b",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_C-HW.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_C-HW.png",
+      "sha256": "8c6f7145bb68a7de33e9bba5d1653041b834589455675beda8dbfc51d50313be",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_COR-AT-E.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_COR-AT-E.png",
+      "sha256": "ffb11332d0c274b2e5f8e179e8025cd7ed01a3c0fcb673d9b047ffa03e51cf7b",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_COR-AT-W.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_COR-AT-W.png",
+      "sha256": "82837292e91df4e847e8c11d74bf45a62e6db786e97a0e8fafcdf67049793cec",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_COR-N-E.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_COR-N-E.png",
+      "sha256": "d8dfccde7b44983666c7884db102ac8a1db3445ba1d6618d4d3e00a4802b2ea3",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_COR-N-W.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_COR-N-W.png",
+      "sha256": "5dad8dc71937da93bca0ad0b6efefb3e57ceefb6375434af4901df55b579aee0",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_COR-S-STUB.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_COR-S-STUB.png",
+      "sha256": "9d9a8f06d75797266225072de938b5fe52f2358a4c6a1eed1f479dbd48665458",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_COR-S.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_COR-S.png",
+      "sha256": "1adfd6d9a8f48139fdc54114be5d5f16eb4f81a99674ed6841c997a81bb43644",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_CY-ATRIUM.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_CY-ATRIUM.png",
+      "sha256": "ebad8c7f4f0958c7afff6dd1c2f80db2ccef81295a389d3d1bd3155e9fe8efb9",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_CY-NE1.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_CY-NE1.png",
+      "sha256": "670b154be3be71e5287a14aa184ee4a1e121c6bde23b8e814d722dda3fe2afa7",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_CY-NE2.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_CY-NE2.png",
+      "sha256": "7c32808c8b52b5303e03bf4dbe59c3fed61648a8e84913c83f1fc523a2672825",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_CY-NW1.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_CY-NW1.png",
+      "sha256": "5cfe0ab93a034eca3ebf340835b072015a27d017500cb40666d56019f6228c88",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_CY-NW2.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_CY-NW2.png",
+      "sha256": "59e8a1787758fa548482d37a41abfa203b89c28ad785e90f7837c254069e3257",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_CY-SE1.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_CY-SE1.png",
+      "sha256": "e4337826642c626decc10c8316930c8fb2781c3fcbf6086f6ceaea4881a5c19d",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_CY-SE2.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_CY-SE2.png",
+      "sha256": "702ef0f63424cbe293fe8eeca80ab7f2c04211934184f8f0c0a3d7bdc16e5310",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_CY-SW1.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_CY-SW1.png",
+      "sha256": "c2f8be1ebea03b9dc19e2fc7323bca03bd461aee7b4b75a9af896759c47fb111",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_CY-SW2.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_CY-SW2.png",
+      "sha256": "1f8293deccb141f9e18ef04cc7704bd6693fb3da0607c999cce5ced6e2a2fafb",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_D-201.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_D-201.png",
+      "sha256": "a02c3a5974db9dc4943451feedfe177421d881b320cda85d22517f983abd2ce4",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_D-202.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_D-202.png",
+      "sha256": "c22ea96d25e83a3949fa24330efabdeac6a656d5dba78cca1ee75d6a19fb429b",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_D-203.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_D-203.png",
+      "sha256": "829bfd97cde0d50c000b624cbf54955979cf16b69e5a20cf2a0be3469aca0695",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_D-204.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_D-204.png",
+      "sha256": "f054c968c08008ae76f268d46fc5f9570d16c0e981cb18083e549917eb89ed38",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_D-205.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_D-205.png",
+      "sha256": "330093b01ba3a502936ad3366070125f7dbb2f439400a98d6191a121ebee08f6",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_D-206.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_D-206.png",
+      "sha256": "89ac394813c2f2c16a43be32df23224562b4776b11b39df29d1c1fe5c58e7eb0",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_D-207.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_D-207.png",
+      "sha256": "fbfeeb9d8b4031d1c177afaf8b0d451b32cc7ed8e5e54d186beea4e856f9770b",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_D-208.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_D-208.png",
+      "sha256": "b8160e7e47b31fb111dae3c75f30e8d6c72b173320d77d4f8eab86289a1dc1a1",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_D-209.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_D-209.png",
+      "sha256": "f60085413fb35cad371e81500f522905291861fb25ac67261c8c2fd3e5a566d4",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_D-210.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_D-210.png",
+      "sha256": "049b5673b1c9721406ea8b320c6652f87dbeb31de11be2d081f0a69565208e11",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_D-211.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_D-211.png",
+      "sha256": "6ac9488181f594f37fa128b06b34e57c97c1f9026eabc71d2311a2248cd14fed",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_DUCT-B-N.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_DUCT-B-N.png",
+      "sha256": "bdd16a36a5ba3dfd3b87b8db9a9f0a3a401dbe06a36b29925c371b1c6bbbd9d1",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_DUCT-B-S.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_DUCT-B-S.png",
+      "sha256": "57528ca37d10593d8fefc2377f7e416fbdc09db998718e366ccf89c8cdf44bdf",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_DUCT-B.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_DUCT-B.png",
+      "sha256": "cde1d86032bb103fa3a081ae425ca2561a3a580d86ad1761b3580b20f460d071",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_DUCT-E-N.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_DUCT-E-N.png",
+      "sha256": "03603342c26178ed740557c9821e66012c91bdecd61c45cf7cc93b2768801747",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_DUCT-E-S.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_DUCT-E-S.png",
+      "sha256": "c79ec06cafaa1e95971197f7566a09f396ed322113d7c940f36744017ad63e66",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_DUCT-E.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_DUCT-E.png",
+      "sha256": "0fb1364d48ebba53f1892c6ef4e1f25231cbd1a6c211dff6f1aa56d8dcacdd71",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_DUCT-NE.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_DUCT-NE.png",
+      "sha256": "d8456956351625cdaf9f8f1caac6d6cb5415057bd0d1fc2a5a3e8500fc073dbb",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_DUCT-NEE.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_DUCT-NEE.png",
+      "sha256": "5d88430e92094066add3a05b1bb4bee0cefac16cd526dedeeb9ed16710b95fb1",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_DUCT-NW.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_DUCT-NW.png",
+      "sha256": "4a70d12962a74c4c6c479eb7ba35ba5816fb095f1ff677f08b673daa2c915977",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_DUCT-NWW.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_DUCT-NWW.png",
+      "sha256": "a5323a2b189eb2109fbb03983c6b6e721fae33b0a89ee3b4f18954159fd1f4d3",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_DUCT-SE.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_DUCT-SE.png",
+      "sha256": "0835e5ed2765bb8075f47b118cb606459e65259923ca594b9475c53eeae0572d",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_DUCT-SEE.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_DUCT-SEE.png",
+      "sha256": "6b05a5b0dcde142f433277f7d6ed46c1a21fe4588de015fa53bc408419bead54",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_DUCT-SW.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_DUCT-SW.png",
+      "sha256": "d99672697e6673c25bb248f22ec856edbb2aa038236f2363659e78a8d1ab79f7",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_DUCT-SWW.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_DUCT-SWW.png",
+      "sha256": "6a001fc3e6fb2ef218c793bb27907b93266b100b77957374efa2a04e3e9054d8",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_E-201.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_E-201.png",
+      "sha256": "e0af7d056817e8ada168c8e354b8ea4cfb786077e906e47b62dc7c8a1b2bf412",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_E-202.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_E-202.png",
+      "sha256": "e62908d7c5a177bb3e791c1c05bb288dd03edfdb4056266641bbf191d0e0aa1f",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_E-203.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_E-203.png",
+      "sha256": "71c42638b8d455f16a586cbb6cb7f31a4b1d64d64f5904a1a87ebc65302681cd",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_E-204.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_E-204.png",
+      "sha256": "9a1148c41070bbf94158cf75802fd9cea0540abef881e25b5587b03e045926bf",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_E201-PASS.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_E201-PASS.png",
+      "sha256": "d425431f35e22daf10ada576f607e60d9a704cb7646a41e06d6eea7f97c6d570",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_EE-CORE.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_EE-CORE.png",
+      "sha256": "823783dbf9d83270998e6a2b3531e4785d936d5730ce109aec262ab757915a8b",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_EE-MAL.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_EE-MAL.png",
+      "sha256": "a0a099848414dbe8237f2898060e7f749f3c0b91a568878f4ca3e2aeee768549",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_EE-WC-L.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_EE-WC-L.png",
+      "sha256": "c2524498edbc9c3f29669073015aa5b651badabcfddae37eb0285a90564514b9",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_F-201.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_F-201.png",
+      "sha256": "d3b3f90361d2b741a5678065f7b27f4c054e57d58d3a2481777b1d3770ede7ac",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_F-202.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_F-202.png",
+      "sha256": "4e53ce5173618b584cf12a5b49241446e802da12159702e1973ae748e1e4d2cf",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_F-203.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_F-203.png",
+      "sha256": "4dc1b55e8dc3451771d6247ccdf2bf9339610e3bfec26eddea27c7965897a01c",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_F-204.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_F-204.png",
+      "sha256": "35ae1c704fdd58d38582310cd1d8643d8606e85b0ce5aa39d683f972c5c442bb",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_F-205.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_F-205.png",
+      "sha256": "8bbb37ef7a837f6b394c1d33d58d3e01e48db292a5885cb9a0d92eee89871b1a",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_F-206.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_F-206.png",
+      "sha256": "29aa5e2e5b5246583ac7738e1212f673e913d3c2bf647d295400df4459f39169",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_F-207.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_F-207.png",
+      "sha256": "e7cd7d664d3bb6aac0bafc3eb2e3d9162b1920fe69a6d07f286d4abc9b799948",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_generic.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_generic.png",
+      "sha256": "29e96486cf22c6a1636df76a7f926b52438737bec44c2ca1cb4dcde1e89b0b65",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_LOBBY-E-N.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_LOBBY-E-N.png",
+      "sha256": "2e8cef80082b95bd7bde48df32c55dc99f27c42fae661ba6d6f3286d86a7d5ce",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_LOBBY-E-S.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_LOBBY-E-S.png",
+      "sha256": "69bf4c9564e83b4bb2f61f1cc834a25ee3188bd9a42d10b6a3de9b28239b466a",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_LOBBY-W-N.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_LOBBY-W-N.png",
+      "sha256": "815efc5e4697f10651eb0191aa2bd8b60781b36f6be41e54acb24b1017ec7d89",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_LOBBY-W-S.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_LOBBY-W-S.png",
+      "sha256": "ee1e2a686e9a60e3582adfbffa1161c29b448efc792ad566c144a5409a203ddf",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_N-E1.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_N-E1.png",
+      "sha256": "a09be84b8e2950ae89ae11eff5ae0fb5a58ed758eb3a0dd215a63797ba42dd5c",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_N-E2.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_N-E2.png",
+      "sha256": "010fa02bd419777a865ba8c6b1d5ba5649b0e2cb4a284503585271d99f376454",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_N-E3.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_N-E3.png",
+      "sha256": "ec9350517e1b38f5c84faa17263b6bd7f2f7383524a4d2544fa2de7680899b9d",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_N-W1.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_N-W1.png",
+      "sha256": "01a0693a35e17f50b6d54309f6756556455ecb869d5a16696b12df2d674cf841",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_N-W2.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_N-W2.png",
+      "sha256": "f87ae6ae86e00312a866618bef240117fc22e6665990fa01892ce0b0f9a601d9",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_N-W3.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_N-W3.png",
+      "sha256": "4e43dab47ad1ab3d2c7a0395bc7f219c7bac6956b4893e596ecf79d0faf5b1f1",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_NE-WC-G.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_NE-WC-G.png",
+      "sha256": "0ddf8eb8472f74d448e6efc885123e189a9c598a9df62b339fd18dd9786a1c4d",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_NW-WC-L.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_NW-WC-L.png",
+      "sha256": "d8031722e0ace8e548c3d73bf0453b9a40363e3fa1abb7fe7589a2f5c244c12b",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_PASS-E.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_PASS-E.png",
+      "sha256": "9b1ff6e4671c0bb4b6f61b804fc7ff7ba645f7dbea5946ade92f0f86127b5bb8",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_PASS-W.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_PASS-W.png",
+      "sha256": "e78f37e2221ccab8823e916597d47d6f6997cd4373ef4db456c89f2fe9b044b0",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_S-E1.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_S-E1.png",
+      "sha256": "d5541322f7ce5703370e1768d2f59a7bfcb85b3e9a4447f89f10039ba65bfe22",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_S-E2.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_S-E2.png",
+      "sha256": "331891d1fb84aa7d104fe47554c6709e2cc57a367935e73e1f5fb363900014f6",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_S-E3.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_S-E3.png",
+      "sha256": "0bbd94b808caeae7b21d976bf4a8ee84dfc232407500d393ead3a21607e600df",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_S-W1.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_S-W1.png",
+      "sha256": "adcab9ecb89d03690b38f0993e0b9a0ea115c541d94a97a293ef9ee115b282e2",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_S-W2.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_S-W2.png",
+      "sha256": "91cab2fd468674bd71467d27529b2178021703f3d35d6065a3ed8ea92f106242",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_S-W3.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_S-W3.png",
+      "sha256": "2b2cd921100623ecd45c7ee6d5458691950d705eeb4fb55a8757ec92436c31b0",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_S-W4.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_S-W4.png",
+      "sha256": "52eb791515e4fa174845d1fb1058435c59e9c26f0b59d39859e2199e4f451f63",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_SEALED-NW.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_SEALED-NW.png",
+      "sha256": "ce69296aea281d6ba983597040f64e8772cfda706ede0cd96f8f8791143e8d1d",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_SLOT-NE.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_SLOT-NE.png",
+      "sha256": "fed82bb85ad53454519f7837922ae32ea2902794982960806fddf40e521b0dee",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_SLOT-NW.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_SLOT-NW.png",
+      "sha256": "726ed977b744afec82a94e3ccf6938b361686480f39a562d02ca3034008fa770",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_SLOT-SE.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_SLOT-SE.png",
+      "sha256": "725e759c9bc55aaea6935023bb1e52d118299f511fe4fd85536501d06c266e75",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_SLOT-SW.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_SLOT-SW.png",
+      "sha256": "556e66aa70600abd6f76951afd3ebbb4e127568f8bae25b3ce7d134bde97297c",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_ST-C-ACCESS.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_ST-C-ACCESS.png",
+      "sha256": "615b834e307c8abee6ef116c43bc4918e1c44f8618be3ff708e23fa2c8f4a483",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_ST-C.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_ST-C.png",
+      "sha256": "ddced8cafe8c4335eac7657f1a39a211c526e121091d8e7175755f3cd2bb4b3a",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_ST-E.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_ST-E.png",
+      "sha256": "b11c30bcfef2fbd0beca5b39b9763caec854930900581d021666b9543421570c",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_ST-W.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_ST-W.png",
+      "sha256": "2b0d26202767eb2e575a714efe93ceb9e2aa7ccc67dd594c5cdf6485fd53f564",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_UPS.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_UPS.png",
+      "sha256": "740a7b7040288f26b868b0de0c84bb73296d459b12cb9413893b7385b1176aaa",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_VOID-CE.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_VOID-CE.png",
+      "sha256": "9d29ecc481264c51c684345fd9be9bf88a9132c087951a89c1b39f2bf8853a72",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_VOID-CW1.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_VOID-CW1.png",
+      "sha256": "079f2230060b0e95243aa1e1c024772f290168f1d2d181ed2d81a25e19f57fc3",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_VOID-CW2.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_VOID-CW2.png",
+      "sha256": "874d3cef5d8eb73c7a71f0d3ddb05ad63bd3696c276d27e0bc8b7a60668186c1",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-B-DISC.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-B-DISC.png",
+      "sha256": "741d1188e673be723f1db3d984bdd1f5f92e8b5f88d954bfa74b466e2560856d",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-B-HOD.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-B-HOD.png",
+      "sha256": "8186bb9aed9c0e29f80a403327becf7ba204ab8bfed992fdb7d68ae09408ee3b",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-B-LOUNGE.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-B-LOUNGE.png",
+      "sha256": "d7fbd765d297dfb8ad0a100ffde0664adb6e31b8db1193cbbb05acdc217d6cc6",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-B-OFF.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-B-OFF.png",
+      "sha256": "e1fd83b60d8d75d33b14e3655533e424dce60782d15d99a410bab0dd168ad411",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-B-PANTRY.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-B-PANTRY.png",
+      "sha256": "094562a70d66a0589ffb3d982ea444cdc0417ba7eb41e6983210611d384d5e3a",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-B-PROF1.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-B-PROF1.png",
+      "sha256": "03d84f1758cbc63fb7b497537c2c9e03ac1f0067cf223e0132b7165709980cb6",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-B-PROF2.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-B-PROF2.png",
+      "sha256": "4d5b525dbfff8a256a601b6943c71a6a8304b23e4df39f31fc6249c3ca188bf7",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-B-PROF3.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-B-PROF3.png",
+      "sha256": "caaa9bfd38647ad085d6da13e6aa92f944a9ab3569395ff6934e64dc16166f16",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-B-PROF4.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-B-PROF4.png",
+      "sha256": "bed1e80512934e1079404da532944fdfa7a9b4d438879c88b757d29caff029d9",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-B-WC-G.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-B-WC-G.png",
+      "sha256": "b760dacfc4987ece4b79195c7d5c72c1e7ef48de452a15b9f6d0c8ed127a1bf5",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-B-WC-L.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-B-WC-L.png",
+      "sha256": "77b3540afc2d3103d430a0e8bbcc25e0cfc8b0945c9897869cd16a8ffaa2c5aa",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-B.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-B.png",
+      "sha256": "60896c4be04794c96b488d49214f0025a2c683d521a4a0746cef18c95efb9692",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-E-DISC.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-E-DISC.png",
+      "sha256": "67aa0214bbb8a48caa7902f69df0f306c9b76df6b537051ef044a2612fcc67de",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-E-HOD.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-E-HOD.png",
+      "sha256": "4f69686aa2dcd412e7215e5d90768e685e33d037e2f2be5638d802261a3fdcee",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-E-P1.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-E-P1.png",
+      "sha256": "b2c525d5a5fa141a0d57283e771f879b773c3e6c53cdc3899922b2cc4a76c5e4",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-E-P2.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-E-P2.png",
+      "sha256": "7b66d12286e80e9c286bb019a33ec7cf366a7ffe00be73838a2ee5b0d42e7a69",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-E-P3.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-E-P3.png",
+      "sha256": "06708cd3454ac0a54ebb736157763bb315477da9fdbf81c4fcc79f3513a25887",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-E-P4.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-E-P4.png",
+      "sha256": "48b1da57ab8d2e78825fe92c54b64d9e151b38efa6ec21a3fd47699b735683fc",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-E-P5.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-E-P5.png",
+      "sha256": "12bd3bd5e37ea06e9890bfadd47ae2dc223adc1d111010fc0e35c51bb0e19166",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-E-P6.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-E-P6.png",
+      "sha256": "f36cc3f4a6cbf5af5b2d0a203f5ffba570ef36512a895a5138ea9e0aa1eb683b",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-E-SEC.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-E-SEC.png",
+      "sha256": "152552d9f3108826c23abdbc36c96b8ba76de25a35ebfb8ea2d1c16cbad0897d",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-E-WC.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-E-WC.png",
+      "sha256": "6ac17d733a3f9396b175e90f4ecbfa57a73b3f1100b42441a385f5140ca35c07",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-E-WC2.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-E-WC2.png",
+      "sha256": "c9921ea298da30090a98b1c085d3961b0a81ef19d862487d0d02bc5c8b9ee351",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_W-E.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_W-E.png",
+      "sha256": "11ca70d6c0d720b92d42f30b1c132109e0155009c4422d67d2299356986be2d7",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_WE-SIEM-ANNEX.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_WE-SIEM-ANNEX.png",
+      "sha256": "1cadbb6fecc893a4d98f152a6f27b1cc46fb3914523a457e23050fbe57813a91",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_WE-SIEM.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_WE-SIEM.png",
+      "sha256": "efd0cf77bd9d47414e6f7b6fce4b89875a899b3dca99f54cd9d2ab1c08cacfc8",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_WE-SMART.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_WE-SMART.png",
+      "sha256": "31f79b777de5e32a82b3af420ddbcb422d580c70fa069495e16f78702a8ba2e5",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_WE-UTIL.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_WE-UTIL.png",
+      "sha256": "25434cd9c5a45609d00ecca1ce93d1edf36b5f57e534ff6ae5dfd5083ff108d6",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_WE-WC.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_WE-WC.png",
+      "sha256": "8a4d64097d29170f19e344cb3c78f7fd33b17c87d83c1b1613f6717a29ed91fa",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_XL-NE.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_XL-NE.png",
+      "sha256": "df116f67f5e970fbb83f0f3e2aa95bf9af2f50d6d1a9d3fe9cba3cb02ad91891",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_XL-NW.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_XL-NW.png",
+      "sha256": "923c95d1c942d8787291341918d17fbb244ca567ffab98a3dec38ee2dcf1cb9d",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_XL-SE.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_XL-SE.png",
+      "sha256": "ca91f7b14f63822d0401ac0b24708139aaa85e67f652acacfe0fc33c4bc3271c",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/sign_XL-SW.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/sign_XL-SW.png",
+      "sha256": "4c91a5ab53ec0980eac02e54b72498bc80fae0949b2fedac848882d4cfd07e03",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/stair.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/stair.png",
+      "sha256": "be55ac21a834b95111965fcd144c393c35ea1123af304b2f01240a2a75238eb7",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    },
+    {
+      "source": "Benchmark/Standard Environment/webots/worlds/textures/window_opaque.png",
+      "destination": "experiments/ab3/Standard Environment/webots/worlds/textures/window_opaque.png",
+      "sha256": "015d35c03bdced2e9e6fcb3e02c06ddbbd633d930798935c7aefe4a19464148d",
+      "license": "MIT (owner confirmed team rights)",
+      "modifications": []
+    }
+  ]
+}
