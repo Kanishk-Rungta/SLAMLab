@@ -22,3 +22,8 @@ source integrity receipts will be added after the corresponding work completes.
 - Offline source restoration verified D?SLAM: 399 locked files; DOOR-SLAM: 1,345 locked files. Both prepare commands succeeded in SLAMLab, generating calibration and checking available build-copy adapters. Native build/run remains unverified.
 - Four source-restoration integrity/path/edit-preservation unit tests pass.
 - The optional D?SLAM full ZIP network fetch exceeded its 64 MiB cap and wrote no source archive; sparse Git is the default transport.
+
+- Default sparse D?SLAM Git restoration succeeded and reproduced the exact 399-file locked archive; no model weights were fetched.
+- Twelve analytic trajectory/format/rejection tests pass. Synthetic CLI: 5 matches, ATE RMSE 0.10000000000000003 m (known 0.1 m offset).
+- Actual short two-robot Webots recording, robot 1: 94 matches, position ATE RMSE 0.0013542252933906292 m without alignment. This only checks the wheel-odometry/evaluation pipeline over 3 seconds; it is not a research SLAM benchmark.
+- Both CLI runs exported JSON, CSV and PNG successfully to ignored output directories.

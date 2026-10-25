@@ -1,0 +1,17 @@
+{
+  "algorithm": "Analytic constant-offset fixture",
+  "version": "1",
+  "environment": "Synthetic unit square",
+  "robot_count": 1,
+  "dataset": "Hand-authored 5-pose mathematical fixture; no sensor recording",
+  "experiment_date": null,
+  "dependencies": {},
+  "configuration": {
+    "purpose": "CLI demonstration only",
+    "offset_m": [
+      0.1,
+      0
+    ]
+  },
+  "kind": "synthetic_fixture"
+}
