@@ -12,13 +12,28 @@ STANDARD = ROOT / 'experiments/ab3/Standard Environment'
 
 
 def main():
+    if '--example' in sys.argv and sys.argv[sys.argv.index('--example') + 1:][:1] == ['landmark-slam']:
+        forwarded = sys.argv[1:]
+        index = forwarded.index('--example')
+        del forwarded[index:index + 2]
+        if '--world' in forwarded:
+            index = forwarded.index('--world')
+            if forwarded[index + 1:index + 2] != ['landmark-lab']:
+                raise SystemExit('landmark-slam uses --world landmark-lab')
+            del forwarded[index:index + 2]
+        raise SystemExit(subprocess.run([sys.executable, '-B', str(ROOT / 'tools/run_reference_slam.py'), *forwarded]).returncode)
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--example', choices=('odometry', 'landmark-slam'), default='odometry')
+    parser.add_argument('--world', choices=('ab3', 'landmark-lab'), default='ab3')
     parser.add_argument('--robots', type=int, choices=(1, 2), default=1)
     parser.add_argument('--seconds', type=float, default=10)
     parser.add_argument('--prepare-only', action='store_true')
     parser.add_argument('--webots-home', type=Path, default=os.environ.get('WEBOTS_HOME'))
     parser.add_argument('--timeout', type=float, default=120, help='Wall-time limit, seconds')
+    parser.add_argument('--output', type=Path)
     args = parser.parse_args()
+    if args.world != 'ab3':
+        parser.error('The odometry example uses --world ab3')
     if not 0 < args.seconds <= 60 or not 0 < args.timeout <= 600:
         parser.error('Use 0 < seconds <= 60 and 0 < timeout <= 600')
     sys.path.insert(0, str(STANDARD / 'tools'))
@@ -37,7 +52,9 @@ def main():
     print('Prepared world:', world)
     if args.prepare_only:
         return
-    output = ROOT / 'outputs' / ('webots-demo-' + time.strftime('%Y%m%d-%H%M%S') + '-' + str(time.time_ns()))
+    output = (args.output or ROOT / 'outputs' / ('webots-demo-' + time.strftime('%Y%m%d-%H%M%S') + '-' + str(time.time_ns()))).resolve()
+    if not output.is_relative_to(ROOT) or output.exists():
+        parser.error('Choose a new output directory inside SLAMLab')
     output.mkdir(parents=True)
     env = dict(os.environ, STANDARD_ENV=str(STANDARD), SLAMLAB_DEMO_OUTPUT=str(output),
                SLAMLAB_DEMO_SECONDS=str(args.seconds), SLAMLAB_DEMO_ROBOTS=str(args.robots),

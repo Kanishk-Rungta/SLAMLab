@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Added a complete Webots landmark EKF-SLAM pipeline, recorded-input replay, joint covariance tests and static result exports.
+- Extended the CLI with algorithm discovery, configuration-based experiments, evaluation and visualization exports.
+
 - Established the software and simulation monorepo foundation.
 - Audited the immutable source, candidate algorithms and licensing boundaries.
 - Recorded the owner's MIT redistribution confirmation for team components.

@@ -1,0 +1,13 @@
+{
+  "algorithm": "ekf-slam",
+  "world": "landmark-lab",
+  "robots": 1,
+  "seconds": 30,
+  "seed": 42,
+  "initial_poses": [[0, 0, 0], [1.5, -1.5, 1.5707963267948966]],
+  "wheel_radius_m": 0.05,
+  "track_m": 0.24,
+  "linear_speed_m_s": 0.22,
+  "angular_speed_rad_s": 0.22,
+  "noise": {"distance_std": 0.003, "turn_std": 0.008, "range_std": 0.04, "bearing_std": 0.015}
+}
