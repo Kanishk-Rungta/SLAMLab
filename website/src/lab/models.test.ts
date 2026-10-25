@@ -10,6 +10,8 @@ import {
   optimizeGraph,
   alignPoints,
   multiRobot,
+  descriptorDistance,
+  featureScene,
   type Point,
 } from './models';
 import { parseTrajectory, parseOccupancy, parseReplay, poseAt } from './data';
@@ -44,6 +46,29 @@ describe('deterministic educational models', () => {
     expect(f.matches.length).toBe(15);
     expect(f.matches.every((m) => m.correct)).toBe(true);
     expect(features(42, 0.8, 2, false).matches.some((m) => !m.correct)).toBe(true);
+  });
+  it('explains every candidate with the same distance and gates used for matching', () => {
+    for (const mutual of [false, true]) {
+      const result = features(42, 0.65, 0.55, mutual);
+      expect(result.candidates).toHaveLength(featureScene.length);
+      expect(result.matches).toEqual(result.candidates.filter((candidate) => candidate.accepted));
+      for (const candidate of result.candidates) {
+        const distances = result.right.map((right) =>
+          descriptorDistance(result.left[candidate.left], right),
+        );
+        expect(candidate.distance).toBe(Math.min(...distances));
+        expect(candidate.accepted).toBe(
+          candidate.distance <= 0.55 && (!mutual || candidate.reciprocal),
+        );
+        expect(candidate.reason).toBe(
+          candidate.distance > 0.55
+            ? 'threshold'
+            : mutual && !candidate.reciprocal
+              ? 'mutual'
+              : 'accepted',
+        );
+      }
+    }
   });
   it('optimizes measurement residuals with an anchored pose, rather than snapping to truth', () => {
     const graph = poseGraph(42),

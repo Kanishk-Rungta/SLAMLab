@@ -16,6 +16,7 @@ import {
   useReplay,
 } from '../components/ui';
 import { odometry } from '../lab/models';
+import { ConceptDiagram, LessonVisual, lessonConcepts } from '../components/LessonVisual';
 
 function HeroPlot() {
   const motion = useMemo(() => odometry(42, 0.045, 0.045, 0.65), []),
@@ -242,14 +243,23 @@ export function Learn() {
             {content.documents
               .filter((d) => d.level === level)
               .map((d, j) => (
-                <Link to={'documentation/' + d.id + '/'} className="lesson-card" key={d.id}>
-                  <span className="lesson-number">{String(i * 4 + j + 1).padStart(2, '0')}</span>
-                  <div>
-                    <h3>{d.title}</h3>
-                    <p>{d.description}</p>
-                    <span className="text-link">
-                      Read lesson <Icon name="arrow" size={15} />
-                    </span>
+                <Link
+                  to={'documentation/' + d.id + '/'}
+                  className="lesson-card visual-lesson"
+                  key={d.id}
+                >
+                  <div className="lesson-preview">
+                    <ConceptDiagram id={d.id} step={d.id === 'multi-robot' ? 1 : 2} compact />
+                  </div>
+                  <div className="lesson-card-copy">
+                    <span className="lesson-number">{String(i * 4 + j + 1).padStart(2, '0')}</span>
+                    <div>
+                      <h3>{d.title}</h3>
+                      <p>{d.description}</p>
+                      <span className="text-link">
+                        Read lesson <Icon name="arrow" size={15} />
+                      </span>
+                    </div>
                   </div>
                 </Link>
               ))}
@@ -626,6 +636,8 @@ export function Documentation({ id }: { id?: string }) {
   if (doc) {
     const index = content.documents.indexOf(doc),
       next = content.documents[index + 1];
+    const visual = lessonConcepts[doc.id];
+    const headingEnd = visual && doc.html.includes('</h1>') ? doc.html.indexOf('</h1>') + 5 : 0;
     return (
       <div className="doc-layout">
         <aside className="doc-nav">
@@ -649,7 +661,15 @@ export function Documentation({ id }: { id?: string }) {
               Edit on GitHub <Icon name="external" size={13} />
             </a>
           </div>
-          <div dangerouslySetInnerHTML={{ __html: doc.html }} />
+          {visual ? (
+            <>
+              <div dangerouslySetInnerHTML={{ __html: doc.html.slice(0, headingEnd) }} />
+              <LessonVisual key={doc.id} id={doc.id} />
+              <div dangerouslySetInnerHTML={{ __html: doc.html.slice(headingEnd) }} />
+            </>
+          ) : (
+            <div dangerouslySetInnerHTML={{ __html: doc.html }} />
+          )}
           {next && (
             <Link to={'documentation/' + next.id + '/'} className="next-lesson">
               <span>CONTINUE EXPLORING</span>

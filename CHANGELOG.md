@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Added annotated previews and three-step visual walkthroughs to all twelve Learn
+  lessons, with captions and links to related activities.
+- Rebuilt feature matching around schematic room views, keyboard-selectable
+  corners, candidate rankings and explanations from the actual matching model.
 - Audited all five playgrounds, Studio and all six Simulation Lab choices; recorded
   live Webots and sensor-only replay evidence in `docs/activity-audit.md`.
 - Fixed replay timing, robot colours, view bounds, metadata retention and malformed

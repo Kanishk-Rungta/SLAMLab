@@ -168,10 +168,32 @@ export function occupancy(seed: number, maximum = 4, noise = 0.03, resolution = 
 }
 
 export type Feature = { point: Point; descriptor: number[]; identity: number };
+export const featureScene: { point: Point; name: string }[] = [
+  { point: [0.12, 0.18], name: 'Left window, upper-left corner' },
+  { point: [0.34, 0.18], name: 'Left window, upper-right corner' },
+  { point: [0.34, 0.48], name: 'Left window, lower-right corner' },
+  { point: [0.12, 0.48], name: 'Left window, lower-left corner' },
+  { point: [0.66, 0.18], name: 'Right window, upper-left corner' },
+  { point: [0.88, 0.18], name: 'Right window, upper-right corner' },
+  { point: [0.88, 0.48], name: 'Right window, lower-right corner' },
+  { point: [0.66, 0.48], name: 'Right window, lower-left corner' },
+  { point: [0.42, 0.5], name: 'Door, upper-left corner' },
+  { point: [0.59, 0.5], name: 'Door, upper-right corner' },
+  { point: [0.59, 0.94], name: 'Door, lower-right corner' },
+  { point: [0.42, 0.94], name: 'Door, lower-left corner' },
+  { point: [0.12, 0.68], name: 'Wall panel, upper-left corner' },
+  { point: [0.31, 0.68], name: 'Wall panel, upper-right corner' },
+  { point: [0.31, 0.84], name: 'Wall panel, lower-right corner' },
+  { point: [0.12, 0.84], name: 'Wall panel, lower-left corner' },
+  { point: [0.72, 0.75], name: 'Notice board, left corner' },
+  { point: [0.89, 0.75], name: 'Notice board, right corner' },
+];
+export const descriptorDistance = (a: Feature, b: Feature) =>
+  Math.hypot(...a.descriptor.map((v, i) => v - b.descriptor[i]));
 export function features(seed: number, noise = 0.2, threshold = 0.65, mutual = true) {
   const rng = random(seed);
   const left: Feature[] = Array.from({ length: 18 }, (_, i) => ({
-    point: [rng(), rng()],
+    point: [...featureScene[i].point] as Point,
     descriptor: Array.from({ length: 6 }, () => rng()),
     identity: i,
   }));
@@ -179,8 +201,8 @@ export function features(seed: number, noise = 0.2, threshold = 0.65, mutual = t
     .filter((_, i) => i % 6 !== 0)
     .map((f) => ({
       point: [
-        Math.min(0.96, Math.max(0.04, f.point[0] + gaussian(rng) * noise * 0.12)),
-        Math.min(0.96, Math.max(0.04, f.point[1] + gaussian(rng) * noise * 0.12)),
+        Math.min(0.96, Math.max(0.04, f.point[0] - 0.045 + gaussian(rng) * noise * 0.035)),
+        Math.min(0.96, Math.max(0.04, f.point[1] + 0.015 + gaussian(rng) * noise * 0.035)),
       ] as Point,
       descriptor: f.descriptor.map((d) => d + gaussian(rng) * noise),
       identity: f.identity,
@@ -191,23 +213,23 @@ export function features(seed: number, noise = 0.2, threshold = 0.65, mutual = t
       descriptor: left[i].descriptor.map((d) => d + gaussian(rng) * 0.13),
       identity: -i - 1,
     });
-  const distance = (a: Feature, b: Feature) =>
-    Math.hypot(...a.descriptor.map((v, i) => v - b.descriptor[i]));
   const nearest = (f: Feature, candidates: Feature[]) =>
-    candidates.map((c, i) => ({ i, d: distance(f, c) })).sort((a, b) => a.d - b.d)[0];
-  const matches = left.flatMap((f, i) => {
+    candidates.map((c, i) => ({ i, d: descriptorDistance(f, c) })).sort((a, b) => a.d - b.d)[0];
+  const candidates = left.map((f, i) => {
     const candidate = nearest(f, right);
-    if (candidate.d > threshold || (mutual && nearest(right[candidate.i], left).i !== i)) return [];
-    return [
-      {
-        left: i,
-        right: candidate.i,
-        correct: f.identity === right[candidate.i].identity,
-        distance: candidate.d,
-      },
-    ];
+    const reciprocal = nearest(right[candidate.i], left).i === i;
+    return {
+      left: i,
+      right: candidate.i,
+      correct: f.identity === right[candidate.i].identity,
+      distance: candidate.d,
+      reciprocal,
+      accepted: candidate.d <= threshold && (!mutual || reciprocal),
+      reason: candidate.d > threshold ? 'threshold' : mutual && !reciprocal ? 'mutual' : 'accepted',
+    };
   });
-  return { left, right, matches };
+  const matches = candidates.filter((candidate) => candidate.accepted);
+  return { left, right, matches, candidates };
 }
 
 export function relative(a: Pose, b: Pose): Pose {

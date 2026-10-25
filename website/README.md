@@ -50,6 +50,10 @@ Reports and traces stay in ignored `test-results` and `playwright-report`.
 - `src/lab/data.ts`: finite, bounded local-file parsing and replay types.
 - `src/components/ui.tsx`: plots, pan/zoom, headings, playback and controls.
 - `src/pages/`: learning, explorer, simulation, benchmarks and Studio.
+- `src/components/LessonVisual.tsx`: twelve conceptual diagrams, card previews and
+  keyboard-operable, three-step walkthroughs placed before lesson equations.
+- `src/components/FeatureExperiment.tsx`: schematic scene views, selectable
+  features, candidate scores and explanations driven by the descriptor matcher.
 - `docs/project/README.md` (repository root): canonical project statement, objectives,
   methodology, Team 98, progress and resources, shared by Project and Documentation.
 - `scripts/content.mjs`: canonical Markdown/catalog/result publishing.
@@ -60,6 +64,12 @@ metrics from measured Webots runs in [examples/results](../examples/results/READ
 Studio's time-varying separation chart illustrates display samples; the Python
 metrics retain the evaluator's association and alignment policy. There are no
 native research-system rankings or unmeasured resource-use charts.
+
+Learn diagrams are explicitly labelled conceptual schematics. The feature scene
+uses provided corner locations and generated descriptors; it performs no image
+feature extraction. Candidate acceptance and rejection use the same descriptor
+distances, threshold and mutual-neighbor checks as the model. Known identities
+are used only for the teaching check and correct/wrong counts.
 
 CSV imports require `timestamp,x,y,yaw`. Planar TUM imports require
 `timestamp tx ty tz qx qy qz qw`, constant height and unit yaw quaternions.

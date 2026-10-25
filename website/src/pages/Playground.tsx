@@ -1,7 +1,6 @@
 import { useMemo, useState } from 'react';
 import katex from 'katex';
 import {
-  features,
   odometry,
   occupancy,
   optimizeGraph,
@@ -12,6 +11,7 @@ import {
   type Point,
 } from '../lab/models';
 import { download } from '../lab/data';
+import { FeatureExperiment } from '../components/FeatureExperiment';
 import { playgroundGuides, type ModuleId } from '../lab/playgroundGuide';
 import {
   Icon,
@@ -417,142 +417,9 @@ function Occupancy({ seed }: { seed: number }) {
 }
 
 function Features({ seed }: { seed: number }) {
-  const [noise, setNoise] = useState(0.2),
-    [threshold, setThreshold] = useState(0.65),
-    [mutual, setMutual] = useState(true);
-  const result = useMemo(
-    () => features(seed, noise, threshold, mutual),
-    [seed, noise, threshold, mutual],
-  );
-  const correct = result.matches.filter((m) => m.correct).length;
-  const position = (point: Point, right = false): Point => [
-    35 + point[0] * 220 + (right ? 320 : 0),
-    35 + point[1] * 260,
-  ];
   return (
     <>
-      <div className="experiment-layout">
-        <section className="panel visual-panel">
-          <div className="panel-heading">
-            <span>Descriptor correspondence</span>
-            <span className="subtle">Synthetic feature pair</span>
-          </div>
-          <div className="feature-visual">
-            <svg
-              viewBox="0 0 640 340"
-              role="img"
-              aria-label="Two feature sets with computed correct and incorrect descriptor matches"
-            >
-              <rect
-                x="15"
-                y="15"
-                width="280"
-                height="310"
-                rx="12"
-                fill="var(--canvas)"
-                stroke="var(--line)"
-              />
-              <rect
-                x="335"
-                y="15"
-                width="280"
-                height="310"
-                rx="12"
-                fill="var(--canvas)"
-                stroke="var(--line)"
-              />
-              {result.matches.map((m, i) => {
-                const a = position(result.left[m.left].point),
-                  b = position(result.right[m.right].point, true);
-                return (
-                  <line
-                    key={i}
-                    x1={a[0]}
-                    y1={a[1]}
-                    x2={b[0]}
-                    y2={b[1]}
-                    stroke={m.correct ? 'var(--teal)' : 'var(--orange)'}
-                    opacity=".55"
-                    strokeWidth="1.4"
-                  />
-                );
-              })}
-              {result.left.map((f, i) => {
-                const p = position(f.point);
-                return <circle key={i} cx={p[0]} cy={p[1]} r="4" fill="var(--teal)" />;
-              })}
-              {result.right.map((f, i) => {
-                const p = position(f.point, true);
-                return (
-                  <rect
-                    key={i}
-                    x={p[0] - 3}
-                    y={p[1] - 3}
-                    width="6"
-                    height="6"
-                    fill={f.identity < 0 ? 'var(--orange)' : 'var(--teal)'}
-                  />
-                );
-              })}
-            </svg>
-          </div>
-          <Legend
-            items={[
-              ['Correct correspondence', 'var(--teal)'],
-              ['Outlier / wrong match', 'var(--orange)'],
-            ]}
-          />
-          <div className="feature-captions">
-            <span>Frame A · reference features</span>
-            <span>Frame B · noisy observations</span>
-          </div>
-        </section>
-        <aside className="panel controls">
-          <h2>Association controls</h2>
-          <p>Compare numerical descriptions of details in two views to propose matching pairs.</p>
-          <Range
-            label="Observation noise"
-            value={noise}
-            min={0}
-            max={0.9}
-            step={0.025}
-            help="How much the second view’s feature positions and descriptions are disturbed. This is a model setting, not metres."
-            onChange={setNoise}
-          />
-          <Range
-            label="Distance threshold"
-            value={threshold}
-            min={0.05}
-            max={2}
-            step={0.05}
-            help="Maximum allowed descriptor difference. A larger value accepts less similar pairs."
-            onChange={setThreshold}
-          />
-          <Toggle label="Mutual nearest neighbors" checked={mutual} onChange={setMutual} />
-          <button
-            className="button secondary"
-            onClick={() => {
-              setNoise(0.2);
-              setThreshold(0.65);
-              setMutual(true);
-            }}
-          >
-            <Icon name="reset" size={16} /> Reset matching
-          </button>
-          <div className="small-stats">
-            <Stat
-              label="Correct matches"
-              value={correct}
-              detail="Accepted pairs that refer to the same generated detail."
-            />
-            <Stat
-              label="Wrong matches"
-              value={result.matches.length - correct}
-              detail="Accepted pairs that refer to different details."
-            />
-          </div>
-        </aside>
-      </div>
+      <FeatureExperiment seed={seed} />
       <Lesson
         title="A match is a hypothesis."
         formula={String.raw`d(a,b)=\sqrt{\sum_i(a_i-b_i)^2}`}

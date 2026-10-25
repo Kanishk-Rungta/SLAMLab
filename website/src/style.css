@@ -1928,6 +1928,243 @@ li code {
 .project-document h3 {
   scroll-margin-top: 100px;
 }
+
+.lesson-card.visual-lesson {
+  display: block;
+  padding: 0;
+  overflow: hidden;
+}
+.lesson-preview {
+  background: var(--canvas);
+  border-bottom: 1px solid var(--line);
+  padding: 10px 24px;
+}
+.concept-diagram {
+  width: 100%;
+  height: auto;
+  display: block;
+  min-width: 0;
+}
+.concept-diagram.compact {
+  height: 160px;
+}
+.concept-diagram text {
+  fill: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+}
+.concept-diagram .diagram-big {
+  font-size: 38px;
+  fill: var(--muted);
+}
+.lesson-card-copy {
+  display: flex;
+  gap: 18px;
+  padding: 22px;
+}
+.lesson-visual {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 22px;
+  margin: 20px 0 32px;
+  background: var(--canvas);
+}
+.lesson-visual h2 {
+  font-size: 20px;
+  margin: 5px 0 20px;
+}
+.lesson-visual .eyebrow {
+  margin: 0;
+}
+.lesson-visual-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 22px;
+  align-items: center;
+}
+.visual-step-buttons,
+.matching-stages {
+  display: flex;
+  gap: 7px;
+}
+.visual-step-buttons {
+  flex-direction: column;
+}
+.visual-step-buttons button,
+.matching-stages button {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: 5px;
+  padding: 11px;
+  font-size: 11px;
+  color: var(--text);
+  text-align: left;
+}
+.visual-step-buttons button[aria-pressed='true'],
+.matching-stages button[aria-pressed='true'] {
+  background: var(--soft);
+  color: var(--teal);
+  border-color: var(--teal);
+}
+.lesson-visual .visual-caption {
+  font-size: 12px;
+  line-height: 1.8;
+  margin: 15px 0;
+}
+.visual-navigation {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 11px;
+  color: var(--muted);
+}
+.visual-navigation button:first-child svg {
+  transform: rotate(180deg);
+}
+.lesson-visual-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 15px;
+  margin-top: 18px;
+  border-top: 1px solid var(--line);
+  font-size: 10px;
+  color: var(--muted);
+}
+.matching-stages {
+  margin-bottom: 18px;
+}
+.matching-stages button {
+  flex: 1;
+  text-align: center;
+}
+.matching-scene {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.matching-scene .scene-label,
+.matching-scene .feature-number {
+  fill: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+}
+.matching-scene [role='button'] {
+  cursor: pointer;
+}
+.matching-scene [role='button']:focus-visible {
+  outline: none;
+}
+.matching-scene [role='button']:focus-visible > circle:first-child {
+  stroke: var(--teal);
+  stroke-width: 2px;
+}
+.matching-caption {
+  background: var(--soft);
+  border-radius: 6px;
+  padding: 14px;
+  font-size: 12px;
+  line-height: 1.8;
+  min-height: 70px;
+}
+.matching-display-controls {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: end;
+  margin-top: 20px;
+}
+.matching-display-controls select {
+  width: 100%;
+  min-width: 0;
+}
+.matching-presets {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.matching-presets .button {
+  padding: 10px 7px;
+  font-size: 10px;
+}
+.match-inspector {
+  margin-top: 22px;
+  padding: 26px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 30px;
+}
+.match-inspector h2 {
+  font-size: 20px;
+  margin-top: 8px;
+}
+.match-inspector h3 {
+  font-size: 14px;
+}
+.match-inspector p {
+  font-size: 12px;
+  line-height: 1.8;
+}
+.match-decision {
+  border-left: 3px solid var(--teal);
+  padding-left: 12px;
+}
+.candidate-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+.candidate-table th,
+.candidate-table td {
+  padding: 10px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+}
+.candidate-table tbody tr:first-child {
+  background: var(--soft);
+}
+.descriptor-details {
+  margin-top: 18px;
+}
+.descriptor-details summary {
+  font-size: 12px;
+  cursor: pointer;
+  color: var(--teal);
+}
+.descriptor-details code {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 1100px) {
+  .lesson-visual-body {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 900px) {
+  .match-inspector {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .matching-display-controls {
+    grid-template-columns: 1fr;
+  }
+  .matching-stages button {
+    padding: 10px 6px;
+    font-size: 10px;
+  }
+  .feature-experiment .panel-heading {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .lesson-visual,
+  .match-inspector {
+    padding: 18px;
+  }
+}
 @media (max-width: 900px) {
   .guide-columns,
   .guide-glossary dl {

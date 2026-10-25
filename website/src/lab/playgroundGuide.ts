@@ -94,16 +94,17 @@ export const playgroundGuides: Record<ModuleId, Guide> = {
     example:
       'When comparing two photos of a room, you might recognise the same window corner in each. A robot compares numerical descriptions of details to make similar guesses.',
     readout:
-      'The two boxes represent different views. Lines join proposed pairs: teal lines are correct matches and orange lines are mistakes. Unconnected points have no accepted match. Correct and wrong match counts are checked against identities known to this teaching model.',
+      'The two room drawings represent different observations. Choose a numbered corner in view A to inspect its nearest descriptor in view B. In Review matches, teal connections are accepted correct pairs, dashed orange connections are accepted mistakes, and dashed grey connections are rejected candidates. Counts use identities known only to this teaching model.',
     steps: [
-      'Increase Observation noise to make the numerical descriptions less reliable.',
+      'Start with Try a clean match. Select a window or door corner and inspect the distance to its nearest candidate.',
+      'Choose Try confusing details or increase Observation noise. Compare the closest three descriptors and the explanation of why the pair was accepted or rejected.',
       'Raise Distance threshold to accept more possible pairs, then lower it to reject less similar pairs. Compare both match counts.',
       'Switch Mutual nearest neighbors off and on to see what changes when both features must choose each other.',
     ],
     terms: [
       [
         'Frame A / Frame B',
-        'Two sets of observations, like two camera views. These points are generated examples rather than features extracted from photographs.',
+        'Two schematic room views with a small viewpoint shift. Corner locations are provided and descriptors are generated; no camera feature extraction is performed.',
       ],
       [
         'Descriptor',
