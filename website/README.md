@@ -50,6 +50,8 @@ Reports and traces stay in ignored `test-results` and `playwright-report`.
 - `src/lab/data.ts`: finite, bounded local-file parsing and replay types.
 - `src/components/ui.tsx`: plots, pan/zoom, headings, playback and controls.
 - `src/pages/`: learning, explorer, simulation, benchmarks and Studio.
+- `docs/project/README.md` (repository root): canonical project statement, objectives,
+  methodology, Team 98, progress and resources, shared by Project and Documentation.
 - `scripts/content.mjs`: canonical Markdown/catalog/result publishing.
 - `scripts/routes.mjs`: refresh-safe static route packaging.
 

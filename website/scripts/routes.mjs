@@ -16,6 +16,7 @@ const routes = [
   'studio',
   'benchmarks',
   'documentation',
+  'project',
   'about',
   ...content.documents.map((d) => 'documentation/' + d.id),
   ...content.catalog.map((a) => 'algorithms/' + a.id),

@@ -184,6 +184,17 @@ export function Home() {
           </span>
         </div>
       </section>
+      <section className="section panel prose about-copy">
+        <div className="eyebrow">THE PROJECT BEHIND THE PLATFORM</div>
+        <h2>From indoor mapping to coordinated cleaning.</h2>
+        <p>
+          Meet Team 98 and explore the problem, objectives, methodology and current progress of the
+          research that SLAMLab grew from.
+        </p>
+        <Link to="project/" className="text-link">
+          Explore the project & team <Icon name="arrow" size={16} />
+        </Link>
+      </section>
     </>
   );
 }
@@ -689,6 +700,12 @@ export function About() {
           a curriculum, and browser experiments while preserving upstream attribution and licenses.
         </p>
         <h2>People & attribution</h2>
+        <p>
+          The original research project is Team 98&apos;s shared effort, guided by Dr. Vidhya
+          Balasubramanian. Meet Konduru Hemesh, Manu Santosh, Rithvik Mukka, Kanishk Rungta and
+          Praneeth Gorugantu on the <Link to="project/">project overview</Link>, alongside the
+          objectives, methodology and progress.
+        </p>
         <p>
           Platform maintainer: <a href="https://github.com/Kanishk-Rungta">Kanishk Rungta</a>, as
           credited in the repository software citation. Original research authors are credited in

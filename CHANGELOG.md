@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Added a project overview with the problem statement, objectives, methodology,
+  Team 98 and guide, progress, documentation, repository link and video availability.
+
 ## 0.2.0 — 2026-10-25
 
 - Added the responsive learning website, five interactive models, searchable algorithm profiles, and twelve guided lessons.

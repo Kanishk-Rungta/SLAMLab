@@ -1,6 +1,7 @@
 import { lazy, Suspense, useEffect, useState } from 'react';
 import content from './generated/content.json';
 import { BASE, Icon, Link, Navigation, REPO } from './components/ui';
+import Project from './pages/Project';
 import {
   About,
   Algorithms,
@@ -22,6 +23,7 @@ const nav = [
   ['studio/', 'Studio', 'studio'],
   ['benchmarks/', 'Benchmarks', 'chart'],
   ['documentation/', 'Documentation', 'docs'],
+  ['project/', 'Project', 'simulation'],
   ['about/', 'About', 'about'],
 ];
 export default function App() {
@@ -69,6 +71,7 @@ export default function App() {
   else if (path.startsWith('algorithms')) page = <Algorithms id={path.split('/')[1]} />;
   else if (path === 'simulations') page = <Simulations />;
   else if (path === 'benchmarks') page = <Benchmarks />;
+  else if (path === 'project') page = <Project />;
   else if (path.startsWith('documentation')) page = <Documentation id={path.split('/')[1]} />;
   else if (path === 'about') page = <About />;
   else

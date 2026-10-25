@@ -94,6 +94,13 @@ const sources = [
     'Keep sensor inputs, computation and provenance comparable.',
   ],
   [
+    'project-overview',
+    'Project overview & team',
+    'Project',
+    'docs/project/README.md',
+    'Problem, objectives, methodology, Team 98, progress and project resources.',
+  ],
+  [
     'installation',
     'Installation',
     'Documentation',

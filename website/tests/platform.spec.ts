@@ -20,6 +20,20 @@ test('home playback, navigation, theme, and direct refresh', async ({ page }) =>
   await page.reload();
   await expect(page.locator('article h1')).toContainText('Coordinate');
   await expect(page.locator('.katex').first()).toBeVisible();
+  await page
+    .getByRole('navigation', { name: 'Main navigation' })
+    .getByRole('link', { name: 'Project', exact: true })
+    .click();
+  await expect(
+    page.getByRole('heading', { name: 'Project objectives', exact: true }),
+  ).toBeVisible();
+  await expect(page.getByText('Dr. Vidhya Balasubramanian', { exact: false })).toBeVisible();
+  await expect(page.getByRole('cell', { name: 'Rithvik Mukka', exact: true })).toBeVisible();
+  await expect(
+    page.getByText('No demonstration videos are currently available.', { exact: false }),
+  ).toBeVisible();
+  await page.reload();
+  await expect(page.getByRole('heading', { name: 'Project overview', exact: true })).toBeVisible();
   expect(errors).toEqual([]);
 });
 
@@ -88,6 +102,8 @@ test('all main routes support light and dark themes with accessible controls', a
       'benchmarks/',
       'documentation/ekf/',
       'about/',
+      'project/',
+      'documentation/project-overview/',
     ]) {
       await page.goto(route || './');
       await expect(page.locator('h1').first()).toBeVisible();
@@ -131,4 +147,8 @@ test('filters, benchmark data, and responsive accessibility', async ({ page }) =
     (await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze())
       .violations,
   ).toEqual([]);
+  await page.goto('project/');
+  await expect(page.getByRole('heading', { name: 'Team details', exact: true })).toBeVisible();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await page.screenshot({ path: 'test-results/mobile-project.png', fullPage: true });
 });
