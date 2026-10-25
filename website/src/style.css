@@ -1240,6 +1240,17 @@ li code {
 .error-chart {
   margin-top: 22px;
 }
+.metric-panel {
+  margin-top: 24px;
+  padding: clamp(18px, 3vw, 30px);
+}
+.metric-panel > .section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+}
 .error-chart > div:first-child {
   display: flex;
   justify-content: space-between;
