@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+# Native and ROS
+build/
+install/
+log/
+devel/
+CMakeFiles/
+CMakeCache.txt
+*.o
+*.obj
+*.so
+*.dll
+*.exe
+# Local dependencies; keep their reviewed lock metadata
+**/algorithm/*
+!**/algorithm/workspace/
+**/algorithm/workspace/*
+!**/algorithm/workspace/*.lock.json
+**/third_party/models/*
+!**/third_party/models/model_lock.json
+# Outputs
+runs/
+backup_runs/
+outputs/
+scratch/
+*.bag
+*.mcap
+*.db
+*.db3
+*.log
+**/webots/controllers/*
+!simulations/webots/controllers/
+!simulations/webots/controllers/**
+**/worlds/ab3_standard__*.wbt
+**/worlds/.ab3_standard__*.wbproj
+*.wbproj
+*.tmp
+# JS/editor/OS
+node_modules/
+dist/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+# Credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json

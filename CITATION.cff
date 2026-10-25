@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use SLAMLab, cite this repository and the original research systems you use."
+title: SLAMLab
+type: software
+authors:
+  - family-names: Rungta
+    given-names: Kanishk
+repository-code: "https://github.com/Kanishk-Rungta/SLAMLab"
+url: "https://github.com/Kanishk-Rungta/SLAMLab"
+license: MIT
+abstract: "Learn, simulate, visualize and benchmark SLAM with Webots and reproducible experiments."
