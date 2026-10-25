@@ -8,7 +8,7 @@ or dependencies are not evidence that this system was separately benchmarked.
 
 Graph-based mapping with appearance-based loop detection and memory management. Supports visual/depth and lidar configurations; accepted loop constraints are optimized with odometry in the map graph.
 
-Mathieu Labb? and Fran?ois Michaud; Journal of Field Robotics 2019, 36(2), 416?446. See the official project bibliography. [Official upstream](https://github.com/introlab/rtabmap).
+Mathieu Labbé and François Michaud; Journal of Field Robotics 2019, 36(2), 416–446. See the official project bibliography. [Official upstream](https://github.com/introlab/rtabmap).
 
 ## Requirements, installation and execution
 

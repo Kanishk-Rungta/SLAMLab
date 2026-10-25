@@ -53,9 +53,12 @@ export default function App() {
   }, [dark]);
   useEffect(() => {
     const doc = content.documents.find((d) => path === 'documentation/' + d.id);
+    const algorithm = content.catalog.find((a) => path === 'algorithms/' + a.id);
     document.title =
-      (doc?.title || nav.find((n) => n[0].replace(/\/$/, '') === path)?.[1] || 'Explore') +
-      ' · SLAMLab';
+      (doc?.title ||
+        algorithm?.name ||
+        nav.find((n) => n[0].replace(/\/$/, '') === path)?.[1] ||
+        'Explore') + ' · SLAMLab';
     document.getElementById('main')?.focus({ preventScroll: true });
   }, [path]);
   let page;
