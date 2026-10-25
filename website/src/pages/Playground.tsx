@@ -450,7 +450,7 @@ function Features({ seed }: { seed: number }) {
                 height="310"
                 rx="12"
                 fill="var(--canvas)"
-                stroke="var(--border)"
+                stroke="var(--line)"
               />
               <rect
                 x="335"
@@ -459,7 +459,7 @@ function Features({ seed }: { seed: number }) {
                 height="310"
                 rx="12"
                 fill="var(--canvas)"
-                stroke="var(--border)"
+                stroke="var(--line)"
               />
               {result.matches.map((m, i) => {
                 const a = position(result.left[m.left].point),
@@ -901,7 +901,7 @@ export default function Playground() {
           </label>
           <p className="help" id="random-seed-help">
             The seed chooses a repeatable set of random errors. Same seed and settings, same
-            example; a new seed gives another example.
+            example. Changing the seed restarts the experiment with its default controls.
           </p>
         </div>
       </div>

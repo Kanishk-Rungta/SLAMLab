@@ -66,6 +66,8 @@ function Viewer({ data, map }: { data: Replay; map: OccupancyMap | null }) {
   const bounds = useMemo(() => {
     const points = data.robots.flatMap((r) => [
       ...r.estimate.map((p) => [p[1], p[2]]),
+      ...r.reference.map((p) => [p[1], p[2]]),
+      ...(r.odometry || []).map((p) => [p[1], p[2]]),
       ...r.landmarks.map((p) => [p.x, p.y]),
     ]);
     if (map)
@@ -89,11 +91,17 @@ function Viewer({ data, map }: { data: Replay; map: OccupancyMap | null }) {
   const colors = ['var(--teal)', 'var(--orange)', 'var(--purple)'];
   const points = (rows: number[][]) =>
     rows.filter((p) => p[0] <= t).map((p) => [p[1], p[2], p[3]] as Pose);
-  const errors = robot.estimate.map((p) => {
-    if (!robot.reference.length) return [p[0], 0];
-    const ref = poseAt(robot.reference, p[0]);
-    return [p[0], Math.hypot(p[1] - ref[1], p[2] - ref[2])];
-  });
+  const errors = robot.estimate
+    .filter(
+      (p) =>
+        robot.reference.length > 0 &&
+        p[0] >= robot.reference[0][0] &&
+        p[0] <= robot.reference.at(-1)![0],
+    )
+    .map((p) => {
+      const ref = poseAt(robot.reference, p[0]);
+      return [p[0], Math.hypot(p[1] - ref[1], p[2] - ref[2])];
+    });
   const maxError = errors.reduce((maximum, e) => Math.max(maximum, e[1]), 0.01);
   return (
     <>
@@ -106,7 +114,7 @@ function Viewer({ data, map }: { data: Replay; map: OccupancyMap | null }) {
             </span>
             <span className="subtle">
               {data.kind === 'simulation_measurement'
-                ? 'Recorded Webots experiment'
+                ? 'Simulation recording'
                 : 'Local / educational data'}
             </span>
           </div>
@@ -116,59 +124,59 @@ function Viewer({ data, map }: { data: Replay; map: OccupancyMap | null }) {
             interactive
           >
             {map && mapVisible && <MapCells map={map} />}
-            {data.robots
-              .filter((r) => !hidden.includes(r.id))
-              .map((r, i) => {
-                const color = colors[i % colors.length],
-                  pose = poseAt(r.estimate, t);
-                const checkpoint = r.frames?.filter((f) => f.t <= t).at(-1);
-                const currentLandmarks = r.frames?.length
-                  ? checkpoint?.landmarks || []
-                  : r.landmarks;
-                return (
-                  <g key={r.id}>
-                    {reference && (
-                      <PathLine points={points(r.reference)} color="var(--slate)" dashed />
-                    )}
-                    {odom && r.odometry && (
-                      <PathLine points={points(r.odometry)} color="var(--purple)" dashed />
-                    )}
-                    {estimate && (
-                      <>
-                        <PathLine points={points(r.estimate)} color={color} />
-                        <Robot pose={[pose[1], pose[2], pose[3]]} color={color} />
-                      </>
-                    )}
-                    {landmarks &&
-                      currentLandmarks.map((p) => (
-                        <circle key={p.id} cx={p.x} cy={p.y} r=".065" fill={color} opacity=".9" />
-                      ))}
-                    {error &&
-                      r.reference.length > 0 &&
-                      (() => {
-                        const ref = poseAt(r.reference, t);
-                        return (
-                          <line
-                            x1={pose[1]}
-                            y1={pose[2]}
-                            x2={ref[1]}
-                            y2={ref[2]}
-                            stroke="var(--orange)"
-                            strokeWidth=".05"
-                          />
-                        );
-                      })()}
-                  </g>
-                );
-              })}
+            {data.robots.map((r, i) => {
+              if (hidden.includes(r.id) || t < r.estimate[0][0]) return null;
+              const color = colors[i % colors.length],
+                pose = poseAt(r.estimate, t);
+              const checkpoint = r.frames?.filter((f) => f.t <= t).at(-1);
+              const currentLandmarks = r.frames?.length ? checkpoint?.landmarks || [] : r.landmarks;
+              return (
+                <g key={r.id} data-robot-id={r.id}>
+                  {reference && (
+                    <PathLine points={points(r.reference)} color="var(--slate)" dashed />
+                  )}
+                  {odom && r.odometry && (
+                    <PathLine points={points(r.odometry)} color="var(--purple)" dashed />
+                  )}
+                  {estimate && (
+                    <>
+                      <PathLine points={points(r.estimate)} color={color} />
+                      <Robot pose={[pose[1], pose[2], pose[3]]} color={color} />
+                    </>
+                  )}
+                  {landmarks &&
+                    currentLandmarks.map((p) => (
+                      <circle key={p.id} cx={p.x} cy={p.y} r=".065" fill={color} opacity=".9" />
+                    ))}
+                  {error &&
+                    r.reference.length > 0 &&
+                    t >= r.reference[0][0] &&
+                    t <= r.reference.at(-1)![0] &&
+                    (() => {
+                      const ref = poseAt(r.reference, t);
+                      return (
+                        <line
+                          x1={pose[1]}
+                          y1={pose[2]}
+                          x2={ref[1]}
+                          y2={ref[2]}
+                          stroke="var(--orange)"
+                          strokeWidth=".05"
+                        />
+                      );
+                    })()}
+                </g>
+              );
+            })}
           </Plot>
           <Legend
             items={[
-              ['EKF estimate / landmarks', 'var(--teal)'],
+              ...data.robots.map(
+                (r, i) =>
+                  [r.id + ' estimate / landmarks', colors[i % colors.length]] as [string, string],
+              ),
               ['Reference', 'var(--slate)'],
-              ...(data.robots.length > 1
-                ? ([['Robot 2', 'var(--orange)']] as [string, string][])
-                : []),
+              ...(odom ? ([['Wheel-only odometry', 'var(--purple)']] as [string, string][]) : []),
             ]}
           />
           <Playback player={player} total={301} label={t.toFixed(2) + ' s'} />
@@ -203,15 +211,16 @@ function Viewer({ data, map }: { data: Replay; map: OccupancyMap | null }) {
             <Icon name="download" size={17} /> Download replay
           </button>
           <p className="help">
-            Final metrics come from Python. Playback positions use the recorded samples; the error
-            connector is a visual separation, not a new benchmark score.
+            Published example metrics come from Python. Local-file metrics are supplied by that file
+            and are not recomputed or verified here. Between samples, playback holds the last
+            recorded pose; the error connector is a visual separation, not a new benchmark score.
           </p>
         </aside>
       </div>
       <section className="panel metric-panel">
         <div className="section-heading">
           <div>
-            <p className="eyebrow">PYTHON EVALUATION</p>
+            <p className="eyebrow">REPLAY METRIC SUMMARY</p>
             <h2>Read the result in context.</h2>
           </div>
           <label className="select-label">
@@ -243,7 +252,7 @@ function Viewer({ data, map }: { data: Replay; map: OccupancyMap | null }) {
           />
           <Stat label="Estimated landmarks" value={robot.landmarks.length} />
         </div>
-        {robot.reference.length > 0 && (
+        {errors.length > 0 && (
           <div className="error-chart">
             <div>
               <span>Sample-wise reference separation</span>

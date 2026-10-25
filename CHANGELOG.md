@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Audited all five playgrounds, Studio and all six Simulation Lab choices; recorded
+  live Webots and sensor-only replay evidence in `docs/activity-audit.md`.
+- Fixed replay timing, robot colours, view bounds, metadata retention and malformed
+  input handling; corrected map colours and local command/reproduction guidance.
 - Updated the research title to "Edge-Based Multi-Robot System for Collaborative
   SLAM and Autonomous Task Coordination" and refocused project descriptions,
   objectives and progress on mapping, edge processing and task coordination.

@@ -69,6 +69,12 @@ Rows advance along +Y. Files are limited to 5 MiB; map arrays to 65,536 cells.
 No compatible 3D map is published in these runs; the Studio uses their native
 planar representation.
 
+Replay poses and map checkpoints are strictly ordered by timestamp. Supply at
+most 200 map checkpoints; downsample longer histories while retaining the final
+state. Playback holds the last available pose between measurements. Replay
+downloads preserve supplied landmark covariance and version metadata; local-file
+metrics are displayed as supplied and are not recomputed or verified in-browser.
+
 ## Deployment
 
 The Pages workflow builds only on `main` or explicit dispatch, uploads `dist`,

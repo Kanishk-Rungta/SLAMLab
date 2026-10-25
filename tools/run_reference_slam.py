@@ -131,7 +131,8 @@ def finalize(output, config):
         'versions': {'python': platform.python_version(), 'numpy': trajectory.np.__version__, 'webots': 'R2025a'},
         'sensor_model': 'Webots camera-recognition relative marker range/bearing plus seeded noise; wheel encoders',
         'initial_prior': 'Known configured starting body pose; all landmark positions initially unknown',
-        'robots': [], 'reproduce': 'python -B tools/run_reference_slam.py --config examples/landmark-slam/config.json'}
+        'robots': [], 'reproduce': 'python -B tools/run_reference_slam.py --config "' +
+            (output / 'config.json').relative_to(ROOT).as_posix() + '"'}
     for index in range(1, config['robots'] + 1):
         folder = output / ('robot-%d' % index)
         completion = json.loads((folder / 'complete.json').read_text())

@@ -41,6 +41,7 @@ export type Replay = {
   sensor_model?: string;
   initial_prior?: string;
   configuration?: unknown;
+  versions?: Record<string, string>;
 };
 export type OccupancyMap = {
   schema_version: number;
@@ -78,7 +79,19 @@ function validateLandmarks(value: unknown): Landmark[] {
   return value.map((v) => {
     if (!record(v) || typeof v.id !== 'string' || !finite(v.x) || !finite(v.y))
       throw new Error('Landmarks need id, x and y.');
-    return { id: v.id.slice(0, 100), x: v.x, y: v.y };
+    if (
+      v.covariance !== undefined &&
+      (!Array.isArray(v.covariance) ||
+        v.covariance.length !== 2 ||
+        !v.covariance.every((row) => Array.isArray(row) && row.length === 2 && row.every(finite)))
+    )
+      throw new Error('Landmark covariance must be a finite 2×2 matrix.');
+    return {
+      id: v.id.slice(0, 100),
+      x: v.x,
+      y: v.y,
+      ...(v.covariance !== undefined ? { covariance: v.covariance as number[][] } : {}),
+    };
   });
 }
 
@@ -95,11 +108,25 @@ export function parseReplay(text: string): Replay {
   ) {
     throw new Error('Expected a SLAMLab schema_version 1 replay with 1–10 robots.');
   }
+  if (
+    value.versions !== undefined &&
+    (!record(value.versions) ||
+      Array.isArray(value.versions) ||
+      !Object.values(value.versions).every((version) => typeof version === 'string'))
+  )
+    throw new Error('Version metadata must contain named version strings.');
   const robots = value.robots.map((row) => {
     if (!record(row) || typeof row.id !== 'string')
       throw new Error('Every robot needs an identifier.');
     let metrics: MetricReport | undefined;
-    if (record(row.metrics) && record(row.metrics.ate_m) && finite(row.metrics.ate_m.rmse)) {
+    if (row.metrics !== undefined) {
+      if (
+        !record(row.metrics) ||
+        !record(row.metrics.ate_m) ||
+        !finite(row.metrics.ate_m.rmse) ||
+        row.metrics.ate_m.rmse < 0
+      )
+        throw new Error('ATE metrics need a finite, nonnegative RMSE.');
       metrics = row.metrics as unknown as MetricReport;
       if (
         metrics.rpe &&
@@ -123,6 +150,30 @@ export function parseReplay(text: string): Replay {
       )
         throw new Error('Coverage metrics must be finite.');
     }
+    let frames: RobotReplay['frames'];
+    if (row.frames !== undefined) {
+      if (!Array.isArray(row.frames) || row.frames.length > 200)
+        throw new Error(
+          'Supply at most 200 map checkpoints; downsample while keeping the final state.',
+        );
+      frames = row.frames.map((frame) => {
+        if (
+          !record(frame) ||
+          !finite(frame.t) ||
+          !Array.isArray(frame.pose) ||
+          frame.pose.length !== 3 ||
+          !frame.pose.every(finite)
+        )
+          throw new Error('Invalid map checkpoint.');
+        return {
+          t: frame.t,
+          pose: frame.pose as [number, number, number],
+          landmarks: validateLandmarks(frame.landmarks),
+        };
+      });
+      if (frames.some((frame, i) => i > 0 && frame.t <= frames![i - 1].t))
+        throw new Error('Map checkpoint timestamps must be unique and strictly increasing.');
+    }
     return {
       id: row.id.slice(0, 80),
       estimate: validatePoses(row.estimate),
@@ -131,25 +182,11 @@ export function parseReplay(text: string): Replay {
       odometry: row.odometry ? validatePoses(row.odometry) : undefined,
       landmarks: validateLandmarks(row.landmarks),
       metrics,
-      frames: Array.isArray(row.frames)
-        ? row.frames.slice(0, 200).map((frame) => {
-            if (
-              !record(frame) ||
-              !finite(frame.t) ||
-              !Array.isArray(frame.pose) ||
-              frame.pose.length !== 3 ||
-              !frame.pose.every(finite)
-            )
-              throw new Error('Invalid map checkpoint.');
-            return {
-              t: frame.t,
-              pose: frame.pose as [number, number, number],
-              landmarks: validateLandmarks(frame.landmarks),
-            };
-          })
-        : undefined,
+      frames,
     };
   });
+  if (new Set(robots.map((robot) => robot.id)).size !== robots.length)
+    throw new Error('Robot identifiers must be unique.');
   return {
     schema_version: 1,
     id: value.id.slice(0, 120),
@@ -165,6 +202,7 @@ export function parseReplay(text: string): Replay {
     initial_prior: typeof value.initial_prior === 'string' ? value.initial_prior : undefined,
     created_utc: typeof value.created_utc === 'string' ? value.created_utc : undefined,
     configuration: value.configuration,
+    versions: value.versions as Record<string, string> | undefined,
   };
 }
 
@@ -246,10 +284,10 @@ export function poseAt(poses: SamplePose[], t: number) {
     hi = poses.length;
   while (lo < hi) {
     const mid = (lo + hi) >>> 1;
-    if (poses[mid][0] < t) lo = mid + 1;
+    if (poses[mid][0] <= t) lo = mid + 1;
     else hi = mid;
   }
-  return poses[Math.min(lo, poses.length - 1)];
+  return poses[Math.max(0, lo - 1)];
 }
 
 export function download(name: string, value: unknown) {

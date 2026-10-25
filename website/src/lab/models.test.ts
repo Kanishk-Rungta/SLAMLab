@@ -12,7 +12,7 @@ import {
   multiRobot,
   type Point,
 } from './models';
-import { parseTrajectory, parseOccupancy, parseReplay } from './data';
+import { parseTrajectory, parseOccupancy, parseReplay, poseAt } from './data';
 
 describe('deterministic educational models', () => {
   it('replays identical seeded odometry and exactly integrates noiseless motion', () => {
@@ -86,6 +86,74 @@ describe('deterministic educational models', () => {
 });
 
 describe('local-file boundaries', () => {
+  const replay = {
+    schema_version: 1,
+    id: 'audit',
+    algorithm: 'local',
+    versions: { python: '3.10' },
+    robots: [
+      {
+        id: 'r',
+        estimate: [
+          [0, 0, 0, 0],
+          [2, 10, 0, 0],
+        ],
+        reference: [],
+        landmarks: [
+          {
+            id: 'a',
+            x: 1,
+            y: 2,
+            covariance: [
+              [0.1, 0],
+              [0, 0.2],
+            ],
+          },
+        ],
+      },
+    ],
+  };
+  it('holds the last recorded pose instead of revealing a future sample', () => {
+    const poses = parseTrajectory('timestamp,x,y,yaw\n0,0,0,0\n2,10,0,0');
+    expect(poseAt(poses, 0.5)).toEqual(poses[0]);
+    expect(poseAt(poses, 2)).toEqual(poses[1]);
+    expect(poseAt(poses, -1)).toEqual(poses[0]);
+    expect(poseAt(poses, 3)).toEqual(poses[1]);
+  });
+  it('retains covariance and version metadata when a replay is downloaded again', () => {
+    const result = parseReplay(JSON.stringify(replay));
+    expect(result.robots[0].landmarks[0].covariance).toEqual([
+      [0.1, 0],
+      [0, 0.2],
+    ]);
+    expect(result).toHaveProperty('versions', { python: '3.10' });
+  });
+  it('rejects invalid primary metrics and unordered map checkpoints', () => {
+    expect(() =>
+      parseReplay(
+        JSON.stringify({
+          ...replay,
+          robots: [{ ...replay.robots[0], metrics: { ate_m: { rmse: 'wrong' } } }],
+        }),
+      ),
+    ).toThrow();
+    expect(() =>
+      parseReplay(
+        JSON.stringify({
+          ...replay,
+          robots: [
+            {
+              ...replay.robots[0],
+              frames: [
+                { t: 2, pose: [1, 0, 0], landmarks: [] },
+                { t: 1, pose: [0, 0, 0], landmarks: [] },
+              ],
+            },
+          ],
+        }),
+      ),
+    ).toThrow();
+  });
   it('accepts the documented CSV and planar TUM formats', () => {
     expect(parseTrajectory('timestamp,x,y,yaw\n0,0,0,0\n1,1,0,0')).toHaveLength(2);
     expect(parseTrajectory('0 0 0 0 0 0 0 1\n1 1 0 0 0 0 0 1')).toHaveLength(2);

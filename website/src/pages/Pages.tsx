@@ -430,7 +430,11 @@ export function Simulations() {
           </div>
         </section>
         <aside className="panel controls">
-          <h2>Configure your run</h2>
+          <h2>Prepare a local run command</h2>
+          <p>
+            This page prepares commands. Run them from the repository root on your computer with
+            Python and Webots installed.
+          </p>
           <label className="select-label">
             Robot sessions
             <select value={robots} onChange={(e) => setRobots(Number(e.target.value))}>
@@ -452,9 +456,13 @@ export function Simulations() {
             Two robots estimate separate maps. Collaborative frame alignment is explored in the
             playground.
           </p>
-          <pre>
-            <code>{`python -B tools/slam.py setup ekf-slam\npython -B tools/slam.py run ekf-slam \\\n  --robots ${robots} --seconds ${duration} \\\n  --output outputs/my-landmark-run`}</code>
+          <pre tabIndex={0} role="region" aria-label="Local Webots commands">
+            <code>{`python -B tools/slam.py setup ekf-slam\npython -B tools/slam.py run ekf-slam --robots ${robots} --seconds ${duration} --output outputs/my-landmark-run`}</code>
           </pre>
+          <p className="help">
+            Use a new output directory for each run. The single-line commands work in PowerShell and
+            POSIX shells.
+          </p>
           <Link to="documentation/first-experiment/" className="button">
             Follow the setup guide <Icon name="arrow" size={16} />
           </Link>

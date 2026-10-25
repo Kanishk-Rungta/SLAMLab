@@ -20,6 +20,7 @@
   --slate: #778b94;
   --occupied: #263b44;
   --free: #c3e1d9;
+  --unknown: #dce3e7;
   --soft: #eaf3f0;
   --shadow: 0 10px 35px #193a3510;
   --heading: #153b3c;
@@ -40,6 +41,7 @@
   --slate: #91a4b4;
   --occupied: #e4f5f1;
   --free: #31534e;
+  --unknown: #263841;
   --soft: #1d3938;
   --heading: #e3f5ee;
   --shadow: 0 10px 35px #0002;
