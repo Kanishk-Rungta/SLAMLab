@@ -50,8 +50,14 @@ Reports and traces stay in ignored `test-results` and `playwright-report`.
 - `src/lab/data.ts`: finite, bounded local-file parsing and replay types.
 - `src/components/ui.tsx`: plots, pan/zoom, headings, playback and controls.
 - `src/pages/`: learning, explorer, simulation, benchmarks and Studio.
-- `src/components/LessonVisual.tsx`: twelve conceptual diagrams, card previews and
-  keyboard-operable, three-step walkthroughs placed before lesson equations.
+- `src/lab/learning.ts`: the twelve-question learning journey, short captions,
+  standalone context, vocabulary and transitions between lessons.
+- `src/components/LearningExperience.tsx`: visual lesson pages with a lesson
+  switcher, a next-concept handoff and optional canonical notes. Existing heading
+  links open and scroll to the corresponding notes.
+- `src/components/LessonVisual.tsx` and `MissionDiagram.tsx`: three-step visual
+  players and previews, including the room-and-map story. The pose-graph scene
+  uses the same optimizer as the playground.
 - `src/components/FeatureExperiment.tsx`: schematic scene views, selectable
   features, candidate scores and explanations driven by the descriptor matcher.
 - `docs/project/README.md` (repository root): canonical project statement, objectives,
@@ -65,7 +71,11 @@ Studio's time-varying separation chart illustrates display samples; the Python
 metrics retain the evaluator's association and alignment policy. There are no
 native research-system rankings or unmeasured resource-use charts.
 
-Learn diagrams are explicitly labelled conceptual schematics. The feature scene
+Learn diagrams are explicitly labelled teaching graphics. Lessons introduce one
+idea per step and keep equations and detailed notes in optional disclosures.
+Playgrounds provide a short first exercise, with vocabulary and assumptions on
+demand; module links retain the selected activity through refresh and history.
+The feature scene
 uses provided corner locations and generated descriptors; it performs no image
 feature extraction. Candidate acceptance and rejection use the same descriptor
 distances, threshold and mutual-neighbor checks as the model. Known identities

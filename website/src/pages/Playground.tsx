@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useContext, useMemo, useState } from 'react';
 import katex from 'katex';
 import {
   odometry,
@@ -15,6 +15,7 @@ import { FeatureExperiment } from '../components/FeatureExperiment';
 import { playgroundGuides, type ModuleId } from '../lab/playgroundGuide';
 import {
   Icon,
+  Navigation,
   Legend,
   Link,
   PageHeader,
@@ -36,57 +37,62 @@ const modules: [ModuleId, string, string, string][] = [
   ['multi', '05', 'Multi-robot alignment', 'From local to shared'],
 ];
 
+const quickTry: Record<ModuleId, string> = {
+  odometry: 'Set both noise controls to zero. Then add turning noise and compare the paths.',
+  occupancy: 'Play to reveal the map. Shorten the sensor range and see what stays unknown.',
+  features: 'Try a clean match, then confusing details. Inspect why one pair was accepted.',
+  graph: 'Optimize with the revisit on, then off. Compare how the path changes.',
+  multi: 'Choose two shared points and align the maps. Then add observation noise.',
+};
 function ExperimentGuide({ module }: { module: ModuleId }) {
   const guide = playgroundGuides[module];
   return (
-    <section className="experiment-guide panel" aria-labelledby="experiment-guide-title">
-      <div className="guide-columns">
-        <div>
-          <p className="eyebrow">START HERE · NO ROBOTICS BACKGROUND NEEDED</p>
-          <h2 id="experiment-guide-title">{guide.title}</h2>
-          <p>{guide.explanation}</p>
-          <p>
-            <strong>Everyday example:</strong> {guide.example}
-          </p>
-        </div>
-        <div>
-          <h3>How to read the picture</h3>
+    <section
+      className="experiment-guide panel compact-guide"
+      aria-labelledby="experiment-guide-title"
+    >
+      <div className="guide-essential">
+        <h2 id="experiment-guide-title">{guide.title}</h2>
+        <p>{guide.explanation}</p>
+      </div>
+      <p className="quick-try">
+        <strong>Try this</strong>
+        {quickTry[module]}
+      </p>
+      <div className="guide-disclosures">
+        <details>
+          <summary>How to read the picture</summary>
           <p>{guide.readout}</p>
-          <h3>Try it yourself</h3>
           <ol>
             {guide.steps.map((step) => (
               <li key={step}>{step}</li>
             ))}
           </ol>
-        </div>
+        </details>
+        <details className="guide-glossary">
+          <summary>Words used in this experiment</summary>
+          <dl>
+            {guide.terms.map(([term, definition]) => (
+              <div key={term}>
+                <dt>{term}</dt>
+                <dd>{definition}</dd>
+              </div>
+            ))}
+          </dl>
+        </details>
+        <details>
+          <summary>Assumptions and playback</summary>
+          <p>{guide.scope}</p>
+          <p>{guide.example}</p>
+          {module !== 'features' && <p>x and y are positions on the map, in metres.</p>}
+          {module !== 'features' && module !== 'graph' && (
+            <p>
+              Play starts the animation. Pause or drag the slider to inspect a moment. Reset returns
+              to the start; playback speed changes only the animation rate.
+            </p>
+          )}
+        </details>
       </div>
-      <details className="guide-glossary">
-        <summary>Words used in this experiment</summary>
-        <dl>
-          {guide.terms.map(([term, definition]) => (
-            <div key={term}>
-              <dt>{term}</dt>
-              <dd>{definition}</dd>
-            </div>
-          ))}
-        </dl>
-      </details>
-      <p className="guide-scope">
-        <strong>What this model covers:</strong> {guide.scope}
-      </p>
-      {module !== 'features' && (
-        <p className="guide-scope">
-          <strong>Plot coordinates:</strong> x and y describe horizontal and vertical position on
-          the map, in metres.
-        </p>
-      )}
-      {module !== 'features' && module !== 'graph' && (
-        <p className="guide-scope">
-          <strong>Playback:</strong> Play starts the animation, Pause holds a moment, the slider
-          moves through saved steps and the reset arrow returns to the beginning. The × speed
-          selector only changes how fast the animation plays.
-        </p>
-      )}
     </section>
   );
 }
@@ -126,21 +132,22 @@ function Lesson({
   symbols: string;
 }) {
   return (
-    <section className="lesson-note">
+    <section className="lesson-note compact-lesson">
       <div>
-        <p className="eyebrow">WHAT TO NOTICE</p>
+        <p className="eyebrow">THE KEY IDEA</p>
         <h2>{title}</h2>
-        {children}
         <Link to={'documentation/' + link + '/'} className="text-link">
-          Read the lesson <Icon name="arrow" size={16} />
+          See the visual lesson <Icon name="arrow" size={16} />
         </Link>
       </div>
-      <div className="formula-context">
-        <p>
-          <strong>The equation in words:</strong> {meaning}
-        </p>
+      <div className="advanced-folds">
+        <details>
+          <summary>What happens underneath?</summary>
+          {children}
+        </details>
         <details>
           <summary>Explore the equation</summary>
+          <p>{meaning}</p>
           <Equation tex={formula} label={label} />
           <p>{symbols}</p>
         </details>
@@ -720,16 +727,26 @@ function Multi({ seed }: { seed: number }) {
 
 export default function Playground() {
   const requested = new URLSearchParams(location.search).get('module');
-  const [active, setActive] = useState<ModuleId>(
-      modules.some((m) => m[0] === requested) ? (requested as ModuleId) : 'odometry',
-    ),
-    [seed, setSeed] = useState(42);
+  const active: ModuleId = modules.some((module) => module[0] === requested)
+    ? (requested as ModuleId)
+    : 'odometry';
+  const [seed, setSeed] = useState(42);
+  const navigate = useContext(Navigation);
+  const nextModule = modules[modules.findIndex((module) => module[0] === active) + 1];
+  const handoff: Record<ModuleId, string> = {
+    odometry: 'Movement can drift. Next, see how observations build a map.',
+    occupancy: 'A map needs observations. How does a camera recognise the same detail twice?',
+    features:
+      'Useful observations can connect places. See what happens when the robot revisits one.',
+    graph: 'One robot can connect its path. Now connect the maps from two robots.',
+    multi: 'You have explored the pieces. Run a complete local experiment next.',
+  };
   return (
     <>
       <PageHeader
         eyebrow="THE INTERACTIVE PLAYGROUND"
         title="Learn by changing the experiment."
-        description="SLAM means working out where a robot is while building a map. Explore five pieces of that problem, with explanations and small experiments you can try."
+        description="SLAM helps a robot locate itself while building a map. Change one thing and watch what happens."
         action={<span className="badge">Educational models · browser-local</span>}
       />
       <nav className="module-tabs" aria-label="Playground modules">
@@ -738,7 +755,7 @@ export default function Playground() {
             key={id}
             className={active === id ? 'active' : ''}
             aria-pressed={active === id}
-            onClick={() => setActive(id)}
+            onClick={() => navigate('playground/?module=' + id)}
           >
             <span>{n}</span>
             <strong>{title}</strong>
@@ -767,8 +784,8 @@ export default function Playground() {
             />
           </label>
           <p className="help" id="random-seed-help">
-            The seed chooses a repeatable set of random errors. Same seed and settings, same
-            example. Changing the seed restarts the experiment with its default controls.
+            A seed makes random examples repeatable. Changing it restarts this activity with default
+            controls.
           </p>
         </div>
       </div>
@@ -785,6 +802,19 @@ export default function Playground() {
           <Multi seed={seed} />
         )}
       </div>
+      <section className="activity-handoff">
+        <div>
+          <span className="eyebrow">CONNECT THE IDEAS</span>
+          <p>{handoff[active]}</p>
+        </div>
+        <Link
+          className="button secondary"
+          to={nextModule ? 'playground/?module=' + nextModule[0] : 'simulations/'}
+        >
+          {nextModule ? 'Next: ' + nextModule[2] : 'Open Simulation Lab'}
+          <Icon name="arrow" size={15} />
+        </Link>
+      </section>
     </>
   );
 }

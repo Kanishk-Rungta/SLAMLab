@@ -100,10 +100,10 @@ export function FeatureExperiment({ seed }: { seed: number }) {
       : 'var(--orange)';
   const decision =
     candidate.reason === 'threshold'
-      ? 'Rejected: descriptor distance is above the threshold.'
+      ? 'Rejected: distance exceeds the threshold.'
       : candidate.reason === 'mutual'
-        ? 'Rejected: the two features do not choose each other.'
-        : 'Accepted: this pair passes the selected matching checks.';
+        ? 'Rejected: the two details do not choose each other.'
+        : 'Accepted: matching checks passed.';
   const line = (a: number, b: number) => {
     const p = position(result.left[a].point),
       q = position(result.right[b].point, true);
@@ -260,16 +260,20 @@ export function FeatureExperiment({ seed }: { seed: number }) {
           </svg>
           <p className="matching-caption" aria-live="polite">
             {stage === 0
-              ? 'Corners and distinctive marks are possible features. Some details are missing or appear more than once in the second observation.'
+              ? 'Corners make useful features. Choose one in view A.'
               : stage === 1
-                ? `Comparing A${selected + 1} with B${candidate.right + 1}: the nearest descriptor, not necessarily the same physical detail.`
-                : `${decision} ${candidate.accepted ? (candidate.correct ? 'The model’s known identities confirm this is the same detail.' : 'The model’s known identities reveal a wrong match.') : 'A rejected candidate is drawn with a dashed grey line.'}`}
+                ? `A${selected + 1} → B${candidate.right + 1} is the nearest descriptor. Similar does not always mean the same detail.`
+                : candidate.accepted
+                  ? candidate.correct
+                    ? 'Accepted, and the same detail. This pair is correct.'
+                    : 'Accepted, but a different detail. A close description can still be wrong.'
+                  : 'Rejected. The dashed grey line shows a candidate that failed a check.'}
           </p>
           <Legend
             items={[
-              ['Correct accepted pair', 'var(--teal)'],
-              ['Wrong accepted pair', 'var(--orange)'],
-              ['Rejected candidate', 'var(--muted)'],
+              ['Accepted, correct', 'var(--teal)'],
+              ['Accepted, wrong', 'var(--orange)'],
+              ['Rejected', 'var(--muted)'],
             ]}
           />
           <div className="matching-display-controls">
@@ -290,30 +294,8 @@ export function FeatureExperiment({ seed }: { seed: number }) {
           </div>
         </section>
         <aside className="panel controls">
-          <h2>Association controls</h2>
-          <p>
-            The matcher compares descriptions. It does not know which room detail a point really
-            represents.
-          </p>
-          <Range
-            label="Observation noise"
-            value={noise}
-            min={0}
-            max={0.9}
-            step={0.025}
-            onChange={setNoise}
-            help="Disturbs the second view’s feature positions and descriptors. It is a model setting, not metres."
-          />
-          <Range
-            label="Distance threshold"
-            value={threshold}
-            min={0.05}
-            max={2}
-            step={0.05}
-            onChange={setThreshold}
-            help="Largest allowed descriptor difference. Higher values admit less similar candidates."
-          />
-          <Toggle label="Mutual nearest neighbors" checked={mutual} onChange={setMutual} />
+          <h2>Compare details</h2>
+          <p>Start clear. Add confusing details. Watch the decision change.</p>
           <div className="matching-presets">
             <button className="button secondary" onClick={() => preset(false)}>
               Try a clean match
@@ -322,6 +304,27 @@ export function FeatureExperiment({ seed }: { seed: number }) {
               Try confusing details
             </button>
           </div>
+          <Range
+            label="Observation noise"
+            value={noise}
+            min={0}
+            max={0.9}
+            step={0.025}
+            onChange={setNoise}
+            help="How much the descriptions and detected positions vary."
+          />
+          <Range
+            label="Distance threshold"
+            value={threshold}
+            min={0.05}
+            max={2}
+            step={0.05}
+            onChange={setThreshold}
+            help="How different two descriptions may be. Lower is stricter."
+          />
+          <Toggle label="Require a two-way match" checked={mutual} onChange={setMutual} />
+          <p className="help">Both details must choose each other.</p>
+
           <button
             className="button secondary"
             onClick={() => {
@@ -353,64 +356,77 @@ export function FeatureExperiment({ seed }: { seed: number }) {
         <div>
           <p className="eyebrow">FOLLOW ONE DECISION</p>
           <h2 id="pair-inspector-title">
-            A{selected + 1}: {featureScene[selected].name}
+            Why A{selected + 1} → B{candidate.right + 1}?
           </h2>
-          <p>
-            <strong>Nearest candidate: B{candidate.right + 1}.</strong> Descriptor distance{' '}
-            {candidate.distance.toFixed(3)}; threshold {threshold.toFixed(3)}.
+          <p className="help">
+            A{selected + 1}: {featureScene[selected].name}
           </p>
-          <p className="match-decision" role="status">
+          <p>
+            <strong>B{candidate.right + 1} is the closest description.</strong> Difference{' '}
+            {candidate.distance.toFixed(3)} · limit {threshold.toFixed(3)}.
+          </p>
+          <p
+            className="match-decision"
+            data-outcome={
+              candidate.accepted ? (candidate.correct ? 'correct' : 'wrong') : 'rejected'
+            }
+            role="status"
+          >
             {decision}
           </p>
           {stage === 2 && (
-            <p>
-              <strong>Teaching check:</strong>{' '}
-              {counterpart < 0
-                ? 'This detail has no detected counterpart in view B.'
-                : `This detail’s known counterpart is B${counterpart + 1}.`}{' '}
-              {right.identity < 0
-                ? `B${candidate.right + 1} is a generated look-alike.`
-                : !candidate.correct
-                  ? `B${candidate.right + 1} belongs to a different detail: ${featureScene[right.identity].name.toLowerCase()}.`
-                  : 'The nearest candidate refers to that same detail.'}
-            </p>
+            <details className="teaching-check">
+              <summary>Check the known identities</summary>
+              <p>
+                <strong>Teaching check:</strong>{' '}
+                {counterpart < 0
+                  ? 'This detail has no detected counterpart in view B.'
+                  : `This detail’s known counterpart is B${counterpart + 1}.`}{' '}
+                {right.identity < 0
+                  ? `B${candidate.right + 1} is a generated look-alike.`
+                  : !candidate.correct
+                    ? `B${candidate.right + 1} belongs to a different detail: ${featureScene[right.identity].name.toLowerCase()}.`
+                    : 'The nearest candidate refers to that same detail.'}
+              </p>
+            </details>
           )}
           <p>
             {mutual
               ? candidate.reciprocal
-                ? 'Mutual check: both features choose each other.'
-                : 'Mutual check: this candidate prefers another feature in view A.'
-              : 'Mutual check is off. One-way nearest matches are allowed.'}
+                ? 'Two-way check: both choose each other.'
+                : 'Two-way check: this candidate prefers another detail.'
+              : 'Two-way checking is off.'}
           </p>
           <p className="help">
-            Ground-truth identities score the example after matching. They never choose or reject a
-            pair. The room is an illustration; features and descriptors are generated, not extracted
-            from a photograph.
+            Generated descriptors, illustrated room. Known identities score the result; the matcher
+            never sees them.
           </p>
         </div>
         <div>
-          <h3>The three closest descriptions</h3>
-          <table className="candidate-table">
-            <thead>
-              <tr>
-                <th scope="col">View B</th>
-                <th scope="col">Distance</th>
-                <th scope="col">Rank</th>
-              </tr>
-            </thead>
-            <tbody>
-              {alternatives.map((alternative, index) => (
-                <tr key={alternative.index}>
-                  <th scope="row">B{alternative.index + 1}</th>
-                  <td>{alternative.distance.toFixed(3)}</td>
-                  <td>{index === 0 ? 'Nearest' : index + 1}</td>
+          <details className="candidate-comparison">
+            <summary>Compare the three nearest candidates</summary>
+            <table className="candidate-table">
+              <thead>
+                <tr>
+                  <th scope="col">View B</th>
+                  <th scope="col">Distance</th>
+                  <th scope="col">Rank</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-          <p className="help">
-            Distances are rounded for display. Acceptance checks use the full-precision values.
-          </p>
+              </thead>
+              <tbody>
+                {alternatives.map((alternative, index) => (
+                  <tr key={alternative.index}>
+                    <th scope="row">B{alternative.index + 1}</th>
+                    <td>{alternative.distance.toFixed(3)}</td>
+                    <td>{index === 0 ? 'Nearest' : index + 1}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <p className="help">
+              Distances are rounded for display. Acceptance checks use the full-precision values.
+            </p>
+          </details>
           <details className="descriptor-details">
             <summary>See the six descriptor values</summary>
             <p>

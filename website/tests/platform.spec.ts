@@ -18,7 +18,8 @@ test('home playback, navigation, theme, and direct refresh', async ({ page }) =>
   await page.getByRole('link', { name: 'Start learning', exact: true }).click();
   await page.getByRole('link', { name: /Coordinate frames & motion/ }).click();
   await page.reload();
-  await expect(page.locator('article h1')).toContainText('Coordinate');
+  await expect(page.locator('article h1')).toHaveText('Whose left and right?');
+  await page.getByText('Equations & detailed notes', { exact: true }).click();
   await expect(page.locator('.katex').first()).toBeVisible();
   await page
     .getByRole('navigation', { name: 'Main navigation' })

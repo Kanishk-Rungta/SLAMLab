@@ -1,5 +1,6 @@
 import { lazy, Suspense, useEffect, useState } from 'react';
 import content from './generated/content.json';
+import { lessonOrder } from './lab/learning';
 import { BASE, Icon, Link, Navigation, REPO } from './components/ui';
 import Project from './pages/Project';
 import {
@@ -34,6 +35,8 @@ export default function App() {
     .split('?')[0]
     .replace(BASE, '')
     .replace(/^\/+|\/+$/g, '');
+  const navPath =
+    path.startsWith('documentation/') && lessonOrder.includes(path.split('/')[1]) ? 'learn' : path;
   function navigate(to: string) {
     history.pushState({}, '', BASE + to.replace(/^\//, ''));
     setUrl(location.pathname + location.search);
@@ -66,7 +69,7 @@ export default function App() {
   let page;
   if (!path) page = <Home />;
   else if (path === 'learn') page = <Learn />;
-  else if (path === 'playground') page = <Playground key={url} />;
+  else if (path === 'playground') page = <Playground />;
   else if (path === 'studio') page = <Studio key={url} />;
   else if (path.startsWith('algorithms')) page = <Algorithms id={path.split('/')[1]} />;
   else if (path === 'simulations') page = <Simulations />;
@@ -126,7 +129,7 @@ export default function App() {
               to={to}
               className={
                 'nav-item ' +
-                ((to ? path.startsWith(to.replace(/\/$/, '')) : !path) ? 'active' : '')
+                ((to ? navPath.startsWith(to.replace(/\/$/, '')) : !navPath) ? 'active' : '')
               }
             >
               <Icon name={icon} size={19} />
@@ -144,7 +147,7 @@ export default function App() {
       </aside>
       <div className="workspace">
         <main id="main" tabIndex={-1} key={path}>
-          <Suspense fallback={<p role="status">Opening the lab?</p>}>{page}</Suspense>
+          <Suspense fallback={<p role="status">Opening the lab...</p>}>{page}</Suspense>
         </main>
         <footer>
           <span>SLAMLab · From motion to understanding.</span>

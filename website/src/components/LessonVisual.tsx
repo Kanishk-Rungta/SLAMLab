@@ -1,219 +1,20 @@
 import { useId, useState, type ReactNode } from 'react';
-import { Icon, Link } from './ui';
+import { Icon, Link, Legend } from './ui';
+import { MissionDiagram } from './MissionDiagram';
+import { optimizeGraph, poseGraph } from '../lab/models';
 
-type Concept = { title: string; target: string; steps: [string, string][] };
-export const lessonConcepts: Record<string, Concept> = {
-  fundamentals: {
-    title: 'A robot needs a position and a map.',
-    target: 'playground/',
-    steps: [
-      [
-        'Start with a question',
-        'The robot starts with incomplete knowledge: where am I, and what is around me?',
-      ],
-      [
-        'Observe the surroundings',
-        'Measurements connect the robot to visible landmarks. A landmark is a recognisable point in the environment.',
-      ],
-      [
-        'Estimate both together',
-        'SLAM uses movement and observations to update the robot’s estimated position and its map together.',
-      ],
-    ],
-  },
-  frames: {
-    title: 'The same point can have different coordinates.',
-    target: 'playground/?module=odometry',
-    steps: [
-      [
-        'Room coordinates',
-        'A world frame gives the room a fixed origin and directions called X and Y.',
-      ],
-      [
-        'Robot coordinates',
-        'The robot has its own origin and facing direction. Its axes move and turn with it.',
-      ],
-      [
-        'Connect the frames',
-        'A rotation and a shift relate a point measured from the robot to that same point in the room.',
-      ],
-    ],
-  },
-  sensors: {
-    title: 'An estimate comes with uncertainty.',
-    target: 'playground/?module=odometry',
-    steps: [
-      [
-        'Take a measurement',
-        'A measurement gives a clue about position. It usually does not identify one perfectly certain location.',
-      ],
-      [
-        'Move without a correction',
-        'Uncertain movement can widen the region of plausible positions. A small heading error also affects later movement.',
-      ],
-      [
-        'Use another observation',
-        'An informative observation can narrow the possibilities. The ellipse here illustrates uncertainty; it is not a measured confidence region.',
-      ],
-    ],
-  },
-  'first-experiment': {
-    title: 'Follow a measurement through the experiment.',
-    target: 'simulations/',
-    steps: [
-      [
-        'Record sensors',
-        'Webots supplies wheel measurements and relative marker observations. A separate recorder saves reference data for evaluation.',
-      ],
-      [
-        'Estimate pose and map',
-        'The EKF predicts movement, then uses observations to update the joint robot-and-landmark estimate.',
-      ],
-      [
-        'Inspect the evidence',
-        'Saved trajectories and maps go to evaluation and Studio. The browser prepares commands; Webots runs locally.',
-      ],
-    ],
-  },
-  association: {
-    title: 'Similar-looking details can create wrong pairs.',
-    target: 'playground/?module=features',
-    steps: [
-      [
-        'Find distinctive details',
-        'Corners and patterns can become features. The same physical detail may appear in two different observations.',
-      ],
-      [
-        'Propose a pair',
-        'Comparing numerical descriptions suggests which details might correspond. Similar appearance alone is not proof.',
-      ],
-      [
-        'Check the hypothesis',
-        'A proposed pair can be wrong when another detail looks similar. Real systems also use geometric checks.',
-      ],
-    ],
-  },
-  ekf: {
-    title: 'Predict, observe, then update.',
-    target: 'simulations/',
-    steps: [
-      ['Predict', 'Movement measurements predict a new robot pose and propagate uncertainty.'],
-      ['Observe', 'A relative landmark measurement adds information about the robot and the map.'],
-      [
-        'Update',
-        'The EKF uses the disagreement between prediction and observation to adjust the joint estimate. This diagram illustrates the sequence, not a numerical EKF result.',
-      ],
-    ],
-  },
-  mapping: {
-    title: 'Unknown space is different from free space.',
-    target: 'playground/?module=occupancy',
-    steps: [
-      [
-        'Begin with unknown cells',
-        'A grid divides space into squares. Unobserved squares do not yet provide evidence of a clear route.',
-      ],
-      [
-        'Add an observation',
-        'A range observation supplies evidence of free space before a hit and occupied space at the hit.',
-      ],
-      [
-        'Accumulate evidence',
-        'More observations reveal more of the room. Map coverage and map accuracy are separate questions.',
-      ],
-    ],
-  },
-  visual: {
-    title: 'Two views constrain where a point can be.',
-    target: 'playground/?module=features',
-    steps: [
-      [
-        'Look from one camera',
-        'A point in one image identifies a viewing direction. Its depth along that direction is still ambiguous.',
-      ],
-      [
-        'Match a second view',
-        'The same point seen from another known camera position adds a second viewing direction.',
-      ],
-      [
-        'Use calibrated geometry',
-        'Matching the same detail and knowing the camera geometry lets stereo infer depth. Incorrect matches or calibration can give incorrect depth.',
-      ],
-    ],
-  },
-  graphs: {
-    title: 'A revisit connects distant parts of a path.',
-    target: 'playground/?module=graph',
-    steps: [
-      [
-        'Remember a chain of poses',
-        'Each dot is a saved position and heading. Edges represent relative measurements between poses.',
-      ],
-      [
-        'Recognise a familiar place',
-        'A verified revisit adds a loop constraint between poses recorded at different times.',
-      ],
-      [
-        'Distribute the correction',
-        'Optimization adjusts the poses to fit the constraints while fixing a reference pose. This sketch shows the idea; the Playground runs the solver.',
-      ],
-    ],
-  },
-  'multi-robot': {
-    title: 'Shared landmarks can connect two local maps.',
-    target: 'playground/?module=multi',
-    steps: [
-      [
-        'Start in separate frames',
-        'Each robot can map the same room from its own origin and orientation. Their coordinates need not agree.',
-      ],
-      [
-        'Identify shared points',
-        'Correspondences say which observations refer to the same landmarks. Finding reliable pairs is part of the real problem.',
-      ],
-      [
-        'Rotate and shift a map',
-        'Rigid alignment brings shared observations into common coordinates. Aligning maps is one part of a collaborative SLAM system.',
-      ],
-    ],
-  },
-  metrics: {
-    title: 'Compare estimates with an independent reference.',
-    target: 'benchmarks/',
-    steps: [
-      [
-        'Associate timestamps',
-        'A meaningful comparison first pairs estimates and reference poses under a declared timing and frame policy.',
-      ],
-      [
-        'Inspect position gaps',
-        'ATE summarises absolute position differences. RMSE gives larger gaps more influence by squaring them before averaging.',
-      ],
-      [
-        'Inspect changes in motion',
-        'RPE compares relative motion over intervals. A small error on one metric does not establish complete coverage or reliable mapping.',
-      ],
-    ],
-  },
-  experiments: {
-    title: 'A fair comparison starts with controlled inputs.',
-    target: 'studio/',
-    steps: [
-      [
-        'Save the conditions',
-        'Record sensor inputs, configuration, versions and the seed that controls generated randomness.',
-      ],
-      [
-        'Repeat the same conditions',
-        'Deterministic teaching models repeat the same example with the same seed and settings. Real executions also require a stated repeatability protocol.',
-      ],
-      [
-        'Change one factor',
-        'Changing one declared setting makes the comparison easier to interpret. Preserve the evidence and record the limitation of the result.',
-      ],
-    ],
-  },
-};
+import { lessonConcepts } from '../lab/learning';
+export { lessonConcepts } from '../lab/learning';
+
+let graphDemo:
+  { graph: ReturnType<typeof poseGraph>; solution: ReturnType<typeof optimizeGraph> } | undefined;
+function getGraphDemo() {
+  if (!graphDemo) {
+    const graph = poseGraph(42);
+    graphDemo = { graph, solution: optimizeGraph(graph.initial, graph.edges) };
+  }
+  return graphDemo;
+}
 
 function Dot({
   x,
@@ -250,6 +51,14 @@ export function ConceptDiagram({
   const arrow = useId().replaceAll(':', '');
   const concept = lessonConcepts[id];
   if (!concept) return null;
+  if (id === 'fundamentals')
+    return (
+      <MissionDiagram
+        step={step}
+        compact={compact}
+        label={`${concept.title} ${concept.steps[step][1]}`}
+      />
+    );
   const line = (d: string, color = 'var(--teal)', dashed = false, directed = false) => (
     <path
       d={d}
@@ -267,43 +76,7 @@ export function ConceptDiagram({
     </g>
   );
   let drawing: ReactNode;
-  if (id === 'fundamentals')
-    drawing = (
-      <>
-        <rect
-          x="225"
-          y="30"
-          width="155"
-          height="155"
-          rx="6"
-          fill="var(--soft)"
-          stroke="var(--line)"
-        />
-        {robot(85, 130)}
-        <text x="48" y="177">
-          Robot pose
-        </text>
-        {[
-          [260, 60],
-          [340, 145],
-          [275, 155],
-        ].map(([x, y], index) => (
-          <g key={index}>
-            {step > 0 && line(`M100 125L${x} ${y}`, 'var(--orange)', true)}
-            <Dot x={x} y={y} color={step > 1 ? 'var(--teal)' : 'var(--slate)'} />
-          </g>
-        ))}
-        <text x="250" y="207">
-          {step === 0 ? 'Surroundings' : 'Landmark map'}
-        </text>
-        {step === 0 && (
-          <text x="292" y="112" className="diagram-big">
-            ?
-          </text>
-        )}
-      </>
-    );
-  else if (id === 'frames')
+  if (id === 'frames')
     drawing = (
       <>
         {line('M55 180H360', 'var(--slate)', false, true)}
@@ -347,7 +120,7 @@ export function ConceptDiagram({
             {robot(65, 135)}
             {line('M90 135H175', 'var(--slate)', true, true)}
             <text x="43" y="186">
-              Previous pose
+              Before moving
             </text>
           </>
         )}
@@ -361,6 +134,22 @@ export function ConceptDiagram({
           strokeWidth="2"
           strokeDasharray="6 4"
         />
+        {[
+          [0, -18],
+          [-24, 5],
+          [22, 8],
+          [7, 24],
+          [-11, -3],
+        ].map(([x, y], index) => (
+          <circle
+            key={index}
+            cx={(step === 2 ? 213 : 235) + x * (step === 1 ? 2.6 : step === 2 ? 0.7 : 1)}
+            cy={(step === 2 ? 107 : 115) + y * (step === 1 ? 1.6 : step === 2 ? 0.7 : 1)}
+            r="3"
+            fill={step === 2 ? 'var(--teal)' : 'var(--slate)'}
+            opacity=".45"
+          />
+        ))}
         {robot(step === 2 ? 213 : 235, step === 2 ? 107 : 115)}
         {(id === 'ekf' ? step > 0 : step === 2) && (
           <>
@@ -384,9 +173,9 @@ export function ConceptDiagram({
         )}
         <text x="154" y="202">
           {step === 0
-            ? 'A range of possible poses'
+            ? 'Several positions could fit'
             : step === 1
-              ? 'Prediction uncertainty'
+              ? 'Movement adds uncertainty'
               : 'Information narrows the possibilities'}
         </text>
       </>
@@ -394,26 +183,58 @@ export function ConceptDiagram({
   else if (id === 'first-experiment')
     drawing = (
       <>
-        {['Sensors', 'Estimator', 'Map + replay'].map((name, index) => (
+        {['Measure', 'Estimate', 'Inspect'].map((name, index) => (
           <g key={name}>
             <rect
               x={20 + index * 135}
-              y="75"
+              y="45"
               width="112"
-              height="66"
+              height="130"
               rx="9"
               fill={step === index ? 'var(--soft)' : 'var(--surface)'}
               stroke={step === index ? 'var(--teal)' : 'var(--line)'}
               strokeWidth="2"
             />
-            <text x={30 + index * 135} y="113">
+            <text x={30 + index * 135} y="162">
               {name}
             </text>
             {index < 2 && line(`M${133 + index * 135} 108h20`, 'var(--teal)', false, true)}
           </g>
         ))}
-        <text x="27" y="183">
-          Measured input → estimate → inspectable evidence
+        <g opacity={step === 0 ? 1 : 0.45}>
+          {robot(67, 112)}
+          <path d="M46 96v28M88 96v28" stroke="var(--slate)" strokeWidth="5" />
+          <path d="M82 99L107 67" stroke="var(--orange)" strokeWidth="2" strokeDasharray="4 3" />
+          <Dot x={107} y={67} color="var(--orange)" />
+        </g>
+        <g opacity={step === 1 ? 1 : 0.45}>
+          <path d="M173 127l16 -30 24 14 20 -37" fill="none" stroke="var(--teal)" strokeWidth="3" />
+          <ellipse
+            cx="213"
+            cy="111"
+            rx="21"
+            ry="17"
+            fill="var(--soft)"
+            stroke="var(--teal)"
+            strokeDasharray="3 3"
+          />
+          <circle cx="213" cy="111" r="5" fill="var(--teal)" />
+        </g>
+        <g opacity={step === 2 ? 1 : 0.45}>
+          <rect
+            x="300"
+            y="65"
+            width="80"
+            height="62"
+            rx="4"
+            fill="var(--canvas)"
+            stroke="var(--slate)"
+          />
+          <path d="M307 118l16 -25 18 7 28 -25" fill="none" stroke="var(--teal)" strokeWidth="3" />
+          <path d="M327 134h27" stroke="var(--slate)" strokeWidth="3" />
+        </g>
+        <text x="40" y="208">
+          Wheel + marker data → position + map → evidence
         </text>
       </>
     );
@@ -508,9 +329,31 @@ export function ConceptDiagram({
   else if (id === 'visual')
     drawing = (
       <>
-        <Dot x={225} y={40} label="Same landmark" />
-        {line('M95 170L225 40', 'var(--teal)')}
-        {step === 0 && line('M225 40L255 10', 'var(--teal)', true)}
+        {line('M95 170L255 10', 'var(--teal)', step === 0)}
+        {step === 0 ? (
+          <>
+            {[
+              [140, 125],
+              [185, 80],
+              [230, 35],
+            ].map(([x, y]) => (
+              <circle
+                key={x}
+                cx={x}
+                cy={y}
+                r="7"
+                fill="var(--canvas)"
+                stroke="var(--teal)"
+                strokeWidth="2"
+              />
+            ))}
+            <text x="245" y="55">
+              Near or far?
+            </text>
+          </>
+        ) : (
+          <Dot x={225} y={40} label="Shared detail" />
+        )}
         <rect x="73" y="170" width="44" height="25" rx="5" fill="var(--teal)" />
         <text x="43" y="216">
           Camera A
@@ -530,61 +373,77 @@ export function ConceptDiagram({
             <text x="155" y="177">
               Known spacing
             </text>
+            {line('M225 55V163', 'var(--slate)', true, true)}
+            <text x="238" y="121">
+              Depth
+            </text>
           </>
         )}
       </>
     );
   else if (id === 'graphs') {
-    const points =
-      step === 2
-        ? [
-            [65, 130],
-            [95, 65],
-            [200, 38],
-            [315, 76],
-            [345, 150],
-            [230, 180],
-            [90, 165],
-          ]
-        : [
-            [65, 130],
-            [110, 65],
-            [210, 50],
-            [330, 90],
-            [365, 163],
-            [275, 183],
-            [180, 178],
-          ];
+    const { graph, solution } = getGraphDemo();
+    const project = (p: number[]) => [210 + p[0] * 44, 185 - p[1] * 32];
+    const initial = graph.initial.map(project),
+      adjusted = solution.poses.map(project);
+    const points = step === 2 ? adjusted : initial;
     drawing = (
       <>
+        {step === 2 &&
+          line('M' + initial.map((point) => point.join(' ')).join('L'), 'var(--slate)', true)}
         {line('M' + points.map((point) => point.join(' ')).join('L'))}
+        {step === 2 &&
+          initial.map(
+            (point, index) =>
+              index > 0 &&
+              index % 3 === 0 && (
+                <g key={index}>
+                  {line(
+                    'M' + point.join(' ') + 'L' + adjusted[index].join(' '),
+                    'var(--slate)',
+                    true,
+                  )}
+                </g>
+              ),
+          )}
         {points.map(([x, y], index) => (
           <Dot key={index} x={x} y={y} color={index === 0 ? 'var(--orange)' : 'var(--teal)'} />
         ))}
-        {step > 0 && line(`M${points.at(-1)!.join(' ')}L65 130`, 'var(--orange)', true)}
-        <text x="91" y="214">
-          {step === 0
-            ? 'A chain of relative measurements'
-            : step === 1
-              ? 'A revisit adds a loop constraint'
-              : 'An anchored, adjusted path'}
+        {step > 0 &&
+          line('M' + points.at(-1)!.join(' ') + 'L' + points[0].join(' '), 'var(--orange)', true)}
+        <text x="222" y="208">
+          Start fixed
         </text>
       </>
     );
   } else if (id === 'multi-robot')
     drawing = (
       <>
+        {(step === 2 ? [100] : [25, 235]).map((x) => (
+          <rect
+            key={x}
+            x={x}
+            y="30"
+            width={step === 2 ? 210 : 170}
+            height="158"
+            rx="12"
+            fill="var(--soft)"
+            stroke="var(--line)"
+            strokeDasharray="4 4"
+          />
+        ))}
         {[
           [90, 60],
           [150, 130],
           [75, 170],
         ].map(([x, y], index) => {
-          const bx = step === 2 ? x : 270 + (x - 100) * Math.cos(0.5) - (y - 110) * Math.sin(0.5),
+          const ax = step === 2 ? x + 110 : x;
+          const bx = step === 2 ? ax : 270 + (x - 100) * Math.cos(0.5) - (y - 110) * Math.sin(0.5),
             by = step === 2 ? y : 110 + (x - 100) * Math.sin(0.5) + (y - 110) * Math.cos(0.5);
           return (
             <g key={index}>
               {step === 1 && line(`M${x} ${y}L${bx} ${by}`, 'var(--slate)', true)}
-              <Dot x={x} y={y} />
+              <Dot x={ax} y={y} />
               <rect
                 x={bx - 9}
                 y={by - 9}
@@ -597,12 +456,12 @@ export function ConceptDiagram({
             </g>
           );
         })}
-        <text x="38" y="210">
-          {step === 2 ? 'Shared points in common coordinates' : 'Map A'}
+        <text x={step === 2 ? 118 : 38} y="210">
+          {step === 2 ? 'One shared set of directions' : 'Robot A’s local map'}
         </text>
         {step < 2 && (
-          <text x="288" y="210">
-            Map B
+          <text x="245" y="210">
+            Robot B’s local map
           </text>
         )}
       </>
@@ -714,26 +573,91 @@ export function ConceptDiagram({
   );
 }
 
-export function LessonVisual({ id }: { id: string }) {
-  const [step, setStep] = useState(0);
+const legendFor = (id: string): [string, string][] => {
+  if (id === 'fundamentals')
+    return [
+      ['Actual in this sketch', 'var(--slate)'],
+      ['Robot estimate', 'var(--teal)'],
+      ['Observation', 'var(--orange)'],
+    ];
+  if (id === 'frames')
+    return [
+      ['Room directions', 'var(--slate)'],
+      ['Robot forward', 'var(--teal)'],
+      ['Robot left', 'var(--orange)'],
+    ];
+  if (id === 'mapping')
+    return [
+      ['Unknown', 'var(--unknown)'],
+      ['Free', 'var(--free)'],
+      ['Obstacle', 'var(--occupied)'],
+    ];
+  if (id === 'multi-robot')
+    return [
+      ['Robot A', 'var(--teal)'],
+      ['Robot B', 'var(--orange)'],
+    ];
+  if (id === 'graphs')
+    return [
+      ['Earlier estimate', 'var(--slate)'],
+      ['Adjusted path', 'var(--teal)'],
+      ['Start / revisit', 'var(--orange)'],
+    ];
+  if (id === 'metrics')
+    return [
+      ['Reference', 'var(--slate)'],
+      ['Estimate', 'var(--teal)'],
+      ['Difference', 'var(--orange)'],
+    ];
+  if (id === 'sensors' || id === 'ekf')
+    return [
+      ['Earlier possibilities', 'var(--slate)'],
+      ['Revised estimate', 'var(--teal)'],
+      ['Observation', 'var(--orange)'],
+    ];
+  return [];
+};
+
+export function LessonVisual({
+  id,
+  currentStep,
+  onStepChange,
+}: {
+  id: string;
+  currentStep?: number;
+  onStepChange?: (step: number) => void;
+}) {
+  const [localStep, setLocalStep] = useState(0);
+  const step = currentStep ?? localStep;
+  const setStep = onStepChange ?? setLocalStep;
   const concept = lessonConcepts[id];
   if (!concept) return null;
   return (
-    <section className="lesson-visual" aria-label="Visual concept walkthrough">
+    <section className="lesson-visual lesson-player" aria-label="Visual concept walkthrough">
       <div className="lesson-visual-heading">
-        <p className="eyebrow">SEE THE IDEA</p>
+        <p className="eyebrow">THE IDEA, ONE STEP AT A TIME</p>
         <h2>{concept.title}</h2>
       </div>
+      <div className="visual-step-buttons" role="group" aria-label="Visual walkthrough steps">
+        {concept.steps.map(([name], index) => (
+          <button key={name} aria-pressed={step === index} onClick={() => setStep(index)}>
+            <span className="step-index">{index + 1}</span>
+            <span>{name}</span>
+          </button>
+        ))}
+      </div>
       <div className="lesson-visual-body">
-        <ConceptDiagram id={id} step={step} />
-        <div>
-          <div className="visual-step-buttons" role="group" aria-label="Visual walkthrough steps">
-            {concept.steps.map(([name], index) => (
-              <button key={name} aria-pressed={step === index} onClick={() => setStep(index)}>
-                {index + 1} · {name}
-              </button>
-            ))}
-          </div>
+        <figure className="learning-scene">
+          <ConceptDiagram id={id} step={step} />
+          <Legend items={legendFor(id)} />
+          <figcaption className="visual-notice">
+            <span>NOTICE</span>
+            {concept.steps[step][2]}
+          </figcaption>
+        </figure>
+        <div className="player-story">
+          <span className="eyebrow">STEP {step + 1} / 3</span>
+          <h3>{concept.steps[step][0]}</h3>
           <p className="visual-caption" aria-live="polite">
             {concept.steps[step][1]}
           </p>
@@ -746,22 +670,22 @@ export function LessonVisual({ id }: { id: string }) {
             >
               <Icon name="arrow" size={16} />
             </button>
-            <span>Step {step + 1} of 3</span>
+            <span>{step === 2 ? 'The idea is connected.' : 'Keep following the same scene.'}</span>
             <button
-              className="icon-button"
+              className="button small"
               aria-label="Next visual step"
               disabled={step === 2}
               onClick={() => setStep(step + 1)}
             >
-              <Icon name="arrow" size={16} />
+              Next <Icon name="arrow" size={15} />
             </button>
           </div>
         </div>
       </div>
       <div className="lesson-visual-footer">
-        <span>Conceptual schematic · not an experiment measurement.</span>
+        <span>Teaching graphic · not a measured run.</span>
         <Link to={concept.target} className="text-link">
-          Explore the related activity <Icon name="arrow" size={14} />
+          Try this idea <Icon name="arrow" size={14} />
         </Link>
       </div>
     </section>

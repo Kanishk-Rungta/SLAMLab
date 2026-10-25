@@ -14,7 +14,7 @@ export const playgroundGuides: Record<ModuleId, Guide> = {
   odometry: {
     title: 'Why does a robot lose track of where it is?',
     explanation:
-      'Odometry estimates movement by adding up small steps, such as wheel rotations. Drift is the growing disagreement between that estimate and the actual position when small measurement errors accumulate.',
+      'Odometry adds up small movements to estimate position. Drift is the gap that builds up when those movement estimates are imperfect.',
     example:
       'Imagine walking across a room by counting steps with your eyes closed. If you misjudge a step or turn slightly, your idea of where you are can move away from your real position.',
     readout:
@@ -52,7 +52,7 @@ export const playgroundGuides: Record<ModuleId, Guide> = {
   occupancy: {
     title: 'How can a robot turn observations into a map?',
     explanation:
-      'An occupancy map divides a room into small squares called cells. Each cell stores evidence about whether that part of the room contains an obstacle, appears open or has not been observed.',
+      'A grid map marks small squares as open, occupied or still unknown. Each observation adds evidence.',
     example:
       'Think of colouring graph paper while exploring a dark room: mark where you see a wall, mark the clear space before it, and leave places you have not seen undecided.',
     readout:
@@ -90,7 +90,7 @@ export const playgroundGuides: Record<ModuleId, Guide> = {
   features: {
     title: 'How does a robot recognise the same detail twice?',
     explanation:
-      'A feature is a distinctive detail, such as a corner in a camera image. Feature matching tries to pair a detail in one view with the same detail in another. Those pairs help a robot reason about movement and familiar places.',
+      'A feature is a distinctive detail, such as a window corner. Matching tries to recognise that same detail in another view.',
     example:
       'When comparing two photos of a room, you might recognise the same window corner in each. A robot compares numerical descriptions of details to make similar guesses.',
     readout:
@@ -99,7 +99,7 @@ export const playgroundGuides: Record<ModuleId, Guide> = {
       'Start with Try a clean match. Select a window or door corner and inspect the distance to its nearest candidate.',
       'Choose Try confusing details or increase Observation noise. Compare the closest three descriptors and the explanation of why the pair was accepted or rejected.',
       'Raise Distance threshold to accept more possible pairs, then lower it to reject less similar pairs. Compare both match counts.',
-      'Switch Mutual nearest neighbors off and on to see what changes when both features must choose each other.',
+      'Switch Require a two-way match off and on. Both features must choose each other for this check to pass.',
     ],
     terms: [
       [
@@ -115,7 +115,7 @@ export const playgroundGuides: Record<ModuleId, Guide> = {
         'The largest allowed difference between descriptors. This is a similarity score, not physical distance in metres.',
       ],
       [
-        'Mutual nearest neighbors',
+        'Two-way match (mutual nearest neighbors)',
         'A pair is kept only if each feature selects the other as its closest descriptor match. This extra check cannot guarantee correctness.',
       ],
       [
@@ -129,7 +129,7 @@ export const playgroundGuides: Record<ModuleId, Guide> = {
   graph: {
     title: 'How can revisiting a place help correct a path?',
     explanation:
-      'A pose means a position and a facing direction. A pose graph connects remembered poses with measurements of movement. A loop closure adds a connection when the robot recognises a previously visited place.',
+      'A pose is a position and direction. Recognising a place again links earlier poses and can help adjust the path.',
     example:
       'Imagine drawing a walk around a building. Your sketch ends away from the doorway where you started. Recognising that doorway gives you another clue for adjusting the sketch.',
     readout:
@@ -167,7 +167,7 @@ export const playgroundGuides: Record<ModuleId, Guide> = {
   multi: {
     title: 'How can two robots put their maps together?',
     explanation:
-      'Each robot can describe the same room using its own starting point and direction. Map alignment finds how to rotate and shift one map so that observations of the same places line up.',
+      'Two robots can describe the same room from different starting points. Shared landmarks help turn and shift their maps into alignment.',
     example:
       'Two people sketch the same room from opposite doors. Matching landmarks, such as the same two corners, helps them turn and slide the sketches into a common orientation.',
     readout:

@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+- Reworked Learn into a connected visual journey with concise, standalone lesson
+  introductions, step-by-step scenes, next-concept handoffs and optional notes.
+- Added a shared robot-and-room story and clearer uncertainty, camera-depth,
+  experiment and map-alignment scenes; pose-graph visuals use the actual optimizer.
+- Simplified playground guidance and feature-match explanations, with one first
+  exercise, optional technical details and activity links that support browser history.
 - Added annotated previews and three-step visual walkthroughs to all twelve Learn
   lessons, with captions and links to related activities.
 - Rebuilt feature matching around schematic room views, keyboard-selectable

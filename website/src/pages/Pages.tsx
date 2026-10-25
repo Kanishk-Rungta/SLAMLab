@@ -16,7 +16,9 @@ import {
   useReplay,
 } from '../components/ui';
 import { odometry } from '../lab/models';
-import { ConceptDiagram, LessonVisual, lessonConcepts } from '../components/LessonVisual';
+import { ConceptDiagram, LessonVisual } from '../components/LessonVisual';
+import { lessonConcepts } from '../lab/learning';
+import { LearningExperience } from '../components/LearningExperience';
 
 function HeroPlot() {
   const motion = useMemo(() => odometry(42, 0.045, 0.045, 0.65), []),
@@ -218,22 +220,34 @@ export function Learn() {
   return (
     <>
       <PageHeader
-        eyebrow="LEARNING PATHS"
-        title="From first principles to shared maps."
-        description="Twelve connected lessons. Read the idea, work through the math, then make it move in the playground."
+        eyebrow="LEARN BY SEEING"
+        title="How does a robot find its way?"
+        description="SLAM helps a robot find its position while building a map of an unfamiliar room. Follow the idea, one change at a time."
       />
+      <LessonVisual id="fundamentals" />
+      <div className="course-intro-actions">
+        <Link to="documentation/fundamentals/" className="button">
+          Start the journey <Icon name="arrow" size={16} />
+        </Link>
+        <a href="#learning-questions" className="text-link">
+          Or choose a question below
+        </a>
+        <span>Every lesson works on its own.</span>
+      </div>
+      <div id="learning-questions" />
       {['Beginner', 'Intermediate', 'Advanced'].map((level, i) => (
         <section className="section" key={level}>
           <div className="level-heading">
             <span className="level-number">0{i + 1}</span>
             <div>
-              <h2>{level}</h2>
+              <span className="eyebrow">{level}</span>
+              <h2>{['Start with the robot', 'Build an understanding', 'Connect and check'][i]}</h2>
               <p>
                 {
                   [
-                    'Build a geometric and probabilistic intuition.',
-                    'Connect measurements to maps and estimation.',
-                    'Optimize, collaborate, and evaluate responsibly.',
+                    'Where am I? What can I trust?',
+                    'Recognise details. Estimate movement. Map the room.',
+                    'Revisit places. Share maps. Check the evidence.',
                   ][i]
                 }
               </p>
@@ -254,10 +268,11 @@ export function Learn() {
                   <div className="lesson-card-copy">
                     <span className="lesson-number">{String(i * 4 + j + 1).padStart(2, '0')}</span>
                     <div>
-                      <h3>{d.title}</h3>
-                      <p>{d.description}</p>
+                      <span className="lesson-topic">{d.title}</span>
+                      <h3>{lessonConcepts[d.id].question}</h3>
+                      <p>{lessonConcepts[d.id].title}</p>
                       <span className="text-link">
-                        Read lesson <Icon name="arrow" size={15} />
+                        See the idea <Icon name="arrow" size={15} />
                       </span>
                     </div>
                   </div>
@@ -633,11 +648,10 @@ export function Documentation({ id }: { id?: string }) {
         <Link to="documentation/">Documentation index</Link>
       </>
     );
+  if (doc && lessonConcepts[doc.id]) return <LearningExperience key={doc.id} doc={doc} />;
   if (doc) {
     const index = content.documents.indexOf(doc),
       next = content.documents[index + 1];
-    const visual = lessonConcepts[doc.id];
-    const headingEnd = visual && doc.html.includes('</h1>') ? doc.html.indexOf('</h1>') + 5 : 0;
     return (
       <div className="doc-layout">
         <aside className="doc-nav">
@@ -661,15 +675,7 @@ export function Documentation({ id }: { id?: string }) {
               Edit on GitHub <Icon name="external" size={13} />
             </a>
           </div>
-          {visual ? (
-            <>
-              <div dangerouslySetInnerHTML={{ __html: doc.html.slice(0, headingEnd) }} />
-              <LessonVisual key={doc.id} id={doc.id} />
-              <div dangerouslySetInnerHTML={{ __html: doc.html.slice(headingEnd) }} />
-            </>
-          ) : (
-            <div dangerouslySetInnerHTML={{ __html: doc.html }} />
-          )}
+          <div dangerouslySetInnerHTML={{ __html: doc.html }} />
           {next && (
             <Link to={'documentation/' + next.id + '/'} className="next-lesson">
               <span>CONTINUE EXPLORING</span>
