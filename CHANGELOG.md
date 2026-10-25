@@ -2,12 +2,17 @@
 
 ## Unreleased
 
+## 0.2.0 — 2026-10-25
+
 - Added the responsive learning website, five interactive models, searchable algorithm profiles, and twelve guided lessons.
 - Added Studio playback, local trajectory/map imports, measured benchmark pages and refresh-safe static routes.
 - Added original branding, a new public introduction, developer guidance and website CI.
 - Published compact, reproducible one- and two-robot Webots recordings with Python-computed metrics.
+- Added separate website validation and GitHub Pages deployment workflows with pinned actions.
 - Added a complete Webots landmark EKF-SLAM pipeline, recorded-input replay, joint covariance tests and static result exports.
 - Extended the CLI with algorithm discovery, configuration-based experiments, evaluation and visualization exports.
+
+### Foundation work
 
 - Established the software and simulation monorepo foundation.
 - Audited the immutable source, candidate algorithms and licensing boundaries.
