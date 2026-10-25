@@ -171,6 +171,7 @@ export function Range({
   max,
   step = 0.01,
   unit = '',
+  help,
   onChange,
 }: {
   label: string;
@@ -179,6 +180,7 @@ export function Range({
   max: number;
   step?: number;
   unit?: string;
+  help?: string;
   onChange: (value: number) => void;
 }) {
   const id = useId();
@@ -198,8 +200,14 @@ export function Range({
         min={min}
         max={max}
         step={step}
+        aria-describedby={help ? id + '-help' : undefined}
         onChange={(e) => onChange(Number(e.target.value))}
       />
+      {help && (
+        <p className="control-help" id={id + '-help'}>
+          {help}
+        </p>
+      )}
     </div>
   );
 }

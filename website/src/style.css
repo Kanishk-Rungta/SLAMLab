@@ -1839,6 +1839,117 @@ li code {
   gap: 12px;
   grid-column: 1/-1;
 }
+
+.experiment-guide {
+  padding: 25px;
+  margin-top: 20px;
+}
+.guide-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.experiment-guide h2 {
+  font-size: 21px;
+  margin: 8px 0 14px;
+}
+.experiment-guide h3 {
+  font-size: 14px;
+  margin: 0 0 10px;
+}
+.experiment-guide p,
+.experiment-guide li,
+.guide-glossary dl {
+  font-size: 12px;
+  line-height: 1.8;
+}
+.experiment-guide ol {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+.experiment-guide li + li {
+  margin-top: 7px;
+}
+.guide-glossary,
+.guide-scope {
+  border-top: 1px solid var(--line);
+  padding-top: 15px;
+  margin-top: 18px;
+}
+.guide-glossary summary,
+.formula-context summary {
+  cursor: pointer;
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 600;
+}
+.guide-glossary dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 28px;
+  margin-bottom: 0;
+}
+.guide-glossary dt {
+  color: var(--heading);
+  font-weight: 600;
+}
+.guide-glossary dd {
+  margin: 3px 0 0;
+  color: var(--muted);
+}
+.experiment-guide .guide-scope {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+.controls .control-help {
+  font-size: 11px;
+  line-height: 1.65;
+  color: var(--muted);
+  margin-top: 7px;
+}
+.seed-controls {
+  max-width: 330px;
+}
+.seed-controls .seed-field {
+  justify-content: flex-end;
+}
+.seed-controls .help {
+  margin: 7px 0 0;
+}
+.formula-context {
+  min-width: 0;
+}
+.formula-context details[open] {
+  margin-top: 15px;
+}
+.project-document h2,
+.project-document h3 {
+  scroll-margin-top: 100px;
+}
+@media (max-width: 900px) {
+  .guide-columns,
+  .guide-glossary dl {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+@media (max-width: 640px) {
+  .experiment-guide {
+    padding: 20px;
+  }
+  .experiment-toolbar:has(.seed-controls) {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .seed-controls {
+    max-width: none;
+  }
+  .seed-controls .seed-field {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 @media (max-width: 640px) {
   .controls {
     display: flex;

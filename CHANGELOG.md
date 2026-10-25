@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Added beginner explanations, guided exercises, control help, glossaries and
+  optional equation walkthroughs to all five playground experiments.
+- Clarified the research purpose and progress on Home, About and Project, with
+  a dedicated project-guide credit.
 - Added a project overview with the problem statement, objectives, methodology,
   Team 98 and guide, progress, documentation, repository link and video availability.
 

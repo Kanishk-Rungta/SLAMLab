@@ -2,6 +2,14 @@
 
 **Autonomous Swarm Robotic System for Intelligent Mapping and Cleaning of Large Indoor Environments** is Team 98's final-year research project. SLAMLab grew from this work and provides a public platform for learning, simulation, visualization and reproducible SLAM experiments.
 
+## What is our project about?
+
+We are investigating how a team of indoor robots can understand a building and eventually coordinate its cleaning. Before a robot can clean a room usefully, it needs to estimate where it is, identify obstacles and keep a map of the space it has observed. Several robots also need to share useful information about that space.
+
+Our current work focuses on that mapping and exploration foundation in **Webots, a robot simulator**. SLAM stands for **simultaneous localization and mapping**: estimating where a robot is while building a map. Reliable cooperative cleaning and physical robot deployment are later stages.
+
+SLAMLab is the learning and experimentation platform that grew from this research. Its playground explains individual ideas, and its separate Landmark Lab example lets visitors inspect recorded simulation data. Progress on these teaching tools is distinct from progress on the complete cleaning system.
+
 ## Project statement
 
 Investigate how robots can build an understanding of indoor spaces, share useful mapping information and work toward coordinated cleaning. Develop and evaluate the mapping foundation in simulation before progressing to physical robot integration.
@@ -30,9 +38,13 @@ The project follows a simulation-first research approach:
 
 SLAMLab supports this learning and evaluation workflow through browser experiments, a separate landmark EKF-SLAM example in Webots, recorded replays and trajectory evaluation tools. Its two-robot Landmark Lab example uses independent estimators and does not demonstrate collaborative SLAM.
 
+## Project guide
+
+**Dr. Vidhya Balasubramanian** guides Team 98's final-year research project.
+
 ## Team details
 
-**Team 98** · **Project guide: Dr. Vidhya Balasubramanian**
+**Team 98**
 
 | Team member | Student ID |
 | --- | --- |
@@ -46,6 +58,10 @@ The team shares development, integration and evaluation. Kanishk Rungta is the S
 
 ## Project progress
 
+**Current stage: experimental mapping and exploration in simulation.** The foundation uses two robots in Webots. The project has not yet established a complete cooperative cleaning system or measured physical mapping performance.
+
+The status below separates the original research, the SLAMLab teaching platform and future goals. “Experimental” means work exists but still needs reliability and validation; “pending” means the stated integration or measurement remains to be completed.
+
 | Area | Current status |
 | --- | --- |
 | Original research foundation | Experimental two-robot mapping and exploration in Webots. Map quality, localization reliability and extended operation need improvement. |
@@ -55,7 +71,15 @@ The team shares development, integration and evaluation. Kanishk Rungta is the S
 | Physical robot deployment | bStem is the hardware target. Connectivity work has been reported; physical mapping integration, calibration and measured performance remain pending. |
 | Cooperative cleaning | A future integration and evaluation stage. Complete cleaning missions are not an established capability of the active mapping foundation. |
 
-Next steps are to improve mapping and localization, evaluate navigation and reliability more broadly, validate native integrations, and progress toward measured hardware operation and cooperative cleaning.
+### What comes next?
+
+1. Improve mapping quality and the reliability of position estimates.
+2. Evaluate navigation, obstacle handling and recovery in a wider range of situations.
+3. Validate the native research integrations under comparable conditions.
+4. Integrate and calibrate the physical robot, then measure its performance.
+5. Develop and evaluate cooperative task execution and cleaning.
+
+These are development stages, not completed milestones or a promised completion date. No overall completion percentage or ranking against other SLAM systems is established.
 
 ## Documentation
 

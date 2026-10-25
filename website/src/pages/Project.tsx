@@ -2,10 +2,12 @@ import content from '../generated/content.json';
 import { Icon, Link, REPO } from '../components/ui';
 
 const sections = [
+  ['what-is-our-project-about', 'What is our project about?'],
   ['project-statement', 'Project statement'],
   ['problem-statement', 'Problem statement'],
   ['project-objectives', 'Project objectives'],
   ['methodology', 'Methodology'],
+  ['project-guide', 'Project guide'],
   ['team-details', 'Team details'],
   ['project-progress', 'Project progress'],
   ['documentation', 'Documentation'],
@@ -27,7 +29,7 @@ export default function Project() {
           </a>
         ))}
       </nav>
-      <article className="prose document">
+      <article className="prose document project-document">
         <div className="doc-meta">
           <span className="eyebrow">TEAM 98 · RESEARCH IN PROGRESS</span>
           <a href={REPO}>

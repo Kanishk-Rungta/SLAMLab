@@ -38,22 +38,49 @@ test('home playback, navigation, theme, and direct refresh', async ({ page }) =>
 });
 
 test('every playground runs a real model and controls work', async ({ page }) => {
+  async function checkContext(title: string) {
+    await expect(page.getByRole('heading', { name: title, exact: true })).toBeVisible();
+    await page.getByText('Words used in this experiment', { exact: true }).click();
+    await expect(page.locator('.guide-glossary dd').first()).toBeVisible();
+    await page.getByText('Explore the equation', { exact: true }).click();
+    await expect(page.locator('.equation')).toBeVisible();
+    expect(
+      (await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze())
+        .violations,
+    ).toEqual([]);
+  }
   await page.goto('playground/');
+  await checkContext('Why does a robot lose track of where it is?');
+  await expect(page.getByRole('slider', { name: 'Translation noise' })).toHaveAccessibleDescription(
+    /Random error in estimated forward movement/,
+  );
   await page.getByRole('slider', { name: 'Playback position' }).fill('160');
   await page.getByRole('slider', { name: 'Translation noise' }).fill('0');
   await page.getByRole('button', { name: /Occupancy mapping/ }).click();
+  await checkContext('How can a robot turn observations into a map?');
   await page.getByRole('slider', { name: 'Playback position' }).fill('79');
   await expect(page.locator('.plot rect').count()).resolves.toBeGreaterThan(100);
   await page.getByRole('button', { name: /Feature matching/ }).click();
+  await checkContext('How does a robot recognise the same detail twice?');
   await expect(page.getByText('Correct matches', { exact: true })).toBeVisible();
   await page.getByRole('button', { name: /Pose graph/ }).click();
+  await checkContext('How can revisiting a place help correct a path?');
   await page.getByRole('button', { name: /Optimize/ }).click();
   await expect(page.getByText(/iterations/i).first()).toBeVisible();
   await page.getByRole('button', { name: /Multi-robot alignment/ }).click();
+  await checkContext('How can two robots put their maps together?');
   await page.getByRole('button', { name: 'Align shared landmarks' }).click();
-  await expect(page.getByText(/Recovered rotation/)).toBeVisible();
+  await expect(page.getByText(/^Recovered rotation /)).toBeVisible();
   await page.getByRole('checkbox', { name: 'Communication enabled' }).uncheck();
   await expect(page.getByRole('button', { name: 'Align shared landmarks' })).toBeDisabled();
+  await page.setViewportSize({ width: 390, height: 844 });
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await page.screenshot({
+    path: 'test-results/mobile-playground-context.png',
+    fullPage: true,
+    animations: 'disabled',
+  });
 });
 
 test('studio uses measured results and accepts and rejects local files', async ({ page }) => {

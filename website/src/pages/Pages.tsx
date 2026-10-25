@@ -186,10 +186,20 @@ export function Home() {
       </section>
       <section className="section panel prose about-copy">
         <div className="eyebrow">THE PROJECT BEHIND THE PLATFORM</div>
-        <h2>From indoor mapping to coordinated cleaning.</h2>
+        <h2>What is our project about?</h2>
         <p>
-          Meet Team 98 and explore the problem, objectives, methodology and current progress of the
-          research that SLAMLab grew from.
+          Team 98 is investigating how indoor robots can map a building, share information and
+          eventually coordinate its cleaning. SLAMLab grew from this research and helps visitors
+          learn the mapping ideas through interactive experiments.
+        </p>
+        <p>
+          <strong>Project guide:</strong> Dr. Vidhya Balasubramanian.
+        </p>
+        <h3>What is the progress of the project?</h3>
+        <p>
+          The current foundation is experimental two-robot mapping and exploration in Webots, a
+          robot simulator. Mapping quality and reliability still need improvement. Physical mapping
+          deployment and complete cooperative cleaning remain future stages.
         </p>
         <Link to="project/" className="text-link">
           Explore the project & team <Icon name="arrow" size={16} />
@@ -681,7 +691,13 @@ export function About() {
         description="An open-source learning and experimentation platform for simultaneous localization and mapping."
       />
       <section className="panel prose about-copy">
-        <h2>Learn it. Run it. Question it.</h2>
+        <h2>What is our project about?</h2>
+        <p>
+          Team 98 is working toward robots that can understand indoor spaces, share mapping
+          information and eventually coordinate cleaning. The current research focuses on mapping
+          and exploration in a robot simulator. SLAMLab makes related ideas accessible through
+          lessons, browser experiments and inspectable simulation recordings.
+        </p>
         <p>
           SLAMLab connects interactive explanations with inspectable implementations and measured
           experiments. It grew from{' '}
@@ -700,11 +716,13 @@ export function About() {
           a curriculum, and browser experiments while preserving upstream attribution and licenses.
         </p>
         <h2>People & attribution</h2>
+        <h3>Project guide</h3>
+        <p>Dr. Vidhya Balasubramanian</p>
         <p>
-          The original research project is Team 98&apos;s shared effort, guided by Dr. Vidhya
-          Balasubramanian. Meet Konduru Hemesh, Manu Santosh, Rithvik Mukka, Kanishk Rungta and
-          Praneeth Gorugantu on the <Link to="project/">project overview</Link>, alongside the
-          objectives, methodology and progress.
+          The original research project is Team 98&apos;s shared effort. Meet Konduru Hemesh, Manu
+          Santosh, Rithvik Mukka, Kanishk Rungta and Praneeth Gorugantu on the{' '}
+          <Link to="project/">project overview</Link>, alongside the objectives, methodology and
+          progress.
         </p>
         <p>
           Platform maintainer: <a href="https://github.com/Kanishk-Rungta">Kanishk Rungta</a>, as
@@ -725,7 +743,19 @@ export function About() {
             Contribute a lesson or experiment
           </Link>
         </div>
-        <h2>Where we go next</h2>
+        <h2>What is the progress of the project?</h2>
+        <p>
+          Experimental two-robot mapping and exploration in Webots is the research foundation.
+          Localization accuracy, map quality and extended reliability need improvement. Physical
+          mapping deployment and complete cooperative cleaning remain pending.
+        </p>
+        <p>
+          The SLAMLab platform already offers twelve lessons, five teaching experiments and recorded
+          Landmark Lab examples. The two-robot Landmark Lab recording uses independent estimators;
+          it does not establish a cooperative cleaning capability.{' '}
+          <Link to="project/">Read the project progress and next stages</Link>.
+        </p>
+        <h3>Next development steps</h3>
         <p>
           Native research integrations are developed through{' '}
           <a href={REPO + '/milestone/1'}>tracked build and execution tasks</a>. Contributions can

@@ -12,6 +12,7 @@ import {
   type Point,
 } from '../lab/models';
 import { download } from '../lab/data';
+import { playgroundGuides, type ModuleId } from '../lab/playgroundGuide';
 import {
   Icon,
   Legend,
@@ -27,13 +28,68 @@ import {
   usePlayback,
 } from '../components/ui';
 
-const modules = [
+const modules: [ModuleId, string, string, string][] = [
   ['odometry', '01', 'Odometry drift', 'Motion & uncertainty'],
   ['occupancy', '02', 'Occupancy mapping', 'A probabilistic map'],
   ['features', '03', 'Feature matching', 'Finding correspondences'],
   ['graph', '04', 'Pose graph', 'Closing the loop'],
   ['multi', '05', 'Multi-robot alignment', 'From local to shared'],
 ];
+
+function ExperimentGuide({ module }: { module: ModuleId }) {
+  const guide = playgroundGuides[module];
+  return (
+    <section className="experiment-guide panel" aria-labelledby="experiment-guide-title">
+      <div className="guide-columns">
+        <div>
+          <p className="eyebrow">START HERE · NO ROBOTICS BACKGROUND NEEDED</p>
+          <h2 id="experiment-guide-title">{guide.title}</h2>
+          <p>{guide.explanation}</p>
+          <p>
+            <strong>Everyday example:</strong> {guide.example}
+          </p>
+        </div>
+        <div>
+          <h3>How to read the picture</h3>
+          <p>{guide.readout}</p>
+          <h3>Try it yourself</h3>
+          <ol>
+            {guide.steps.map((step) => (
+              <li key={step}>{step}</li>
+            ))}
+          </ol>
+        </div>
+      </div>
+      <details className="guide-glossary">
+        <summary>Words used in this experiment</summary>
+        <dl>
+          {guide.terms.map(([term, definition]) => (
+            <div key={term}>
+              <dt>{term}</dt>
+              <dd>{definition}</dd>
+            </div>
+          ))}
+        </dl>
+      </details>
+      <p className="guide-scope">
+        <strong>What this model covers:</strong> {guide.scope}
+      </p>
+      {module !== 'features' && (
+        <p className="guide-scope">
+          <strong>Plot coordinates:</strong> x and y describe horizontal and vertical position on
+          the map, in metres.
+        </p>
+      )}
+      {module !== 'features' && module !== 'graph' && (
+        <p className="guide-scope">
+          <strong>Playback:</strong> Play starts the animation, Pause holds a moment, the slider
+          moves through saved steps and the reset arrow returns to the beginning. The × speed
+          selector only changes how fast the animation plays.
+        </p>
+      )}
+    </section>
+  );
+}
 
 function Equation({ tex, label }: { tex: string; label: string }) {
   return (
@@ -58,12 +114,16 @@ function Lesson({
   formula,
   label,
   link,
+  meaning,
+  symbols,
 }: {
   title: string;
   children: React.ReactNode;
   formula: string;
   label: string;
   link: string;
+  meaning: string;
+  symbols: string;
 }) {
   return (
     <section className="lesson-note">
@@ -75,7 +135,16 @@ function Lesson({
           Read the lesson <Icon name="arrow" size={16} />
         </Link>
       </div>
-      <Equation tex={formula} label={label} />
+      <div className="formula-context">
+        <p>
+          <strong>The equation in words:</strong> {meaning}
+        </p>
+        <details>
+          <summary>Explore the equation</summary>
+          <Equation tex={formula} label={label} />
+          <p>{symbols}</p>
+        </details>
+      </div>
     </section>
   );
 }
@@ -136,6 +205,7 @@ function Odometry({ seed }: { seed: number }) {
             min={0.15}
             max={0.65}
             unit="m/s"
+            help="How far the robot moves each second. Faster motion covers more distance in the same simulated time."
             onChange={setSpeed}
           />
           <Range
@@ -145,6 +215,7 @@ function Odometry({ seed }: { seed: number }) {
             max={0.15}
             step={0.005}
             unit="m/√s"
+            help="Random error in estimated forward movement. Zero removes this source of drift."
             onChange={setTrans}
           />
           <Range
@@ -154,6 +225,7 @@ function Odometry({ seed }: { seed: number }) {
             max={0.15}
             step={0.005}
             unit="rad/√s"
+            help="Random error in estimated turns. A wrong heading can send later steps in the wrong direction."
             onChange={setRotation}
           />
           <fieldset>
@@ -170,8 +242,18 @@ function Odometry({ seed }: { seed: number }) {
             />
           </fieldset>
           <div className="small-stats">
-            <Stat label="Position error" value={current.error.toFixed(3)} unit="m" />
-            <Stat label="Distance travelled" value={current.length.toFixed(2)} unit="m" />
+            <Stat
+              label="Position error"
+              value={current.error.toFixed(3)}
+              unit="m"
+              detail="Gap between the estimated and reference positions now."
+            />
+            <Stat
+              label="Distance travelled"
+              value={current.length.toFixed(2)}
+              unit="m"
+              detail="Length of the reference path so far."
+            />
           </div>
         </aside>
       </div>
@@ -180,14 +262,16 @@ function Odometry({ seed }: { seed: number }) {
         formula={String.raw`x_{t+1}=x_t+d\cos(\theta_t+\Delta\theta/2)`}
         label="Midpoint planar motion update"
         link="frames"
+        meaning="The next position is the current position plus a step in the direction the robot is facing. An error in that direction changes where the step lands."
+        symbols="x is the horizontal position, t labels a time step, d is the distance moved, θ is the heading and Δθ is the turn during the step. cos gives the horizontal part of that movement."
       >
         <p>
           A heading error changes the direction of every later step. Set both noise terms to zero to
           make the paths agree, then increase rotation noise and watch the position error grow.
         </p>
         <p>
-          Noise is sampled with √Δt scaling. This is a seeded educational motion model, so resets
-          replay the same random sequence.
+          The seed makes the random errors repeatable: keep the same seed and settings to replay the
+          same example. This model does not use a map to correct its motion estimate.
         </p>
       </Lesson>
     </>
@@ -279,6 +363,7 @@ function Occupancy({ seed }: { seed: number }) {
             max={6}
             step={0.25}
             unit="m"
+            help="Maximum distance a simulated sensor beam can reach."
             onChange={setRange}
           />
           <Range
@@ -288,6 +373,7 @@ function Occupancy({ seed }: { seed: number }) {
             max={0.2}
             step={0.01}
             unit="m"
+            help="Random error in measured distance. Higher values make wall observations less consistent."
             onChange={setNoise}
           />
           <Range
@@ -297,6 +383,7 @@ function Occupancy({ seed }: { seed: number }) {
             max={0.5}
             step={0.05}
             unit="m"
+            help="Side length of one grid square. A lower value gives a more detailed, larger grid."
             onChange={setResolution}
           />
           <Toggle label="Occupancy map" checked={visible} onChange={setVisible} />
@@ -313,6 +400,8 @@ function Occupancy({ seed }: { seed: number }) {
         formula={String.raw`l_t=l_{t-1}+\log\frac{p(m\mid z_t,x_t)}{1-p(m\mid z_t,x_t)}`}
         label="Log odds occupancy update"
         link="mapping"
+        meaning="Start with the evidence already stored for a square, then add what the latest observation suggests about whether it contains an obstacle."
+        symbols="l is stored log-odds evidence, t is the current step, m is a map cell, z is a sensor observation and x is the supplied robot pose. p is an occupancy probability; log converts it into evidence that can be added."
       >
         <p>
           Beams reduce occupancy belief along their path and increase it at measured hits. Smaller
@@ -420,13 +509,14 @@ function Features({ seed }: { seed: number }) {
         </section>
         <aside className="panel controls">
           <h2>Association controls</h2>
-          <p>Descriptors drive matching. Hidden identities are used only to score the display.</p>
+          <p>Compare numerical descriptions of details in two views to propose matching pairs.</p>
           <Range
             label="Observation noise"
             value={noise}
             min={0}
             max={0.9}
             step={0.025}
+            help="How much the second view’s feature positions and descriptions are disturbed. This is a model setting, not metres."
             onChange={setNoise}
           />
           <Range
@@ -435,6 +525,7 @@ function Features({ seed }: { seed: number }) {
             min={0.05}
             max={2}
             step={0.05}
+            help="Maximum allowed descriptor difference. A larger value accepts less similar pairs."
             onChange={setThreshold}
           />
           <Toggle label="Mutual nearest neighbors" checked={mutual} onChange={setMutual} />
@@ -449,8 +540,16 @@ function Features({ seed }: { seed: number }) {
             <Icon name="reset" size={16} /> Reset matching
           </button>
           <div className="small-stats">
-            <Stat label="Correct matches" value={correct} />
-            <Stat label="Wrong matches" value={result.matches.length - correct} />
+            <Stat
+              label="Correct matches"
+              value={correct}
+              detail="Accepted pairs that refer to the same generated detail."
+            />
+            <Stat
+              label="Wrong matches"
+              value={result.matches.length - correct}
+              detail="Accepted pairs that refer to different details."
+            />
           </div>
         </aside>
       </div>
@@ -459,6 +558,8 @@ function Features({ seed }: { seed: number }) {
         formula={String.raw`d(a,b)=\sqrt{\sum_i(a_i-b_i)^2}`}
         label="Euclidean descriptor distance"
         link="association"
+        meaning="Compare two features by combining the differences between the numbers in their descriptions. A smaller distance means more similar descriptions."
+        symbols="a and b are feature descriptors, i selects a number in each descriptor and d is their Euclidean difference score. The sum adds squared differences; the square root converts that sum into a distance."
       >
         <p>
           Loose thresholds accept more candidates, including outliers. Tight thresholds can reject
@@ -522,13 +623,17 @@ function Graph({ seed }: { seed: number }) {
         </section>
         <aside className="panel controls">
           <h2>Graph constraints</h2>
-          <p>Optimize relative measurements with Gauss–Newton updates and a line search.</p>
+          <p>
+            Adjust the saved positions and headings so the movement and revisit measurements agree
+            more closely.
+          </p>
           <Range
             label="Measurement noise"
             value={noise}
             min={0}
             max={0.12}
             step={0.005}
+            help="Random error added to movement measurements. The example also has a fixed turning bias."
             onChange={(v) => {
               setNoise(v);
               setSolution(null);
@@ -560,8 +665,8 @@ function Graph({ seed }: { seed: number }) {
             }
             detail={
               solution
-                ? `Initial ${solution.costs[0].toFixed(4)} · ${solution.costs.length - 1} accepted iterations`
-                : 'The solver uses edges, not a truth trajectory.'
+                ? `Started at ${solution.costs[0].toFixed(4)} · ${solution.costs.length - 1} accepted iterations (adjustment steps). Lower means a closer fit to the selected measurements.`
+                : 'Measurement disagreement score. Lower means a closer fit, not proven map accuracy.'
             }
           />
         </aside>
@@ -571,11 +676,13 @@ function Graph({ seed }: { seed: number }) {
         formula={String.raw`\min_{T}\sum_{(i,j)}e_{ij}^{T}\Omega_{ij}e_{ij}`}
         label="Weighted pose graph objective"
         link="graphs"
+        meaning="Find the set of robot poses with the smallest combined disagreement with all the selected movement and revisit measurements."
+        symbols="T represents the poses being adjusted, i and j identify connected poses, e is their measurement disagreement and Ω sets how strongly different parts of that disagreement are weighted. min asks for the smallest total score."
       >
         <p>
           A loop edge links poses that local odometry treats as distant in time. Optimization
-          distributes its correction across the graph while preserving the first pose as a gauge
-          anchor.
+          distributes its correction across the graph while keeping the first position and heading
+          fixed as a reference.
         </p>
         <p>
           Adding noisy constraints can also harm a graph. The displayed objective measures
@@ -659,8 +766,8 @@ function Multi({ seed }: { seed: number }) {
         <aside className="panel controls">
           <h2>Share & align</h2>
           <p>
-            Recover a rigid transform from shared observations. No common map origin is supplied to
-            the fit.
+            Rotate and shift map B to line up its shared landmarks with map A. Each map begins with
+            its own coordinate system.
           </p>
           <Range
             label="Shared landmarks"
@@ -668,6 +775,7 @@ function Multi({ seed }: { seed: number }) {
             min={0}
             max={10}
             step={1}
+            help="Number of point pairs used to fit the maps. At least two distinct pairs are needed in this example."
             onChange={(v) => {
               setShared(v);
               setAligned(false);
@@ -680,6 +788,7 @@ function Multi({ seed }: { seed: number }) {
             max={0.3}
             step={0.01}
             unit="m"
+            help="Random error in landmark positions. More noise can leave larger gaps after alignment."
             onChange={(v) => {
               setNoise(v);
               setAligned(false);
@@ -716,7 +825,7 @@ function Multi({ seed }: { seed: number }) {
                 ? 'Choose at least two distinct shared landmarks.'
                 : alignment
                   ? `Recovered rotation ${((alignment.angle * 180) / Math.PI).toFixed(1)}°; translation ${alignment.translation.map((v) => v.toFixed(2)).join(', ')} m.`
-                  : 'Fit uses the chosen shared correspondences.'}
+                  : 'The fit will use the chosen pairs of observations of the same landmarks.'}
           </p>
         </aside>
       </div>
@@ -725,11 +834,13 @@ function Multi({ seed }: { seed: number }) {
         formula={String.raw`\min_{R\in SO(2),t}\sum_i\|Rp_i+t-q_i\|^2`}
         label="Rigid map alignment objective"
         link="multi-robot"
+        meaning="Turn and shift one map until the total squared gap between observations of the same landmarks is as small as possible."
+        symbols="R is a 2D rotation, t is a shift, p and q are a shared point’s coordinates in the two maps, and i selects a pair. The squared norm measures their squared gap after transforming the first point."
       >
         <p>
-          Each robot begins in a local frame. A rigid least-squares fit estimates the rotation and
-          translation that reconcile shared landmarks. Communication controls the available
-          correspondences.
+          Each robot begins with its own starting point and directions. Matching shared landmarks
+          reveals how to turn and shift one map into the other’s coordinates. More shared points can
+          help the fit cope with noisy observations.
         </p>
         <p>
           This is an introductory alignment model. The research collection explores full distributed
@@ -742,8 +853,8 @@ function Multi({ seed }: { seed: number }) {
 
 export default function Playground() {
   const requested = new URLSearchParams(location.search).get('module');
-  const [active, setActive] = useState(
-      modules.some((m) => m[0] === requested) ? requested! : 'odometry',
+  const [active, setActive] = useState<ModuleId>(
+      modules.some((m) => m[0] === requested) ? (requested as ModuleId) : 'odometry',
     ),
     [seed, setSeed] = useState(42);
   return (
@@ -751,7 +862,7 @@ export default function Playground() {
       <PageHeader
         eyebrow="THE INTERACTIVE PLAYGROUND"
         title="Learn by changing the experiment."
-        description="A few controls. A visible consequence. Build intuition for the ideas that make SLAM work."
+        description="SLAM means working out where a robot is while building a map. Explore five pieces of that problem, with explanations and small experiments you can try."
         action={<span className="badge">Educational models · browser-local</span>}
       />
       <nav className="module-tabs" aria-label="Playground modules">
@@ -768,23 +879,31 @@ export default function Playground() {
           </button>
         ))}
       </nav>
+      <ExperimentGuide key={active} module={active} />
       <div className="experiment-toolbar">
         <div>
           <span className="eyebrow">EXPERIMENT {modules.find((m) => m[0] === active)![1]}</span>
           <h2>{modules.find((m) => m[0] === active)![2]}</h2>
         </div>
-        <label className="seed-field">
-          Random seed
-          <input
-            type="number"
-            min="0"
-            max="2147483647"
-            value={seed}
-            onChange={(e) =>
-              setSeed(Math.max(0, Math.min(2147483647, Math.trunc(Number(e.target.value) || 0))))
-            }
-          />
-        </label>
+        <div className="seed-controls">
+          <label className="seed-field">
+            Random seed
+            <input
+              type="number"
+              min="0"
+              max="2147483647"
+              value={seed}
+              aria-describedby="random-seed-help"
+              onChange={(e) =>
+                setSeed(Math.max(0, Math.min(2147483647, Math.trunc(Number(e.target.value) || 0))))
+              }
+            />
+          </label>
+          <p className="help" id="random-seed-help">
+            The seed chooses a repeatable set of random errors. Same seed and settings, same
+            example; a new seed gives another example.
+          </p>
+        </div>
       </div>
       <div key={active + seed}>
         {active === 'odometry' ? (
