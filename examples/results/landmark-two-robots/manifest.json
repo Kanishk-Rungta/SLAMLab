@@ -1,0 +1,43 @@
+{
+  "source_run": "landmark-two-robots",
+  "source_viewer_sha256": "24424b905b0485f32465661d8a2f76cef1c2ff9065b8ec53f2e463e5922cf3ff",
+  "kind": "simulation_measurement",
+  "webots": "R2025a",
+  "reproduce": "python -B tools/run_reference_slam.py --robots 2 --seconds 30 --output outputs/reproduced-landmark-run",
+  "configuration": {
+    "algorithm": "ekf-slam",
+    "world": "landmark-lab",
+    "robots": 2,
+    "seconds": 30.0,
+    "seed": 42,
+    "initial_poses": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1.5,
+        -1.5,
+        1.5707963267948966
+      ]
+    ],
+    "wheel_radius_m": 0.05,
+    "track_m": 0.24,
+    "linear_speed_m_s": 0.22,
+    "angular_speed_rad_s": 0.22,
+    "noise": {
+      "distance_std": 0.003,
+      "turn_std": 0.008,
+      "range_std": 0.04,
+      "bearing_std": 0.015
+    }
+  },
+  "display_coordinate_decimals": 6,
+  "metrics": "Copied without rounding or recalculation from the Python evaluator",
+  "implementation_sha256": {
+    "algorithms/ekf-slam/ekf.py": "fc6bd9aec0482daf5d44bbbc1f42f7ddc6c1a2b91a37158966634e904ee00e88",
+    "simulations/webots/controllers/landmark_slam.py": "ebf8d5383be34e39b07999a5aba120598786be0b9b00f1b1f3b0239d27d9ab73"
+  },
+  "display_export": "Includes the final measured map checkpoint; display coordinates rounded only."
+}
