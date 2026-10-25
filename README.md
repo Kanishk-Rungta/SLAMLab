@@ -61,9 +61,9 @@ compatibility unit; navigation directories link to it without duplicating code.
 
 Use Python 3.10?3.12. From the repository root:
 
-```sh
+```powershell
 python -m venv .venv
-# Activate .venv using your shell; see installation below.
+.\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
 python -B -m unittest discover -s tests -v
 python -B tools/slam.py doctor d2slam

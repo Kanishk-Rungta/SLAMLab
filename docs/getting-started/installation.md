@@ -5,7 +5,7 @@ Use Python 3.10?3.12. From the repository root, create an isolated environment:
 ```sh
 python -m venv .venv
 # Windows PowerShell
-.venv/Scripts/Activate.ps1
+.\.venv\Scripts\Activate.ps1
 # Linux/macOS: source .venv/bin/activate
 python -m pip install -r requirements.txt
 ```
@@ -20,3 +20,6 @@ explain source restoration and remaining validation gates.
 Start offline with `python -B tools/run_webots_demo.py --prepare-only`, then run
 `python -B tools/run_webots_demo.py --robots 1 --seconds 10` on a simulator host.
 No native SLAM dependency is required for wheel odometry.
+
+Run all offline checks with `python -B tools/validation/run_checks.py`. CI uses
+Python 3.10 and 3.12 on Ubuntu; Webots/native builds remain separate local checks.
