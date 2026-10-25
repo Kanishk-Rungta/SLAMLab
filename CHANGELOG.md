@@ -11,3 +11,5 @@
 - Verified offline DOOR-SLAM and D?SLAM source preparation without native execution.
 - Added strict planar trajectory conversion, association, alignment, ATE/RPE, comparison tables and export plots.
 - Added labeled analytic fixtures and exercised actual bounded simulator trajectories.
+- Added fundamentals, practical tutorials, output interpretation, research references and future website content guidance.
+- Reworked the project README around available capabilities and explicit native validation gaps.
