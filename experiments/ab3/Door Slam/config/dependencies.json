@@ -1,0 +1,9 @@
+{
+  "selection": "Historical dependency snapshots before 2020-01-01; native compatibility must be validated on the target laptop. Upstream Dockerfiles did not pin these dependencies.",
+  "gtsam": {"url": "https://github.com/borglab/gtsam.git", "commit": "762788efa3428f02520076cf7fcb1ad4d2523554"},
+  "rtabmap": {"url": "https://github.com/introlab/rtabmap.git", "commit": "e09a872fa2149482e0e4ae3827176c8390da8517", "version": "0.19.3, matching the author's ROS fork"},
+  "rtabmap_ros": {"url": "https://github.com/bramtoula/rtabmap_ros.git", "commit": "9e68b23bb8358ccee4a1676cc19dfe87e36dd665"},
+  "buzz": {"url": "https://github.com/MISTLab/Buzz.git", "commit": "57e447837ac8a632ad254b6f673786999d29c18d"},
+  "netvlad": {"url": "https://github.com/uzh-rpg/netvlad_tf_open.git", "commit": "abe37fe9d656bf781cff32caf738efca525b7889"},
+  "netvlad_weights_url": "https://rpg.ifi.uzh.ch/datasets/netvlad/vd16_pitts30k_conv5_3_vlad_preL2_intra_white.zip"
+}

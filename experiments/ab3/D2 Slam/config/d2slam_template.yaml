@@ -1,0 +1,158 @@
+%YAML:1.0
+---
+# D2SLAM settings for the standard AB3 robot, rendered per run by tools/calibration.py.
+# Base: upstream config/realsense_d435/d435_multi.yaml at the pinned commit
+# (multi-robot stereo). Every value is the base value except lines marked:
+#   [standard]  generated from Standard Environment/robot (calibration, timing)
+#   [benchmark] changed from the base for the reason given
+
+#inputs
+imu: 1
+imu_topic: "/bench/imu"                    # [benchmark] bridge topic
+image0_topic: "/bench/left/image_raw"      # [benchmark] bridge topic
+image1_topic: "/bench/right/image_raw"     # [benchmark] bridge topic
+is_compressed_images: 0                    # [benchmark] lossless raw images
+imu_freq: $imu_freq                        # [standard] one IMU sample per control step
+image_freq: $image_freq                    # [standard] one stereo pair per camera period
+frame_step: 1                              # [benchmark] base 2 halves a 30 Hz camera; this one is 10.4 Hz
+lcm_thread_freq: 10.0                      # [benchmark] missing in the base; upstream's Dec 2024 value
+loop_detection_freq: 10.0                  # [benchmark] missing in the base; upstream's Dec 2024 value
+
+#Camera configuration
+camera_configuration: 0  #STEREO_PINHOLE = 0
+num_of_cam: 2
+cam0_calib: "left.yaml"                    # [standard]
+cam1_calib: "right.yaml"                   # [standard]
+image_width: $image_width                  # [standard]
+image_height: $image_height                # [standard]
+enable_undistort_image: 0
+
+# [standard] T_BS of the left and right cameras
+body_T_cam0: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: d
+   data: [ $body_T_cam0 ]
+body_T_cam1: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: d
+   data: [ $body_T_cam1 ]
+
+#estimation
+estimate_extrinsic: 0
+estimate_td: 0
+td: 0.0                                    # [benchmark] images and IMU share the simulation clock
+estimation_mode: 2 #0:single; 1:solve all; 2: distributed; 3:server
+double_counting_common_feature: 1
+
+#optimization parameters
+max_solver_time: 0.08
+max_num_iterations: 8
+consensus_max_steps: 4
+timout_wait_sync: 100
+rho_landmark: 1.0
+rho_frame_T: 100
+rho_frame_theta: 100
+relaxation_alpha: 0.
+# Upstream requires both synchronization modes off when lazy keyframes are
+# enabled; otherwise the distributed solver can reset the same Ceres problem
+# concurrently and abort with "double free or corruption".
+consensus_sync_for_averaging: 0
+consensus_sync_to_start: 0
+consensus_trigger_time_err_us: 100
+
+#depth fusing
+depth_far_thres: $depth_far_thres          # [standard] base 3.0 m at 50 mm baseline, scaled to the standard baseline
+depth_near_thres: 0.3
+fuse_dep: 0
+max_depth_to_fuse: 5.0
+min_depth_to_fuse: 0.3
+
+#Multi-drone
+track_remote_netvlad_thres: 0.5
+
+#Initialization
+init_method: 0 #0 IMU, 1 PnP
+depth_estimate_baseline: $depth_estimate_baseline  # [standard] base 0.03 m at 50 mm baseline, scaled (else stereo pairs never triangulate)
+
+#sliding window
+max_sld_win_size: 11
+landmark_estimate_tracks: 4
+min_solve_frames: 5
+
+#outlier rejection
+thres_outlier : 10.0
+perform_outlier_rejection_num: 100000
+tri_max_err: 0.2
+
+#Marginalization
+enable_marginalization: 1
+# [benchmark] distributed radio loss can make the marginalized remote block
+# rank-deficient; the dense eigenvalue-thresholded Schur complement handles
+# that valid case without aborting in Eigen's sparse LLT.
+margin_sparse_solver: 0
+always_fixed_first_pose: 1
+remove_base_when_margin_remote: 2
+
+#feature tracker parameters
+max_cnt: 150
+max_superpoint_cnt: 150
+max_solve_cnt: 150
+show_track_id: 0
+check_essential: 0
+enable_lk_optical_flow: 1
+remote_min_match_num: 40
+ransacReprojThreshold: 10.0
+parallex_thres: 0.012
+knn_match_ratio: 0.7
+feature_min_dist: 20
+
+#CNN
+cnn_use_onnx: 1
+enable_pca_superpoint: 1
+enable_pca_netvlad: 1
+superpoint_pca_dims: 64
+netvlad_pca_dims: 1024
+cnn_enable_tensorrt: 0
+cnn_enable_tensorrt_int8: 0
+netvlad_int8_calib_table_name: "mobilenetvlad_calibration.flatbuffers"
+superpoint_int8_calib_table_name: "superpoint_calibration.flatbuffers"
+
+#IMU
+acc_n: $acc_n                              # base values, not fitted to the simulated sensors
+gyr_n: $gyr_n
+acc_w: $acc_w
+gyr_w: $gyr_w
+g_norm: $g_norm                            # [benchmark] Webots gravity (base 9.805)
+
+#Loop Closure Detection
+loop_detection_netvlad_thres: 0.85
+enable_homography_test: 0
+loop_inlier_feature_num: 20
+accept_loop_max_yaw: 10
+accept_loop_max_pos: 1.0
+lazy_broadcast_keyframe: 1                 # [benchmark] base 0 (greedy); compact mode for the 50 kB/s radio
+gravity_check_thres: 0.06
+
+#PGO
+pgo_mode: 1
+pgo_rho_frame_T: 0.7
+pgo_rho_frame_theta: 0.625
+pgo_eta_k: 0.1
+write_g2o: 0
+g2o_output_path: "output.g2o"
+write_pgo_to_file: 1
+enable_gravity_prior: 1
+gravity_sqrt_info: 10
+pgo_solver_time: 1.0                       # the base lists 0.5 and then 1.0; the later value is kept
+solver_timer_freq: 1.0
+enable_pcm: 1
+pcm_thres: 2.8
+
+#outputs
+output_path: "/output/"                    # [benchmark] per-robot native output folder
+debug_print_sldwin: 0
+debug_print_states: 0
+enable_perf_output: 0
+debug_write_margin_matrix: 0

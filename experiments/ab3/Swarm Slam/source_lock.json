@@ -1,0 +1,19 @@
+{
+  "repository": "https://github.com/MISTLab/Swarm-SLAM",
+  "commit": "af17c4b71432f750571ea699a0beccfbe9004872",
+  "archive_sha256": "b6ca5a7cc7aebb997b17e50a77dabb52dfe104f786342ef8402638c53377be77",
+  "files": {
+    ".github/workflows/main.yml": "7442e732eb6bed9c8aa424858283ddd9777e93d08cb1b696fce78d9cb5392dee",
+    ".gitignore": "ee9b1548af5f2fc7812be6ad3b975440512de1c419b9e25686888c2c36e3597c",
+    "LICENSE.md": "86624ed0d24878b6bc6ae1330c773f3176372ff46f0dcb34040e974b5c1184a7",
+    "README.md": "c65f4fbe30fcb83a2387eb970d6c9b9bc68b28dc7bb1cd3a365f2a177531dc6a",
+    "build-everything.sh": "af50fac0706449e405ea87efd1dd74385198d716c524ff465eca508d8d8e6e32",
+    "cslam.repos": "a29e2ed20c8b4df65e29da431ca13603dc8e909432b1015e4379ecc91962a47f",
+    "media/graco_pc.gif": "e7b6770c3ac34542f5b1cbc6fa4ef20e4894981f47490997a48a5dba52adc080",
+    "media/graco_pg.gif": "edb75208f97830c7cf721cd036286f9cd24c9c935458a71178534097d39ac158",
+    "media/system-overview.svg": "5d0cb1f4cf902c8b6864f808ae671efc3a40078e4b4b867df0b100ac75b9ea42",
+    "requirements.txt": "b8dcada1565cbf2cd9ad807ec362aa2e32d081e04ec211e8b740699e5630f3b7"
+  },
+  "submodules_included": false,
+  "note": "GitHub archives omit submodules; see .gitmodules or workspace manifests. Native dependencies are separate."
+}

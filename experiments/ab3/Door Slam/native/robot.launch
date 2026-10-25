@@ -1,0 +1,48 @@
+<launch>
+  <arg name="robot_id"/>
+  <arg name="peer_id"/>
+  <arg name="robots"/>
+  <param name="/use_sim_time" value="true"/>
+  <group ns="robot_$(arg robot_id)">
+    <param name="local_robot_id" value="$(arg robot_id)" type="int"/>
+    <param name="other_robot_id" value="$(arg peer_id)" type="int"/>
+    <param name="frame_id" value="robot_$(arg robot_id)/base_link"/>
+    <param name="estimate_stereo_transform_from_tf" value="false"/>
+    <param name="set_fixed_covariance" value="true"/>
+    <param name="translation_std" value="0.1"/>
+    <param name="rotation_std" value="0.01"/>
+    <param name="netvlad_distance" value="0.13"/>
+    <param name="netvlad_dimensions" value="128"/>
+    <param name="netvlad_batch_size" value="3"/>
+    <param name="netvlad_max_matches_nb" value="20"/>
+    <param name="separators_min_inliers" value="5"/>
+    <param name="number_of_kf_skipped" value="0"/>
+    <param name="use_estimates_of_poses" value="true"/>
+    <param name="log_gps" value="false"/>
+    <param name="logs_location" value="/output/"/>
+    <node pkg="rtabmap_ros" type="stereo_odometry" name="stereo_odometry" output="screen" required="true">
+      <param name="frame_id" value="robot_$(arg robot_id)/base_link"/>
+      <param name="odom_frame_id" value="robot_$(arg robot_id)/odom"/>
+      <param name="estimate_stereo_transform_from_tf" value="false"/>
+      <param name="Odom/Strategy" value="0" type="string"/>
+      <param name="Vis/CorType" value="1" type="string"/>
+      <param name="OdomF2M/MaxSize" value="1000" type="string"/>
+      <param name="Vis/MaxFeatures" value="600" type="string"/>
+      <param name="Vis/MaxDepth" value="1.6" type="string"/>
+      <param name="approx_sync" value="false"/>
+    </node>
+    <node pkg="multi_robot_separators" type="stereo_cam_geometric_tools" name="stereo_cam_geometric_tools" output="screen" required="true"/>
+    <node if="$(eval int(arg('robots')) &gt; 1)" pkg="multi_robot_separators" type="find_separators.py" name="find_separators" output="screen"/>
+    <!-- Upstream communication and Blabbermouth are deliberately replaced by
+         gateway.py: both frontend service bytes and native Buzz bytes use radio. -->
+    <node pkg="robust_distributed_slam_module" type="generic_robot_buzz_slam_node" name="robust_distributed_slam_module" output="screen" required="true">
+      <param name="message_size" value="10000" type="int"/>
+      <param name="buzz_script_name" value="/tmp/door_scripts/ros_slam"/>
+      <param name="robot_id" value="$(arg robot_id)" type="int"/>
+      <param name="port" value="24580"/>
+      <param name="next_robot_id" value="$(arg peer_id)" type="int"/>
+      <param name="rotation_std" value="0.01"/>
+      <param name="translation_std" value="0.1"/>
+    </node>
+  </group>
+</launch>

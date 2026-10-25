@@ -1,0 +1,13 @@
+{
+  "repository": "https://github.com/zurich-eye/cmake_external_project_catkin",
+  "commit": "7c2ab9a04c400b74914abe773c1e27e5b195ce9f",
+  "archive_sha256": "278de634ee26a4a2726a24605c109bc9da1ad0c57443932cec26772aec2d5820",
+  "files": {
+    ".gitignore": "2c9fbaf31e3728c92f27799adb454cd43593d9c3c0bc9277b7473940e10ed781",
+    "CMakeLists.txt": "36d75db4b1a205a2aae3e4aee32b622d0f5ec30498cf246ca803970464c6be9e",
+    "LICENSE": "c87757556fc3a80ded9ff152175d000d63b7c244a983b00bc91d276009c6ab31",
+    "README.md": "669081d30ea64e428bc917674933d0bd4899445cd7826402423681f3ad1d1539",
+    "cmake/cmake_external_project_catkin-extras.cmake.em": "6198bba24b94821a4939fa0ea47ff2ea97e8823adff4cae766bdd33f8025c2ef",
+    "package.xml": "f2848f38c4135953ed48cae047b803ddc2ad19c9627b8d0befa41f043e8eb3cf"
+  }
+}

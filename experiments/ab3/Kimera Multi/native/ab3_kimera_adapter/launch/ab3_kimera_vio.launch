@@ -1,0 +1,43 @@
+<launch>
+  <!-- AB3 copy of Kimera-Multi launch/kimera_vio_jackal.launch. Differences: params_folder (AB3
+       calibration generated from the standard; algorithm parameters copied from params/D455),
+       input topics (/ab3/...), no compressed-image republishers, and use_external_odom false
+       (the standard platform runs Kimera-Multi stereo-inertial, like the other algorithms). -->
+  <arg name="robot_name"  doc="Namespace of the platform producing sensor data." />
+  <arg name="robot_id"    doc="ID of the platform producing sensor data." />
+  <arg name="online"      default="true" />
+  <arg name="log_output"  default="false"/>
+  <arg name="verbosity"   default="0"/>
+  <arg name="bow_batch_size"          default="10" />
+  <arg name="bow_skip_num"            default="2" />
+  <arg name="publish_vlc_frames"      default="true"/>
+  <arg name="do_coarse_temporal_sync" default="false"/>
+  <arg name="do_fine_temporal_sync"   default="false"/>
+  <arg name="use_external_odom"       default="false"/>
+  <arg name="use_lcd"                 default="true"/>
+  <arg name="lcd_no_optimize"         default="true"/>
+  <arg name="lcd_no_detection"        default="false"/>
+  <arg name="lcd_disable_stereo_match_depth_check" default="true"/>
+  <arg name="no_incremental_pose" default="true"/>
+  <arg name="multirobot"          default="true"/>
+  <arg name="visualize"           default="true"/>
+  <arg name="viz_type"            default="2" />
+  <arg name="use_rviz"            default="false"/>
+  <arg name="log_gt_data"         value="false"/>
+  <arg name="log_imu_data"        value="false"/>
+  <arg name="should_use_sim_time" default="true"/>
+  <arg name="params_folder"       default="/tmp/ab3_kimera_params" />
+  <arg name="path_to_vocab"       default="$(find kimera_multi_lcd)/vocab/mit_voc.yml"/>
+  <arg name="left_cam_topic"      default="/ab3/left/image"/>
+  <arg name="right_cam_topic"     default="/ab3/right/image"/>
+  <arg name="imu_topic"           default="/ab3/imu"/>
+  <arg name="external_odom_topic" default=""/>
+  <arg name="map_frame_id"        value="$(arg robot_name)/map"/>
+  <arg name="base_link_frame_id"  value="$(arg robot_name)/base_link"/>
+  <arg name="odom_frame_id"       value="$(arg robot_name)/odom"/>
+  <arg name="left_cam_frame_id"   value="$(arg robot_name)/left_optical"/>
+  <arg name="right_cam_frame_id"  value="$(arg robot_name)/right_optical"/>
+  <group ns="$(arg robot_name)" >
+    <include file="$(find kimera_vio_ros)/launch/kimera_vio_ros.launch" pass_all_args="true"/>
+  </group>
+</launch>

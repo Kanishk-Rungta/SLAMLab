@@ -1,0 +1,33 @@
+{
+  "repository": "https://github.com/lajoiepy/cslam_interfaces",
+  "commit": "0e6bb91411796db593c8ce680f382a1f242ab7d9",
+  "archive_sha256": "a1d99019a8e7d83665a8e94516d3791266900acb5df40730287e722e1422c86e",
+  "files": {
+    "cslam_common_interfaces/CMakeLists.txt": "6569e00456a48e36484ea51e8dfd5226cb1c2d17c636b2911e6c4171970595ac",
+    "cslam_common_interfaces/LICENSE.md": "86624ed0d24878b6bc6ae1330c773f3176372ff46f0dcb34040e974b5c1184a7",
+    "cslam_common_interfaces/msg/GlobalDescriptor.msg": "491c2f481ba7050b429b65910804a124cabf8d96c9ba5b09a9b09f9e7ad9411c",
+    "cslam_common_interfaces/msg/GlobalDescriptors.msg": "4fe0209804ec431bd9b64e22ce9ab512eff5a836e1aee0b72786b25be8d723ab",
+    "cslam_common_interfaces/msg/InterRobotLoopClosure.msg": "d72c4286ffeec916afa3a9846282af42de80c96c92b9fa76a0806171f1c7908b",
+    "cslam_common_interfaces/msg/InterRobotMatch.msg": "b4a94289ce1ac975d7e9b28a8e9eb896fe81776f2193668301b78222cba119c3",
+    "cslam_common_interfaces/msg/InterRobotMatches.msg": "14d3b0d82e0fd5c070c6c89a534ccd1792545c750a323481f9391e1cf0ad314d",
+    "cslam_common_interfaces/msg/IntraRobotLoopClosure.msg": "ce3185f806cdc307b1828034ee5d10ef07c33f49d8c4b2bacf09642289aa7f62",
+    "cslam_common_interfaces/msg/KeyframeOdom.msg": "6532434a7ddcbcdae7eed2d0c02ec8e1d3939d9a1b2de26a5aa0192dd12d3815",
+    "cslam_common_interfaces/msg/KeyframePointCloud.msg": "a55877158f52f1c35ef58e44f7a27984f16ddd648e317c0874d0aef0ebd4c945",
+    "cslam_common_interfaces/msg/KeyframeRGB.msg": "9ee92bda8e4a545a67b5980337d72f8eab21db1c22709d3c5a86d80c7e9dcf3a",
+    "cslam_common_interfaces/msg/LocalDescriptorsRequest.msg": "e1f32f4f42cf65613821ec0d791b41ef596074a8e3c927f8081fc36b21e97fcf",
+    "cslam_common_interfaces/msg/LocalImageDescriptors.msg": "4e87560c0366dac5317a40cb199c4603917b98eb98bef2dc190c740254b0ffad",
+    "cslam_common_interfaces/msg/LocalKeyframeMatch.msg": "b0afcc4834191d5ff976b755b50d29e0816b3a80bccb516c5bb14393789d1901",
+    "cslam_common_interfaces/msg/LocalPointCloudDescriptors.msg": "ebdab803da50db874e233a69456a987c5ae29ff15d74c0df3ff2fd5af56daf48",
+    "cslam_common_interfaces/msg/MultiRobotKey.msg": "25074513ac6dac601e2308f249088960269887ee068f0352b3e2600a04f066a2",
+    "cslam_common_interfaces/msg/OptimizationResult.msg": "11c4302f93e387b3470d0acaa82d851f6a59425dc00c00fbcd0c98b75e7ad033",
+    "cslam_common_interfaces/msg/OptimizerState.msg": "973bf277134f224d8d34465125e1eb058d48fae658c9255bb167f4b4c145032f",
+    "cslam_common_interfaces/msg/PoseGraph.msg": "edd8b4aea635ead243e57899a7bd638c711c1699aa57fe2171db932f90934881",
+    "cslam_common_interfaces/msg/PoseGraphEdge.msg": "59507bbdadd8e6ce9e9cf9f4c6ce4e7460510592f27c6fa2b754c6463455f3ad",
+    "cslam_common_interfaces/msg/PoseGraphValue.msg": "da8e095f23f998e995cf6bbf55bc8be09ae67a34f612047bc79711e234813d8a",
+    "cslam_common_interfaces/msg/ReferenceFrames.msg": "e017916f4eb8becdfd793576cb457b64fa44bb34ca2d0165edc1c7c0c72b4b3b",
+    "cslam_common_interfaces/msg/RobotIds.msg": "ef4dc8e1280c00c5255944d96b5f00e4aba0c7288f7da930682e8251e101603d",
+    "cslam_common_interfaces/msg/RobotIdsAndOrigin.msg": "5198d26638959ccadfe297d312a158781d7bcef37b48454541e4231608593ad5",
+    "cslam_common_interfaces/msg/VizPointCloud.msg": "75d6b6d0da393539a331ccf30a6326c6e54441b575fba273cfc4f886d37165fb",
+    "cslam_common_interfaces/package.xml": "23bf9175da215de77bffae900beced8519a9d4e2081ab23de057446401c9d6ee"
+  }
+}

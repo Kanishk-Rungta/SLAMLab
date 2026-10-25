@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/MIT-SPARK/dbow2_catkin",
+  "commit": "210b907287deeb0f7133cda6da375a970e098fa5",
+  "archive_sha256": "e9a189f1a375384b0365176dbe7562893a0c1b2534f1fd983b3eb2fdfe1ff7fa",
+  "files": {
+    "CMakeLists.txt": "86825e20c16072d20fcaaaaed5f2b4a8d7889618055e3e309ceb87192d630e04",
+    "LICENSE": "8a64cb8ed96a56cfc3caf1e6112bbd7d07fff4114b7edfc539427e679fc398f5",
+    "README.md": "2c9567cf78d69e76786e02ab3fb58a4221d7653cac663d3c8c164eb7f26d1750",
+    "fix_fs_iter.patch": "5a3df03a2dd23c6cb6744caf6da98cc3c4e29643cc611a98fce1a51256b418fa",
+    "package.xml": "6d5f4be0dfad274c5451b218aa401885b453986703553cf2f6427f5e76e4a301"
+  }
+}

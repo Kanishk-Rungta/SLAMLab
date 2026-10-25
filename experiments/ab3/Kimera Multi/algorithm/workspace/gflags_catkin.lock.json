@@ -1,0 +1,11 @@
+{
+  "repository": "https://github.com/ethz-asl/gflags_catkin",
+  "commit": "fc38fc525f7d48881aebb27a7b9978453556bbd4",
+  "archive_sha256": "467d0bd059c35f51f64d66bdc698366f382635c032f87c280d230dc79d5d7675",
+  "files": {
+    ".gitignore": "0865b355234186f9becbfe1aa7ac5c328d863f5d61093d765b3443ab60f02177",
+    "CMakeLists.txt": "b4ac1e84653361fcfccac3633e051894901f49cb2f093776d9c3af0c5d672cd5",
+    "README.md": "aa94a5740d9021c8335532190a9a835405d278e9b377dd13cab749bc1978aff7",
+    "package.xml": "0d64dabd89308c4648af4e614c0bf9d91e750a6584717a53b72e29cc01bf7f5d"
+  }
+}

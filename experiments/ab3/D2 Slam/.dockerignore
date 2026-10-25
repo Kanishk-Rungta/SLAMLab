@@ -1,0 +1,11 @@
+build
+runtime
+runs
+backup_runs
+tests
+webots_controller
+**/__pycache__
+**/*.pyc
+algorithm/D2SLAM
+third_party/*
+!third_party/models

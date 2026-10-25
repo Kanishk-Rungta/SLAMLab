@@ -1,0 +1,25 @@
+{
+  "repository": "https://github.com/catkin/catkin_simple",
+  "commit": "0e62848b12da76c8cc58a1add42b4f894d1ac21e",
+  "archive_sha256": "14f3599a98d4a59dd7e6c4d0d6509afcc2053a50c3f1e7bd3fcc7cf14c40eec7",
+  "files": {
+    ".gitignore": "094c25031dcfe5c288666671bc2012866293b3797ea53c796af798bda4c32f01",
+    "CMakeLists.txt": "b0952d746504e27f1e1a3a6a5ea4c8a12b5ab305f1a92e68d864f46a74c701a1",
+    "README.md": "06bd6fe014ed60f31f29301125f9ab6babd126153ca3eff8bdf9116f0bd3deb2",
+    "cmake/catkin_simple-extras.cmake.em": "3724434afb9e6f5c49f2e4dd1224bb8aeb9048f983854cf1f90f180caf266e8e",
+    "package.xml": "1d43d640ef6cedb496539f3a9c51879bd02de71ab62bd2a5b678ff09c80a93d5",
+    "test/scenarios/hello_world/.gitignore": "8ae52a30e4b027889aaff985756387200e41ffeb13f610ae44e26ed70744e60a",
+    "test/scenarios/hello_world/bar/CMakeLists.txt": "5a2b9e58275b2d1f4ed4dfa2467dd894b12747b5ef796a3fe9c7a4ab282ea021",
+    "test/scenarios/hello_world/bar/include/bar/hello.h": "db429d9f96240cba644b00f2a4c5b86920cd068a8929cb45fe0fee0cd8cd448b",
+    "test/scenarios/hello_world/bar/msg/HeaderString.msg": "9427012251454e4e496fc0ddc9967dd7bae84adfa67275a2733662cd9cb64400",
+    "test/scenarios/hello_world/bar/package.xml": "9d6f78ac718f4eddb649315308e69c8463a0e61e7f78431847111e47dbb0d32c",
+    "test/scenarios/hello_world/bar/src/hello.cpp": "a00332010711b0f6d119535b56783703fc33117278e8e582c5867c78a5ea4ed2",
+    "test/scenarios/hello_world/baz/CMakeLists.txt": "b46f685ad7f999f8c5c37f9103c1597ec9c4073d53c39f3e513b40c57b9bbf55",
+    "test/scenarios/hello_world/baz/include/baz/world.h": "dea9a950fdbce57aaefdee25aa291951bfc602263f79826cc88b248df483d491",
+    "test/scenarios/hello_world/baz/package.xml": "bb11cadff376db8e2c2cb561b8d6c5a35d6ac74f8121f36ffa1ca59de1657321",
+    "test/scenarios/hello_world/catkin_simple": "297823c2f472cdfefd4dfdec487f9069aaf971ac18839bbb2dd4f2c7f3ca57ca",
+    "test/scenarios/hello_world/foo/CMakeLists.txt": "00cd4ac559683e68128bd9023686dfa5a4f9e0a5d1bb08ff40a52ef8f8d200ad",
+    "test/scenarios/hello_world/foo/package.xml": "e0edaf61e6aba17f8f9d3ed9baa4c01e26e83aaadeef7b3280b59121ed70ed52",
+    "test/scenarios/hello_world/foo/src/main.cpp": "dc6b555941bdbbf164768934da80cf2985480b99d9ef44bf89c61f577b36f411"
+  }
+}

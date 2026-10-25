@@ -1,0 +1,24 @@
+{
+  "repository": "https://github.com/MIT-SPARK/mesh_rviz_plugins",
+  "commit": "2ad232270b5728522fd504d5c337ed5e43bf46cf",
+  "archive_sha256": "4422081cd9e32d9d0472a7f93107a91c42f3f0ca43095aed571ec9cabcb8d117",
+  "files": {
+    ".gitignore": "3ba2020da55f76620d61950cb88f0d6cc0d5852eae7b2c03f8487a64c87da959",
+    "CMakeLists.txt": "11c4e029b7a638a5e1ccb332ceb255107ca61741614348f3b99f20e62d0a215a",
+    "LICENSE": "20045cea43a1d2070f3887cc89935d4d49a943dcf2426eb189db0b3946609de0",
+    "README.md": "92fb0a0484ec24ba58e515039aa0567c3056061bfbccdc91129e5664846a346c",
+    "docs/media/SparkVIO_ROS_mesh.gif": "3d8a19c2acf7200f4ec38239534cbb5309fd7c0defc5fe09b1bd43fa6b7c8262",
+    "icons/classes/TexturedMesh.png": "c3db938217258fd7e33da9a0da05e497794ede4488b72f98c2a4c7a8e5dae9b9",
+    "include/mesh_rviz_plugins/surface_normals_visual.h": "765803a94310e500727be4f5673d216ddb3e2ed555fd7bae228653c8c0432665",
+    "include/mesh_rviz_plugins/textured_mesh_display.h": "8993037391b09e480f2bd2951a4d1e11f2ff968d8c280e3dd4b8f205eff6ac9a",
+    "include/mesh_rviz_plugins/textured_mesh_visual.h": "87c16ce0fb40baffd45fcc90fa98c76d9eb21ddb32887ec7f23c694222963f56",
+    "include/mesh_rviz_plugins/visual.h": "80e5f99f0b77181b8a679b646de3dbd8c532e004d3d0db658795b50cb409f615",
+    "install/mesh_rviz_plugins.rosinstall": "e4fb0fa0eb4cd8024a4c521460cbe46cf85d601adf0989f95f1f94c54aac8f6e",
+    "mesh_rviz_plugins.xml": "94d460032717e90cecba8244b46f6cff1f72fcf5b2948fc066ec639e4deb79b6",
+    "package.xml": "0fc88eae96e2084c30918934c06cc2b51ccc00d25d3162f20a21382a05f9caac",
+    "src/surface_normals_visual.cc": "cbbf4cca090189156fa9431c0dbdc38041fd5d78989636ba62a824f7e1d00fff",
+    "src/textured_mesh_display.cc": "2ad88c712489ad60bbb9c167427ff8627222b048fe9d314cd8e456f7af73e317",
+    "src/textured_mesh_visual.cc": "79ea1c213c6696ede830bf9984e0e0173d8421e47c31c815cd927d3197caaafa",
+    "ubuntu_focal.patch": "2da70b3c259794114ec28f8fbcca451f541e64cd7c8bdca3d7254b767dcc10b7"
+  }
+}

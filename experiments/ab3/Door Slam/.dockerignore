@@ -1,0 +1,8 @@
+build
+runtime
+third_party
+runs
+backup_runs
+**/__pycache__
+**/*.pyc
+algorithm/DOOR-SLAM

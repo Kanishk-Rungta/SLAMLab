@@ -1,0 +1,16 @@
+{
+  "algorithm": "D2SLAM-Original-StereoIMU",
+  "native_stack": "ROS 1 Noetic, official D2SLAM: D2VINS (with D2Frontend: SuperPoint, MobileNetVLAD, LK), D2PGO (distributed ARock PGO with PCM), D2Comm",
+  "upstream_commit": "4c33871083e4ae97b97973eb5bd88dc6735359d7",
+  "cnn_backend": "ONNX Runtime 1.18.0 CPU execution provider (upstream builds use TensorRT on CUDA)",
+  "sensors": "BstemSensors stereo cameras (as 8-bit grayscale) and IMU (standard 3-axis gyro from BstemSensors.imu(); raw accelerometer)",
+  "lidar": false,
+  "rangefinder": false,
+  "gpu": false,
+  "ground_truth_to_estimator": false,
+  "known_docks": false,
+  "inter_robot_transport": "BstemSensors.send/receive carrying unchanged LCM bytes; LCM is ttl=0 inside each container",
+  "native_runtime_validated": false,
+  "native_adapter_complete": true,
+  "comparison_ready": false
+}

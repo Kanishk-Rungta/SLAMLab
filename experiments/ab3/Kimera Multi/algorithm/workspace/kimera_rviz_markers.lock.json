@@ -1,0 +1,19 @@
+{
+  "repository": "https://github.com/ToniRV/kimera_rviz_markers",
+  "commit": "f342baf99fa55f9351795785bea1262ed8b451db",
+  "archive_sha256": "fae74816bd5e27de32a2fc7d9721c336c631ce39743891ae5ad155acac09d549",
+  "files": {
+    "CMakeLists.txt": "32f569db596dd411a61d4639d06de47ace8f2616b938db20b4dabfc64505d91d",
+    "LICENSE": "20045cea43a1d2070f3887cc89935d4d49a943dcf2426eb189db0b3946609de0",
+    "README.md": "b4dcea790631413672ada3d166c86063a394e21bdfee25c8a74f3795c9024fca",
+    "include/kimera_rviz_markers/kimera_rviz_markers.h": "3beeb25428c913fb5c5f52ee49216b65dc29cca18b2ba34437012e1a7a068d40",
+    "include/kimera_rviz_markers/utils.h": "95be329043db0d6396f726459debcb888c0623f8f10b8a597dd09ff2724db956",
+    "install/kimera_rviz_markers.rosinstall": "e4fb0fa0eb4cd8024a4c521460cbe46cf85d601adf0989f95f1f94c54aac8f6e",
+    "launch/drone_marker_pub.launch": "5c3e2eddeed78756ed040147f8e7b2836561c46aed27f110f7dc8ddf05dc0c4c",
+    "launch/kimera_rviz_markers.launch": "fd3e067ec795cd06236be2a825dd496aff979a8bcb53b1b1a0c2e866a52defbe",
+    "package.xml": "ff6378e1f8c8bf6f1cbee48ce1386e2fad487cee8e00ffc96d3d68b00108421f",
+    "src/drone_marker_pub.cpp": "489c93341419a87dd315c2122b3b2fb6e506f35c691a082e6b16e2c50c9b24b2",
+    "src/kimera_rviz_markers.cpp": "456b6fb36272f9aa49075bbd87ef68562ea5f6a1ccf740979196bc92c395b987",
+    "src/utils.cpp": "bd8ee275d0348e3c82ac748a7031132f9dc7bad641064a6b2d42ff61f24b102c"
+  }
+}

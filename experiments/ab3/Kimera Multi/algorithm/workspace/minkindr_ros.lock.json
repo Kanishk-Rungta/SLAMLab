@@ -1,0 +1,18 @@
+{
+  "repository": "https://github.com/ethz-asl/minkindr_ros",
+  "commit": "5528b042124fe056a7cf53f96c8b39e1e32ec2b9",
+  "archive_sha256": "8763c9515dbd1b829457d22bb267585182692437a781f7b7537ffcc35affb275",
+  "files": {
+    ".gitignore": "7bc15a2320b345f273e1929b982b2ea2be6fa3069b751192df8ef2d3aea596c4",
+    "LICENSE": "006a7c466878edb277fe0cdb1f7d1a875e58d690c2aeec144043d3a423adbd55",
+    "README.md": "9c91254d7cbb7bfc68b28760574af2e8aafb71ef73c5623fe1f2f90aeefc3385",
+    "minkindr_conversions/CMakeLists.txt": "93b723afdeadff2627d0c7563bfbbf1122ac75fd922d348bda8860a89f0fa861",
+    "minkindr_conversions/include/minkindr_conversions/kindr_msg.h": "84cc51ca1794f27b18187ca594cf7fe7ead1c4f84cc9d39207ef673371566bf3",
+    "minkindr_conversions/include/minkindr_conversions/kindr_tf.h": "9004427e7844fc4ad37e21b30410b84d6fbc7c462311f50d23fcf6e4972faa11",
+    "minkindr_conversions/include/minkindr_conversions/kindr_xml.h": "4ccd1246d4aa66282eb417ce76221145df416ee2e8a4a8ffb951d3cbc5b20c53",
+    "minkindr_conversions/package.xml": "34de030315a12b2e176bbf4387c7e62ec8d52e8126a82d14923e29dc6243c4c8",
+    "minkindr_conversions/test/kindr_msg_test.cc": "2a86f82d8d660b9ae1e0c40419a7046b608a34fd921b4b3b7c11fd0c9ecb4250",
+    "minkindr_conversions/test/kindr_tf_test.cc": "ab8151116efa652fa3000eeac99be04c86dabe6e30492aa604d83221589b9b0d",
+    "minkindr_conversions/test/testing_predicates.h": "e8ed8832ecd5745bc2bf86e5a033bb5134c3f8081a6a8e1ab5f6d8d5eede1930"
+  }
+}

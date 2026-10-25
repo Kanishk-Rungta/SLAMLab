@@ -1,0 +1,28 @@
+{
+  "repository": "https://github.com/ethz-asl/eigen_checks",
+  "commit": "22a6247a3df11bc285d43d1a030f4e874a413997",
+  "archive_sha256": "8aa7e2ff4c453ac35ed78af8ffe151ad7f5351426b78cce3b07f1ffa006efd5c",
+  "files": {
+    ".gitignore": "a907634a84374b43d6d09fd345dc3cfb69d8edcf0aa2d49c26136e83760709e3",
+    "CMakeLists.txt": "d3f74f209c337478270625844bec2589dcb25ed6321dbba9e0383fe37f5a23f6",
+    "README.md": "49f47f4616e1f7c91d6b6094b0cb3729a1e2c1ca122cb0391b62b66da9264462",
+    "cmake/eigen_checks-extras.cmake.in": "41feb77a3d727cf87b4f5705e9d53e1f0ac7e7993ed20cde5fc3feaab975df13",
+    "include/eigen-checks/entrypoint.h": "2ac793fa6b40ad44a299052ce814b1dfc43525482b86115a66ce7ac9bb291b79",
+    "include/eigen-checks/glog.h": "d5da68d1209cdcf34d602a771aac73f11f80b52bfc428b7c387b1a8539b9d44c",
+    "include/eigen-checks/gtest.h": "b24faa1420b10e8d319e862cc161e9b25186964740670d1998bc9a27498d0c1a",
+    "include/eigen-checks/internal/gtest-equal.h": "6d321822e7bd06846c14bd3c8a6a074298277edc232c47c2409caf93fa62d10d",
+    "package.xml": "d53470d0d4ca21cef5d4080a16f70fa3c81b93eca7ba5394b44ecde601243e5f",
+    "src/eigen-checks.cc": "cceddad8ec1c67191201974d810da406099f39e6d65273f053c97bb76a987ac9",
+    "test/test_glog-equal-double.cc": "f04463835acd091e2829545e7c01b344a319ef8b3bdadac03dadc36dee08ff5c",
+    "test/test_glog-equal.cc": "abc85fdc7bae903571d697b54529c3b41d1167243952f7be905797abfc417154",
+    "test/test_glog-near.cc": "8c21c55add9dfb939f924b8f01788b3debe0e1e2c66de1b7877a9ef1ab071380",
+    "test/test_glog-zero-sized-types.cc": "dade48519aff2ec6c5a9f209b83ffcf61803b4e91184fd8d92077b2030377217",
+    "test/test_glog-zero.cc": "0ef5d15c002396c8dfd1d92a27950754183018c30e470e7fe4b4efd85b8d835d",
+    "test/test_gtest-equal-double.cc": "0119e0f6f480b7c469105f645e04bde267c6ebc5ec8588ec4512005cb4c577c1",
+    "test/test_gtest-equal.cc": "4b19625dab87be1b006a25ccc491d46fc1a51106fb10cc9810ea6318f4e80e7d",
+    "test/test_gtest-near.cc": "a2967c5865b8c05ed1a4cd9838b4055d32f1c192282a456a80e15415b4404c25",
+    "test/test_gtest-zero-sized-types.cc": "e6c8aec957c7e0b3d83b130f81927a6f58c601b82f79c818c122377383b2b105",
+    "test/test_gtest-zero.cc": "5a0ef9055229856dab973b95cd154c297bfe06d08bbbcfef5f4fbdf0e8251586",
+    "test/test_helper.h": "beb869cc391a1ef0894f899966f3c94ee65fc0547dfa35cb0c03835f03e0a463"
+  }
+}

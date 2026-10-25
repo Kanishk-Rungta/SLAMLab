@@ -1,0 +1,14 @@
+{
+  "repository": "https://github.com/ethz-asl/protobuf_catkin",
+  "commit": "721a6cc17e7e937e7accfb88a9967b26134db6f9",
+  "archive_sha256": "cbc6052528806bf7436f1a2b7de80219804c77df3f72706bb1506072cb945dba",
+  "files": {
+    ".gitignore": "0865b355234186f9becbfe1aa7ac5c328d863f5d61093d765b3443ab60f02177",
+    "CMakeLists.txt": "753971b46a01de3df8bab32d815cbea4affbcaf3e62d38d647243eaf189af33c",
+    "README.md": "0e6cb46e760af31f3f6f49139c79dbb418db27d2afbb0555e1f635c8c897ba1e",
+    "cmake/protobuf-generate-cpp.cmake.in": "4340ea023eb83afc1332761ae5bfa269e082fc8d071b9a88b59a2331037d44dc",
+    "package.xml": "9d623d80237111f36907c9e36578d703978075bcf7613b3f78289577ff8f2b2e",
+    "unused_parameter_warnings.patch": "5da503305f459af4ed15183e508fca04b18278514f6717dc28d0ff41cb71c69f",
+    "unused_parameter_warnings_wire_format.patch": "2c7a90d87722f3936c2b290007ed226a50c6e938bb8bb6a4de976f1748288a08"
+  }
+}

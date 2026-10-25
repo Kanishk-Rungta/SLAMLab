@@ -1,0 +1,78 @@
+{
+  "id": "kimera_multi",
+  "algorithm": "Kimera-Multi",
+  "repository": "https://github.com/MIT-SPARK/Kimera-Multi",
+  "ros": "ROS 1 Noetic",
+  "input_mode": "stereo-inertial (standard stereo + 3-axis gyro + accelerometer); no external odometry, no semantics input",
+  "architecture": "decentralized",
+  "max_robots_upstream": 10,
+  "required_workspace": [
+    "catkin_boost_python_buildtool",
+    "catkin_simple",
+    "cmake_external_project_catkin",
+    "dbow2_catkin",
+    "dpgo",
+    "dpgo_ros",
+    "eigen_catkin",
+    "eigen_checks",
+    "gflags_catkin",
+    "glog_catkin",
+    "gtsam",
+    "image_undistort",
+    "kimera_distributed",
+    "kimera_multi_lcd",
+    "kimera_pgmo",
+    "kimera_ros",
+    "kimera_rpgo",
+    "kimera_rviz_markers",
+    "kimera_semantics",
+    "kimera_vio",
+    "mesh_rviz_plugins",
+    "mesh_tools",
+    "minkindr",
+    "minkindr_ros",
+    "numpy_eigen",
+    "opencv3_catkin",
+    "pose_graph_tools",
+    "protobuf_catkin",
+    "pybind11_catkin",
+    "voxblox"
+  ],
+  "live_adapter_implemented": true,
+  "native_build_validated": false,
+  "webots_validated": false,
+  "integration_work_remaining": [
+    "Compile and validate the Docker image (written without a build environment; follows upstream docker/Dockerfile).",
+    "Validate Kimera-VIO stereo-inertial initialisation with the 25 mm stereo, 31.25 Hz IMU and planar motion.",
+    "Validate Kimera-Distributed / DPGO exchange over the radio (broadcast topics, connectivity heartbeats).",
+    "The vocabulary is downloaded from Google Drive at build time (upstream behaviour); its sha256 is recorded."
+  ],
+  "result_label": "Kimera-Multi-Original-StereoInertial",
+  "max_robots_adapter": 10,
+  "first_port": 48600,
+  "pose_axes": "body",
+  "metric": true,
+  "frame_ack": "none",
+  "ready_inputs": [
+    "left",
+    "right"
+  ],
+  "connectivity": {
+    "topic": "/bstem%d/connected_peer_ids",
+    "period_s": 1.0,
+    "timeout_s": 5.0
+  },
+  "dependency_substitutions": [
+    {
+      "name": "opengv_catkin",
+      "upstream": "nathanhhughes/opengv_catkin @ fix/march_native_optional (repository removed, HTTP 404)",
+      "used": "MIT-SPARK/opengv_catkin @ b2cf789eb1dff2cc57ac65c8919cb8030807f4c5",
+      "reason": "same OPENGV_BUILD_WITH_MARCH_NATIVE option (upstream build sets it OFF); maintained by the Kimera-Multi lab"
+    }
+  ],
+  "unsupported_telemetry": [
+    "loop candidate decisions",
+    "per-frame processing latency (keyframe outputs only)",
+    "peer-pose estimates"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "map_resolution_m": 0.05,
+  "map_size_m": 140.0,
+  "optimizer_trigger_seconds": 30.0,
+  "native_step_hz": 10,
+  "rpc_timeout_sim_seconds": 10.0,
+  "speed_m_s": 0.12,
+  "turn_rad_s": 0.6,
+  "frame_wait_wall_seconds": 30.0,
+  "known_docks": false,
+  "frame": "door_map",
+  "motion_policy": "stereo clearance with periodic scans; own explorer, not replay"
+}

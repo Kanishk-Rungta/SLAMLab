@@ -1,0 +1,15 @@
+{
+  "repository": "https://github.com/ipab-slmc/pybind11_catkin",
+  "commit": "d21b4ffbc6bfc5d1d8ee264fc959b7c3f0a1221b",
+  "archive_sha256": "6460f377a451bd3d69049b70a194510f97f4ae5bc65f0e6c3f18577c5d204eb9",
+  "files": {
+    ".github/workflows/industrial_ci_action.yml": "e98fd84371227441c7cfe8167c2c304155bbdb34d47370ef7317fef809744781",
+    "CHANGELOG.rst": "c771abccd1de37e49c361bcba8266051149260543588a9a5ad4b6fb077d1420e",
+    "CMakeLists.txt": "96adf94608e12a4ba1a5d2f0f3bb10dfed531c578cb39b22d4c49111cd452ac9",
+    "LICENSE": "143077f9f6a8de5a99f78c2c2472801fb53cf240277ef661642f079b9acdfff8",
+    "README.md": "aefd2c9a15e895d092b82e64083b8e9fc83dc85f6a87239bbd5e1ebb6368f2f4",
+    "cmake/pybind11_catkin.cmake.in": "12708163fa8520efd7a63b8c48d49cb34c5eab1c436e3e853aad763531f39c96",
+    "include/pybind11_catkin/dummy.hpp": "66ab90a1dafcc93c272bbccbe0a6415dd0b07dd6dcb52cd66bf1c0f1d785f104",
+    "package.xml": "9a9f8f5d6c110ac5a4851d9bd8d64c179727cb220f928b4d9532204eb9324f91"
+  }
+}

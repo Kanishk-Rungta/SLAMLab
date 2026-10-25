@@ -1,0 +1,30 @@
+{
+  "algorithm": "D2SLAM-Original-StereoIMU",
+  "frame": "d2_map",
+  "known_docks": false,
+  "lcm_url": "udpm://239.255.76.67:7667?ttl=0",
+  "first_port": 47200,
+  "native_ready_wall_seconds": 900.0,
+  "frame_wait_wall_seconds": 300.0,
+  "radio_timeout_sim_seconds": 10.0,
+  "settle_seconds": 10.0,
+  "map_resolution_m": 0.05,
+  "map_size_m": 140.0,
+  "speed_m_s": 0.12,
+  "turn_rad_s": 0.6,
+  "reference_stereo": {
+    "_comment": "Upstream config/realsense_d435/d435_multi.yaml: depth limits for its 50 mm baseline. They are scaled to the standard baseline by tools/calibration.py.",
+    "baseline_m": 0.05,
+    "depth_far_thres": 3.0,
+    "depth_estimate_baseline": 0.03
+  },
+  "imu_noise": {
+    "_comment": "Upstream d435_multi.yaml defaults, not tuned to the simulation. The standard 3-axis gyro has a 1% scale error per axis (D2VINS does not model it) and no accelerometer error model.",
+    "acc_n": 0.1,
+    "gyr_n": 0.05,
+    "acc_w": 0.002,
+    "gyr_w": 0.0004
+  },
+  "g_norm": 9.81,
+  "motion_policy": "stereo clearance with periodic scans; own explorer, not replay (same driver as Door Slam)"
+}
