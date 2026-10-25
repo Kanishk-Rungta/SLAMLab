@@ -8,7 +8,7 @@ or dependencies are not evidence that this system was separately benchmarked.
 
 Feature-based monocular, stereo and RGB-D SLAM with parallel tracking, local mapping and loop correction. ORB descriptors support matching and bag-of-words place recognition; bundle adjustment refines camera poses and landmarks.
 
-Ra?l Mur-Artal and Juan D. Tard?s; IEEE Transactions on Robotics 2017, DOI 10.1109/TRO.2017.2705103. [Official upstream](https://github.com/raulmur/ORB_SLAM2).
+Raúl Mur-Artal and Juan D. Tardós; IEEE Transactions on Robotics 2017, DOI 10.1109/TRO.2017.2705103. [Official upstream](https://github.com/raulmur/ORB_SLAM2).
 
 ## Requirements, installation and execution
 

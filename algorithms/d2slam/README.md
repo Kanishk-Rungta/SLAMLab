@@ -1,4 +1,4 @@
-# D?SLAM
+# D²SLAM
 
 **Status: implemented adapter, native execution not verified in SLAMLab.**
 The source project records preparation-level checks; no native benchmark result
@@ -9,7 +9,7 @@ for this adapter is imported or inferred. This is an integration of the
 
 Collaborative visual-inertial estimation (D2VINS), visual loop detection and distributed graph optimization (D2PGO); learned descriptors aid place recognition.
 
-Hao Xu, Peize Liu, Xinyi Chen and Shaojie Shen; D?SLAM, IEEE Transactions on Robotics 40, 3445?3464 (2024), DOI 10.1109/TRO.2024.3422003. [Primary paper](https://arxiv.org/abs/2211.01538). See upstream for the complete publication and implementation details.
+Hao Xu, Peize Liu, Xinyi Chen and Shaojie Shen; D²SLAM, IEEE Transactions on Robotics 40, 3445–3464 (2024), DOI 10.1109/TRO.2024.3422003. [Primary paper](https://arxiv.org/abs/2211.01538). See upstream for the complete publication and implementation details.
 A frontend processes sensor observations; the backend corrects a graph of poses.
 Inter-robot loops are constraints between observations from different robots.
 
@@ -41,7 +41,7 @@ python -B tools/slam.py run d2slam --robots 2 --seconds 120 --gui
 Source restoration uses a filtered sparse Git fetch to omit unlocked model blobs.
 An exact previously verified cache can be used offline with
 `--local-archive PATH_TO_ORIGINAL_ZIP`. The optional `--transport archive` path
-has a 64 MiB cap; a D?SLAM full-archive trial exceeded it and wrote no output.
+has a 64 MiB cap; a D²SLAM full-archive trial exceeded it and wrote no output.
 Source restoration is an explicit network operation; inspect notices before
 redistributing fetched files. Models may require additional downloads during
 preparation/build. No model or native snapshot is tracked in Git. The common

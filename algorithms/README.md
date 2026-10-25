@@ -4,7 +4,7 @@
 | --- | --- | --- |
 | [DOOR-SLAM](door-slam/README.md) | Imported stereo/radio adapter, Melodic | Pending |
 | [Kimera-Multi](kimera-multi/README.md) | Imported stereo/IMU/radio adapter, Noetic | Pending |
-| [D?SLAM](d2slam/README.md) | Imported stereo/IMU/LCM adapter, Noetic | Pending |
+| [D²SLAM](d2slam/README.md) | Imported stereo/IMU/LCM adapter, Noetic | Pending |
 | [Swarm-SLAM](swarm-slam/README.md) | Imported stereo/graph/radio adapter, Humble | Pending |
 | [ORB-SLAM2](orb-slam2/README.md) | Standalone reference; no source port found | Not integrated |
 | [RTAB-Map](rtabmap/README.md) | Dependency/bridge; standalone reference | Not integrated |

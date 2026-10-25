@@ -20,7 +20,7 @@
 - Imported the AB3 simulation standard and benchmark evaluator with per-file provenance.
 - Added a bounded wheel-odometry example with separate ground-truth recording.
 - Integrated four native adapter packages, external source locks and consistent readiness/launch commands.
-- Verified offline DOOR-SLAM and D?SLAM source preparation without native execution.
+- Verified offline DOOR-SLAM and D²SLAM source preparation without native execution.
 - Added strict planar trajectory conversion, association, alignment, ATE/RPE, comparison tables and export plots.
 - Added labeled analytic fixtures and exercised actual bounded simulator trajectories.
 - Added fundamentals, practical tutorials, output interpretation, research references and future website content guidance.

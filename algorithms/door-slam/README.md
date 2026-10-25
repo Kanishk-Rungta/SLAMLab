@@ -41,7 +41,7 @@ python -B tools/slam.py run door-slam --robots 2 --seconds 120 --gui
 Source restoration uses a filtered sparse Git fetch to omit unlocked model blobs.
 An exact previously verified cache can be used offline with
 `--local-archive PATH_TO_ORIGINAL_ZIP`. The optional `--transport archive` path
-has a 64 MiB cap; a D?SLAM full-archive trial exceeded it and wrote no output.
+has a 64 MiB cap; a D²SLAM full-archive trial exceeded it and wrote no output.
 Source restoration is an explicit network operation; inspect notices before
 redistributing fetched files. Models may require additional downloads during
 preparation/build. No model or native snapshot is tracked in Git. The common
