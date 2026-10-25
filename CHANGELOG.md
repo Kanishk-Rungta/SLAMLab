@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Added the responsive learning website, five interactive models, searchable algorithm profiles, and twelve guided lessons.
+- Added Studio playback, local trajectory/map imports, measured benchmark pages and refresh-safe static routes.
+- Added original branding, a new public introduction, developer guidance and website CI.
+- Published compact, reproducible one- and two-robot Webots recordings with Python-computed metrics.
 - Added a complete Webots landmark EKF-SLAM pipeline, recorded-input replay, joint covariance tests and static result exports.
 - Extended the CLI with algorithm discovery, configuration-based experiments, evaluation and visualization exports.
 
