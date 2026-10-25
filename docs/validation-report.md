@@ -44,3 +44,15 @@ Python 3.10/3.12. It runs no simulator GUI, native ROS build, model download or
 specialized accelerator workload. Host package pins cover direct dependencies,
 not a complete transitive lock. External URLs are reviewed primary references;
 CI validates internal links without making network requests.
+
+## Remote CI evidence
+
+[GitHub Actions run 40183475057](https://github.com/Kanishk-Rungta/SLAMLab/actions/runs/40183475057)
+completed successfully for implementation commit
+`6e381b2760e725195247436a8eeb5a71d1c7cb28`: both Ubuntu Python 3.10 and 3.12 jobs
+passed using the pinned requirements, including the synthetic CLI smoke.
+The local Windows interpreter used NumPy 2.4.3, SciPy 1.15.2, Matplotlib 3.10.0,
+psutil 7.0.0 and PyYAML 6.0.2; its existing OpenCV distributions were 4.11.0.86
+and headless 4.13.0.92. No host package installation was performed. Remote CI
+therefore separately establishes the pinned direct-package configuration on
+Ubuntu; the current Windows environment is not misrepresented as that lock.

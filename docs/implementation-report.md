@@ -120,8 +120,11 @@ Legacy tests emit existing ResourceWarning messages for open-file patterns;
 assertions pass. The full D? upstream ZIP hit the 64 MiB cap and wrote no source
 archive. The default sparse Git path subsequently succeeded and reproduced the
 locked source archive. Native execution fails explicitly before work when
-Docker is absent. GitHub matrix status is reported with the final delivery;
-local checks do not invent a remote passing state.
+Docker is absent. [GitHub matrix run 40183475057](https://github.com/Kanishk-Rungta/SLAMLab/actions/runs/40183475057)
+passed on Ubuntu Python 3.10 and 3.12 for implementation commit `6e381b2`,
+including pinned-package installation and the synthetic CLI smoke. The final
+documentation evidence update triggers a separate check; its status is reported
+with delivery. Local checks do not invent a remote passing state.
 
 ## 11. Git workflow
 
@@ -132,7 +135,7 @@ local checks do not invent a remote passing state.
 | `feat/slam-integrations` | `1b477bf` | [PR 2](https://github.com/Kanishk-Rungta/SLAMLab/pull/2), merged |
 | `feat/benchmark-toolkit` | `e334857` | [PR 3](https://github.com/Kanishk-Rungta/SLAMLab/pull/3), merged |
 | `docs/slam-learning-resources` | `79b4c17` | [PR 4](https://github.com/Kanishk-Rungta/SLAMLab/pull/4), merged |
-| `ci/automated-validation` | Inspect branch log | Final validation pull request, status reported on delivery |
+| `ci/automated-validation` | `6e381b2` plus final documentation evidence commit | [PR 5](https://github.com/Kanishk-Rungta/SLAMLab/pull/5); final merge state reported on delivery |
 
 All author/committer identity and timestamps use genuine configured Git values.
 No history rewrite, force push, branch deletion or protection bypass occurred.
@@ -187,3 +190,7 @@ See [website plan](../website/README.md).
 1,858 source files have identical SHA-256 hashes, and zero files were added,
 removed or modified. No symlinks/junctions or source build artifacts appeared.
 The initial SLAMLab worktree was empty, so no pre-existing user changes were lost.
+
+The populated `main` branch is explicitly configured as the GitHub default.
+GitHub initially selected the first foundation branch on the empty repository;
+that setup detail was corrected without deleting or rewriting any branch.
