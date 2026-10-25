@@ -188,9 +188,13 @@ export function Home() {
         <div className="eyebrow">THE PROJECT BEHIND THE PLATFORM</div>
         <h2>What is our project about?</h2>
         <p>
-          Team 98 is investigating how indoor robots can map a building, share information and
-          eventually coordinate its cleaning. SLAMLab grew from this research and helps visitors
-          learn the mapping ideas through interactive experiments.
+          <strong>
+            Edge-Based Multi-Robot System for Collaborative SLAM and Autonomous Task Coordination
+          </strong>{' '}
+          is Team 98&apos;s research project. We investigate how indoor robots can build a shared
+          map, estimate their positions and coordinate exploration tasks, with processing on or near
+          each robot. SLAMLab helps visitors learn the mapping ideas through interactive
+          experiments.
         </p>
         <p>
           <strong>Project guide:</strong> Dr. Vidhya Balasubramanian.
@@ -199,7 +203,7 @@ export function Home() {
         <p>
           The current foundation is experimental two-robot mapping and exploration in Webots, a
           robot simulator. Mapping quality and reliability still need improvement. Physical mapping
-          deployment and complete cooperative cleaning remain future stages.
+          deployment and integrated autonomous task coordination remain future stages.
         </p>
         <Link to="project/" className="text-link">
           Explore the project & team <Icon name="arrow" size={16} />
@@ -693,17 +697,18 @@ export function About() {
       <section className="panel prose about-copy">
         <h2>What is our project about?</h2>
         <p>
-          Team 98 is working toward robots that can understand indoor spaces, share mapping
-          information and eventually coordinate cleaning. The current research focuses on mapping
-          and exploration in a robot simulator. SLAMLab makes related ideas accessible through
-          lessons, browser experiments and inspectable simulation recordings.
+          Team 98 is working toward an edge-based multi-robot system that can build shared indoor
+          maps, estimate robot positions and coordinate autonomous exploration tasks. Edge-based
+          means processing on or near the robots and sharing useful information between them. The
+          current research focuses on mapping and exploration in a robot simulator. SLAMLab makes
+          related ideas accessible through lessons, browser experiments and inspectable simulation
+          recordings.
         </p>
         <p>
           SLAMLab connects interactive explanations with inspectable implementations and measured
           experiments. It grew from{' '}
           <em>
-            Autonomous Swarm Robotic System for Intelligent Mapping and Cleaning of Large
-            Environments
+            Edge-Based Multi-Robot System for Collaborative SLAM and Autonomous Task Coordination
           </em>
           , consolidating reusable educational, simulation, SLAM integration, and evaluation
           resources from that project. It continues as a place to learn, reproduce, and extend
@@ -747,12 +752,13 @@ export function About() {
         <p>
           Experimental two-robot mapping and exploration in Webots is the research foundation.
           Localization accuracy, map quality and extended reliability need improvement. Physical
-          mapping deployment and complete cooperative cleaning remain pending.
+          mapping deployment, measured edge resource requirements and integrated autonomous task
+          coordination remain pending.
         </p>
         <p>
           The SLAMLab platform already offers twelve lessons, five teaching experiments and recorded
           Landmark Lab examples. The two-robot Landmark Lab recording uses independent estimators;
-          it does not establish a cooperative cleaning capability.{' '}
+          it does not establish collaborative mapping or autonomous task coordination.{' '}
           <Link to="project/">Read the project progress and next stages</Link>.
         </p>
         <h3>Next development steps</h3>

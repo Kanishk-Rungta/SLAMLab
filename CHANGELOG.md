@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Updated the research title to "Edge-Based Multi-Robot System for Collaborative
+  SLAM and Autonomous Task Coordination" and refocused project descriptions,
+  objectives and progress on mapping, edge processing and task coordination.
 - Added beginner explanations, guided exercises, control help, glossaries and
   optional equation walkthroughs to all five playground experiments.
 - Clarified the research purpose and progress on Home, About and Project, with

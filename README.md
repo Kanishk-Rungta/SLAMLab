@@ -126,12 +126,14 @@ the [development guide](docs/development.md), and [open issues](https://github.c
 
 ## Project background and citation
 
-SLAMLab grew from **Autonomous Swarm Robotic System for Intelligent Mapping and
-Cleaning of Large Environments**, consolidating reusable educational, simulation,
-SLAM integration and evaluation resources. The
+SLAMLab grew from **Edge-Based Multi-Robot System for Collaborative SLAM and
+Autonomous Task Coordination**, Team 98's research into shared indoor mapping,
+local robot processing and coordinated exploration. It consolidates reusable
+educational, simulation, SLAM integration and evaluation resources. The
 [original project](https://github.com/Kanishk-Rungta/Final-Year-Project) preserves
 that research history. SLAMLab focuses on software, simulation and reproducible
-multi-robot mapping experiments.
+multi-robot mapping experiments. See the [project overview](docs/project/README.md)
+for the problem statement, objectives, team and evidence-based progress.
 
 Project-authored code is [MIT licensed](LICENSE). Imported components retain
 their original licenses; see [third-party notices](THIRD_PARTY_NOTICES.md).

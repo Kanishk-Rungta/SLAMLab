@@ -199,6 +199,6 @@ export const playgroundGuides: Record<ModuleId, Guide> = {
       ],
     ],
     scope:
-      'This is a map-alignment lesson with known pairs, not a full cooperative exploration or cleaning system. Communication timing and bandwidth are not simulated.',
+      'This is a map-alignment lesson with known pairs, not a full collaborative SLAM or autonomous task-coordination system. Communication timing and bandwidth are not simulated.',
   },
 };

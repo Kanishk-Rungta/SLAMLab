@@ -1,40 +1,46 @@
 # Project overview
 
-**Autonomous Swarm Robotic System for Intelligent Mapping and Cleaning of Large Indoor Environments** is Team 98's final-year research project. SLAMLab grew from this work and provides a public platform for learning, simulation, visualization and reproducible SLAM experiments.
+**Edge-Based Multi-Robot System for Collaborative SLAM and Autonomous Task Coordination** is Team 98's final-year research project. SLAMLab grew from this work and provides a public platform for learning, simulation, visualization and reproducible SLAM experiments.
 
 ## What is our project about?
 
-We are investigating how a team of indoor robots can understand a building and eventually coordinate its cleaning. Before a robot can clean a room usefully, it needs to estimate where it is, identify obstacles and keep a map of the space it has observed. Several robots also need to share useful information about that space.
+We are investigating how a team of indoor robots can build a shared map, estimate their positions and coordinate autonomous tasks such as exploring different areas. Each robot needs to understand its surroundings, identify obstacles and contribute useful observations to a shared understanding of the environment.
 
-Our current work focuses on that mapping and exploration foundation in **Webots, a robot simulator**. SLAM stands for **simultaneous localization and mapping**: estimating where a robot is while building a map. Reliable cooperative cleaning and physical robot deployment are later stages.
+Our current work focuses on that mapping and exploration foundation in **Webots, a robot simulator**. SLAM stands for **simultaneous localization and mapping**: estimating where a robot is while building a map. Reliable collaborative mapping, integrated autonomous task coordination and physical robot deployment require further development and evaluation.
 
-SLAMLab is the learning and experimentation platform that grew from this research. Its playground explains individual ideas, and its separate Landmark Lab example lets visitors inspect recorded simulation data. Progress on these teaching tools is distinct from progress on the complete cleaning system.
+**Edge-based** describes the intended processing approach: handle observations on or near each robot and exchange useful information between robots. Physical deployment must establish the actual computing, memory and communication requirements; the title does not imply those measurements are complete.
+
+SLAMLab is the learning and experimentation platform that grew from this research. Its playground explains individual ideas, and its separate Landmark Lab example lets visitors inspect recorded simulation data. Progress on these teaching tools is distinct from progress on the integrated multi-robot system.
 
 ## Project statement
 
-Investigate how robots can build an understanding of indoor spaces, share useful mapping information and work toward coordinated cleaning. Develop and evaluate the mapping foundation in simulation before progressing to physical robot integration.
+Develop and evaluate an edge-based multi-robot approach to collaborative SLAM and autonomous task coordination. Investigate local perception, shared mapping and coordinated exploration in simulation before progressing to measured physical robot integration.
 
 ## Problem statement
 
-Large indoor facilities contain multiple rooms, different surfaces and changing levels of human activity. A robot needs to understand its surroundings and estimate its position before it can perform useful cleaning work. Multiple robots also need to coordinate their efforts and contribute to a shared understanding of the environment.
+Mapping a large indoor environment requires robots to estimate their positions while observing unfamiliar rooms, obstacles and changing surroundings. Errors in motion estimates can accumulate, and separate robots may describe the same space using different coordinate systems. Combining those observations into a consistent shared map is a central challenge.
+
+A multi-robot system must also decide which areas each robot should explore, avoid unnecessary duplication and exchange information within practical computing and communication limits. The project investigates how processing on or near the robots can support collaborative SLAM and autonomous task coordination under these constraints.
 
 ## Project objectives
 
-- Investigate indoor mapping and exploration without LiDAR.
-- Develop a foundation for robots to contribute information about a shared space.
-- Work toward coordinated cleaning that responds to changing indoor needs.
+- Investigate indoor localization, mapping and exploration without LiDAR.
+- Develop and evaluate a foundation for combining robots' observations into a consistent shared map.
+- Investigate edge-based processing and measure computing, memory and communication requirements.
+- Work toward autonomous task coordination for exploration and mapping, including reducing duplicated effort.
 - Progress from simulation to measured physical-robot evaluation.
 - Make reusable SLAM concepts, experiments and evaluation tools accessible through SLAMLab.
 
 ## Methodology
 
-The project follows a simulation-first research approach:
+The project follows a simulation-first research approach. The methodology connects current mapping work with planned validation of collaboration, edge deployment and task coordination:
 
-1. **Observe:** use visual and motion observations to understand the surroundings, accounting for uncertainty and limited visibility.
+1. **Observe locally:** use visual and motion observations to understand each robot's surroundings, accounting for uncertainty and limited visibility.
 2. **Localize and map:** estimate robot motion and represent observed space; assess localization and map quality separately.
-3. **Explore and collaborate:** investigate navigation, obstacle handling and sharing information between robots.
-4. **Evaluate:** compare recorded estimates with independent reference data under declared conditions. Keep observations, interpretations and limitations explicit.
-5. **Progress toward hardware:** identify and calibrate physical interfaces, evaluate one robot, then investigate cooperation and integrated cleaning.
+3. **Explore and collaborate:** investigate navigation, obstacle handling, sharing information and bringing local maps into consistent coordinates.
+4. **Coordinate tasks:** develop and evaluate how robots can divide exploration work using the available map and shared information. Integrated autonomous task coordination remains a development stage.
+5. **Evaluate:** compare recorded estimates with independent reference data under declared conditions. Assess map quality, localization, navigation and resource use while keeping observations, interpretations and limitations explicit.
+6. **Progress toward edge hardware:** identify and calibrate physical interfaces, measure local processing and communication requirements, evaluate one robot, then investigate a cooperative physical system.
 
 SLAMLab supports this learning and evaluation workflow through browser experiments, a separate landmark EKF-SLAM example in Webots, recorded replays and trajectory evaluation tools. Its two-robot Landmark Lab example uses independent estimators and does not demonstrate collaborative SLAM.
 
@@ -58,7 +64,7 @@ The team shares development, integration and evaluation. Kanishk Rungta is the S
 
 ## Project progress
 
-**Current stage: experimental mapping and exploration in simulation.** The foundation uses two robots in Webots. The project has not yet established a complete cooperative cleaning system or measured physical mapping performance.
+**Current stage: experimental mapping and exploration in simulation.** The foundation uses two robots in Webots. Reliable collaborative mapping, integrated autonomous task coordination and measured physical mapping performance remain to be established.
 
 The status below separates the original research, the SLAMLab teaching platform and future goals. “Experimental” means work exists but still needs reliability and validation; “pending” means the stated integration or measurement remains to be completed.
 
@@ -69,15 +75,16 @@ The status below separates the original research, the SLAMLab teaching platform 
 | Landmark Lab | Published one-robot and two-independent-robot Webots recordings, with trajectory metrics and replay bundles. These are separate from the original cooperative research system. |
 | Native research integrations | Integration guides and selected adapters are available. Native build and execution validation in SLAMLab remain pending. No research-system ranking is established. |
 | Physical robot deployment | bStem is the hardware target. Connectivity work has been reported; physical mapping integration, calibration and measured performance remain pending. |
-| Cooperative cleaning | A future integration and evaluation stage. Complete cleaning missions are not an established capability of the active mapping foundation. |
+| Edge deployment | Local processing is part of the intended architecture. Physical computing, memory and communication requirements still need measurement. |
+| Autonomous task coordination | A future integration and evaluation stage. Reliable autonomous allocation of exploration and mapping tasks is not an established capability of the active foundation. |
 
 ### What comes next?
 
 1. Improve mapping quality and the reliability of position estimates.
 2. Evaluate navigation, obstacle handling and recovery in a wider range of situations.
 3. Validate the native research integrations under comparable conditions.
-4. Integrate and calibrate the physical robot, then measure its performance.
-5. Develop and evaluate cooperative task execution and cleaning.
+4. Integrate and calibrate the physical robot, then measure mapping performance, local computing and communication requirements.
+5. Develop and evaluate autonomous task coordination for cooperative exploration and mapping.
 
 These are development stages, not completed milestones or a promised completion date. No overall completion percentage or ranking against other SLAM systems is established.
 
