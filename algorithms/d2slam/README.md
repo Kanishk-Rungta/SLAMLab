@@ -9,7 +9,7 @@ for this adapter is imported or inferred. This is an integration of the
 
 Collaborative visual-inertial estimation (D2VINS), visual loop detection and distributed graph optimization (D2PGO); learned descriptors aid place recognition.
 
-Hao Xu and collaborators; D?SLAM, IEEE Transactions on Robotics 40, 3445?3464 (2024), DOI 10.1109/TRO.2024.3422003. Full author list is available from the upstream paper. See upstream for the complete publication and implementation details.
+Hao Xu, Peize Liu, Xinyi Chen and Shaojie Shen; D?SLAM, IEEE Transactions on Robotics 40, 3445?3464 (2024), DOI 10.1109/TRO.2024.3422003. [Primary paper](https://arxiv.org/abs/2211.01538). See upstream for the complete publication and implementation details.
 A frontend processes sensor observations; the backend corrects a graph of poses.
 Inter-robot loops are constraints between observations from different robots.
 
