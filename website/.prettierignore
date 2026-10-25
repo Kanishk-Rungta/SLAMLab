@@ -1,0 +1,6 @@
+src/generated/
+public/generated/
+dist/
+test-results/
+playwright-report/
+.cache/

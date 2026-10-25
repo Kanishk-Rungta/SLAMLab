@@ -41,10 +41,13 @@ def export_experiment(root, destination):
         frames = [json.loads(line) for line in history.read_text().splitlines()] if history.exists() else []
         # Preserve real timestamps and final state; decimate only display checkpoints.
         step = max(1, (len(frames) + 79) // 80)
+        checkpoints = frames[::step]
+        if frames and checkpoints[-1] != frames[-1]:
+            checkpoints.append(frames[-1])
         result['robots'].append({'id': robot['id'], 'estimate': poses(safe_file(root, robot['estimate'])),
             'reference': poses(safe_file(root, robot['reference'])),
             'odometry': poses(safe_file(root, robot['id'] + '/odometry.csv')),
-            'landmarks': state['landmarks'], 'frames': frames[::step],
+            'landmarks': state['landmarks'], 'frames': checkpoints,
             'metrics': json.loads(safe_file(root, robot['metrics']).read_text())})
     truth = root / 'reference_landmarks.json'
     result['reference_landmarks'] = json.loads(truth.read_text()) if truth.exists() else []

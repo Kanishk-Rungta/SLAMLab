@@ -42,6 +42,12 @@ scratch/
 *.tmp
 # JS/editor/OS
 node_modules/
+.cache/
+website/src/generated/
+website/public/generated/
+playwright-report/
+test-results/
+*.tsbuildinfo
 dist/
 .vscode/
 .idea/

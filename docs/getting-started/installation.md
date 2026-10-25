@@ -1,6 +1,6 @@
 # Installation
 
-Use Python 3.10?3.12. From the repository root, create an isolated environment:
+Use Python 3.10–3.12. From the repository root, create an isolated environment:
 
 ```sh
 python -m venv .venv
@@ -23,3 +23,29 @@ No native SLAM dependency is required for wheel odometry.
 
 Run all offline checks with `python -B tools/validation/run_checks.py`. CI uses
 Python 3.10 and 3.12 on Ubuntu; Webots/native builds remain separate local checks.
+
+## Complete landmark SLAM
+
+With Webots R2025a installed, run the NumPy estimator without a ROS stack:
+
+```sh
+python -B tools/slam.py list
+python -B tools/slam.py run ekf-slam --robots 1 --seconds 30 --output outputs/my-slam
+```
+
+See [your first experiment](../learning/first-slam.md) for the complete workflow.
+
+## Interactive website
+
+Use Node.js 24 LTS and the committed npm lockfile:
+
+```sh
+cd website
+npm ci
+npm run dev
+```
+
+Open the printed `/SLAMLab/` URL. Build with `npm run build`, then
+`npm run preview`. Windows PowerShell users can use `npm.cmd` if script execution
+policy blocks the npm PowerShell shim. Browser experiments require no Python,
+Webots, server API, or uploaded data service.
