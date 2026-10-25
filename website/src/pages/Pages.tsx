@@ -799,8 +799,8 @@ export function About() {
         </p>
         <p>
           The team comprises Konduru Hemesh, Manu Santosh, Rithvik Mukka, Kanishk Rungta and
-          Praneeth Gorugantu. <a href="https://github.com/Kanishk-Rungta">Kanishk Rungta</a>{' '}
-          maintains SLAMLab and is credited in its software citation.
+          Praneeth Gorugantu. SLAMLab is developed and maintained collaboratively by the entire
+          project team.
         </p>
         <p>
           The original{' '}

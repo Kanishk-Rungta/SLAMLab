@@ -229,8 +229,9 @@ const catalog = JSON.parse(await fs.readFile(path.join(root, 'algorithms/catalog
 const citationSource = await fs.readFile(path.join(root, 'CITATION.cff'), 'utf8');
 const version = /^version:\s*(.+)$/m.exec(citationSource)[1];
 const release = /^date-released:\s*(.+)$/m.exec(citationSource)[1];
-const author = /family-names:\s*(.+)\s+given-names:\s*(.+)/.exec(citationSource);
-const citation = `${author[2].trim()} ${author[1].trim()}. SLAMLab (version ${version}), ${release.slice(0, 4)}. Software. https://github.com/Kanishk-Rungta/SLAMLab`;
+const authorName = /^\s*- name:\s*(.+)$/m.exec(citationSource)?.[1].trim();
+if (!authorName) throw new Error('The software citation must declare its credited team.');
+const citation = `${authorName}. SLAMLab (version ${version}), ${release.slice(0, 4)}. Software. https://github.com/Kanishk-Rungta/SLAMLab`;
 const manifests = Object.fromEntries(
   await Promise.all(
     ['landmark-reference', 'landmark-two-robots'].map(async (name) => [

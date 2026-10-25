@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Credited the project team with platform maintenance and software authorship consistently
+  across About, Project and the downloadable software citation.
 - Fixed stale recording results after failed experiment changes, added retry states,
   and separated occupancy previews from unrelated recorded coordinate frames.
 - Fixed Simulation Lab mobile overflow and keyboard/link accessibility across

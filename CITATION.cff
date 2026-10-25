@@ -5,8 +5,7 @@ type: software
 version: 0.2.0
 date-released: 2026-10-25
 authors:
-  - family-names: Rungta
-    given-names: Kanishk
+  - name: SLAMLab project team
 repository-code: "https://github.com/Kanishk-Rungta/SLAMLab"
 url: "https://kanishk-rungta.github.io/SLAMLab/"
 license: MIT

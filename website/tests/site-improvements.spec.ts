@@ -173,7 +173,7 @@ test('research resources retain attribution and match the selected recording', a
   await page.getByText('Position ATE · RMSE', { exact: true }).waitFor();
   await resources.getByRole('button', { name: 'Copy software citation' }).click();
   expect(await page.evaluate(() => navigator.clipboard.readText())).toContain(
-    'Kanishk Rungta. SLAMLab',
+    'SLAMLab project team. SLAMLab',
   );
   await page
     .getByRole('combobox', { name: 'Experiment', exact: true })
@@ -186,8 +186,17 @@ test('research resources retain attribution and match the selected recording', a
   const manifest = await page.request.get('generated/landmark-two-robots-manifest.json');
   expect((await manifest.json()).configuration.robots).toBe(2);
   const citation = await page.request.get('generated/CITATION.cff');
-  expect(await citation.text()).toContain('family-names: Rungta');
+  expect(await citation.text()).toContain('name: SLAMLab project team');
   const figure = await page.request.get('generated/landmark-slam.png');
   expect(figure.ok()).toBe(true);
   expect((await figure.body()).length).toBeGreaterThan(1000);
+  await page.goto('about/');
+  await expect(
+    page.getByText(
+      'SLAMLab is developed and maintained collaboratively by the entire project team.',
+      {
+        exact: false,
+      },
+    ),
+  ).toBeVisible();
 });

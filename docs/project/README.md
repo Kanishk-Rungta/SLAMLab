@@ -60,7 +60,7 @@ SLAMLab supports this learning and evaluation workflow through browser experimen
 | Kanishk Rungta | CB.SC.U4CSE23761 |
 | Praneeth Gorugantu | CB.SC.U4CSE23769 |
 
-The team shares development, integration and evaluation. Kanishk Rungta is the SLAMLab platform maintainer. Original research authors retain attribution in the algorithm profiles and references.
+SLAMLab is developed and maintained collaboratively by the entire project team, with shared contributions to integration and evaluation. The software citation credits the project team collectively. Original research authors retain attribution in the algorithm profiles and references.
 
 ## Project progress
 
