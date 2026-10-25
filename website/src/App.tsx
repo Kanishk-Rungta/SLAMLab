@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useState } from 'react';
+import { Fragment, lazy, Suspense, useEffect, useState } from 'react';
 import content from './generated/content.json';
 import { lessonOrder } from './lab/learning';
 import { BASE, Icon, Link, Navigation, REPO } from './components/ui';
@@ -123,19 +123,30 @@ export default function App() {
       <aside className={'sidebar ' + (menu ? 'open' : '')}>
         <p className="nav-caption">EXPLORE THE LAB</p>
         <nav aria-label="Main navigation">
-          {nav.map(([to, title, icon]) => (
-            <Link
-              key={to}
-              to={to}
-              className={
-                'nav-item ' +
-                ((to ? navPath.startsWith(to.replace(/\/$/, '')) : !navPath) ? 'active' : '')
-              }
-            >
-              <Icon name={icon} size={19} />
-              {title}
-              {title === 'Playground' && <span className="nav-pill">5</span>}
-            </Link>
+          {nav.map(([to, title, icon], index) => (
+            <Fragment key={to}>
+              {[0, 3, 7].includes(index) && (
+                <p className="nav-group-label">
+                  {index === 0
+                    ? 'UNDERSTAND & TRY'
+                    : index === 3
+                      ? 'RUN & INSPECT'
+                      : 'PROJECT & GUIDES'}
+                </p>
+              )}
+              <Link
+                key={to}
+                to={to}
+                className={
+                  'nav-item ' +
+                  ((to ? navPath.startsWith(to.replace(/\/$/, '')) : !navPath) ? 'active' : '')
+                }
+              >
+                <Icon name={icon} size={19} />
+                {title}
+                {title === 'Playground' && <span className="nav-pill">5</span>}
+              </Link>
+            </Fragment>
           ))}
         </nav>
         <div className="sidebar-bottom">

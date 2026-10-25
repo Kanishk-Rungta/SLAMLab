@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from 'react';
 import { lessonConcepts, lessonOrder } from '../lab/learning';
 import { Icon, Link, Navigation, REPO } from './ui';
 import { LessonVisual } from './LessonVisual';
+import { HtmlContent } from './ContentTools';
 
 type LessonDocument = { id: string; title: string; html: string; source: string };
 
@@ -115,7 +116,7 @@ export function LearningExperience({ doc }: { doc: LessonDocument }) {
         >
           <summary>Equations & detailed notes</summary>
           <div className="prose">
-            <div dangerouslySetInnerHTML={{ __html: doc.html.slice(headingEnd) }} />
+            <HtmlContent html={doc.html.slice(headingEnd)} />
             <a className="text-link" href={REPO + '/blob/main/' + doc.source}>
               View the shared source <Icon name="external" size={13} />
             </a>

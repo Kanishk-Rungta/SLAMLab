@@ -60,6 +60,14 @@ Reports and traces stay in ignored `test-results` and `playwright-report`.
   uses the same optimizer as the playground.
 - `src/components/FeatureExperiment.tsx`: schematic scene views, selectable
   features, candidate scores and explanations driven by the descriptor matcher.
+- `src/components/ExperimentComparison.tsx`: frozen visual snapshots with settings
+  and model-derived results; all five playgrounds have guided presets.
+- `src/components/ContentTools.tsx`: copyable commands, keyboard-focusable shared
+  document code blocks, and explicit recording loading/failure/retry states.
+- `src/components/ResearchResources.tsx`: attribution from `CITATION.cff`, commands
+  from published run manifests and downloads of reviewed existing assets.
+- `src/lab/documentGroups.ts` and `algorithmStories.ts`: task-based documentation
+  categories and plain-language system flows with explicit availability labels.
 - `docs/project/README.md` (repository root): canonical project statement, objectives,
   methodology, Team 98, progress and resources, shared by Project and Documentation.
 - `scripts/content.mjs`: canonical Markdown/catalog/result publishing.
@@ -75,6 +83,9 @@ Learn diagrams are explicitly labelled teaching graphics. Lessons introduce one
 idea per step and keep equations and detailed notes in optional disclosures.
 Playgrounds provide a short first exercise, with vocabulary and assumptions on
 demand; module links retain the selected activity through refresh and history.
+Odometry and occupancy open at their final teaching frame; Play restarts them.
+Saved comparisons retain the exact settings, playback moment and visual state
+until cleared or the activity/seed changes. They remain in browser memory.
 The feature scene
 uses provided corner locations and generated descriptors; it performs no image
 feature extraction. Candidate acceptance and rejection use the same descriptor
@@ -88,6 +99,11 @@ JSON replays use schema version 1. Occupancy maps use `width`, `height`, positiv
 Rows advance along +Y. Files are limited to 5 MiB; map arrays to 65,536 cells.
 No compatible 3D map is published in these runs; the Studio uses their native
 planar representation.
+Occupancy maps are previewed separately from recordings because a shared frame
+cannot be inferred from a file upload. Published recordings open paused at their
+final map, with a replay-from-start action. Local trajectories begin at time zero.
+Changing examples clears mismatched results immediately; errors offer Retry and
+do not retain another recording under the new selection.
 
 Replay poses and map checkpoints are strictly ordered by timestamp. Supply at
 most 200 map checkpoints; downsample longer histories while retaining the final

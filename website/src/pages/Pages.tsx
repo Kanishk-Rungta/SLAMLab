@@ -16,9 +16,16 @@ import {
   useReplay,
 } from '../components/ui';
 import { odometry } from '../lab/models';
+import { plotBounds } from '../lab/plotBounds';
 import { ConceptDiagram, LessonVisual } from '../components/LessonVisual';
 import { lessonConcepts } from '../lab/learning';
 import { LearningExperience } from '../components/LearningExperience';
+import { CodeBlock, HtmlContent, LoadNotice } from '../components/ContentTools';
+import { SiteJourney } from '../components/SiteJourney';
+import { ResearchResources } from '../components/ResearchResources';
+import { MetricComparison } from '../components/MetricComparison';
+import { algorithmStories, availability } from '../lab/algorithmStories';
+import { documentGroups } from '../lab/documentGroups';
 
 function HeroPlot() {
   const motion = useMemo(() => odometry(42, 0.045, 0.045, 0.65), []),
@@ -35,7 +42,7 @@ function HeroPlot() {
       </div>
       <Plot
         label="Interactive odometry experiment showing noise accumulating along a trajectory"
-        bounds={[-4, -3, 4, 5]}
+        bounds={plotBounds(motion.flatMap((frame) => [frame.truth, frame.estimate]))}
       >
         <PathLine
           points={motion.slice(0, player.frame + 1).map((f) => f.truth)}
@@ -83,8 +90,8 @@ export function Home() {
             find its <em>place?</em>
           </h1>
           <p>
-            Explore the ideas behind simultaneous localization and mapping. Change the noise. Close
-            a loop. Build a map. Then run the experiment yourself.
+            A robot needs to find its position while building a map. That is SLAM. See the idea,
+            change a small experiment, then explore a complete recorded run.
           </p>
           <div className="button-row">
             <Link to="playground/" className="button">
@@ -120,96 +127,18 @@ export function Home() {
           <span>questions to explore</span>
         </div>
       </div>
-      <section className="section">
-        <div className="section-heading">
-          <div className="eyebrow">A LITTLE THEORY. A LOT OF DISCOVERY.</div>
-          <h2>Make the invisible visible.</h2>
-          <p>Follow a measurement from a noisy sensor to a shared understanding of space.</p>
-        </div>
-        <div className="card-grid three">
-          {[
-            [
-              'lab',
-              'Build an intuition',
-              'Turn abstract equations into experiments you can see, pause, and change.',
-              'playground/',
-              'Try an experiment',
-            ],
-            [
-              'simulation',
-              'Run a real pipeline',
-              'Launch a differential-drive robot in Webots and estimate its pose and landmark map.',
-              'simulations/',
-              'Open Simulation Lab',
-            ],
-            [
-              'studio',
-              'Read the evidence',
-              'Replay measured trajectories, inspect map checkpoints, and understand ATE and RPE.',
-              'studio/',
-              'Open the Studio',
-            ],
-          ].map(([icon, title, text, to, cta]) => (
-            <Link to={to} className="feature-card" key={title}>
-              <span className="card-icon">
-                <Icon name={icon} size={24} />
-              </span>
-              <h3>{title}</h3>
-              <p>{text}</p>
-              <span className="text-link">
-                {cta} <Icon name="arrow" size={16} />
-              </span>
-            </Link>
-          ))}
-        </div>
-      </section>
-      <section className="journey panel">
+      <SiteJourney />
+      <section className="panel home-project">
         <div>
-          <div className="eyebrow">YOUR NEXT COORDINATE</div>
-          <h2>Curiosity is the only prerequisite.</h2>
+          <p className="eyebrow">THE PROJECT BEHIND SLAMLAB</p>
+          <h2>From learning ideas to collaborative mapping.</h2>
           <p>
-            Start with motion and uncertainty. Work toward visual SLAM, pose graphs, and
-            collaborative robots at your own pace.
+            Team 98 is investigating an edge-based multi-robot system for collaborative SLAM and
+            autonomous task coordination.
           </p>
-          <Link to="learn/" className="button secondary">
-            Find your learning path <Icon name="arrow" size={16} />
-          </Link>
         </div>
-        <div className="journey-steps">
-          <span>
-            01 <b>Understand motion</b>
-          </span>
-          <span>
-            02 <b>Connect observations</b>
-          </span>
-          <span>
-            03 <b>Optimize the map</b>
-          </span>
-        </div>
-      </section>
-      <section className="section panel prose about-copy">
-        <div className="eyebrow">THE PROJECT BEHIND THE PLATFORM</div>
-        <h2>What is our project about?</h2>
-        <p>
-          <strong>
-            Edge-Based Multi-Robot System for Collaborative SLAM and Autonomous Task Coordination
-          </strong>{' '}
-          is Team 98&apos;s research project. We investigate how indoor robots can build a shared
-          map, estimate their positions and coordinate exploration tasks, with processing on or near
-          each robot. SLAMLab helps visitors learn the mapping ideas through interactive
-          experiments.
-        </p>
-        <p>
-          <strong>Project guide:</strong> Dr. Vidhya Balasubramanian.
-        </p>
-        <h3>What is the progress of the project?</h3>
-        <p>
-          The current foundation is experimental two-robot mapping and exploration in Webots, a
-          robot simulator. Mapping quality and reliability still need improvement. Physical mapping
-          deployment and integrated autonomous task coordination remain future stages.
-        </p>
-        <Link to="project/" className="text-link">
-          Explore the project & team <Icon name="arrow" size={16} />
+        <Link to="project/" className="button secondary">
+          Project, team and current progress <Icon name="arrow" size={16} />
         </Link>
       </section>
     </>
@@ -307,6 +236,30 @@ export function Algorithms({ id }: { id?: string }) {
           title={chosen.name}
           description={chosen.approach}
         />
+        <section className="panel algorithm-story">
+          <span className="chip availability">{availability(chosen.operation)}</span>
+          <h2>The idea in plain words</h2>
+          <p>{algorithmStories[chosen.id].idea}</p>
+          <div className="flow-three" aria-label="Algorithm input, process and output">
+            {[
+              algorithmStories[chosen.id].input,
+              algorithmStories[chosen.id].process,
+              algorithmStories[chosen.id].output,
+            ].map((text, index) => (
+              <div key={text}>
+                <span className="eyebrow">{['INPUT', 'PROCESS', 'OUTPUT'][index]}</span>
+                <strong>{text}</strong>
+                {index < 2 && <Icon name="arrow" size={18} />}
+              </div>
+            ))}
+          </div>
+          {chosen.operation !== 'run' && (
+            <p className="help">
+              This describes the original research system. Native build and execution have not been
+              validated in SLAMLab.
+            </p>
+          )}
+        </section>
         <div className="detail-grid">
           <section className="panel prose">
             <h2>How it works</h2>
@@ -396,11 +349,11 @@ export function Algorithms({ id }: { id?: string }) {
         {visible.map((a) => (
           <Link to={'algorithms/' + a.id + '/'} className="algorithm-card panel" key={a.id}>
             <div className="card-top">
-              <span className="chip">{a.category}</span>
+              <span className="chip">{availability(a.operation)}</span>
               <Icon name="arrow" size={18} />
             </div>
             <h2>{a.name}</h2>
-            <p>{a.approach}</p>
+            <p>{algorithmStories[a.id].idea}</p>
             <div className="tags">
               {a.sensors.map((s) => (
                 <span key={s}>{s}</span>
@@ -426,8 +379,26 @@ export function Simulations() {
       <PageHeader
         eyebrow="SIMULATION LAB"
         title="An idea becomes an experiment."
-        description="Run a complete landmark EKF-SLAM pipeline in Webots R2025a. Wheel encoders predict motion; relative range and bearing observations correct the robot and map together."
+        description="Watch how a simulated robot builds a landmark map, or run the experiment on your computer with Python and Webots."
       />
+      <div className="simulation-entry">
+        <section className="panel">
+          <p className="eyebrow">START IN YOUR BROWSER</p>
+          <h2>Explore a saved experiment</h2>
+          <p>Replay a measured robot path and its growing map. No installation needed.</p>
+          <Link to="studio/" className="button">
+            Explore a recording <Icon name="play" size={16} />
+          </Link>
+        </section>
+        <section className="panel">
+          <p className="eyebrow">RUN ON YOUR COMPUTER</p>
+          <h2>Create your own recording</h2>
+          <p>Choose the settings below, copy the commands, and run Webots locally.</p>
+          <a className="button secondary" href="#local-run">
+            Prepare a local experiment <Icon name="arrow" size={16} />
+          </a>
+        </section>
+      </div>
       <div className="detail-grid">
         <section className="panel scenario">
           <img
@@ -454,7 +425,7 @@ export function Simulations() {
             </Link>
           </div>
         </section>
-        <aside className="panel controls">
+        <aside id="local-run" className="panel controls">
           <h2>Prepare a local run command</h2>
           <p>
             This page prepares commands. Run them from the repository root on your computer with
@@ -481,14 +452,15 @@ export function Simulations() {
             Two robots estimate separate maps. Collaborative frame alignment is explored in the
             playground.
           </p>
-          <pre tabIndex={0} role="region" aria-label="Local Webots commands">
-            <code>{`python -B tools/slam.py setup ekf-slam\npython -B tools/slam.py run ekf-slam --robots ${robots} --seconds ${duration} --output outputs/my-landmark-run`}</code>
-          </pre>
+          <CodeBlock
+            label="Local Webots commands"
+            code={`python -B tools/slam.py setup ekf-slam\npython -B tools/slam.py run ekf-slam --robots ${robots} --seconds ${duration} --output outputs/my-landmark-run`}
+          />
           <p className="help">
             Use a new output directory for each run. The single-line commands work in PowerShell and
             POSIX shells.
           </p>
-          <Link to="documentation/first-experiment/" className="button">
+          <Link to="documentation/installation/" className="button">
             Follow the setup guide <Icon name="arrow" size={16} />
           </Link>
         </aside>
@@ -528,7 +500,7 @@ export function Simulations() {
 
 export function Benchmarks() {
   const [sample, setSample] = useState('landmark-reference'),
-    { data, error } = useReplay(sample),
+    { data, error, loading, retry } = useReplay(sample),
     [robot, setRobot] = useState(0);
   const r = data?.robots[robot] || data?.robots[0],
     m = r?.metrics;
@@ -566,23 +538,68 @@ export function Benchmarks() {
           </select>
         </label>
       </div>
-      {error && <p role="alert">{error}</p>}
+      <LoadNotice loading={loading} error={error} retry={retry} />
       {m && r && (
         <>
+          <MetricComparison metrics={m} />
           <div className="metric-grid">
-            <Stat label="Position ATE · RMSE" value={m.ate_m.rmse.toFixed(4)} unit="m" />
+            <Stat
+              label="Position ATE · RMSE"
+              value={m.ate_m.rmse.toFixed(4)}
+              unit="m"
+              detail="Overall position error against the reference. Lower is closer."
+            />
             <Stat
               label="Odometry baseline · ATE"
               value={m.odometry_baseline_ate_m?.rmse.toFixed(4) || '—'}
               unit="m"
+              detail="Position error using wheel movement alone."
             />
             <Stat
               label="Landmark map · RMSE"
               value={m.landmark_map?.rmse_m.toFixed(4) || '—'}
               unit="m"
+              detail="Error in the mapped landmark positions."
             />
-            <Stat label="Matched poses" value={m.association?.matched || r.estimate.length} />
+            <Stat
+              label="Matched poses"
+              value={m.association?.matched || r.estimate.length}
+              detail="Position samples paired with the reference for evaluation."
+            />
           </div>
+          <details className="panel metric-explainer">
+            <summary>Understand ATE, RPE, RMSE and coverage</summary>
+            <dl>
+              <div>
+                <dt>ATE · position error</dt>
+                <dd>
+                  How far estimated positions lie from the reference after matching times and
+                  applying the declared frame policy.
+                </dd>
+              </div>
+              <div>
+                <dt>RPE · movement error</dt>
+                <dd>
+                  How much the estimated movement differs from reference movement over the same
+                  interval, including turning.
+                </dd>
+              </div>
+              <div>
+                <dt>RMSE · error summary</dt>
+                <dd>
+                  Root mean square error combines many errors into one value, giving larger errors
+                  more weight.
+                </dd>
+              </div>
+              <div>
+                <dt>Reference coverage</dt>
+                <dd>
+                  The share of reference positions that could be paired with estimates. Check it
+                  alongside error.
+                </dd>
+              </div>
+            </dl>
+          </details>
           <section className="panel prose">
             <h2>Read the experiment</h2>
             <dl className="facts">
@@ -617,6 +634,7 @@ export function Benchmarks() {
           </section>
         </>
       )}
+      {data && <ResearchResources sample={sample} />}
       <section className="section prose">
         <h2>Understand the comparison</h2>
         <p>
@@ -650,40 +668,49 @@ export function Documentation({ id }: { id?: string }) {
     );
   if (doc && lessonConcepts[doc.id]) return <LearningExperience key={doc.id} doc={doc} />;
   if (doc) {
-    const index = content.documents.indexOf(doc),
-      next = content.documents[index + 1];
+    const group = documentGroups.find((group) => group.ids.includes(doc.id))!;
+    const nextId = group.ids[group.ids.indexOf(doc.id) + 1];
+    const next = content.documents.find((d) => d.id === nextId);
     return (
-      <div className="doc-layout">
-        <aside className="doc-nav">
-          <Link to="documentation/" className="text-link">
-            ← Documentation
-          </Link>
-          {content.documents.map((d) => (
-            <Link
-              key={d.id}
-              to={'documentation/' + d.id + '/'}
-              className={d.id === id ? 'selected' : ''}
-            >
-              {d.title}
+      <>
+        <div className="doc-layout">
+          <aside className="doc-nav">
+            <Link to="documentation/" className="text-link">
+              All documentation
             </Link>
-          ))}
-        </aside>
-        <article className="prose document">
-          <div className="doc-meta">
-            <span className="eyebrow">{doc.level}</span>
-            <a href={REPO + '/blob/main/' + doc.source}>
-              Edit on GitHub <Icon name="external" size={13} />
-            </a>
-          </div>
-          <div dangerouslySetInnerHTML={{ __html: doc.html }} />
-          {next && (
-            <Link to={'documentation/' + next.id + '/'} className="next-lesson">
-              <span>CONTINUE EXPLORING</span>
-              <b>{next.title} →</b>
-            </Link>
-          )}
-        </article>
-      </div>
+            <p className="eyebrow">{group.title}</p>
+            {content.documents
+              .filter((d) => group.ids.includes(d.id))
+              .map((d) => (
+                <Link
+                  key={d.id}
+                  to={'documentation/' + d.id + '/'}
+                  className={d.id === id ? 'selected' : ''}
+                >
+                  {d.title}
+                </Link>
+              ))}
+          </aside>
+          <article className="prose document">
+            <div className="doc-meta">
+              <span className="eyebrow">{doc.level}</span>
+              <a href={REPO + '/blob/main/' + doc.source}>
+                Edit on GitHub <Icon name="external" size={13} />
+              </a>
+            </div>
+            <HtmlContent html={doc.html} />
+            {next && (
+              <Link to={'documentation/' + next.id + '/'} className="next-lesson">
+                <span>CONTINUE EXPLORING</span>
+                <b>
+                  {next.title} <Icon name="arrow" size={14} />
+                </b>
+              </Link>
+            )}
+          </article>
+        </div>
+        {doc.id === 'references' && <ResearchResources />}
+      </>
     );
   }
   const docs = content.documents.filter((d) =>
@@ -693,8 +720,8 @@ export function Documentation({ id }: { id?: string }) {
     <>
       <PageHeader
         eyebrow="DOCUMENTATION"
-        title="Keep a good field notebook."
-        description="Installation, mathematical foundations, reproducible experiments, and practical guides. The website and repository share the same documentation."
+        title="Find the guide for your next step."
+        description="Understand an idea, set up your computer, run an experiment, or interpret its results."
       />
       <label className="search-field panel">
         <Icon name="search" />
@@ -702,19 +729,45 @@ export function Documentation({ id }: { id?: string }) {
           aria-label="Search documentation"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Find a lesson or guide…"
+          placeholder="Find a lesson or guide..."
         />
       </label>
-      <div className="card-grid two section">
-        {docs.map((d) => (
-          <Link className="document-card panel" key={d.id} to={'documentation/' + d.id + '/'}>
-            <span className="eyebrow">{d.level}</span>
-            <h2>{d.title}</h2>
-            <p>{d.description}</p>
-            <Icon name="arrow" size={18} />
-          </Link>
+      <nav className="document-categories" aria-label="Documentation categories">
+        {documentGroups.map((group, index) => (
+          <a key={group.title} href={'#document-group-' + index}>
+            {group.title}
+          </a>
         ))}
-      </div>
+      </nav>
+      {documentGroups.map((group, index) => {
+        const entries = group.ids.flatMap((id) => docs.filter((d) => d.id === id));
+        return (
+          entries.length > 0 && (
+            <section
+              className="section document-group"
+              id={'document-group-' + index}
+              key={group.title}
+            >
+              <h2>{group.title}</h2>
+              <p>{group.description}</p>
+              <div className="card-grid two">
+                {entries.map((d) => (
+                  <Link
+                    className="document-card panel"
+                    key={d.id}
+                    to={'documentation/' + d.id + '/'}
+                  >
+                    <span className="eyebrow">{d.level}</span>
+                    <h3>{d.title}</h3>
+                    <p>{d.description}</p>
+                    <Icon name="arrow" size={18} />
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )
+        );
+      })}
       {!docs.length && <p role="status">No guides match your search.</p>}
     </>
   );
@@ -726,53 +779,39 @@ export function About() {
       <PageHeader
         eyebrow="ABOUT SLAMLAB"
         title="A shared space for understanding space."
-        description="An open-source learning and experimentation platform for simultaneous localization and mapping."
+        description="The people, origins and open-source principles behind the platform."
       />
       <section className="panel prose about-copy">
-        <h2>What is our project about?</h2>
+        <h2>Why SLAMLab exists</h2>
         <p>
-          Team 98 is working toward an edge-based multi-robot system that can build shared indoor
-          maps, estimate robot positions and coordinate autonomous exploration tasks. Edge-based
-          means processing on or near the robots and sharing useful information between them. The
-          current research focuses on mapping and exploration in a robot simulator. SLAMLab makes
-          related ideas accessible through lessons, browser experiments and inspectable simulation
-          recordings.
+          SLAMLab connects visual lessons, small browser experiments and inspectable robot
+          recordings. Its purpose is to make mapping ideas easier to understand and experiments
+          easier to reproduce.
         </p>
         <p>
-          SLAMLab connects interactive explanations with inspectable implementations and measured
-          experiments. It grew from{' '}
-          <em>
-            Edge-Based Multi-Robot System for Collaborative SLAM and Autonomous Task Coordination
-          </em>
-          , consolidating reusable educational, simulation, SLAM integration, and evaluation
-          resources from that project. It continues as a place to learn, reproduce, and extend
-          multi-robot mapping ideas.
+          It grew from Team 98's final-year research project. The{' '}
+          <Link to="project/">project overview</Link> holds the research problem, objectives,
+          methodology and current progress.
+        </p>
+        <h2>People and origins</h2>
+        <p>
+          <strong>Project guide:</strong> Dr. Vidhya Balasubramanian.
+        </p>
+        <p>
+          The team comprises Konduru Hemesh, Manu Santosh, Rithvik Mukka, Kanishk Rungta and
+          Praneeth Gorugantu. <a href="https://github.com/Kanishk-Rungta">Kanishk Rungta</a>{' '}
+          maintains SLAMLab and is credited in its software citation.
         </p>
         <p>
           The original{' '}
           <a href="https://github.com/Kanishk-Rungta/Final-Year-Project">Final-Year-Project</a>{' '}
-          remains its own historical source. SLAMLab adds new tooling, a runnable landmark pipeline,
-          a curriculum, and browser experiments while preserving upstream attribution and licenses.
-        </p>
-        <h2>People & attribution</h2>
-        <h3>Project guide</h3>
-        <p>Dr. Vidhya Balasubramanian</p>
-        <p>
-          The original research project is Team 98&apos;s shared effort. Meet Konduru Hemesh, Manu
-          Santosh, Rithvik Mukka, Kanishk Rungta and Praneeth Gorugantu on the{' '}
-          <Link to="project/">project overview</Link>, alongside the objectives, methodology and
-          progress.
-        </p>
-        <p>
-          Platform maintainer: <a href="https://github.com/Kanishk-Rungta">Kanishk Rungta</a>, as
-          credited in the repository software citation. Original research authors are credited in
-          each algorithm profile; imported team work retains its source notices.
+          remains a historical source. Original algorithm authors and imported team work retain
+          their attribution.
         </p>
         <h2>Built in the open</h2>
         <p>
-          Project-authored software is MIT licensed. Imported systems retain their respective
-          licenses. Cite the original papers for the algorithms you use, alongside SLAMLab for
-          platform tooling.
+          Project-authored software is MIT licensed. Imported systems retain their own licenses.
+          Cite the research systems you use alongside SLAMLab's platform tooling.
         </p>
         <div className="button-row">
           <a href={REPO} className="button">
@@ -782,30 +821,8 @@ export function About() {
             Contribute a lesson or experiment
           </Link>
         </div>
-        <h2>What is the progress of the project?</h2>
-        <p>
-          Experimental two-robot mapping and exploration in Webots is the research foundation.
-          Localization accuracy, map quality and extended reliability need improvement. Physical
-          mapping deployment, measured edge resource requirements and integrated autonomous task
-          coordination remain pending.
-        </p>
-        <p>
-          The SLAMLab platform already offers twelve lessons, five teaching experiments and recorded
-          Landmark Lab examples. The two-robot Landmark Lab recording uses independent estimators;
-          it does not establish collaborative mapping or autonomous task coordination.{' '}
-          <Link to="project/">Read the project progress and next stages</Link>.
-        </p>
-        <h3>Next development steps</h3>
-        <p>
-          Native research integrations are developed through{' '}
-          <a href={REPO + '/milestone/1'}>tracked build and execution tasks</a>. Contributions can
-          add calibrated sensor adapters, validated native runs, new scenarios, accessible lessons,
-          or more ways to inspect results.
-        </p>
-        <Link to="documentation/references/" className="text-link">
-          Research references & attribution <Icon name="arrow" size={16} />
-        </Link>
       </section>
+      <ResearchResources />
     </>
   );
 }

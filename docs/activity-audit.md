@@ -4,6 +4,44 @@ Audit date: 2026-10-25. Starting revision: `91d9ede`. This review checked the
 instructions against model behaviour, browser interactions and actual local
 Webots executions. The fixes below are included with this report.
 
+## Website usability follow-up: 2026-10-26
+
+A subsequent review covered all 36 published routes and five additional activity
+states: all five playgrounds and the two-robot replay. The 41 states were checked
+at desktop and 390 px mobile widths. The review found no JavaScript errors,
+broken internal route/anchor links, horizontal page overflow or WCAG 2 A/AA and
+2.1 AA axe violations in those states after the changes below.
+
+- Recording changes now hide mismatched results immediately. Failed loads show
+  an error and Retry, including on initial load; a failed two-robot selection no
+  longer retains one-robot metrics underneath it.
+- Occupancy files and the sample grid use a separate map preview. A common
+  coordinate frame is not inferred from an upload or a supplied frame label.
+- Simulation Lab distinguishes replaying an example from preparing a local run,
+  links directly to installation, fits mobile width and offers copyable commands.
+- Shared documentation code blocks can receive keyboard focus; inline links in
+  all six external-system profiles are visibly distinguishable.
+- All five playgrounds have preset comparisons, model-derived explanations and
+  saved visual snapshots with settings. Odometry comparisons share bounds that
+  include both saved and current paths; playback time is included in snapshots.
+- Home, About and Project have distinct roles. The project overview separates
+  experimental research, measured teaching evidence and pending integration.
+- Guides are grouped by task. Algorithm profiles add plain-language flows and
+  availability labels while retaining original publication and author credits.
+- Citation text comes from `CITATION.cff`; reproduction commands and downloadable
+  manifests come from the reviewed published recordings. The downloadable PNG is
+  explicitly identified as the existing Landmark Lab overview figure.
+
+Validation includes the production build, lint, formatting, 15 model/parser tests
+and 18 browser tests. New browser tests cover failed loads and recovery, separate
+map previews, all five saved comparisons, clipboard content, the eight pages
+with previously identified accessibility failures, mobile layout and research
+resource downloads. Accessibility automation does not establish exhaustive
+screen-reader conformance. No estimator, recorded metric or native integration
+was changed, and no additional Webots execution was required for this UI update.
+
+The original simulator and data audit follows.
+
 ## Playground
 
 | Activity | Verified behaviour |

@@ -153,6 +153,10 @@ for (const [id, title, level, source, description] of sources) {
   const md = new Marked({
     renderer: {
       html: ({ text }) => escape(text),
+      code({ text, lang }) {
+        const language = (lang || '').replace(/[^a-zA-Z0-9_-]/g, '');
+        return `<div class="code-block"><button type="button" class="copy-code button secondary small" data-copy-code>Copy code</button><pre tabindex="0" role="region" aria-label="Code example"><code class="language-${language}">${escape(text)}\n</code></pre></div>`;
+      },
       heading({ text, tokens, depth }) {
         const slug = text
           .toLowerCase()
@@ -222,19 +226,39 @@ for (const [id, title, level, source, description] of sources) {
   });
 }
 const catalog = JSON.parse(await fs.readFile(path.join(root, 'algorithms/catalog.json'), 'utf8'));
+const citationSource = await fs.readFile(path.join(root, 'CITATION.cff'), 'utf8');
+const version = /^version:\s*(.+)$/m.exec(citationSource)[1];
+const release = /^date-released:\s*(.+)$/m.exec(citationSource)[1];
+const author = /family-names:\s*(.+)\s+given-names:\s*(.+)/.exec(citationSource);
+const citation = `${author[2].trim()} ${author[1].trim()}. SLAMLab (version ${version}), ${release.slice(0, 4)}. Software. https://github.com/Kanishk-Rungta/SLAMLab`;
+const manifests = Object.fromEntries(
+  await Promise.all(
+    ['landmark-reference', 'landmark-two-robots'].map(async (name) => [
+      name,
+      JSON.parse(
+        await fs.readFile(path.join(root, 'examples/results', name, 'manifest.json'), 'utf8'),
+      ),
+    ]),
+  ),
+);
 await fs.mkdir(path.join(website, 'src/generated'), { recursive: true });
 await fs.writeFile(
   path.join(website, 'src/generated/content.json'),
-  JSON.stringify({ documents, catalog }),
+  JSON.stringify({ documents, catalog, citation, manifests }),
 );
 const out = path.join(website, 'public/generated');
 await fs.mkdir(out, { recursive: true });
+await fs.copyFile(path.join(root, 'CITATION.cff'), path.join(out, 'CITATION.cff'));
 await fs.copyFile(path.join(root, 'assets/logo.svg'), path.join(out, 'logo.svg'));
 await fs.copyFile(
   path.join(root, 'assets/results/landmark-slam.png'),
   path.join(out, 'landmark-slam.png'),
 );
 for (const name of ['landmark-reference', 'landmark-two-robots']) {
+  await fs.copyFile(
+    path.join(root, 'examples/results', name, 'manifest.json'),
+    path.join(out, name + '-manifest.json'),
+  );
   await fs.copyFile(
     path.join(root, 'examples/results', name, 'viewer.json'),
     path.join(out, name + '.json'),

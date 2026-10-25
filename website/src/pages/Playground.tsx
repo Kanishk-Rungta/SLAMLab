@@ -12,7 +12,9 @@ import {
 } from '../lab/models';
 import { download } from '../lab/data';
 import { FeatureExperiment } from '../components/FeatureExperiment';
+import { ExperimentTools, useExperimentComparison } from '../components/ExperimentComparison';
 import { playgroundGuides, type ModuleId } from '../lab/playgroundGuide';
+import { plotBounds } from '../lab/plotBounds';
 import {
   Icon,
   Navigation,
@@ -166,8 +168,25 @@ function Odometry({ seed }: { seed: number }) {
     () => odometry(seed, trans, rotation, speed),
     [seed, trans, rotation, speed],
   );
-  const player = usePlayback(frames.length),
+  const player = usePlayback(frames.length, frames.length - 1),
     current = frames[player.frame];
+  const result = `At ${current.t.toFixed(1)} s, the estimated position is ${current.error.toFixed(3)} m from the reference.`;
+  const bounds = plotBounds(frames.flatMap((frame) => [frame.truth, frame.estimate]));
+  const comparison = useExperimentComparison({
+    bounds,
+    settings: `Seed ${seed}; speed ${speed} m/s; movement noise ${trans}; turning noise ${rotation}; time ${current.t.toFixed(1)} s`,
+    result,
+    graphic: (
+      <Plot label="Odometry comparison snapshot" bounds={bounds}>
+        <PathLine
+          points={frames.slice(0, player.frame + 1).map((f) => f.truth)}
+          color="var(--slate)"
+          dashed
+        />
+        <PathLine points={frames.slice(0, player.frame + 1).map((f) => f.estimate)} />
+      </Plot>
+    ),
+  });
   return (
     <>
       <div className="experiment-layout">
@@ -179,7 +198,7 @@ function Odometry({ seed }: { seed: number }) {
             </span>
             <span className="subtle">Seed {seed} · 2D unicycle</span>
           </div>
-          <Plot label="Ground-truth and noisy odometry trajectories" bounds={[-4, -3, 4, 5]}>
+          <Plot label="Ground-truth and noisy odometry trajectories" bounds={bounds}>
             {truthVisible && (
               <PathLine
                 points={frames.slice(0, player.frame + 1).map((f) => f.truth)}
@@ -202,10 +221,39 @@ function Odometry({ seed }: { seed: number }) {
             ]}
           />
           <Playback player={player} total={frames.length} label={current.t.toFixed(1) + ' s'} />
+          <p className="result-note" aria-live="polite">
+            {result}
+          </p>
         </section>
         <aside className="panel controls">
           <h2>Experiment controls</h2>
           <p>Change the noise model, then replay the same motion.</p>
+          <ExperimentTools
+            save={comparison.save}
+            saved={comparison.saved}
+            examples={[
+              {
+                label: 'No movement errors',
+                run: () => {
+                  setTrans(0);
+                  setRotation(0);
+                  setSpeed(0.45);
+                  player.setRunning(false);
+                  player.setFrame(frames.length - 1);
+                },
+              },
+              {
+                label: 'Add turning errors',
+                run: () => {
+                  setTrans(0);
+                  setRotation(0.12);
+                  setSpeed(0.45);
+                  player.setRunning(false);
+                  player.setFrame(frames.length - 1);
+                },
+              },
+            ]}
+          />
           <Range
             label="Robot speed"
             value={speed}
@@ -264,6 +312,7 @@ function Odometry({ seed }: { seed: number }) {
           </div>
         </aside>
       </div>
+      {comparison.panel}
       <Lesson
         title="Small errors travel with you."
         formula={String.raw`x_{t+1}=x_t+d\cos(\theta_t+\Delta\theta/2)`}
@@ -295,9 +344,28 @@ function Occupancy({ seed }: { seed: number }) {
     () => occupancy(seed, range, noise, resolution),
     [seed, range, noise, resolution],
   );
-  const player = usePlayback(frames.length),
+  const player = usePlayback(frames.length, frames.length - 1),
     frame = frames[player.frame];
   const known = frame.grid.filter((v) => v !== 0).length;
+  const result = `${known} of ${frame.grid.length} cells have observation evidence at step ${player.frame + 1}. Unseen cells remain unknown.`;
+  const comparison = useExperimentComparison({
+    settings: `Seed ${seed}; range ${range} m; noise ${noise} m; cell ${resolution} m; step ${player.frame + 1}`,
+    result,
+    graphic: (
+      <Plot label="Occupancy comparison snapshot">
+        {frame.grid.map((v, i) => (
+          <rect
+            key={i}
+            x={-4 + (i % frame.width) * frame.resolution}
+            y={-4 + Math.floor(i / frame.width) * frame.resolution}
+            width={frame.resolution}
+            height={frame.resolution}
+            fill={v === 0 ? 'var(--unknown)' : v > 0.5 ? 'var(--occupied)' : 'var(--free)'}
+          />
+        ))}
+      </Plot>
+    ),
+  });
   const exportMap = () =>
     download('educational-occupancy-map.json', {
       schema_version: 1,
@@ -359,10 +427,39 @@ function Occupancy({ seed }: { seed: number }) {
             ]}
           />
           <Playback player={player} total={frames.length} />
+          <p className="result-note" aria-live="polite">
+            {result}
+          </p>
         </section>
         <aside className="panel controls">
           <h2>Sensor & map</h2>
           <p>Every range beam contributes free-space and hit evidence.</p>
+          <ExperimentTools
+            save={comparison.save}
+            saved={comparison.saved}
+            examples={[
+              {
+                label: 'Look farther',
+                run: () => {
+                  setRange(4);
+                  setNoise(0);
+                  setResolution(0.2);
+                  player.setRunning(false);
+                  player.setFrame(frames.length - 1);
+                },
+              },
+              {
+                label: 'Shorten the view',
+                run: () => {
+                  setRange(1.5);
+                  setNoise(0);
+                  setResolution(0.2);
+                  player.setRunning(false);
+                  player.setFrame(frames.length - 1);
+                },
+              },
+            ]}
+          />
           <Range
             label="Sensor range"
             value={range}
@@ -402,6 +499,7 @@ function Occupancy({ seed }: { seed: number }) {
           />
         </aside>
       </div>
+      {comparison.panel}
       <Lesson
         title="A map is accumulated evidence."
         formula={String.raw`l_t=l_{t-1}+\log\frac{p(m\mid z_t,x_t)}{1-p(m\mid z_t,x_t)}`}
@@ -452,6 +550,19 @@ function Graph({ seed }: { seed: number }) {
   const [solution, setSolution] = useState<ReturnType<typeof optimizeGraph> | null>(null);
   const edges = graph.edges.filter((e) => !e.loop || loop);
   const display = solution?.poses || graph.initial;
+  const cost = solution?.costs.at(-1) ?? graphCost(graph.initial, edges);
+  const result = `Measurement disagreement is ${cost.toFixed(4)}${solution ? ' after adjustment' : ' before adjustment'}. ${loop ? 'The revisit connection is included.' : 'There is no revisit connection.'}`;
+  const comparison = useExperimentComparison({
+    settings: `Seed ${seed}; noise ${noise}; revisit ${loop ? 'on' : 'off'}; ${solution ? 'adjusted' : 'initial'}`,
+    result,
+    graphic: (
+      <Plot label="Pose graph comparison snapshot" bounds={[-3, -1, 4, 6]}>
+        <PathLine points={graph.initial} color="var(--slate)" dashed />
+        <PathLine points={display} />
+        {loop && <PathLine points={[display.at(-1)!, display[0]]} color="var(--orange)" dashed />}
+      </Plot>
+    ),
+  });
   return (
     <>
       <div className="experiment-layout">
@@ -494,9 +605,41 @@ function Graph({ seed }: { seed: number }) {
               ['Loop edge / anchor', 'var(--orange)'],
             ]}
           />
+          <p className="result-note" aria-live="polite">
+            {result}
+          </p>
         </section>
         <aside className="panel controls">
           <h2>Graph constraints</h2>
+          <ExperimentTools
+            save={comparison.save}
+            saved={comparison.saved}
+            examples={[
+              {
+                label: 'Correct with a revisit',
+                run: () => {
+                  const g = poseGraph(seed, 0.045);
+                  setNoise(0.045);
+                  setLoop(true);
+                  setSolution(optimizeGraph(g.initial, g.edges));
+                },
+              },
+              {
+                label: 'Without a revisit',
+                run: () => {
+                  const g = poseGraph(seed, 0.045);
+                  setNoise(0.045);
+                  setLoop(false);
+                  setSolution(
+                    optimizeGraph(
+                      g.initial,
+                      g.edges.filter((e) => !e.loop),
+                    ),
+                  );
+                },
+              },
+            ]}
+          />
           <p>
             Adjust the saved positions and headings so the movement and revisit measurements agree
             more closely.
@@ -545,6 +688,7 @@ function Graph({ seed }: { seed: number }) {
           />
         </aside>
       </div>
+      {comparison.panel}
       <Lesson
         title="One revisit connects the whole path."
         formula={String.raw`\min_{T}\sum_{(i,j)}e_{ij}^{T}\Omega_{ij}e_{ij}`}
@@ -582,6 +726,34 @@ function Multi({ seed }: { seed: number }) {
   const phase = (player.frame / 120) * Math.PI * 2;
   const localB: Point = [Math.cos(phase + 1), Math.sin(phase + 1)];
   const robotB = alignment ? alignment.transform(localB) : localB;
+  const gap = Math.sqrt(
+    b.reduce(
+      (sum, p, index) => sum + (p[0] - maps.a[index][0]) ** 2 + (p[1] - maps.a[index][1]) ** 2,
+      0,
+    ) / b.length,
+  );
+  const result = `The gap across all ${b.length} known point pairs is ${gap.toFixed(3)} m (RMS). ${alignment ? 'Map B has been aligned.' : 'Map B is still in its local frame.'}`;
+  const comparison = useExperimentComparison({
+    settings: `Seed ${seed}; noise ${noise} m; ${shared} shared pairs; communication ${connected ? 'on' : 'off'}; ${alignment ? 'aligned' : 'unaligned'}`,
+    result,
+    graphic: (
+      <Plot label="Map alignment comparison snapshot" bounds={[-5, -4, 4, 4]}>
+        {maps.a.map((p, i) => (
+          <circle key={'a' + i} cx={p[0]} cy={p[1]} r=".085" fill="var(--teal)" />
+        ))}
+        {b.map((p, i) => (
+          <rect
+            key={i}
+            x={p[0] - 0.07}
+            y={p[1] - 0.07}
+            width=".14"
+            height=".14"
+            fill="var(--orange)"
+          />
+        ))}
+      </Plot>
+    ),
+  });
   return (
     <>
       <div className="experiment-layout">
@@ -636,9 +808,36 @@ function Multi({ seed }: { seed: number }) {
             ]}
           />
           <Playback player={player} total={120} />
+          <p className="result-note" aria-live="polite">
+            {result}
+          </p>
         </section>
         <aside className="panel controls">
           <h2>Share & align</h2>
+          <ExperimentTools
+            save={comparison.save}
+            saved={comparison.saved}
+            examples={[
+              {
+                label: 'Align clear observations',
+                run: () => {
+                  setNoise(0);
+                  setShared(5);
+                  setConnected(true);
+                  setAligned(true);
+                },
+              },
+              {
+                label: 'Align noisy observations',
+                run: () => {
+                  setNoise(0.25);
+                  setShared(5);
+                  setConnected(true);
+                  setAligned(true);
+                },
+              },
+            ]}
+          />
           <p>
             Rotate and shift map B to line up its shared landmarks with map A. Each map begins with
             its own coordinate system.
@@ -703,6 +902,7 @@ function Multi({ seed }: { seed: number }) {
           </p>
         </aside>
       </div>
+      {comparison.panel}
       <Lesson
         title="Shared observations connect local frames."
         formula={String.raw`\min_{R\in SO(2),t}\sum_i\|Rp_i+t-q_i\|^2`}
@@ -763,31 +963,50 @@ export default function Playground() {
           </button>
         ))}
       </nav>
-      <ExperimentGuide key={active} module={active} />
+      <label className="mobile-module-select">
+        Choose an experiment
+        <select
+          aria-label="Choose an experiment"
+          value={active}
+          onChange={(event) => navigate('playground/?module=' + event.target.value)}
+        >
+          {modules.map(([id, , title]) => (
+            <option key={id} value={id}>
+              {title}
+            </option>
+          ))}
+        </select>
+      </label>
+      <p className="mobile-activity-context">{playgroundGuides[active].explanation}</p>
       <div className="experiment-toolbar">
         <div>
           <span className="eyebrow">EXPERIMENT {modules.find((m) => m[0] === active)![1]}</span>
           <h2>{modules.find((m) => m[0] === active)![2]}</h2>
         </div>
-        <div className="seed-controls">
-          <label className="seed-field">
-            Random seed
-            <input
-              type="number"
-              min="0"
-              max="2147483647"
-              value={seed}
-              aria-describedby="random-seed-help"
-              onChange={(e) =>
-                setSeed(Math.max(0, Math.min(2147483647, Math.trunc(Number(e.target.value) || 0))))
-              }
-            />
-          </label>
-          <p className="help" id="random-seed-help">
-            A seed makes random examples repeatable. Changing it restarts this activity with default
-            controls.
-          </p>
-        </div>
+        <details className="seed-settings">
+          <summary>Repeatable settings</summary>
+          <div className="seed-controls">
+            <label className="seed-field">
+              Random seed
+              <input
+                type="number"
+                min="0"
+                max="2147483647"
+                value={seed}
+                aria-describedby="random-seed-help"
+                onChange={(e) =>
+                  setSeed(
+                    Math.max(0, Math.min(2147483647, Math.trunc(Number(e.target.value) || 0))),
+                  )
+                }
+              />
+            </label>
+            <p className="help" id="random-seed-help">
+              A seed makes random examples repeatable. Changing it restarts this activity with
+              default controls.
+            </p>
+          </div>
+        </details>
       </div>
       <div key={active + seed}>
         {active === 'odometry' ? (
@@ -802,6 +1021,7 @@ export default function Playground() {
           <Multi seed={seed} />
         )}
       </div>
+      <ExperimentGuide key={active} module={active} />
       <section className="activity-handoff">
         <div>
           <span className="eyebrow">CONNECT THE IDEAS</span>

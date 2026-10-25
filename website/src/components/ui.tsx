@@ -499,8 +499,13 @@ export function Legend({ items }: { items: [string, string][] }) {
 }
 
 export function useReplay(name = 'landmark-reference') {
-  const [data, setData] = useState<Replay | null>(null),
-    [error, setError] = useState('');
+  const [attempt, setAttempt] = useState(0);
+  const key = name + ':' + attempt;
+  const [result, setResult] = useState<{ key: string; data: Replay | null; error: string }>({
+    key: '',
+    data: null,
+    error: '',
+  });
   useEffect(() => {
     const controller = new AbortController();
     fetch(BASE + 'generated/' + name + '.json', { signal: controller.signal })
@@ -509,15 +514,26 @@ export function useReplay(name = 'landmark-reference') {
         return r.text();
       })
       .then((text) => {
-        setData(parseReplay(text));
-        setError('');
+        if (!controller.signal.aborted) setResult({ key, data: parseReplay(text), error: '' });
       })
       .catch((e) => {
-        if (e.name !== 'AbortError') setError(e.message);
+        if (!controller.signal.aborted)
+          setResult({
+            key,
+            data: null,
+            error:
+              'Could not load the selected recording. Check your connection and retry. ' +
+              (e.name === 'TypeError' ? '' : e.message),
+          });
       });
     return () => controller.abort();
-  }, [name]);
-  return { data, error };
+  }, [name, key]);
+  const current = result.key === key ? result : { data: null, error: '' };
+  return {
+    ...current,
+    loading: !current.data && !current.error,
+    retry: () => setAttempt((value) => value + 1),
+  };
 }
 
 export function PageHeader({

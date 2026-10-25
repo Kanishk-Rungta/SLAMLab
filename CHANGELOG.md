@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+- Fixed stale recording results after failed experiment changes, added retry states,
+  and separated occupancy previews from unrelated recorded coordinate frames.
+- Fixed Simulation Lab mobile overflow and keyboard/link accessibility across
+  documentation and research profiles.
+- Added guided presets, frozen before/after comparisons and model-derived result
+  explanations to all five playgrounds, with a more compact mobile entry.
+- Added a clear site journey, project status/evidence overview, grouped guides,
+  copyable commands and plain-language algorithm input/process/output flows.
+- Explained benchmark measures with a wheel-only comparison and added accessible
+  citation, reproduction, manifest and overview-figure downloads.
 - Reworked Learn into a connected visual journey with concise, standalone lesson
   introductions, step-by-step scenes, next-concept handoffs and optional notes.
 - Added a shared robot-and-room story and clearer uncertainty, camera-depth,

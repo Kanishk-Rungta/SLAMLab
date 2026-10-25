@@ -1,4 +1,5 @@
 import { memo, useMemo, useState } from 'react';
+import { LoadNotice } from '../components/ContentTools';
 import {
   download,
   MAX_FILE_BYTES,
@@ -50,14 +51,48 @@ const MapCells = memo(function MapCells({ map }: { map: OccupancyMap }) {
   );
 });
 
-function Viewer({ data, map }: { data: Replay; map: OccupancyMap | null }) {
-  const player = usePlayback(301),
+function MapViewer({ map }: { map: OccupancyMap }) {
+  const [visible, setVisible] = useState(true);
+  return (
+    <section className="panel standalone-map" aria-label="Separate occupancy map">
+      <div className="panel-heading">
+        <h2>Separate map preview</h2>
+        <Toggle label="Occupancy map layer" checked={visible} onChange={setVisible} />
+      </div>
+      <p>This grid uses its own coordinates. It is displayed separately from the recording.</p>
+      <Plot
+        label="Standalone occupancy grid in its supplied coordinate frame"
+        bounds={[
+          map.origin[0] - 0.2,
+          map.origin[1] - 0.2,
+          map.origin[0] + map.width * map.resolution + 0.2,
+          map.origin[1] + map.height * map.resolution + 0.2,
+        ]}
+        interactive
+      >
+        {visible && <MapCells map={map} />}
+      </Plot>
+      <Legend
+        items={[
+          ['Open space', 'var(--free)'],
+          ['Obstacle', 'var(--occupied)'],
+        ]}
+      />
+      <p className="help">
+        {map.width} × {map.height} cells · {map.resolution} m/cell · {map.frame}. Unobserved cells
+        are omitted. Large grids are decimated for display.
+      </p>
+    </section>
+  );
+}
+
+function Viewer({ data }: { data: Replay }) {
+  const player = usePlayback(301, data.kind === 'simulation_measurement' ? 300 : 0),
     [estimate, setEstimate] = useState(true),
     [reference, setReference] = useState(true),
     [odom, setOdom] = useState(false),
     [landmarks, setLandmarks] = useState(true),
     [error, setError] = useState(false),
-    [mapVisible, setMapVisible] = useState(true),
     [selected, setSelected] = useState(0),
     [hidden, setHidden] = useState<string[]>([]);
   const first = Math.min(...data.robots.map((r) => r.estimate[0][0])),
@@ -70,11 +105,6 @@ function Viewer({ data, map }: { data: Replay; map: OccupancyMap | null }) {
       ...(r.odometry || []).map((p) => [p[1], p[2]]),
       ...r.landmarks.map((p) => [p.x, p.y]),
     ]);
-    if (map)
-      points.push(map.origin, [
-        map.origin[0] + map.width * map.resolution,
-        map.origin[1] + map.height * map.resolution,
-      ]);
     const box = points.reduce(
       (b, p) => [
         Math.min(b[0], p[0]),
@@ -85,7 +115,7 @@ function Viewer({ data, map }: { data: Replay; map: OccupancyMap | null }) {
       [Infinity, Infinity, -Infinity, -Infinity],
     );
     return [box[0] - 0.7, box[1] - 0.7, box[2] + 0.7, box[3] + 0.7];
-  }, [data, map]);
+  }, [data]);
   const robot = data.robots[selected] || data.robots[0],
     metrics = robot.metrics;
   const colors = ['var(--teal)', 'var(--orange)', 'var(--purple)'];
@@ -107,6 +137,24 @@ function Viewer({ data, map }: { data: Replay; map: OccupancyMap | null }) {
     <>
       <div className="experiment-layout studio-layout">
         <section className="panel visual-panel">
+          <div className="replay-intro">
+            <div>
+              <h2>The saved path and map</h2>
+              <p>
+                Solid paths are estimates; dashed grey is the recorded reference. Dots are mapped
+                landmarks.
+              </p>
+            </div>
+            <button
+              className="button secondary"
+              onClick={() => {
+                player.setFrame(0);
+                player.setRunning(true);
+              }}
+            >
+              Replay from start <Icon name="play" size={16} />
+            </button>
+          </div>
           <div className="panel-heading">
             <span>
               <i className="live-dot" />
@@ -123,7 +171,6 @@ function Viewer({ data, map }: { data: Replay; map: OccupancyMap | null }) {
             bounds={bounds}
             interactive
           >
-            {map && mapVisible && <MapCells map={map} />}
             {data.robots.map((r, i) => {
               if (hidden.includes(r.id) || t < r.estimate[0][0]) return null;
               const color = colors[i % colors.length],
@@ -189,9 +236,6 @@ function Viewer({ data, map }: { data: Replay; map: OccupancyMap | null }) {
           <Toggle label="Wheel-only odometry" checked={odom} onChange={setOdom} />
           <Toggle label="Estimated landmarks" checked={landmarks} onChange={setLandmarks} />
           <Toggle label="Position error connector" checked={error} onChange={setError} />
-          {map && (
-            <Toggle label="Occupancy map layer" checked={mapVisible} onChange={setMapVisible} />
-          )}
           {data.robots.length > 1 && (
             <fieldset>
               <legend>Robots</legend>
@@ -305,12 +349,13 @@ function Viewer({ data, map }: { data: Replay; map: OccupancyMap | null }) {
             Load a Python-exported replay to include evaluated ATE/RPE and reference coverage.
           </p>
         )}
-        {map && (
-          <p className="help">
-            Map: {map.width} × {map.height} cells · {map.resolution} m/cell · origin [
-            {map.origin.join(', ')}] · {map.frame}. Large displays are decimated for responsiveness.
-          </p>
-        )}
+        <p className="help">
+          These metric summaries describe the complete recording; moving playback changes the
+          picture, not the evaluated result.
+        </p>
+        <Link to="documentation/metrics/" className="text-link">
+          Understand position error, movement error and coverage <Icon name="arrow" size={14} />
+        </Link>
       </section>
     </>
   );
@@ -322,7 +367,7 @@ export default function Studio() {
       ? 'landmark-two-robots'
       : 'landmark-reference';
   const [sample, setSample] = useState(initial),
-    { data, error } = useReplay(sample),
+    { data, error, loading, retry } = useReplay(sample),
     [local, setLocal] = useState<Replay | null>(null),
     [map, setMap] = useState<OccupancyMap | null>(null),
     [message, setMessage] = useState('');
@@ -372,9 +417,7 @@ export default function Studio() {
       cells: frame.grid.map((v) => (v === 0 ? -1 : v > 0.5 ? 1 : 0)),
       frame: 'Educational mapping world, rows along +Y',
     });
-    setMessage(
-      'Loaded the educational occupancy layer. Its coordinate frame is separate from the recorded marker lab.',
-    );
+    setMessage('Loaded the educational grid in a separate map preview.');
   }
   return (
     <>
@@ -433,19 +476,17 @@ export default function Studio() {
           </button>
         )}
       </section>
-      {(message || error) && (
+      {message && (
         <p
-          className={message.startsWith('Could not') || error ? 'notice error' : 'notice'}
-          role={message.startsWith('Could not') || error ? 'alert' : 'status'}
+          className={message.startsWith('Could not') ? 'notice error' : 'notice'}
+          role={message.startsWith('Could not') ? 'alert' : 'status'}
         >
-          {message || error}
+          {message}
         </p>
       )}
-      {local || data ? (
-        <Viewer key={(local || data)!.id} data={(local || data)!} map={map} />
-      ) : (
-        <p role="status">Loading the recorded experiment…</p>
-      )}
+      {!local && <LoadNotice loading={loading} error={error} retry={retry} />}
+      {map && <MapViewer key={map.frame + ':' + map.width + ':' + map.height} map={map} />}
+      {local || data ? <Viewer key={(local || data)!.id} data={(local || data)!} /> : null}
       <section className="lesson-note compact">
         <div>
           <h2>Bring an experiment into the browser.</h2>

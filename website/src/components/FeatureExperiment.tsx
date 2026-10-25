@@ -1,6 +1,7 @@
 import { useEffect, useId, useMemo, useState } from 'react';
 import { descriptorDistance, featureScene, features, type Point } from '../lab/models';
 import { Icon, Legend, Range, Stat, Toggle } from './ui';
+import { useExperimentComparison } from './ExperimentComparison';
 
 function Room({
   x,
@@ -82,6 +83,34 @@ export function FeatureExperiment({ seed }: { seed: number }) {
     right = result.right[candidate.right];
   const counterpart = result.right.findIndex((feature) => feature.identity === left.identity);
   const correct = result.matches.filter((match) => match.correct).length;
+  const resultNote = `${result.matches.length} pairs accepted: ${correct} correct and ${result.matches.length - correct} wrong. These checks compare descriptions; they do not prove identity.`;
+  const comparison = useExperimentComparison({
+    settings: `Seed ${seed}; noise ${noise}; threshold ${threshold}; two-way ${mutual ? 'on' : 'off'}`,
+    result: resultNote,
+    graphic: (
+      <svg
+        className="comparison-features"
+        viewBox="0 0 420 180"
+        role="img"
+        aria-label="Accepted feature pairs in the saved settings"
+      >
+        <rect x="10" y="10" width="165" height="160" fill="var(--soft)" />
+        <rect x="245" y="10" width="165" height="160" fill="var(--soft)" />
+        {result.matches.map((match) => (
+          <line
+            key={match.left}
+            x1={15 + result.left[match.left].point[0] * 150}
+            y1={15 + result.left[match.left].point[1] * 150}
+            x2={250 + result.right[match.right].point[0] * 150}
+            y2={15 + result.right[match.right].point[1] * 150}
+            stroke={match.correct ? 'var(--teal)' : 'var(--orange)'}
+            strokeWidth="2"
+            strokeDasharray={match.correct ? undefined : '4 3'}
+          />
+        ))}
+      </svg>
+    ),
+  });
   const alternatives = result.right
     .map((feature, index) => ({ index, distance: descriptorDistance(left, feature) }))
     .sort((a, b) => a.distance - b.distance)
@@ -304,6 +333,15 @@ export function FeatureExperiment({ seed }: { seed: number }) {
               Try confusing details
             </button>
           </div>
+          <button className="text-link" onClick={comparison.save}>
+            Save current example for comparison
+          </button>
+          {comparison.saved && (
+            <p className="help" aria-live="polite">
+              Saved. Change the current settings, then{' '}
+              <a href="#experiment-comparison">view the comparison</a>.
+            </p>
+          )}
           <Range
             label="Observation noise"
             value={noise}
@@ -352,6 +390,10 @@ export function FeatureExperiment({ seed }: { seed: number }) {
           </div>
         </aside>
       </div>
+      <p className="result-note" aria-live="polite">
+        {resultNote}
+      </p>
+      {comparison.panel}
       <section className="match-inspector panel" aria-labelledby="pair-inspector-title">
         <div>
           <p className="eyebrow">FOLLOW ONE DECISION</p>
